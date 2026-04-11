@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "XR_CIRCUIT"
 include(":app")
+include(":domain")
+include(":data")
+include(":presentation")
