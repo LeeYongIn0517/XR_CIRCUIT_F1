@@ -40,6 +40,11 @@ import androidx.xr.compose.subspace.layout.resizable
 import androidx.xr.compose.subspace.layout.width
 import app.yongin.xr_circuit.ui.theme.XR_CIRCUITTheme
 
+/**
+ * On XR devices the launcher activity starts in managed full space (see manifest
+ * `android.window.PROPERTY_XR_ACTIVITY_START_MODE`). On non‑XR devices the spatial branch is
+ * skipped and the flat UI is shown instead.
+ */
 class MainActivity : ComponentActivity() {
 
     @SuppressLint("RestrictedApi")

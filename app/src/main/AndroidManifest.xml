@@ -4,6 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Jetpack XR: required for Play / system feature resolution; false keeps install on non‑XR devices. -->
+    <uses-feature
+        android:name="android.software.xr.api.spatial"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,6 +22,12 @@
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.XR_CIRCUIT">
+            <property
+                android:name="android.window.PROPERTY_XR_ACTIVITY_START_MODE"
+                android:value="XR_ACTIVITY_START_MODE_FULL_SPACE_MANAGED" />
+            <property
+                android:name="android.window.PROPERTY_XR_BOUNDARY_TYPE_RECOMMENDED"
+                android:value="XR_BOUNDARY_TYPE_LARGE" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
