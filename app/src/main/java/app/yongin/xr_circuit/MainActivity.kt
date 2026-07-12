@@ -30,20 +30,10 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             XR_CIRCUITTheme {
-                CircuitMainScreen(
-                    panelContent = { MainContent() },
-                    fullSpaceButton = { onClick, modifier ->
-                        FullSpaceModeIconButton(onClick = onClick, modifier = modifier)
-                    },
-                )
+                CircuitMainScreen()
             }
         }
     }
-}
-
-@Composable
-private fun MainContent(modifier: Modifier = Modifier) {
-    Text(text = stringResource(R.string.hello_android_xr), modifier = modifier)
 }
 
 @Composable
@@ -62,17 +52,6 @@ private fun HomeSpaceModeIconButton(onClick: () -> Unit, modifier: Modifier = Mo
         Icon(
             painter = painterResource(id = R.drawable.ic_home_space_mode_switch),
             contentDescription = stringResource(R.string.switch_to_home_space_mode)
-        )
-    }
-}
-
-@PreviewLightDark
-@Composable
-private fun My2dContentPreview() {
-    XR_CIRCUITTheme {
-        CircuitMainScreen(
-            panelContent = { MainContent() },
-            fullSpaceButton = { _, _ -> },
         )
     }
 }
