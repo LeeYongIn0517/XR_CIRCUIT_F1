@@ -1,19 +1,12 @@
-package app.yongin.xr_circuit.presentation
+package app.yongin.xr_circuit.presentation.screen
 
 import android.annotation.SuppressLint
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.xr.compose.platform.LocalSpatialCapabilities
-import androidx.xr.compose.platform.LocalSpatialConfiguration
 import androidx.xr.compose.spatial.Subspace
 import androidx.xr.compose.subspace.SpatialGltfModel
 import androidx.xr.compose.subspace.SpatialGltfModelSource
@@ -24,10 +17,11 @@ import androidx.xr.compose.subspace.layout.fillMaxWidth
 import androidx.xr.compose.subspace.layout.height
 import androidx.xr.compose.subspace.layout.padding
 import androidx.xr.compose.subspace.layout.width
+import app.yongin.xr_circuit.presentation.util.loadTrackPath
 import kotlin.io.path.Path
 
 /** Merged into the app APK from `presentation/src/main/assets/`. */
-private const val TRACK_GLTF_ASSET_FILE_NAME = "Circuit Sliverstone.glb"
+private const val TRACK_GLTF_ASSET_FILE_NAME = "SilverstoneTrack.glb"
 
 @SuppressLint("RestrictedApi")
 @Composable
@@ -42,6 +36,7 @@ fun CircuitMainScreen() {
 @SuppressLint("RestrictedApi")
 @Composable
 private fun CircuitSpatialContent() {
+    val context = LocalContext.current
     val trackSource = remember {
         SpatialGltfModelSource.fromPath(Path(TRACK_GLTF_ASSET_FILE_NAME))
     }
@@ -49,6 +44,7 @@ private fun CircuitSpatialContent() {
     DisposableEffect(trackState) {
         onDispose { trackState.close() }
     }
+    val trackPath = remember { context.loadTrackPath() }
 
     SpatialRow(
         modifier = SubspaceModifier.height(900.dp).fillMaxWidth()
