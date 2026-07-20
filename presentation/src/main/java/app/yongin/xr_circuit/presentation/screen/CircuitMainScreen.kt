@@ -5,7 +5,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.dp
 import androidx.xr.compose.platform.LocalSpatialCapabilities
 import androidx.xr.compose.spatial.Subspace
 import androidx.xr.compose.subspace.SpatialGltfModel
@@ -14,10 +13,9 @@ import androidx.xr.compose.subspace.SpatialRow
 import androidx.xr.compose.subspace.rememberSpatialGltfModelState
 import androidx.xr.compose.subspace.layout.SubspaceModifier
 import androidx.xr.compose.subspace.layout.absoluteOffset
-import androidx.xr.compose.subspace.layout.fillMaxWidth
-import androidx.xr.compose.subspace.layout.height
-import androidx.xr.compose.subspace.layout.padding
-import androidx.xr.compose.subspace.layout.width
+import androidx.xr.compose.subspace.layout.requiredDepth
+import androidx.xr.compose.subspace.layout.requiredHeight
+import androidx.xr.compose.subspace.layout.requiredWidth
 import androidx.xr.compose.unit.Meter
 import app.yongin.xr_circuit.presentation.util.loadTrackPath
 import kotlin.io.path.Path
@@ -25,6 +23,11 @@ import kotlin.io.path.Path
 /** Merged into the app APK from `presentation/src/main/assets/`. */
 private const val TRACK_GLTF_ASSET_FILE_NAME = "SilverstoneTrack.glb"
 private const val MARKER_GLTF_ASSET_FILE_NAME = "CarDotMat.glb"
+
+/** glTF Y-up track bbox in meters (1:1 with Blender asset). */
+private val TrackWidth = Meter(16.44f)
+private val TrackHeight = Meter(0.44f)
+private val TrackDepth = Meter(10.0f)
 
 @SuppressLint("RestrictedApi")
 @Composable
@@ -57,27 +60,24 @@ private fun CircuitSpatialContent() {
         }
     }
 
-    SpatialRow(
-//        modifier = SubspaceModifier.height(900.dp).fillMaxWidth()
-    ) {
+    SpatialRow {
+        // Force meter-sized layout so SpatialRow cannot shrink the track away from 1m=1m.
         SpatialGltfModel(
             state = trackState,
             modifier = SubspaceModifier
-//                .padding(start = 24.dp)
-//                .width(960.dp)
-//                .height(800.dp)
+                .requiredWidth(TrackWidth.toDp())
+                .requiredHeight(TrackHeight.toDp())
+                .requiredDepth(TrackDepth.toDp())
         ) {
-            // 일단 waypoint[0]에 고정
+            // Pin to waypoint[0] in the same meter space as the track.
             val wp = trackPath.waypoints_gltf_yup.first()
             val x = Meter(wp.position[0]).toDp()
             val y = Meter(wp.position[1]).toDp()
             val z = Meter(wp.position[2]).toDp()
             SpatialGltfModel(
                 state = markerState,
-                modifier = SubspaceModifier
-//                    .width(40.dp)   // 작게
-//                    .height(40.dp)
-                    .absoluteOffset(x = x, y = 0.dp, z = z)
+                // No width/height — marker keeps asset scale inside the track's meter space.
+                modifier = SubspaceModifier.absoluteOffset(x = x, y = y, z = z)
             )
         }
     }
