@@ -1,8 +1,15 @@
 package app.yongin.xr_circuit.presentation.screen
 
 import android.annotation.SuppressLint
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
+import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.xr.compose.platform.LocalSpatialCapabilities
@@ -18,6 +25,7 @@ import androidx.xr.compose.subspace.layout.requiredHeight
 import androidx.xr.compose.subspace.layout.requiredWidth
 import androidx.xr.compose.unit.Meter
 import app.yongin.xr_circuit.presentation.util.loadTrackPath
+import app.yongin.xr_circuit.presentation.util.sampleAtDistance
 import kotlin.io.path.Path
 
 /** Merged into the app APK from `presentation/src/main/assets/`. */
@@ -28,6 +36,9 @@ private const val MARKER_GLTF_ASSET_FILE_NAME = "CarDotMat.glb"
 private val TrackWidth = Meter(16.44f)
 private val TrackHeight = Meter(0.44f)
 private val TrackDepth = Meter(10.0f)
+
+/** One full lap around the sampled path. */
+private const val LapDurationMs = 45_000
 
 @SuppressLint("RestrictedApi")
 @Composable
@@ -52,6 +63,23 @@ private fun CircuitSpatialContent() {
     val trackState = rememberSpatialGltfModelState(trackSource)
     val markerState = rememberSpatialGltfModelState(markerSource)
     val trackPath = remember { context.loadTrackPath() }
+    val waypoints = trackPath.waypoints_gltf_yup
+
+    val infiniteTransition = rememberInfiniteTransition(label = "carDotLap")
+    val distanceAlongPath by infiniteTransition.animateFloat(
+        initialValue = 0f,
+        targetValue = trackPath.path_length_m,
+        animationSpec = infiniteRepeatable(
+            animation = tween(durationMillis = LapDurationMs, easing = LinearEasing),
+            repeatMode = RepeatMode.Restart,
+        ),
+        label = "distanceAlongPath",
+    )
+    val (markerPos, _) = sampleAtDistance(
+        waypoints,
+        trackPath.path_length_m,
+        distanceAlongPath,
+    )
 
     DisposableEffect(trackState) {
         onDispose {
@@ -61,7 +89,6 @@ private fun CircuitSpatialContent() {
     }
 
     SpatialRow {
-        // Force meter-sized layout so SpatialRow cannot shrink the track away from 1m=1m.
         SpatialGltfModel(
             state = trackState,
             modifier = SubspaceModifier
@@ -69,14 +96,12 @@ private fun CircuitSpatialContent() {
                 .requiredHeight(TrackHeight.toDp())
                 .requiredDepth(TrackDepth.toDp())
         ) {
-            // Pin to waypoint[0] in the same meter space as the track.
-            val wp = trackPath.waypoints_gltf_yup.first()
-            val x = Meter(wp.position[0]).toDp()
-            val y = Meter(wp.position[1]).toDp()
-            val z = Meter(wp.position[2]).toDp()
+            // CarDotMat is authored at local origin; JSON waypoints drive world offset.
+            val x = Meter(markerPos.x).toDp()
+            val y = Meter(markerPos.y).toDp()
+            val z = Meter(markerPos.z).toDp()
             SpatialGltfModel(
                 state = markerState,
-                // No width/height — marker keeps asset scale inside the track's meter space.
                 modifier = SubspaceModifier.absoluteOffset(x = x, y = y, z = z)
             )
         }
