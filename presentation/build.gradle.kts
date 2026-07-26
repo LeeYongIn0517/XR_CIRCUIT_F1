@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.compose)
+    implementation(libs.androidx.xr.compose.material3)
     implementation(libs.runtime)
     implementation(libs.androidx.scenecore)
     testImplementation(libs.junit)
