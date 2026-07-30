@@ -21,11 +21,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
+import app.yongin.xr_circuit.presentation.theme.XR_CIRCUITTheme
 
 /**
  * UI model for a single quick-stat tile in [CircuitProfilePanel].
@@ -79,13 +81,13 @@ fun CircuitProfilePanel(
     Surface(
         modifier = modifier,
         shape = MaterialTheme.shapes.small,
-        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.72f),
+        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.7f),
         contentColor = MaterialTheme.colorScheme.onSurface,
         tonalElevation = 3.dp,
         shadowElevation = 12.dp,
         border = BorderStroke(
             width = 1.dp,
-            color = MaterialTheme.colorScheme.outline.copy(alpha = 0.35f),
+            color = Color.White.copy(alpha = 0.5f),
         ),
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
@@ -128,7 +130,7 @@ fun CircuitProfilePanel(
                         style = MaterialTheme.typography.labelMedium.copy(
                             fontWeight = FontWeight.Bold,
                         ),
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        color = MaterialTheme.colorScheme.outline,
                         modifier = Modifier.padding(top = 8.dp),
                     )
 
@@ -230,7 +232,7 @@ internal val SampleKeyCorners = listOf(
 @PreviewLightDark
 @Composable
 private fun CircuitProfilePanelPreview() {
-    MaterialTheme {
+    XR_CIRCUITTheme {
         Box(modifier = Modifier.padding(16.dp)) {
             CircuitProfilePanel(
                 stats = SampleCircuitStats,
@@ -247,7 +249,7 @@ private fun CircuitProfilePanelPreview() {
 @Preview(showBackground = true, widthDp = 320, heightDp = 480, name = "Empty data skeleton")
 @Composable
 private fun CircuitProfilePanelEmptyPreview() {
-    MaterialTheme {
+    XR_CIRCUITTheme {
         Box(modifier = Modifier.padding(16.dp)) {
             CircuitProfilePanel(
                 stats = emptyList(),

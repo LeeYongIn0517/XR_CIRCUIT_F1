@@ -25,12 +25,13 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
+import app.yongin.xr_circuit.presentation.theme.XR_CIRCUITTheme
 
 /**
  * Selectable row for a key corner / turn entry.
  *
- * Selected state maps to Material 3 filled primary (similar to
- * [androidx.compose.material3.NavigationDrawerItem] active styling).
+ * Selected / idle turn codes use [androidx.compose.material3.ColorScheme.secondary]
+ * (`#3B82F6`) to match Figma; selected fill uses the same secondary token.
  */
 @Composable
 fun KeyCornerListItem(
@@ -41,19 +42,19 @@ fun KeyCornerListItem(
     modifier: Modifier = Modifier,
 ) {
     val containerColor = if (selected) {
-        MaterialTheme.colorScheme.primary
+        MaterialTheme.colorScheme.secondary
     } else {
         MaterialTheme.colorScheme.surfaceContainerHighest.copy(alpha = 0.4f)
     }
     val contentColor = if (selected) {
-        MaterialTheme.colorScheme.onPrimary
+        MaterialTheme.colorScheme.onSecondary
     } else {
         MaterialTheme.colorScheme.onSurface
     }
     val codeColor = if (selected) {
-        MaterialTheme.colorScheme.onPrimary
+        MaterialTheme.colorScheme.onSecondary
     } else {
-        MaterialTheme.colorScheme.primary
+        MaterialTheme.colorScheme.secondary
     }
 
     Surface(
@@ -110,9 +111,9 @@ fun KeyCornerListItem(
                 contentDescription = null,
                 modifier = Modifier.size(if (selected) 18.dp else 16.dp),
                 tint = if (selected) {
-                    MaterialTheme.colorScheme.onPrimary
+                    MaterialTheme.colorScheme.onSecondary
                 } else {
-                    MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
+                    MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)
                 },
             )
         }
@@ -122,7 +123,7 @@ fun KeyCornerListItem(
 @Preview(showBackground = true, widthDp = 288, name = "Key corner — idle")
 @Composable
 private fun KeyCornerListItemIdlePreview() {
-    MaterialTheme {
+    XR_CIRCUITTheme {
         KeyCornerListItem(
             turnCode = "T1",
             name = "La Source",
@@ -137,7 +138,7 @@ private fun KeyCornerListItemIdlePreview() {
 @PreviewLightDark
 @Composable
 private fun KeyCornerListItemSelectedPreview() {
-    MaterialTheme {
+    XR_CIRCUITTheme {
         KeyCornerListItem(
             turnCode = "T2-4",
             name = "Eau Rouge",

@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.yongin.xr_circuit.presentation.theme.XR_CIRCUITTheme
 
 /**
  * Featured card highlighting a circuit lap record.
@@ -45,7 +46,7 @@ fun LapRecordCard(
         ),
         border = BorderStroke(
             width = 1.dp,
-            color = MaterialTheme.colorScheme.primary.copy(alpha = 0.35f),
+            color = MaterialTheme.colorScheme.secondaryContainer,
         ),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
     ) {
@@ -70,7 +71,7 @@ fun LapRecordCard(
                 Text(
                     text = year.toString(),
                     style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = MaterialTheme.colorScheme.outline,
                     maxLines = 1,
                 )
             }
@@ -101,7 +102,7 @@ fun LapRecordCard(
 @PreviewLightDark
 @Composable
 private fun LapRecordCardPreview() {
-    MaterialTheme {
+    XR_CIRCUITTheme {
         LapRecordCard(
             time = "1:41.252",
             driver = "Charles Leclerc",

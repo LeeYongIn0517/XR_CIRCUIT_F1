@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.yongin.xr_circuit.presentation.theme.XR_CIRCUITTheme
 
 /**
  * Compact metric tile for a single circuit statistic (e.g. length, turns).
@@ -38,7 +39,7 @@ fun CircuitStatCard(
         modifier = modifier.fillMaxWidth(),
         shape = MaterialTheme.shapes.extraSmall,
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceContainerHighest.copy(alpha = 0.55f),
+            containerColor = MaterialTheme.colorScheme.surfaceContainerHighest.copy(alpha = 0.5f),
             contentColor = MaterialTheme.colorScheme.onSurface,
         ),
         border = BorderStroke(
@@ -93,7 +94,7 @@ fun CircuitStatCard(
 @PreviewLightDark
 @Composable
 private fun CircuitStatCardPreview() {
-    MaterialTheme {
+    XR_CIRCUITTheme {
         CircuitStatCard(
             label = "Length",
             value = "7.004",
@@ -106,7 +107,7 @@ private fun CircuitStatCardPreview() {
 @Preview(showBackground = true, widthDp = 140, name = "Stat without unit")
 @Composable
 private fun CircuitStatCardNoUnitPreview() {
-    MaterialTheme {
+    XR_CIRCUITTheme {
         CircuitStatCard(
             label = "Turns",
             value = "20",
