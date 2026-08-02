@@ -16,6 +16,7 @@ runtimeVersion = "1.0.0-alpha15"
 scenecore = "1.0.0-alpha16"
 xrComposeMaterial3 = "1.0.0-alpha17"
 hilt = "2.52"
+hiltNavigationCompose = "1.2.0"
 retrofit = "2.11.0"
 okhttp = "4.12.0"
 kotlinxSerialization = "1.7.3"
@@ -24,6 +25,7 @@ kotlinxSerialization = "1.7.3"
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 javax-inject = { group = "javax.inject", name = "javax.inject", version = "1" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

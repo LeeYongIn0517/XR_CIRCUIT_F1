@@ -11,12 +11,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.xr.compose.platform.LocalSpatialCapabilities
 import androidx.xr.compose.spatial.Orbiter
 import androidx.xr.compose.spatial.OrbiterAnchorPoint
@@ -49,6 +49,8 @@ import app.yongin.xr_circuit.presentation.component.GridWeatherPanel
 import app.yongin.xr_circuit.presentation.component.OverlayToggleUi
 import app.yongin.xr_circuit.presentation.util.loadTrackPath
 import app.yongin.xr_circuit.presentation.util.sampleAtDistance
+import app.yongin.xr_circuit.presentation.viewmodel.CircuitUiState
+import app.yongin.xr_circuit.presentation.viewmodel.CircuitViewModel
 import kotlin.io.path.Path
 
 /** Merged into the app APK from `presentation/src/main/assets/`. */
@@ -97,11 +99,17 @@ private val DockAboveTrackGap = 12.dp
 @SuppressLint("RestrictedApi")
 @Composable
 fun CircuitMainScreen(
-    dummyInfo: DummyCircuitSpatialInfo = DummyCircuitSpatialInfoDefault,
+    viewModel: CircuitViewModel = hiltViewModel(),
 ) {
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+
     if (LocalSpatialCapabilities.current.isSpatialUiEnabled) {
         Subspace {
-            CircuitSpatialLayout(dummyInfo = dummyInfo)
+            CircuitSpatialLayout(
+                uiState = uiState,
+                onCornerClick = viewModel::selectCorner,
+                onOverlayToggle = viewModel::toggleOverlay,
+            )
         }
     }
 }
@@ -118,14 +126,11 @@ fun CircuitMainScreen(
  */
 @SuppressLint("RestrictedApi")
 @Composable
-private fun CircuitSpatialLayout(dummyInfo: DummyCircuitSpatialInfo) {
-    var selectedCornerId by remember(dummyInfo.initiallySelectedCornerId) {
-        mutableStateOf(dummyInfo.initiallySelectedCornerId)
-    }
-    var overlays by remember(dummyInfo.overlays) {
-        mutableStateOf(dummyInfo.overlays)
-    }
-
+private fun CircuitSpatialLayout(
+    uiState: CircuitUiState,
+    onCornerClick: (String) -> Unit,
+    onOverlayToggle: (OverlayToggleUi) -> Unit,
+) {
     SpatialColumn(
         modifier = SubspaceModifier.fillMaxWidth().fillMaxHeight(),
         horizontalAlignment = SpatialAlignment.CenterHorizontally,
@@ -145,11 +150,11 @@ private fun CircuitSpatialLayout(dummyInfo: DummyCircuitSpatialInfo) {
                     .rotate(yaw = PanelInwardYawDegrees),
             ) {
                 CircuitProfilePanel(
-                    stats = dummyInfo.stats,
-                    lapRecord = dummyInfo.lapRecord,
-                    corners = dummyInfo.corners,
-                    selectedCornerId = selectedCornerId,
-                    onCornerClick = { selectedCornerId = it.id },
+                    stats = uiState.stats,
+                    lapRecord = uiState.lapRecord,
+                    corners = uiState.corners,
+                    selectedCornerId = uiState.selectedCornerId,
+                    onCornerClick = { onCornerClick(it.id) },
                     modifier = Modifier.fillMaxSize(),
                 )
             }
@@ -178,12 +183,10 @@ private fun CircuitSpatialLayout(dummyInfo: DummyCircuitSpatialInfo) {
                     ),
                 ) {
                     CircuitControlDock(
-                        circuitName = dummyInfo.circuitName,
-                        overlays = overlays,
+                        circuitName = uiState.circuitName.ifBlank { "Silverstone" },
+                        overlays = uiState.overlays,
                         onCircuitClick = { /* circuit picker — wired later */ },
-                        onOverlayToggle = { toggled ->
-                            overlays = overlays.toggle(toggled)
-                        },
+                        onOverlayToggle = onOverlayToggle,
                         onResetClick = { /* view reset — wired later */ },
                     )
                 }
@@ -197,9 +200,9 @@ private fun CircuitSpatialLayout(dummyInfo: DummyCircuitSpatialInfo) {
                     .rotate(yaw = -PanelInwardYawDegrees),
             ) {
                 GridWeatherPanel(
-                    weather = dummyInfo.weather,
-                    drivers = dummyInfo.drivers,
-                    strategy = dummyInfo.strategy,
+                    weather = uiState.weather,
+                    drivers = uiState.drivers,
+                    strategy = uiState.strategy,
                     modifier = Modifier.fillMaxSize(),
                 )
             }
@@ -263,8 +266,3 @@ private fun CircuitSpatialContent() {
         )
     }
 }
-
-private fun List<OverlayToggleUi>.toggle(target: OverlayToggleUi): List<OverlayToggleUi> =
-    map { overlay ->
-        if (overlay.id == target.id) overlay.copy(selected = !overlay.selected) else overlay
-    }
