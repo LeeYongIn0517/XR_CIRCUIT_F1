@@ -43,6 +43,42 @@ val Slate200 = Color(0xFFE2E8F0)
 /** Preview / page backdrop */
 val Slate100 = Color(0xFFF1F5F9)
 
+/** Weather card cool wash — Figma `#60A5FA` @ 20% */
+val SkyBlue400 = Color(0xFF60A5FA)
+
+// Team accent colors (Starting Grid left rail / progress)
+// Existing three match Figma node 1:78; the rest follow common F1 digital palettes.
+
+/** Red Bull — Figma `#3671C6` */
+val TeamRedBull = Color(0xFF3671C6)
+
+/** McLaren — Figma `#FF8700` */
+val TeamMcLaren = Color(0xFFFF8700)
+
+/** Ferrari — Figma `#F91536` */
+val TeamFerrari = Color(0xFFF91536)
+
+/** Mercedes — `#00D2BE` */
+val TeamMercedes = Color(0xFF00D2BE)
+
+/** Aston Martin — `#006F62` */
+val TeamAstonMartin = Color(0xFF006F62)
+
+/** Alpine — BWT pink `#FF87BC` */
+val TeamAlpine = Color(0xFFFF87BC)
+
+/** Williams — `#005AFF` */
+val TeamWilliams = Color(0xFF005AFF)
+
+/** Visa Cash App RB / Racing Bulls — `#2647D8` */
+val TeamVisaCashAppRb = Color(0xFF2647D8)
+
+/** Haas — `#FFFFFF` */
+val TeamHaas = Color(0xFFFFFFFF)
+
+/** Cadillac — `#111111` */
+val TeamCadillac = Color(0xFF111111)
+
 // Dark-theme companions (tonal equivalents, same brand hue)
 val Blue80 = Color(0xFFADC6FF)
 val Blue20 = Color(0xFF001A41)
