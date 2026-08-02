@@ -11,10 +11,8 @@ import javax.inject.Singleton
 /**
  * Aggregates Left Spatial Panel data sources.
  *
- * - Specs / lap record / named corners: local assets (always available offline)
- * - Optional identity enrichment: Jolpica circuit endpoint
- *
- * Domain repository / mappers will sit on top of this in a later step.
+ * Prefer [app.yongin.xr_circuit.domain.repository.CircuitRepository] from domain /
+ * presentation. This helper remains for direct DTO access and Jolpica enrichment.
  */
 @Singleton
 class CircuitInfoDataSource @Inject constructor(
