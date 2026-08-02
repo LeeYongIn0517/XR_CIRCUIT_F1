@@ -1,0 +1,82 @@
+{
+  "id": "silverstone",
+  "name": "Silverstone Circuit",
+  "country": "United Kingdom",
+  "lengthKm": 5.891,
+  "turns": 18,
+  "drsZoneCount": 2,
+  "location": {
+    "latitude": 52.0786,
+    "longitude": -1.0169,
+    "locality": "Silverstone"
+  },
+  "characteristics": {
+    "elevationMinM": 148,
+    "elevationMaxM": 172,
+    "overtakingDifficulty": 2,
+    "tyreWearIndex": 5,
+    "fullThrottlePercent": 71
+  },
+  "lapRecord": {
+    "time": "1:27.097",
+    "driver": "Max Verstappen",
+    "team": "Red Bull Racing",
+    "year": 2020
+  },
+  "sectors": [
+    { "index": 1, "startWaypoint": 0, "endWaypoint": 35, "colorHex": "#E10600" },
+    { "index": 2, "startWaypoint": 35, "endWaypoint": 70, "colorHex": "#00D2BE" },
+    { "index": 3, "startWaypoint": 70, "endWaypoint": 106, "colorHex": "#3B82F6" }
+  ],
+  "drsZones": [
+    { "index": 1, "startWaypoint": 0, "endWaypoint": 8 },
+    { "index": 2, "startWaypoint": 88, "endWaypoint": 102 }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Abbey",
+      "turnCode": "T1",
+      "waypointIndex": 5,
+      "anchor": { "x": 0.0, "y": 0.24, "z": 0.0 },
+      "description": "고속 우코너. 랩 시작 직후 첫 도전 구간."
+    },
+    {
+      "number": 9,
+      "name": "Copse",
+      "turnCode": "T9",
+      "waypointIndex": 30,
+      "anchor": { "x": 0.42, "y": 0.02, "z": -0.31 },
+      "description": "고속 우코너. 진입 290km/h 부근."
+    },
+    {
+      "number": 10,
+      "name": "Maggotts-Becketts",
+      "turnCode": "T10-12",
+      "waypointIndex": 42,
+      "anchor": { "x": 0.55, "y": 0.02, "z": -0.18 },
+      "description": "연속 고속 S자. Silverstone의 시그니처 코너 콤플렉스."
+    },
+    {
+      "number": 15,
+      "name": "Stowe",
+      "turnCode": "T15",
+      "waypointIndex": 78,
+      "anchor": { "x": -0.2, "y": 0.02, "z": 0.48 },
+      "description": "긴 직선 끝 브레이킹 존. 추월 기회가 자주 발생하는 코너."
+    },
+    {
+      "number": 18,
+      "name": "Club",
+      "turnCode": "T16-18",
+      "waypointIndex": 95,
+      "anchor": { "x": -0.35, "y": 0.02, "z": 0.12 },
+      "description": "복합 코너로 피니시 직선 진입 전 마지막 도전."
+    }
+  ],
+  "pitLane": {
+    "speedLimitKmh": 80,
+    "entryWaypoint": 100,
+    "exitWaypoint": 6
+  }
+}

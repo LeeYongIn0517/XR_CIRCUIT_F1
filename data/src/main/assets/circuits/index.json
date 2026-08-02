@@ -1,0 +1,14 @@
+{
+  "circuits": [
+    {
+      "id": "silverstone",
+      "displayName": "Silverstone",
+      "detailAssetPath": "circuits/silverstone.json",
+      "modelAsset": "SilverstoneTrack.glb",
+      "waypointsAsset": "silverstone_waypoints.json",
+      "jolpicaCircuitId": "silverstone",
+      "openF1CircuitKey": 2,
+      "openF1CircuitShortName": "Silverstone"
+    }
+  ]
+}
