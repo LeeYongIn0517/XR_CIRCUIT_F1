@@ -1,6 +1,8 @@
 package app.yongin.xr_circuit.data.network
 
 import android.content.Context
+import android.util.Log
+import app.yongin.xr_circuit.data.BuildConfig
 import app.yongin.xr_circuit.data.remote.jolpica.JolpicaApiService
 import app.yongin.xr_circuit.data.remote.openf1.OpenF1ApiService
 import app.yongin.xr_circuit.data.remote.openmeteo.OpenMeteoApiService
@@ -26,6 +28,7 @@ import retrofit2.converter.kotlinx.serialization.asConverterFactory
 object NetworkModule {
 
     private const val CACHE_SIZE_BYTES = 10L * 1024L * 1024L
+    private const val HTTP_LOG_TAG = "XrCircuitHttp"
 
     @Provides
     @Singleton
@@ -40,8 +43,14 @@ object NetworkModule {
     fun provideOkHttpClient(
         @ApplicationContext context: Context,
     ): OkHttpClient {
-        val logging = HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BASIC
+        val logging = HttpLoggingInterceptor { message ->
+            Log.d(HTTP_LOG_TAG, message)
+        }.apply {
+            level = if (BuildConfig.DEBUG) {
+                HttpLoggingInterceptor.Level.BODY
+            } else {
+                HttpLoggingInterceptor.Level.NONE
+            }
         }
         val cacheDir = File(context.cacheDir, "http_cache")
         return OkHttpClient.Builder()
