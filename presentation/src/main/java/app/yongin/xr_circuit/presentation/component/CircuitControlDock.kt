@@ -15,7 +15,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
-import app.yongin.xr_circuit.presentation.R
 import app.yongin.xr_circuit.presentation.theme.XR_CIRCUITTheme
 
 /**
@@ -46,14 +45,14 @@ data class OverlayToggleUi(
  * - [OverlayToggleButton] — independent layer toggles
  * - [ViewResetButton] — camera / view reset
  *
- * Data binding is deferred: pass sample / empty values until the ViewModel is wired.
+ * Overlay selection is driven by [CircuitControlDockUiState] from the host screen.
  */
 @Composable
 fun CircuitControlDock(
     circuitName: String,
-    overlays: List<OverlayToggleUi>,
+    uiState: CircuitControlDockUiState,
     onCircuitClick: () -> Unit,
-    onOverlayToggle: (OverlayToggleUi) -> Unit,
+    onOverlayToggle: (OverlayLayerId) -> Unit,
     onResetClick: () -> Unit,
     modifier: Modifier = Modifier,
     circuitLabel: String = "CIRCUIT",
@@ -87,11 +86,11 @@ fun CircuitControlDock(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                overlays.forEach { toggle ->
+                uiState.overlays.forEach { toggle ->
                     OverlayToggleButton(
                         label = toggle.label,
                         selected = toggle.selected,
-                        onClick = { onOverlayToggle(toggle) },
+                        onClick = { onOverlayToggle(toggle.id) },
                         iconRes = toggle.iconRes,
                     )
                 }
@@ -105,32 +104,13 @@ fun CircuitControlDock(
     }
 }
 
-// region Sample / Preview data (replace when ViewModel is wired)
+// region Preview data
 
-internal val SampleOverlayToggles = listOf(
-    OverlayToggleUi(
-        id = OverlayLayerId.Sectors,
-        label = "Sectors",
-        selected = true,
-        iconRes = R.drawable.ic_overlay_sectors,
-    ),
-    OverlayToggleUi(
-        id = OverlayLayerId.Drs,
-        label = "DRS",
-        selected = false,
-        iconRes = R.drawable.ic_overlay_drs,
-    ),
-    OverlayToggleUi(
-        id = OverlayLayerId.Pins,
-        label = "Pins",
-        selected = false,
-        iconRes = R.drawable.ic_overlay_pins,
-    ),
+private val PreviewDockUiState = CircuitControlDockUiState()
+
+private val PreviewDockUiStateAllOff = CircuitControlDockUiState(
+    overlays = DefaultOverlayToggles.map { it.copy(selected = false) },
 )
-
-internal val SampleOverlayTogglesAllOff = SampleOverlayToggles.map {
-    it.copy(selected = false)
-}
 
 // endregion
 
@@ -142,7 +122,7 @@ private fun CircuitControlDockPreview() {
         Box(modifier = Modifier.padding(16.dp)) {
             CircuitControlDock(
                 circuitName = "Spa-Francorchamps",
-                overlays = SampleOverlayToggles,
+                uiState = PreviewDockUiState,
                 onCircuitClick = {},
                 onOverlayToggle = {},
                 onResetClick = {},
@@ -158,7 +138,7 @@ private fun CircuitControlDockAllOffPreview() {
         Box(modifier = Modifier.padding(16.dp)) {
             CircuitControlDock(
                 circuitName = "Silverstone",
-                overlays = SampleOverlayTogglesAllOff,
+                uiState = PreviewDockUiStateAllOff,
                 onCircuitClick = {},
                 onOverlayToggle = {},
                 onResetClick = {},
@@ -174,7 +154,7 @@ private fun CircuitControlDockPlaceholderPreview() {
         Box(modifier = Modifier.padding(16.dp)) {
             CircuitControlDock(
                 circuitName = "—",
-                overlays = SampleOverlayTogglesAllOff,
+                uiState = PreviewDockUiStateAllOff,
                 onCircuitClick = {},
                 onOverlayToggle = {},
                 onResetClick = {},

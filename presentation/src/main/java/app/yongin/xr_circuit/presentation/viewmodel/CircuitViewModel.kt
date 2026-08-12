@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import app.yongin.xr_circuit.domain.usecase.GetCircuitDetailUseCase
 import app.yongin.xr_circuit.domain.usecase.GetStartingGridUseCase
 import app.yongin.xr_circuit.domain.usecase.GetTrackWeatherUseCase
-import app.yongin.xr_circuit.presentation.component.OverlayToggleUi
 import app.yongin.xr_circuit.presentation.mapper.toStatsUi
 import app.yongin.xr_circuit.presentation.mapper.toUi
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -32,20 +31,6 @@ class CircuitViewModel @Inject constructor(
 
     fun selectCorner(cornerId: String) {
         _uiState.update { it.copy(selectedCornerId = cornerId) }
-    }
-
-    fun toggleOverlay(target: OverlayToggleUi) {
-        _uiState.update { state ->
-            state.copy(
-                overlays = state.overlays.map { overlay ->
-                    if (overlay.id == target.id) {
-                        overlay.copy(selected = !overlay.selected)
-                    } else {
-                        overlay
-                    }
-                },
-            )
-        }
     }
 
     fun loadCircuit(circuitId: String) {

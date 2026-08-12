@@ -11,7 +11,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -44,9 +46,10 @@ import androidx.xr.compose.subspace.rememberSpatialGltfModelState
 import androidx.xr.compose.unit.DpVolumeOffset
 import androidx.xr.compose.unit.Meter
 import app.yongin.xr_circuit.presentation.component.CircuitControlDock
+import app.yongin.xr_circuit.presentation.component.CircuitControlDockUiState
 import app.yongin.xr_circuit.presentation.component.CircuitProfilePanel
 import app.yongin.xr_circuit.presentation.component.GridWeatherPanel
-import app.yongin.xr_circuit.presentation.component.OverlayToggleUi
+import app.yongin.xr_circuit.presentation.component.OverlayLayerId
 import app.yongin.xr_circuit.presentation.util.loadTrackPath
 import app.yongin.xr_circuit.presentation.util.sampleAtDistance
 import app.yongin.xr_circuit.presentation.viewmodel.CircuitUiState
@@ -102,13 +105,17 @@ fun CircuitMainScreen(
     viewModel: CircuitViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    var dockUiState by remember { mutableStateOf(CircuitControlDockUiState()) }
 
     if (LocalSpatialCapabilities.current.isSpatialUiEnabled) {
         Subspace {
             CircuitSpatialLayout(
                 uiState = uiState,
+                dockUiState = dockUiState,
                 onCornerClick = viewModel::selectCorner,
-                onOverlayToggle = viewModel::toggleOverlay,
+                onOverlayToggle = { id ->
+                    dockUiState = dockUiState.toggleOverlay(id)
+                },
             )
         }
     }
@@ -128,8 +135,9 @@ fun CircuitMainScreen(
 @Composable
 private fun CircuitSpatialLayout(
     uiState: CircuitUiState,
+    dockUiState: CircuitControlDockUiState,
     onCornerClick: (String) -> Unit,
-    onOverlayToggle: (OverlayToggleUi) -> Unit,
+    onOverlayToggle: (OverlayLayerId) -> Unit,
 ) {
     SpatialColumn(
         modifier = SubspaceModifier.fillMaxWidth().fillMaxHeight(),
@@ -184,7 +192,7 @@ private fun CircuitSpatialLayout(
                 ) {
                     CircuitControlDock(
                         circuitName = uiState.circuitName.ifBlank { "Silverstone" },
-                        overlays = uiState.overlays,
+                        uiState = dockUiState,
                         onCircuitClick = { /* circuit picker — wired later */ },
                         onOverlayToggle = onOverlayToggle,
                         onResetClick = { /* view reset — wired later */ },
