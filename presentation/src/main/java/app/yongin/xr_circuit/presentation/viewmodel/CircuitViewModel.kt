@@ -2,6 +2,7 @@ package app.yongin.xr_circuit.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import app.yongin.xr_circuit.domain.usecase.GetCircuitCatalogUseCase
 import app.yongin.xr_circuit.domain.usecase.GetCircuitDetailUseCase
 import app.yongin.xr_circuit.domain.usecase.GetStartingGridUseCase
 import app.yongin.xr_circuit.domain.usecase.GetTrackWeatherUseCase
@@ -17,6 +18,7 @@ import kotlinx.coroutines.launch
 
 @HiltViewModel
 class CircuitViewModel @Inject constructor(
+    private val getCircuitCatalog: GetCircuitCatalogUseCase,
     private val getCircuitDetail: GetCircuitDetailUseCase,
     private val getTrackWeather: GetTrackWeatherUseCase,
     private val getStartingGrid: GetStartingGridUseCase,
@@ -26,11 +28,26 @@ class CircuitViewModel @Inject constructor(
     val uiState: StateFlow<CircuitUiState> = _uiState.asStateFlow()
 
     init {
+        loadCatalog()
         loadCircuit(DEFAULT_CIRCUIT_ID)
     }
 
     fun selectCorner(cornerId: String) {
         _uiState.update { it.copy(selectedCornerId = cornerId) }
+    }
+
+    fun selectCircuit(circuitId: String) {
+        if (circuitId == _uiState.value.circuitId) return
+        loadCircuit(circuitId)
+    }
+
+    private fun loadCatalog() {
+        runCatching { getCircuitCatalog() }
+            .onSuccess { catalog ->
+                _uiState.update {
+                    it.copy(availableCircuits = catalog.map { entry -> entry.toUi() })
+                }
+            }
     }
 
     fun loadCircuit(circuitId: String) {
@@ -119,7 +136,6 @@ class CircuitViewModel @Inject constructor(
     }
 
     companion object {
-        /** Fixed until the top Orbiter circuit picker is wired. */
         const val DEFAULT_CIRCUIT_ID = "silverstone"
     }
 }

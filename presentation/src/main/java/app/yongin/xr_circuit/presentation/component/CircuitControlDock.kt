@@ -41,7 +41,7 @@ data class OverlayToggleUi(
  * Bottom Orbiter / Control Dock (Figma Nav, node `1:164`).
  *
  * Glass Material 3 surface composing:
- * - [CircuitSelectorButton] — circuit picker trigger
+ * - [CircuitSelectorDropdown] — circuit picker with vertical menu
  * - [OverlayToggleButton] — independent layer toggles
  * - [ViewResetButton] — camera / view reset
  *
@@ -50,8 +50,10 @@ data class OverlayToggleUi(
 @Composable
 fun CircuitControlDock(
     circuitName: String,
+    circuits: List<CircuitSummaryUi>,
+    selectedCircuitId: String,
     uiState: CircuitControlDockUiState,
-    onCircuitClick: () -> Unit,
+    onCircuitSelected: (String) -> Unit,
     onOverlayToggle: (OverlayLayerId) -> Unit,
     onResetClick: () -> Unit,
     modifier: Modifier = Modifier,
@@ -74,9 +76,11 @@ fun CircuitControlDock(
             horizontalArrangement = Arrangement.spacedBy(16.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            CircuitSelectorButton(
+            CircuitSelectorDropdown(
                 circuitName = circuitName,
-                onClick = onCircuitClick,
+                circuits = circuits,
+                selectedCircuitId = selectedCircuitId,
+                onCircuitSelected = onCircuitSelected,
                 label = circuitLabel,
                 showTrailingDivider = true,
             )
@@ -112,6 +116,11 @@ private val PreviewDockUiStateAllOff = CircuitControlDockUiState(
     overlays = DefaultOverlayToggles.map { it.copy(selected = false) },
 )
 
+private val PreviewCircuits = listOf(
+    CircuitSummaryUi(id = "silverstone", displayName = "Silverstone"),
+    CircuitSummaryUi(id = "spa", displayName = "Spa-Francorchamps"),
+)
+
 // endregion
 
 @Preview(showBackground = true, widthDp = 560, heightDp = 100, name = "Control dock — default")
@@ -122,8 +131,10 @@ private fun CircuitControlDockPreview() {
         Box(modifier = Modifier.padding(16.dp)) {
             CircuitControlDock(
                 circuitName = "Spa-Francorchamps",
+                circuits = PreviewCircuits,
+                selectedCircuitId = "spa",
                 uiState = PreviewDockUiState,
-                onCircuitClick = {},
+                onCircuitSelected = {},
                 onOverlayToggle = {},
                 onResetClick = {},
             )
@@ -138,8 +149,10 @@ private fun CircuitControlDockAllOffPreview() {
         Box(modifier = Modifier.padding(16.dp)) {
             CircuitControlDock(
                 circuitName = "Silverstone",
+                circuits = PreviewCircuits,
+                selectedCircuitId = "silverstone",
                 uiState = PreviewDockUiStateAllOff,
-                onCircuitClick = {},
+                onCircuitSelected = {},
                 onOverlayToggle = {},
                 onResetClick = {},
             )
@@ -154,8 +167,10 @@ private fun CircuitControlDockPlaceholderPreview() {
         Box(modifier = Modifier.padding(16.dp)) {
             CircuitControlDock(
                 circuitName = "—",
+                circuits = emptyList(),
+                selectedCircuitId = "",
                 uiState = PreviewDockUiStateAllOff,
-                onCircuitClick = {},
+                onCircuitSelected = {},
                 onOverlayToggle = {},
                 onResetClick = {},
             )

@@ -3,16 +3,23 @@ package app.yongin.xr_circuit.presentation.mapper
 import androidx.compose.ui.graphics.Color
 import app.yongin.xr_circuit.domain.model.CircuitCorner
 import app.yongin.xr_circuit.domain.model.CircuitDetail
+import app.yongin.xr_circuit.domain.model.CircuitSummary
 import app.yongin.xr_circuit.domain.model.GridEntry
 import app.yongin.xr_circuit.domain.model.LapRecord
 import app.yongin.xr_circuit.domain.model.TrackWeather
 import app.yongin.xr_circuit.presentation.component.CircuitStatUi
+import app.yongin.xr_circuit.presentation.component.CircuitSummaryUi
 import app.yongin.xr_circuit.presentation.component.GridDriverUi
 import app.yongin.xr_circuit.presentation.component.KeyCornerUi
 import app.yongin.xr_circuit.presentation.component.LapRecordUi
 import app.yongin.xr_circuit.presentation.component.TrackWeatherUi
 import java.util.Locale
 import kotlin.math.roundToInt
+
+internal fun CircuitSummary.toUi(): CircuitSummaryUi = CircuitSummaryUi(
+    id = id,
+    displayName = displayName,
+)
 
 internal fun CircuitDetail.toStatsUi(): List<CircuitStatUi> = buildList {
     add(

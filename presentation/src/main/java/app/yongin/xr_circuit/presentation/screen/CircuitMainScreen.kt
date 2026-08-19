@@ -113,6 +113,7 @@ fun CircuitMainScreen(
                 uiState = uiState,
                 dockUiState = dockUiState,
                 onCornerClick = viewModel::selectCorner,
+                onCircuitSelected = viewModel::selectCircuit,
                 onOverlayToggle = { id ->
                     dockUiState = dockUiState.toggleOverlay(id)
                 },
@@ -137,6 +138,7 @@ private fun CircuitSpatialLayout(
     uiState: CircuitUiState,
     dockUiState: CircuitControlDockUiState,
     onCornerClick: (String) -> Unit,
+    onCircuitSelected: (String) -> Unit,
     onOverlayToggle: (OverlayLayerId) -> Unit,
 ) {
     SpatialColumn(
@@ -192,8 +194,10 @@ private fun CircuitSpatialLayout(
                 ) {
                     CircuitControlDock(
                         circuitName = uiState.circuitName.ifBlank { "Silverstone" },
+                        circuits = uiState.availableCircuits,
+                        selectedCircuitId = uiState.circuitId,
                         uiState = dockUiState,
-                        onCircuitClick = { /* circuit picker — wired later */ },
+                        onCircuitSelected = onCircuitSelected,
                         onOverlayToggle = onOverlayToggle,
                         onResetClick = { /* view reset — wired later */ },
                     )

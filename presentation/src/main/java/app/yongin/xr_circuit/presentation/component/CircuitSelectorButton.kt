@@ -10,12 +10,20 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -34,7 +42,7 @@ import app.yongin.xr_circuit.presentation.theme.XR_CIRCUITTheme
  * Circuit picker trigger for the control dock.
  *
  * Material 3 clickable [Surface] with a label + value hierarchy and trailing
- * chevron. Dropdown menu / sheet binding is deferred — wire [onClick] later.
+ * chevron. Use [CircuitSelectorDropdown] for the anchored menu.
  */
 @Composable
 fun CircuitSelectorButton(
@@ -43,6 +51,7 @@ fun CircuitSelectorButton(
     modifier: Modifier = Modifier,
     label: String = "CIRCUIT",
     showTrailingDivider: Boolean = true,
+    expanded: Boolean = false,
 ) {
     Row(
         modifier = modifier,
@@ -84,7 +93,11 @@ fun CircuitSelectorButton(
                     )
                 }
                 Icon(
-                    imageVector = Icons.Filled.KeyboardArrowDown,
+                    imageVector = if (expanded) {
+                        Icons.Filled.KeyboardArrowUp
+                    } else {
+                        Icons.Filled.KeyboardArrowDown
+                    },
                     contentDescription = null,
                     modifier = Modifier.size(18.dp),
                     tint = MaterialTheme.colorScheme.outline,
@@ -100,6 +113,87 @@ fun CircuitSelectorButton(
                     .background(MaterialTheme.colorScheme.outlineVariant),
             )
         }
+    }
+}
+
+/**
+ * Circuit picker with a vertical [DropdownMenu] anchored below the trigger.
+ *
+ * In spatial UI the menu inherits popup elevation from Jetpack Compose for XR;
+ * in 2D it falls back to a standard Material menu.
+ */
+@Composable
+fun CircuitSelectorDropdown(
+    circuitName: String,
+    circuits: List<CircuitSummaryUi>,
+    selectedCircuitId: String,
+    onCircuitSelected: (String) -> Unit,
+    modifier: Modifier = Modifier,
+    label: String = "CIRCUIT",
+    showTrailingDivider: Boolean = true,
+) {
+    var expanded by remember { mutableStateOf(false) }
+
+    Box(modifier = modifier) {
+        CircuitSelectorButton(
+            circuitName = circuitName,
+            onClick = { expanded = true },
+            label = label,
+            showTrailingDivider = showTrailingDivider,
+            expanded = expanded,
+        )
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+        ) {
+            circuits.forEach { circuit ->
+                val selected = circuit.id == selectedCircuitId
+                DropdownMenuItem(
+                    text = {
+                        Text(
+                            text = circuit.displayName.uppercase(),
+                            style = MaterialTheme.typography.bodyMedium.copy(
+                                fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal,
+                            ),
+                        )
+                    },
+                    onClick = {
+                        expanded = false
+                        onCircuitSelected(circuit.id)
+                    },
+                    leadingIcon = if (selected) {
+                        {
+                            Icon(
+                                imageVector = Icons.Filled.Check,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.secondary,
+                            )
+                        }
+                    } else {
+                        null
+                    },
+                )
+            }
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 280, name = "Circuit selector dropdown")
+@PreviewLightDark
+@Composable
+private fun CircuitSelectorDropdownPreview() {
+    XR_CIRCUITTheme {
+        CircuitSelectorDropdown(
+            circuitName = "Silverstone",
+            circuits = listOf(
+                CircuitSummaryUi(id = "silverstone", displayName = "Silverstone"),
+                CircuitSummaryUi(id = "spa", displayName = "Spa-Francorchamps"),
+                CircuitSummaryUi(id = "monza", displayName = "Monza"),
+            ),
+            selectedCircuitId = "silverstone",
+            onCircuitSelected = {},
+            modifier = Modifier.padding(8.dp),
+        )
     }
 }
 
