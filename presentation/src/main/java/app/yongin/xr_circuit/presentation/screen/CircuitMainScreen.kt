@@ -10,6 +10,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -19,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.xr.compose.platform.LocalSession
 import androidx.xr.compose.platform.LocalSpatialCapabilities
 import androidx.xr.compose.spatial.Orbiter
 import androidx.xr.compose.spatial.OrbiterAnchorPoint
@@ -28,6 +30,7 @@ import androidx.xr.compose.subspace.SpatialBox
 import androidx.xr.compose.subspace.SpatialColumn
 import androidx.xr.compose.subspace.SpatialGltfModel
 import androidx.xr.compose.subspace.SpatialGltfModelSource
+import androidx.xr.compose.subspace.SpatialGltfModelStatus
 import androidx.xr.compose.subspace.SpatialPanel
 import androidx.xr.compose.subspace.SpatialRow
 import androidx.xr.compose.subspace.layout.SpatialAlignment
@@ -45,6 +48,10 @@ import androidx.xr.compose.subspace.layout.rotate
 import androidx.xr.compose.subspace.rememberSpatialGltfModelState
 import androidx.xr.compose.unit.DpVolumeOffset
 import androidx.xr.compose.unit.Meter
+import androidx.xr.runtime.math.Vector4
+import androidx.xr.scenecore.AlphaMode
+import androidx.xr.scenecore.KhronosUnlitMaterial
+import androidx.xr.scenecore.Material
 import app.yongin.xr_circuit.presentation.component.CircuitControlDock
 import app.yongin.xr_circuit.presentation.component.CircuitControlDockUiState
 import app.yongin.xr_circuit.presentation.component.CircuitProfilePanel
@@ -56,9 +63,12 @@ import app.yongin.xr_circuit.presentation.viewmodel.CircuitUiState
 import app.yongin.xr_circuit.presentation.viewmodel.CircuitViewModel
 import kotlin.io.path.Path
 
-/** Merged into the app APK from `presentation/src/main/assets/`. */
-private const val TRACK_GLTF_ASSET_FILE_NAME = "SilverstoneTrack.glb"
+/** Combined track + sector / DRS overlay meshes (single scale-to-fit volume). */
+private const val CIRCUIT_GLTF_ASSET_FILE_NAME = "SilverstoneCircuit.glb"
 private const val MARKER_GLTF_ASSET_FILE_NAME = "CarDotMat.glb"
+
+private val SectorStripNodeNames = setOf("SectorStrip_1", "SectorStrip_2", "SectorStrip_3")
+private val DrsStripNodeNames = setOf("DrsStrip_1", "DrsStrip_2")
 
 /** glTF Y-up track bbox in meters (1:1 with Blender asset). */
 private val TrackWidth = Meter(16.44f)
@@ -180,7 +190,7 @@ private fun CircuitSpatialLayout(
                         .offset(y = -TrackDownOffset, z = TrackForwardOffset),
                     horizontalAlignment = SpatialAlignment.CenterHorizontally,
                 ) {
-                    CircuitSpatialContent()
+                    CircuitSpatialContent(dockUiState = dockUiState)
                 }
 
                 // Anchor to this tall center slot (not the thin track volume)
@@ -224,16 +234,27 @@ private fun CircuitSpatialLayout(
 
 @SuppressLint("RestrictedApi")
 @Composable
-private fun CircuitSpatialContent() {
+private fun CircuitSpatialContent(
+    dockUiState: CircuitControlDockUiState,
+) {
     val context = LocalContext.current
-    val trackSource = remember {
-        SpatialGltfModelSource.fromPath(Path(TRACK_GLTF_ASSET_FILE_NAME))
+    val showSectors = dockUiState.overlays.any {
+        it.id == OverlayLayerId.Sectors && it.selected
+    }
+    val showDrs = dockUiState.overlays.any {
+        it.id == OverlayLayerId.Drs && it.selected
+    }
+
+    val circuitSource = remember {
+        SpatialGltfModelSource.fromPath(Path(CIRCUIT_GLTF_ASSET_FILE_NAME))
     }
     val markerSource = remember {
         SpatialGltfModelSource.fromPath(Path(MARKER_GLTF_ASSET_FILE_NAME))
     }
-    val trackState = rememberSpatialGltfModelState(trackSource)
+    val session = LocalSession.current
+    val circuitState = rememberSpatialGltfModelState(circuitSource)
     val markerState = rememberSpatialGltfModelState(markerSource)
+    var hiddenOverlayMaterial by remember { mutableStateOf<Material?>(null) }
     val trackPath = remember { context.loadTrackPath() }
     val waypoints = trackPath.waypoints_gltf_yup
 
@@ -253,22 +274,45 @@ private fun CircuitSpatialContent() {
         distanceAlongPath,
     )
 
-    DisposableEffect(trackState) {
+    LaunchedEffect(session) {
+        if (session == null || hiddenOverlayMaterial != null) return@LaunchedEffect
+        hiddenOverlayMaterial = KhronosUnlitMaterial.create(session, AlphaMode.BLEND).apply {
+            setBaseColorFactor(Vector4(0f, 0f, 0f, 0f))
+        }
+    }
+
+    DisposableEffect(circuitState, markerState, hiddenOverlayMaterial) {
         onDispose {
-            trackState.close()
+            hiddenOverlayMaterial?.close()
+            circuitState.close()
             markerState.close()
         }
     }
 
+    LaunchedEffect(circuitState.status, showSectors, showDrs, hiddenOverlayMaterial) {
+        if (circuitState.status != SpatialGltfModelStatus.Loaded) return@LaunchedEffect
+        val hiddenMaterial = hiddenOverlayMaterial ?: return@LaunchedEffect
+        circuitState.nodes.forEach { node ->
+            when (node.name) {
+                in SectorStripNodeNames -> {
+                    if (showSectors) node.clearMaterialOverride() else node.setMaterialOverride(hiddenMaterial)
+                }
+                in DrsStripNodeNames -> {
+                    if (showDrs) node.clearMaterialOverride() else node.setMaterialOverride(hiddenMaterial)
+                }
+            }
+        }
+    }
+
+    val trackVolumeModifier = SubspaceModifier
+        .requiredWidth(DisplayTrackWidth.toDp())
+        .requiredHeight(DisplayTrackHeight.toDp())
+        .requiredDepth(DisplayTrackDepth.toDp())
+
     SpatialGltfModel(
-        state = trackState,
-        modifier = SubspaceModifier
-            .requiredWidth(DisplayTrackWidth.toDp())
-            .requiredHeight(DisplayTrackHeight.toDp())
-            .requiredDepth(DisplayTrackDepth.toDp()),
+        state = circuitState,
+        modifier = trackVolumeModifier,
     ) {
-        // CarDotMat is authored at local origin; JSON waypoints drive world offset.
-        // Offsets follow TrackDisplayScale so the marker stays on the scaled path.
         val x = Meter(markerPos.x * TrackDisplayScale).toDp()
         val y = Meter(markerPos.y * TrackDisplayScale).toDp()
         val z = Meter(markerPos.z * TrackDisplayScale).toDp()

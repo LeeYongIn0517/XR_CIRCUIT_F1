@@ -24,9 +24,9 @@
     "year": 2020
   },
   "sectors": [
-    { "index": 1, "startWaypoint": 0, "endWaypoint": 35, "colorHex": "#E10600" },
-    { "index": 2, "startWaypoint": 35, "endWaypoint": 70, "colorHex": "#00D2BE" },
-    { "index": 3, "startWaypoint": 70, "endWaypoint": 106, "colorHex": "#3B82F6" }
+    { "index": 1, "startWaypoint": 0, "endWaypoint": 20, "colorHex": "#FF0000" },
+    { "index": 2, "startWaypoint": 20, "endWaypoint": 71, "colorHex": "#00C8FF" },
+    { "index": 3, "startWaypoint": 71, "endWaypoint": 106, "colorHex": "#FFFF00" }
   ],
   "drsZones": [
     { "index": 1, "startWaypoint": 0, "endWaypoint": 8 },
