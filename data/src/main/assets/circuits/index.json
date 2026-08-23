@@ -1,6 +1,86 @@
 {
   "circuits": [
     {
+      "id": "albert_park",
+      "displayName": "Melbourne",
+      "detailAssetPath": "circuits/albert_park.json",
+      "modelAsset": "MelbourneTrack.glb",
+      "waypointsAsset": "melbourne_waypoints.json",
+      "jolpicaCircuitId": "albert_park",
+      "openF1CircuitKey": 10,
+      "openF1CircuitShortName": "Melbourne"
+    },
+    {
+      "id": "shanghai",
+      "displayName": "Shanghai",
+      "detailAssetPath": "circuits/shanghai.json",
+      "modelAsset": "ShanghaiTrack.glb",
+      "waypointsAsset": "shanghai_waypoints.json",
+      "jolpicaCircuitId": "shanghai",
+      "openF1CircuitKey": 49,
+      "openF1CircuitShortName": "Shanghai"
+    },
+    {
+      "id": "suzuka",
+      "displayName": "Suzuka",
+      "detailAssetPath": "circuits/suzuka.json",
+      "modelAsset": "SuzukaTrack.glb",
+      "waypointsAsset": "suzuka_waypoints.json",
+      "jolpicaCircuitId": "suzuka",
+      "openF1CircuitKey": 46,
+      "openF1CircuitShortName": "Suzuka"
+    },
+    {
+      "id": "miami",
+      "displayName": "Miami",
+      "detailAssetPath": "circuits/miami.json",
+      "modelAsset": "MiamiTrack.glb",
+      "waypointsAsset": "miami_waypoints.json",
+      "jolpicaCircuitId": "miami",
+      "openF1CircuitKey": 151,
+      "openF1CircuitShortName": "Miami"
+    },
+    {
+      "id": "villeneuve",
+      "displayName": "Montreal",
+      "detailAssetPath": "circuits/villeneuve.json",
+      "modelAsset": "MontrealTrack.glb",
+      "waypointsAsset": "montreal_waypoints.json",
+      "jolpicaCircuitId": "villeneuve",
+      "openF1CircuitKey": 23,
+      "openF1CircuitShortName": "Montreal"
+    },
+    {
+      "id": "monaco",
+      "displayName": "Monaco",
+      "detailAssetPath": "circuits/monaco.json",
+      "modelAsset": "MonacoTrack.glb",
+      "waypointsAsset": "monaco_waypoints.json",
+      "jolpicaCircuitId": "monaco",
+      "openF1CircuitKey": 22,
+      "openF1CircuitShortName": "Monte Carlo"
+    },
+    {
+      "id": "catalunya",
+      "displayName": "Barcelona",
+      "detailAssetPath": "circuits/catalunya.json",
+      "modelAsset": "BarcelonaTrack.glb",
+      "waypointsAsset": "barcelona_waypoints.json",
+      "jolpicaCircuitId": "catalunya",
+      "openF1CircuitKey": 15,
+      "openF1CircuitShortName": "Catalunya"
+    },
+    {
+      "id": "red_bull_ring",
+      "displayName": "Red Bull Ring",
+      "detailAssetPath": "circuits/red_bull_ring.json",
+      "modelAsset": "RedBullRingTrack.glb",
+      "waypointsAsset": "red_bull_ring_waypoints.json",
+      "jolpicaCircuitId": "red_bull_ring",
+      "openF1CircuitKey": 19,
+      "openF1CircuitShortName": "Spielberg"
+    },
+    {
       "id": "silverstone",
       "displayName": "Silverstone",
       "detailAssetPath": "circuits/silverstone.json",
@@ -9,6 +89,146 @@
       "jolpicaCircuitId": "silverstone",
       "openF1CircuitKey": 2,
       "openF1CircuitShortName": "Silverstone"
+    },
+    {
+      "id": "spa",
+      "displayName": "Spa-Francorchamps",
+      "detailAssetPath": "circuits/spa.json",
+      "modelAsset": "SpaTrack.glb",
+      "waypointsAsset": "spa_waypoints.json",
+      "jolpicaCircuitId": "spa",
+      "openF1CircuitKey": 7,
+      "openF1CircuitShortName": "Spa-Francorchamps"
+    },
+    {
+      "id": "hungaroring",
+      "displayName": "Hungaroring",
+      "detailAssetPath": "circuits/hungaroring.json",
+      "modelAsset": "HungaroringTrack.glb",
+      "waypointsAsset": "hungaroring_waypoints.json",
+      "jolpicaCircuitId": "hungaroring",
+      "openF1CircuitKey": 4,
+      "openF1CircuitShortName": "Hungaroring"
+    },
+    {
+      "id": "zandvoort",
+      "displayName": "Zandvoort",
+      "detailAssetPath": "circuits/zandvoort.json",
+      "modelAsset": "ZandvoortTrack.glb",
+      "waypointsAsset": "zandvoort_waypoints.json",
+      "jolpicaCircuitId": "zandvoort",
+      "openF1CircuitKey": 55,
+      "openF1CircuitShortName": "Zandvoort"
+    },
+    {
+      "id": "monza",
+      "displayName": "Monza",
+      "detailAssetPath": "circuits/monza.json",
+      "modelAsset": "MonzaTrack.glb",
+      "waypointsAsset": "monza_waypoints.json",
+      "jolpicaCircuitId": "monza",
+      "openF1CircuitKey": 39,
+      "openF1CircuitShortName": "Monza"
+    },
+    {
+      "id": "madring",
+      "displayName": "Madring",
+      "detailAssetPath": "circuits/madring.json",
+      "modelAsset": "MadringTrack.glb",
+      "waypointsAsset": "madring_waypoints.json",
+      "jolpicaCircuitId": "madring",
+      "openF1CircuitKey": 153,
+      "openF1CircuitShortName": "Madring"
+    },
+    {
+      "id": "baku",
+      "displayName": "Baku",
+      "detailAssetPath": "circuits/baku.json",
+      "modelAsset": "BakuTrack.glb",
+      "waypointsAsset": "baku_waypoints.json",
+      "jolpicaCircuitId": "baku",
+      "openF1CircuitKey": 144,
+      "openF1CircuitShortName": "Baku"
+    },
+    {
+      "id": "sepang",
+      "displayName": "Sepang",
+      "detailAssetPath": "circuits/sepang.json",
+      "modelAsset": "SepangTrack.glb",
+      "waypointsAsset": "sepang_waypoints.json",
+      "jolpicaCircuitId": "sepang",
+      "openF1CircuitKey": 12,
+      "openF1CircuitShortName": "Kuala Lumpur"
+    },
+    {
+      "id": "marina_bay",
+      "displayName": "Singapore",
+      "detailAssetPath": "circuits/marina_bay.json",
+      "modelAsset": "SingaporeTrack.glb",
+      "waypointsAsset": "singapore_waypoints.json",
+      "jolpicaCircuitId": "marina_bay",
+      "openF1CircuitKey": 61,
+      "openF1CircuitShortName": "Singapore"
+    },
+    {
+      "id": "americas",
+      "displayName": "Austin",
+      "detailAssetPath": "circuits/americas.json",
+      "modelAsset": "AustinTrack.glb",
+      "waypointsAsset": "austin_waypoints.json",
+      "jolpicaCircuitId": "americas",
+      "openF1CircuitKey": 9,
+      "openF1CircuitShortName": "Austin"
+    },
+    {
+      "id": "rodriguez",
+      "displayName": "Mexico City",
+      "detailAssetPath": "circuits/rodriguez.json",
+      "modelAsset": "MexicoCityTrack.glb",
+      "waypointsAsset": "mexico_city_waypoints.json",
+      "jolpicaCircuitId": "rodriguez",
+      "openF1CircuitKey": 65,
+      "openF1CircuitShortName": "Mexico City"
+    },
+    {
+      "id": "interlagos",
+      "displayName": "Interlagos",
+      "detailAssetPath": "circuits/interlagos.json",
+      "modelAsset": "InterlagosTrack.glb",
+      "waypointsAsset": "interlagos_waypoints.json",
+      "jolpicaCircuitId": "interlagos",
+      "openF1CircuitKey": 14,
+      "openF1CircuitShortName": "Interlagos"
+    },
+    {
+      "id": "vegas",
+      "displayName": "Las Vegas",
+      "detailAssetPath": "circuits/vegas.json",
+      "modelAsset": "LasVegasTrack.glb",
+      "waypointsAsset": "las_vegas_waypoints.json",
+      "jolpicaCircuitId": "vegas",
+      "openF1CircuitKey": 152,
+      "openF1CircuitShortName": "Las Vegas"
+    },
+    {
+      "id": "losail",
+      "displayName": "Lusail",
+      "detailAssetPath": "circuits/losail.json",
+      "modelAsset": "LusailTrack.glb",
+      "waypointsAsset": "lusail_waypoints.json",
+      "jolpicaCircuitId": "losail",
+      "openF1CircuitKey": 150,
+      "openF1CircuitShortName": "Lusail"
+    },
+    {
+      "id": "yas_marina",
+      "displayName": "Yas Marina",
+      "detailAssetPath": "circuits/yas_marina.json",
+      "modelAsset": "YasMarinaTrack.glb",
+      "waypointsAsset": "yas_marina_waypoints.json",
+      "jolpicaCircuitId": "yas_marina",
+      "openF1CircuitKey": 70,
+      "openF1CircuitShortName": "Yas Marina Circuit"
     }
   ]
 }
