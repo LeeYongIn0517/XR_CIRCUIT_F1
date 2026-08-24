@@ -54,6 +54,7 @@ RACE_POINT_OVERLAP = 8
 TRACK_TOP_Z = 0.22
 # Lift overlays slightly above the asphalt to avoid z-fighting in XR.
 SURFACE_LIFT_Z = 0.001
+OVERLAY_THICKNESS = 0.003
 
 REMOVE_PREFIXES = (
     "OverlayProfile",
@@ -179,6 +180,15 @@ def _extract_track_overlay(
     if downward:
         bmesh.ops.reverse_faces(bm_out, faces=downward)
         bm_out.normal_update()
+
+    extruded = bmesh.ops.extrude_face_region(bm_out, geom=bm_out.faces[:])
+    extruded_verts = [elem for elem in extruded["geom"] if isinstance(elem, bmesh.types.BMVert)]
+    bmesh.ops.translate(bm_out, vec=(0.0, 0.0, OVERLAY_THICKNESS), verts=extruded_verts)
+    bm_out.normal_update()
+    for face in bm_out.faces:
+        if face.normal.z < 0.0:
+            bmesh.ops.reverse_faces(bm_out, faces=[face])
+    bm_out.normal_update()
 
     mesh_data = bpy.data.meshes.new(mesh_name)
     bm_out.to_mesh(mesh_data)

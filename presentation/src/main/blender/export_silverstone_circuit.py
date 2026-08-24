@@ -33,17 +33,7 @@ OVERLAY_OBJECTS = (
     "DrsStrip_2",
 )
 
-
-def _parent_overlays_to_track() -> None:
-    """Attach overlay meshes to the track node so they inherit the same transform."""
-    track = bpy.data.objects[TRACK_OBJECT]
-    overlays = [bpy.data.objects[name] for name in OVERLAY_OBJECTS]
-    bpy.ops.object.select_all(action="DESELECT")
-    for obj in overlays:
-        obj.select_set(True)
-    track.select_set(True)
-    bpy.context.view_layer.objects.active = track
-    bpy.ops.object.parent_set(type="OBJECT", keep_transform=True)
+CIRCUIT_OBJECTS = (TRACK_OBJECT, OUTLINE_OBJECT, *OVERLAY_OBJECTS)
 
 
 def _run_script(filename: str) -> None:
@@ -54,13 +44,12 @@ def _run_script(filename: str) -> None:
 def main() -> None:
     _run_script("export_silverstone_track.py")
     _run_script("export_silverstone_overlays.py")
-    _parent_overlays_to_track()
 
     os.makedirs(ASSETS_DIR, exist_ok=True)
     out = os.path.join(ASSETS_DIR, "SilverstoneCircuit.glb")
 
     bpy.ops.object.select_all(action="DESELECT")
-    for name in (TRACK_OBJECT, OUTLINE_OBJECT, *OVERLAY_OBJECTS):
+    for name in CIRCUIT_OBJECTS:
         obj = bpy.data.objects.get(name)
         if obj is None:
             raise RuntimeError(f"Missing object {name!r} — run overlay export first")

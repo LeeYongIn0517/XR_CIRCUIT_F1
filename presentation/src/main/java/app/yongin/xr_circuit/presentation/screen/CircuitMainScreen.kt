@@ -20,7 +20,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.xr.compose.platform.LocalSession
 import androidx.xr.compose.platform.LocalSpatialCapabilities
 import androidx.xr.compose.spatial.Orbiter
 import androidx.xr.compose.spatial.OrbiterAnchorPoint
@@ -48,10 +47,7 @@ import androidx.xr.compose.subspace.layout.rotate
 import androidx.xr.compose.subspace.rememberSpatialGltfModelState
 import androidx.xr.compose.unit.DpVolumeOffset
 import androidx.xr.compose.unit.Meter
-import androidx.xr.runtime.math.Vector4
-import androidx.xr.scenecore.AlphaMode
-import androidx.xr.scenecore.KhronosUnlitMaterial
-import androidx.xr.scenecore.Material
+import androidx.xr.runtime.math.Vector3
 import app.yongin.xr_circuit.presentation.component.CircuitControlDock
 import app.yongin.xr_circuit.presentation.component.CircuitControlDockUiState
 import app.yongin.xr_circuit.presentation.component.CircuitProfilePanel
@@ -69,6 +65,8 @@ private const val MARKER_GLTF_ASSET_FILE_NAME = "CarDotMat.glb"
 
 private val SectorStripNodeNames = setOf("SectorStrip_1", "SectorStrip_2", "SectorStrip_3")
 private val DrsStripNodeNames = setOf("DrsStrip_1", "DrsStrip_2")
+private val VisibleScale = Vector3(1f, 1f, 1f)
+private val HiddenScale = Vector3(0f, 0f, 0f)
 
 /** glTF Y-up track bbox in meters (1:1 with Blender asset). */
 private val TrackWidth = Meter(16.44f)
@@ -251,10 +249,8 @@ private fun CircuitSpatialContent(
     val markerSource = remember {
         SpatialGltfModelSource.fromPath(Path(MARKER_GLTF_ASSET_FILE_NAME))
     }
-    val session = LocalSession.current
     val circuitState = rememberSpatialGltfModelState(circuitSource)
     val markerState = rememberSpatialGltfModelState(markerSource)
-    var hiddenOverlayMaterial by remember { mutableStateOf<Material?>(null) }
     val trackPath = remember { context.loadTrackPath() }
     val waypoints = trackPath.waypoints_gltf_yup
 
@@ -274,32 +270,20 @@ private fun CircuitSpatialContent(
         distanceAlongPath,
     )
 
-    LaunchedEffect(session) {
-        if (session == null || hiddenOverlayMaterial != null) return@LaunchedEffect
-        hiddenOverlayMaterial = KhronosUnlitMaterial.create(session, AlphaMode.BLEND).apply {
-            setBaseColorFactor(Vector4(0f, 0f, 0f, 0f))
-        }
-    }
-
-    DisposableEffect(circuitState, markerState, hiddenOverlayMaterial) {
+    DisposableEffect(circuitState, markerState) {
         onDispose {
-            hiddenOverlayMaterial?.close()
             circuitState.close()
             markerState.close()
         }
     }
 
-    LaunchedEffect(circuitState.status, showSectors, showDrs, hiddenOverlayMaterial) {
+    LaunchedEffect(circuitState.status, showSectors, showDrs) {
         if (circuitState.status != SpatialGltfModelStatus.Loaded) return@LaunchedEffect
-        val hiddenMaterial = hiddenOverlayMaterial ?: return@LaunchedEffect
         circuitState.nodes.forEach { node ->
-            when (node.name) {
-                in SectorStripNodeNames -> {
-                    if (showSectors) node.clearMaterialOverride() else node.setMaterialOverride(hiddenMaterial)
-                }
-                in DrsStripNodeNames -> {
-                    if (showDrs) node.clearMaterialOverride() else node.setMaterialOverride(hiddenMaterial)
-                }
+            node.localScale = when (node.name) {
+                in SectorStripNodeNames -> if (showSectors) VisibleScale else HiddenScale
+                in DrsStripNodeNames -> if (showDrs) VisibleScale else HiddenScale
+                else -> return@forEach
             }
         }
     }
