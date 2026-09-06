@@ -20,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.xr.compose.platform.LocalSession
 import androidx.xr.compose.platform.LocalSpatialCapabilities
 import androidx.xr.compose.spatial.Orbiter
 import androidx.xr.compose.spatial.OrbiterAnchorPoint
@@ -47,7 +48,9 @@ import androidx.xr.compose.subspace.layout.rotate
 import androidx.xr.compose.subspace.rememberSpatialGltfModelState
 import androidx.xr.compose.unit.DpVolumeOffset
 import androidx.xr.compose.unit.Meter
-import androidx.xr.runtime.math.Vector3
+import androidx.xr.runtime.math.Vector4
+import androidx.xr.scenecore.AlphaMode
+import androidx.xr.scenecore.KhronosUnlitMaterial
 import app.yongin.xr_circuit.presentation.component.CircuitControlDock
 import app.yongin.xr_circuit.presentation.component.CircuitControlDockUiState
 import app.yongin.xr_circuit.presentation.component.CircuitProfilePanel
@@ -65,8 +68,9 @@ private const val MARKER_GLTF_ASSET_FILE_NAME = "CarDotMat.glb"
 
 private val SectorStripNodeNames = setOf("SectorStrip_1", "SectorStrip_2", "SectorStrip_3")
 private val DrsStripNodeNames = setOf("DrsStrip_1", "DrsStrip_2")
-private val VisibleScale = Vector3(1f, 1f, 1f)
-private val HiddenScale = Vector3(0f, 0f, 0f)
+
+/** Fully discarded fragments — used to hide overlay nodes without touching transforms. */
+private val InvisibleBaseColor = Vector4(0f, 0f, 0f, 0f)
 
 /** glTF Y-up track bbox in meters (1:1 with Blender asset). */
 private val TrackWidth = Meter(16.44f)
@@ -236,6 +240,7 @@ private fun CircuitSpatialContent(
     dockUiState: CircuitControlDockUiState,
 ) {
     val context = LocalContext.current
+    val session = LocalSession.current
     val showSectors = dockUiState.overlays.any {
         it.id == OverlayLayerId.Sectors && it.selected
     }
@@ -254,6 +259,8 @@ private fun CircuitSpatialContent(
     val trackPath = remember { context.loadTrackPath() }
     val waypoints = trackPath.waypoints_gltf_yup
 
+    var overlayHiddenMaterial by remember { mutableStateOf<KhronosUnlitMaterial?>(null) }
+
     val infiniteTransition = rememberInfiniteTransition(label = "carDotLap")
     val distanceAlongPath by infiniteTransition.animateFloat(
         initialValue = 0f,
@@ -270,6 +277,17 @@ private fun CircuitSpatialContent(
         distanceAlongPath,
     )
 
+    LaunchedEffect(session) {
+        if (session == null) {
+            overlayHiddenMaterial = null
+            return@LaunchedEffect
+        }
+        val material = KhronosUnlitMaterial.create(session, AlphaMode.MASK)
+        material.setBaseColorFactor(InvisibleBaseColor)
+        material.setAlphaCutoff(0.5f)
+        overlayHiddenMaterial = material
+    }
+
     DisposableEffect(circuitState, markerState) {
         onDispose {
             circuitState.close()
@@ -277,12 +295,34 @@ private fun CircuitSpatialContent(
         }
     }
 
-    LaunchedEffect(circuitState.status, showSectors, showDrs) {
+    DisposableEffect(overlayHiddenMaterial) {
+        val material = overlayHiddenMaterial
+        onDispose {
+            material?.close()
+        }
+    }
+
+    // Hide overlays via material override so node transforms stay untouched
+    // (localScale rewrite + reskin was suspected of skewing SectorStrip poses).
+    LaunchedEffect(circuitState.status, showSectors, showDrs, overlayHiddenMaterial) {
         if (circuitState.status != SpatialGltfModelStatus.Loaded) return@LaunchedEffect
+        val hiddenMaterial = overlayHiddenMaterial ?: return@LaunchedEffect
         circuitState.nodes.forEach { node ->
-            node.localScale = when (node.name) {
-                in SectorStripNodeNames -> if (showSectors) VisibleScale else HiddenScale
-                in DrsStripNodeNames -> if (showDrs) VisibleScale else HiddenScale
+            when (node.name) {
+                in SectorStripNodeNames -> {
+                    if (showSectors) {
+                        node.clearMaterialOverride()
+                    } else {
+                        node.setMaterialOverride(hiddenMaterial)
+                    }
+                }
+                in DrsStripNodeNames -> {
+                    if (showDrs) {
+                        node.clearMaterialOverride()
+                    } else {
+                        node.setMaterialOverride(hiddenMaterial)
+                    }
+                }
                 else -> return@forEach
             }
         }
