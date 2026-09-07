@@ -68,8 +68,13 @@ private const val MARKER_GLTF_ASSET_FILE_NAME = "CarDotMat.glb"
 
 private val SectorStripNodeNames = setOf("SectorStrip_1", "SectorStrip_2", "SectorStrip_3")
 private val DrsStripNodeNames = setOf("DrsStrip_1", "DrsStrip_2")
+private val OverlayNodeNames = SectorStripNodeNames + DrsStripNodeNames
 
-/** Fully discarded fragments — used to hide overlay nodes without touching transforms. */
+/**
+ * Impress only draws overlay meshes after a node transform write (see A/B 4).
+ * Wake with a localPose self-assign (no localScale poke) to avoid TRS flip from scale rewrite.
+ * Visibility toggling uses material override — never scale-to-zero.
+ */
 private val InvisibleBaseColor = Vector4(0f, 0f, 0f, 0f)
 
 /** glTF Y-up track bbox in meters (1:1 with Blender asset). */
@@ -260,6 +265,7 @@ private fun CircuitSpatialContent(
     val waypoints = trackPath.waypoints_gltf_yup
 
     var overlayHiddenMaterial by remember { mutableStateOf<KhronosUnlitMaterial?>(null) }
+    var overlaysWoken by remember { mutableStateOf(false) }
 
     val infiniteTransition = rememberInfiniteTransition(label = "carDotLap")
     val distanceAlongPath by infiniteTransition.animateFloat(
@@ -302,10 +308,30 @@ private fun CircuitSpatialContent(
         }
     }
 
-    // Hide overlays via material override so node transforms stay untouched
-    // (localScale rewrite + reskin was suspected of skewing SectorStrip poses).
-    LaunchedEffect(circuitState.status, showSectors, showDrs, overlayHiddenMaterial) {
+    // Wake Impress overlay draw via pose self-assign (no localScale; avoids flip).
+    LaunchedEffect(circuitState.status) {
+        if (circuitState.status != SpatialGltfModelStatus.Loaded) {
+            overlaysWoken = false
+            return@LaunchedEffect
+        }
+        circuitState.nodes.forEach { node ->
+            val name = node.name ?: return@forEach
+            if (name !in OverlayNodeNames) return@forEach
+            node.localPose = node.localPose
+        }
+        overlaysWoken = true
+    }
+
+    // Toggle visibility without scale-to-zero (avoids TRS corruption on hide/show).
+    LaunchedEffect(
+        circuitState.status,
+        showSectors,
+        showDrs,
+        overlayHiddenMaterial,
+        overlaysWoken,
+    ) {
         if (circuitState.status != SpatialGltfModelStatus.Loaded) return@LaunchedEffect
+        if (!overlaysWoken) return@LaunchedEffect
         val hiddenMaterial = overlayHiddenMaterial ?: return@LaunchedEffect
         circuitState.nodes.forEach { node ->
             when (node.name) {
