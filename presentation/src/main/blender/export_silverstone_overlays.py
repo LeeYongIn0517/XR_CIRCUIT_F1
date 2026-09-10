@@ -52,8 +52,8 @@ RACE_POINT_OVERLAP = 8
 
 # Square TrackProfile top in Blender Z-up (glTF Y-up after export).
 TRACK_TOP_Z = 0.22
-# Lift overlays slightly above the asphalt to avoid z-fighting in XR.
-SURFACE_LIFT_Z = 0.001
+# Lift overlays above asphalt. 0.05 m authored ≈ 2.5 mm after TrackDisplayScale 0.05.
+SURFACE_LIFT_Z = 0.05
 OVERLAY_THICKNESS = 0.003
 
 REMOVE_PREFIXES = (

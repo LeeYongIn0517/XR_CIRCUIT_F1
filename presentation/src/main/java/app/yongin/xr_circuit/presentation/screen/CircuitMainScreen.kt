@@ -48,6 +48,9 @@ import androidx.xr.compose.subspace.layout.rotate
 import androidx.xr.compose.subspace.rememberSpatialGltfModelState
 import androidx.xr.compose.unit.DpVolumeOffset
 import androidx.xr.compose.unit.Meter
+import androidx.xr.runtime.math.Pose
+import androidx.xr.runtime.math.Quaternion
+import androidx.xr.runtime.math.Vector3
 import androidx.xr.runtime.math.Vector4
 import androidx.xr.scenecore.AlphaMode
 import androidx.xr.scenecore.KhronosUnlitMaterial
@@ -72,10 +75,17 @@ private val OverlayNodeNames = SectorStripNodeNames + DrsStripNodeNames
 
 /**
  * Impress only draws overlay meshes after a node transform write (see A/B 4).
- * Wake with a localPose self-assign (no localScale poke) to avoid TRS flip from scale rewrite.
- * Visibility toggling uses material override — never scale-to-zero.
+ * Wake with a localPose write; visibility uses material override (never scale-to-zero).
+ *
+ * Transform A/B: Roll 180° about Z, then Yaw 180° about Y (CCW from above; 180° = same CW).
+ * Composition matches SceneCore Euler YXZ: yaw * roll.
  */
 private val InvisibleBaseColor = Vector4(0f, 0f, 0f, 0f)
+private const val OverlayRollAbDegrees = 180f
+private const val OverlayYawAbDegrees = 180f
+private val OverlayAbRotation =
+    Quaternion.fromAxisAngle(Vector3.Up, OverlayYawAbDegrees) *
+        Quaternion.fromAxisAngle(Vector3.Backward, OverlayRollAbDegrees)
 
 /** glTF Y-up track bbox in meters (1:1 with Blender asset). */
 private val TrackWidth = Meter(16.44f)
@@ -308,7 +318,7 @@ private fun CircuitSpatialContent(
         }
     }
 
-    // Wake Impress overlay draw via pose self-assign (no localScale; avoids flip).
+    // Wake + Roll 180° about Z, then Yaw 180° about Y.
     LaunchedEffect(circuitState.status) {
         if (circuitState.status != SpatialGltfModelStatus.Loaded) {
             overlaysWoken = false
@@ -317,7 +327,10 @@ private fun CircuitSpatialContent(
         circuitState.nodes.forEach { node ->
             val name = node.name ?: return@forEach
             if (name !in OverlayNodeNames) return@forEach
-            node.localPose = node.localPose
+            node.localPose = Pose(
+                translation = node.localPose.translation,
+                rotation = OverlayAbRotation,
+            )
         }
         overlaysWoken = true
     }
