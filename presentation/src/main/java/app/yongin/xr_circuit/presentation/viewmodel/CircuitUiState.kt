@@ -1,5 +1,6 @@
 package app.yongin.xr_circuit.presentation.viewmodel
 
+import app.yongin.xr_circuit.domain.model.CircuitSummary
 import app.yongin.xr_circuit.presentation.component.CircuitControlDockUiState
 import app.yongin.xr_circuit.presentation.component.CircuitStatUi
 import app.yongin.xr_circuit.presentation.component.CircuitSummaryUi
@@ -19,6 +20,7 @@ import app.yongin.xr_circuit.presentation.component.TrackWeatherUi
 data class CircuitUiState(
     val circuitId: String = CircuitViewModel.DEFAULT_CIRCUIT_ID,
     val circuitName: String = "",
+    val selectedCircuit: CircuitSummary? = null,
     val availableCircuits: List<CircuitSummaryUi> = emptyList(),
     val stats: List<CircuitStatUi> = emptyList(),
     val lapRecord: LapRecordUi? = null,

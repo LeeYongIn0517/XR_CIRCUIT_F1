@@ -4,11 +4,15 @@
       "id": "albert_park",
       "displayName": "Melbourne",
       "detailAssetPath": "circuits/albert_park.json",
-      "modelAsset": "MelbourneTrack.glb",
+      "modelAsset": "MelbourneCircuit.glb",
       "waypointsAsset": "melbourne_waypoints.json",
       "jolpicaCircuitId": "albert_park",
       "openF1CircuitKey": 10,
-      "openF1CircuitShortName": "Melbourne"
+      "openF1CircuitShortName": "Melbourne",
+      "modelWidthMeters": 16.516904,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 13.989089,
+      "legacyOverlayRotation": false
     },
     {
       "id": "shanghai",
@@ -84,11 +88,12 @@
       "id": "silverstone",
       "displayName": "Silverstone",
       "detailAssetPath": "circuits/silverstone.json",
-      "modelAsset": "SilverstoneTrack.glb",
+      "modelAsset": "SilverstoneCircuit.glb",
       "waypointsAsset": "silverstone_waypoints.json",
       "jolpicaCircuitId": "silverstone",
       "openF1CircuitKey": 2,
-      "openF1CircuitShortName": "Silverstone"
+      "openF1CircuitShortName": "Silverstone",
+      "legacyOverlayRotation": true
     },
     {
       "id": "spa",

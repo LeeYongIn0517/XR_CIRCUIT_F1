@@ -7,7 +7,7 @@ import os
 import bpy
 
 ASSETS_DIR = os.path.normpath(
-    os.path.join(os.path.dirname(__file__), "..", "assets"),
+    os.path.join(os.path.dirname(__file__), "..", "..", "assets"),
 )
 
 ASPHALT = (0.898, 0.906, 0.922, 1.0)  # ~ #E5E7EB

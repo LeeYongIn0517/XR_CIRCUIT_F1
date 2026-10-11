@@ -24,6 +24,14 @@ class CircuitLocalDataSource @Inject constructor(
         return decodeAsset(CATALOG_PATH)
     }
 
+    /** Planned catalog entries become selectable once all three assets are bundled. */
+    fun loadAvailableCatalogEntries(): List<CircuitCatalogEntryDto> =
+        loadCatalog().circuits.filter { entry ->
+            listOf(entry.detailAssetPath, entry.modelAsset, entry.waypointsAsset).all { path ->
+                runCatching { context.assets.open(path).use { } }.isSuccess
+            }
+        }
+
     fun loadCatalogEntry(circuitId: String): CircuitCatalogEntryDto {
         return loadCatalog().circuits.firstOrNull { it.id == circuitId }
             ?: error("Unknown circuit id: $circuitId")

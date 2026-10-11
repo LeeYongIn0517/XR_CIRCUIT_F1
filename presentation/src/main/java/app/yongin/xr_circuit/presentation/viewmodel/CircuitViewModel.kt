@@ -10,6 +10,9 @@ import app.yongin.xr_circuit.presentation.mapper.toStatsUi
 import app.yongin.xr_circuit.presentation.mapper.toUi
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.CancellationException
+import app.yongin.xr_circuit.domain.model.CircuitSummary
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -26,6 +29,10 @@ class CircuitViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(CircuitUiState())
     val uiState: StateFlow<CircuitUiState> = _uiState.asStateFlow()
+
+    private var catalog: List<CircuitSummary> = emptyList()
+    private var weatherJob: Job? = null
+    private var gridJob: Job? = null
 
     init {
         loadCatalog()
@@ -47,13 +54,14 @@ class CircuitViewModel @Inject constructor(
     }
 
     private fun selectCircuit(circuitId: String) {
-        if (circuitId == _uiState.value.circuitId) return
+        if (circuitId == _uiState.value.circuitId || catalog.none { it.id == circuitId }) return
         loadCircuit(circuitId)
     }
 
     private fun loadCatalog() {
         runCatching { getCircuitCatalog() }
             .onSuccess { catalog ->
+                this.catalog = catalog
                 _uiState.update {
                     it.copy(availableCircuits = catalog.map { entry -> entry.toUi() })
                 }
@@ -61,6 +69,20 @@ class CircuitViewModel @Inject constructor(
     }
 
     private fun loadCircuit(circuitId: String) {
+        val entry = catalog.firstOrNull { it.id == circuitId } ?: return
+        weatherJob?.cancel()
+        gridJob?.cancel()
+        _uiState.update {
+            it.copy(
+                circuitId = circuitId,
+                circuitName = entry.displayName,
+                selectedCircuit = entry,
+                weather = null,
+                weatherError = null,
+                drivers = emptyList(),
+                strategy = null,
+            )
+        }
         loadProfile(circuitId)
         loadWeather(circuitId)
         loadGrid(circuitId)
@@ -79,9 +101,6 @@ class CircuitViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         circuitId = detail.id,
-                        circuitName = detail.name
-                            .removeSuffix(" Circuit")
-                            .ifBlank { detail.name },
                         stats = detail.toStatsUi(),
                         lapRecord = detail.lapRecord?.toUi(),
                         corners = corners,
@@ -105,11 +124,15 @@ class CircuitViewModel @Inject constructor(
     }
 
     private fun loadWeather(circuitId: String) {
-        viewModelScope.launch {
+        weatherJob = viewModelScope.launch {
             _uiState.update {
                 it.copy(weatherLoading = true, weatherError = null)
             }
             runCatching { getTrackWeather(circuitId) }
+                .also { result ->
+                    (result.exceptionOrNull() as? CancellationException)?.let { throw it }
+                    if (_uiState.value.circuitId != circuitId) return@launch
+                }
                 .onSuccess { weather ->
                     _uiState.update {
                         it.copy(
@@ -132,8 +155,12 @@ class CircuitViewModel @Inject constructor(
     }
 
     private fun loadGrid(circuitId: String) {
-        viewModelScope.launch {
+        gridJob = viewModelScope.launch {
             runCatching { getStartingGrid(circuitId) }
+                .also { result ->
+                    (result.exceptionOrNull() as? CancellationException)?.let { throw it }
+                    if (_uiState.value.circuitId != circuitId) return@launch
+                }
                 .onSuccess { entries ->
                     _uiState.update {
                         it.copy(drivers = entries.map { entry -> entry.toUi() })

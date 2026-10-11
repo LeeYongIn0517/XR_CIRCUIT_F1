@@ -1,0 +1,66 @@
+"""Run with python3 -m unittest discover -s presentation/src/main/blender/tests -p 'test_*.py'."""
+import json
+import math
+from pathlib import Path
+import struct
+import unittest
+
+ROOT = Path(__file__).resolve().parents[5]
+ASSETS = ROOT / 'presentation/src/main/assets'
+DATA = ROOT / 'data/src/main/assets'
+
+
+def glb(path):
+    raw = path.read_bytes()
+    magic, version, length = struct.unpack_from('<4sII', raw)
+    assert (magic, version, length) == (b'glTF', 2, len(raw))
+    size, kind = struct.unpack_from('<II', raw, 12)
+    assert kind == 0x4e4f534a
+    return json.loads(raw[20:20+size])
+
+
+class TrackAssetsTest(unittest.TestCase):
+    def test_ready_catalog_entries_resolve_to_distinct_combined_models(self):
+        catalog = json.loads((DATA/'circuits/index.json').read_text())['circuits']
+        ready = [c for c in catalog if (DATA/c['detailAssetPath']).exists()
+                 and (ASSETS/c['modelAsset']).exists() and (ASSETS/c['waypointsAsset']).exists()]
+        self.assertTrue({'silverstone', 'albert_park'}.issubset({c['id'] for c in ready}))
+        self.assertEqual(len(ready), len({c['modelAsset'] for c in ready}))
+        for c in ready:
+            doc = glb(ASSETS/c['modelAsset'])
+            names = {n.get('name') for n in doc['nodes']}
+            detail = json.loads((DATA/c['detailAssetPath']).read_text())
+            for s in detail['sectors']: self.assertIn('SectorStrip_'+str(s['index']), names)
+            for z in detail['drsZones']: self.assertIn('DrsStrip_'+str(z['index']), names)
+
+    def test_melbourne_path_sectors_and_wrapped_drs_share_indices(self):
+        detail = json.loads((DATA/'circuits/albert_park.json').read_text())
+        path = json.loads((ASSETS/'melbourne_waypoints.json').read_text())
+        wp = path['waypoints_gltf_yup']; n = len(wp)
+        self.assertTrue(path['closed_loop'])
+        self.assertEqual(list(range(n)), [p['index'] for p in wp])
+        self.assertEqual(4, len(detail['drsZones']))
+        self.assertEqual(14, len(detail['corners']))
+        self.assertEqual(0, detail['sectors'][0]['startWaypoint'])
+        self.assertEqual(n, detail['sectors'][-1]['endWaypoint'])
+        for a,b in zip(detail['sectors'],detail['sectors'][1:]):
+            self.assertEqual(a['endWaypoint'],b['startWaypoint'])
+        for z in detail['drsZones']:
+            self.assertTrue(0 <= z['startWaypoint'] < n)
+            self.assertTrue(0 <= z['endWaypoint'] < n)
+        self.assertTrue(any(z['startWaypoint'] > z['endWaypoint'] for z in detail['drsZones']))
+        distances=[math.dist(a['position'], b['position']) for a,b in zip(wp,wp[1:]+wp[:1])]
+        self.assertLess(max(distances)/min(distances), 1.08)
+        self.assertAlmostEqual(sum(distances),path['path_length_m'],places=4)
+
+    def test_melbourne_bounds_match_catalog_and_centered_origin(self):
+        entry=next(c for c in json.loads((DATA/'circuits/index.json').read_text())['circuits'] if c['id']=='albert_park')
+        doc=glb(ASSETS/entry['modelAsset'])
+        bounds=[doc['accessors'][p['attributes']['POSITION']] for mesh in doc['meshes'] for p in mesh['primitives']]
+        for axis, key in enumerate(['modelWidthMeters','modelHeightMeters','modelDepthMeters']):
+            low=min(a['min'][axis] for a in bounds); high=max(a['max'][axis] for a in bounds)
+            self.assertAlmostEqual(high-low,entry[key],places=4)
+            self.assertAlmostEqual(high+low,0,places=4)
+        self.assertFalse(entry['legacyOverlayRotation'])
+
+if __name__ == '__main__': unittest.main()

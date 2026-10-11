@@ -14,7 +14,7 @@ class CircuitRepositoryImpl @Inject constructor(
 ) : CircuitRepository {
 
     override fun getCatalog(): List<CircuitSummary> {
-        return local.loadCatalog().circuits.map { it.toDomain() }
+        return local.loadAvailableCatalogEntries().map { it.toDomain() }
     }
 
     override fun getCircuitDetail(circuitId: String): CircuitDetail {

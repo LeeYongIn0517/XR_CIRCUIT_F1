@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.key
+import app.yongin.xr_circuit.domain.model.CircuitSummary
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -66,13 +68,7 @@ import app.yongin.xr_circuit.presentation.viewmodel.CircuitUiState
 import app.yongin.xr_circuit.presentation.viewmodel.CircuitViewModel
 import kotlin.io.path.Path
 
-/** Combined track + sector / DRS overlay meshes (single scale-to-fit volume). */
-private const val CIRCUIT_GLTF_ASSET_FILE_NAME = "SilverstoneCircuit.glb"
 private const val MARKER_GLTF_ASSET_FILE_NAME = "CarDotMat.glb"
-
-private val SectorStripNodeNames = setOf("SectorStrip_1", "SectorStrip_2", "SectorStrip_3")
-private val DrsStripNodeNames = setOf("DrsStrip_1", "DrsStrip_2")
-private val OverlayNodeNames = SectorStripNodeNames + DrsStripNodeNames
 
 /**
  * Impress only draws overlay meshes after a node transform write (see A/B 4).
@@ -87,22 +83,6 @@ private const val OverlayYawAbDegrees = 180f
 private val OverlayAbRotation =
     Quaternion.fromAxisAngle(Vector3.Up, OverlayYawAbDegrees) *
         Quaternion.fromAxisAngle(Vector3.Backward, OverlayRollAbDegrees)
-
-/** glTF Y-up track bbox in meters (1:1 with Blender asset). */
-private val TrackWidth = Meter(16.44f)
-private val TrackHeight = Meter(0.44f)
-private val TrackDepth = Meter(10.0f)
-
-/**
- * Keeps the authored track inside ~40% of the recommended content box so
- * left/right panels are not starved by SpatialRow's sequential measure pass.
- * (~0.82m wide × ~0.50m deep)
- */
-private const val TrackDisplayScale = 0.05f
-
-private val DisplayTrackWidth = TrackWidth * TrackDisplayScale
-private val DisplayTrackHeight = TrackHeight * TrackDisplayScale
-private val DisplayTrackDepth = TrackDepth * TrackDisplayScale
 
 /** One full lap around the sampled path. */
 private const val LapDurationMs = 45_000
@@ -199,7 +179,12 @@ private fun CircuitSpatialLayout(
                         .offset(y = -TrackDownOffset, z = TrackForwardOffset),
                     horizontalAlignment = SpatialAlignment.CenterHorizontally,
                 ) {
-                    CircuitSpatialContent(dockUiState = uiState.dockUiState)
+                    uiState.selectedCircuit?.let { circuit ->
+                        // Dispose the previous model, material and lap animation together.
+                        key(circuit.id) {
+                            CircuitSpatialContent(circuit = circuit, dockUiState = uiState.dockUiState)
+                        }
+                    }
                 }
 
                 // Anchor to this tall center slot (not the thin track volume)
@@ -212,7 +197,7 @@ private fun CircuitSpatialLayout(
                     ),
                 ) {
                     CircuitControlDock(
-                        circuitName = uiState.circuitName.ifBlank { "Silverstone" },
+                        circuitName = uiState.circuitName,
                         circuits = uiState.availableCircuits,
                         selectedCircuitId = uiState.circuitId,
                         uiState = uiState.dockUiState,
@@ -244,8 +229,10 @@ private fun CircuitSpatialLayout(
 @SuppressLint("RestrictedApi")
 @Composable
 private fun CircuitSpatialContent(
+    circuit: CircuitSummary,
     dockUiState: CircuitControlDockUiState,
 ) {
+    val displayScale = minOf(0.822f / circuit.modelWidthMeters, 0.5f / circuit.modelDepthMeters)
     val context = LocalContext.current
     val session = LocalSession.current
     val showSectors = dockUiState.overlays.any {
@@ -256,14 +243,14 @@ private fun CircuitSpatialContent(
     }
 
     val circuitSource = remember {
-        SpatialGltfModelSource.fromPath(Path(CIRCUIT_GLTF_ASSET_FILE_NAME))
+        SpatialGltfModelSource.fromPath(Path(circuit.modelAsset))
     }
     val markerSource = remember {
         SpatialGltfModelSource.fromPath(Path(MARKER_GLTF_ASSET_FILE_NAME))
     }
     val circuitState = rememberSpatialGltfModelState(circuitSource)
     val markerState = rememberSpatialGltfModelState(markerSource)
-    val trackPath = remember { context.loadTrackPath() }
+    val trackPath = remember { context.loadTrackPath(circuit.waypointsAsset) }
     val waypoints = trackPath.waypoints_gltf_yup
 
     var overlayHiddenMaterial by remember { mutableStateOf<KhronosUnlitMaterial?>(null) }
@@ -310,7 +297,7 @@ private fun CircuitSpatialContent(
         }
     }
 
-    // Wake + Roll 180° about Z, then Yaw 180° about Y.
+    // Wake every overlay; apply the legacy correction only to assets that request it.
     LaunchedEffect(circuitState.status) {
         if (circuitState.status != SpatialGltfModelStatus.Loaded) {
             overlaysWoken = false
@@ -318,10 +305,10 @@ private fun CircuitSpatialContent(
         }
         circuitState.nodes.forEach { node ->
             val name = node.name ?: return@forEach
-            if (name !in OverlayNodeNames) return@forEach
+            if (!name.startsWith("SectorStrip_") && !name.startsWith("DrsStrip_")) return@forEach
             node.localPose = Pose(
                 translation = node.localPose.translation,
-                rotation = OverlayAbRotation,
+                rotation = if (circuit.legacyOverlayRotation) OverlayAbRotation else node.localPose.rotation,
             )
         }
         overlaysWoken = true
@@ -339,15 +326,15 @@ private fun CircuitSpatialContent(
         if (!overlaysWoken) return@LaunchedEffect
         val hiddenMaterial = overlayHiddenMaterial ?: return@LaunchedEffect
         circuitState.nodes.forEach { node ->
-            when (node.name) {
-                in SectorStripNodeNames -> {
+            when {
+                node.name?.startsWith("SectorStrip_") == true -> {
                     if (showSectors) {
                         node.clearMaterialOverride()
                     } else {
                         node.setMaterialOverride(hiddenMaterial)
                     }
                 }
-                in DrsStripNodeNames -> {
+                node.name?.startsWith("DrsStrip_") == true -> {
                     if (showDrs) {
                         node.clearMaterialOverride()
                     } else {
@@ -360,17 +347,17 @@ private fun CircuitSpatialContent(
     }
 
     val trackVolumeModifier = SubspaceModifier
-        .requiredWidth(DisplayTrackWidth.toDp())
-        .requiredHeight(DisplayTrackHeight.toDp())
-        .requiredDepth(DisplayTrackDepth.toDp())
+        .requiredWidth(Meter(circuit.modelWidthMeters * displayScale).toDp())
+        .requiredHeight(Meter(circuit.modelHeightMeters * displayScale).toDp())
+        .requiredDepth(Meter(circuit.modelDepthMeters * displayScale).toDp())
 
     SpatialGltfModel(
         state = circuitState,
         modifier = trackVolumeModifier,
     ) {
-        val x = Meter(markerPos.x * TrackDisplayScale).toDp()
-        val y = Meter(markerPos.y * TrackDisplayScale).toDp()
-        val z = Meter(markerPos.z * TrackDisplayScale).toDp()
+        val x = Meter(markerPos.x * displayScale).toDp()
+        val y = Meter(markerPos.y * displayScale).toDp()
+        val z = Meter(markerPos.z * displayScale).toDp()
         SpatialGltfModel(
             state = markerState,
             modifier = SubspaceModifier.absoluteOffset(x = x, y = y, z = z),

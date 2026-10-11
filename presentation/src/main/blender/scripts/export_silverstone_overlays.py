@@ -12,8 +12,8 @@ Exports (Y-up glTF):
   presentation/src/main/assets/SilverstoneSectors.glb
   presentation/src/main/assets/SilverstoneDrs.glb
 
-Run inside Blender:
-  blender --background SilverstoneTrack.blend --python export_silverstone_overlays.py
+Run from presentation/src/main/blender:
+  blender --background models/SilverstoneTrack.blend --python scripts/export_silverstone_overlays.py
   or Scripting workspace → Run Script
 """
 
@@ -27,7 +27,7 @@ from mathutils import Vector
 
 WP_COUNT = 107
 ASSETS_DIR = os.path.normpath(
-    os.path.join(os.path.dirname(__file__), "..", "assets"),
+    os.path.join(os.path.dirname(__file__), "..", "..", "assets"),
 )
 
 # F1 official Silverstone sectors (clockwise from finish line):

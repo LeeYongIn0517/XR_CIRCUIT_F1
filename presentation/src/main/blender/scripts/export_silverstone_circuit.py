@@ -4,10 +4,10 @@ Export a single combined Silverstone circuit GLB (track + sector + DRS overlays)
 The app loads this one file and toggles overlay nodes at runtime, avoiding extra
 SpatialGltfModel siblings that break Subspace layout orientation.
 
-Run:
-  blender --background SilverstoneTrack.blend --python export_silverstone_track.py
-  blender --background SilverstoneTrack.blend --python export_silverstone_overlays.py
-  blender --background SilverstoneTrack.blend --python export_silverstone_circuit.py
+Run from presentation/src/main/blender:
+  blender --background models/SilverstoneTrack.blend --python scripts/export_silverstone_track.py
+  blender --background models/SilverstoneTrack.blend --python scripts/export_silverstone_overlays.py
+  blender --background models/SilverstoneTrack.blend --python scripts/export_silverstone_circuit.py
 
 Or only the last script after the blend already contains generated strip meshes.
 """
@@ -20,7 +20,7 @@ import runpy
 import bpy
 
 ASSETS_DIR = os.path.normpath(
-    os.path.join(os.path.dirname(__file__), "..", "assets"),
+    os.path.join(os.path.dirname(__file__), "..", "..", "assets"),
 )
 
 TRACK_OBJECT = "SilverstoneTrack"
