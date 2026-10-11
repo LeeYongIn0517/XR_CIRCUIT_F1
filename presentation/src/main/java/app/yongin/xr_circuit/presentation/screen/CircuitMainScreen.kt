@@ -61,6 +61,7 @@ import app.yongin.xr_circuit.presentation.component.GridWeatherPanel
 import app.yongin.xr_circuit.presentation.component.OverlayLayerId
 import app.yongin.xr_circuit.presentation.util.loadTrackPath
 import app.yongin.xr_circuit.presentation.util.sampleAtDistance
+import app.yongin.xr_circuit.presentation.viewmodel.CircuitIntent
 import app.yongin.xr_circuit.presentation.viewmodel.CircuitUiState
 import app.yongin.xr_circuit.presentation.viewmodel.CircuitViewModel
 import kotlin.io.path.Path
@@ -132,18 +133,12 @@ fun CircuitMainScreen(
     viewModel: CircuitViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-    var dockUiState by remember { mutableStateOf(CircuitControlDockUiState()) }
 
     if (LocalSpatialCapabilities.current.isSpatialUiEnabled) {
         Subspace {
             CircuitSpatialLayout(
                 uiState = uiState,
-                dockUiState = dockUiState,
-                onCornerClick = viewModel::selectCorner,
-                onCircuitSelected = viewModel::selectCircuit,
-                onOverlayToggle = { id ->
-                    dockUiState = dockUiState.toggleOverlay(id)
-                },
+                onIntent = viewModel::onIntent,
             )
         }
     }
@@ -163,10 +158,7 @@ fun CircuitMainScreen(
 @Composable
 private fun CircuitSpatialLayout(
     uiState: CircuitUiState,
-    dockUiState: CircuitControlDockUiState,
-    onCornerClick: (String) -> Unit,
-    onCircuitSelected: (String) -> Unit,
-    onOverlayToggle: (OverlayLayerId) -> Unit,
+    onIntent: (CircuitIntent) -> Unit,
 ) {
     SpatialColumn(
         modifier = SubspaceModifier.fillMaxWidth().fillMaxHeight(),
@@ -191,7 +183,7 @@ private fun CircuitSpatialLayout(
                     lapRecord = uiState.lapRecord,
                     corners = uiState.corners,
                     selectedCornerId = uiState.selectedCornerId,
-                    onCornerClick = { onCornerClick(it.id) },
+                    onCornerClick = { onIntent(CircuitIntent.SelectCorner(it.id)) },
                     modifier = Modifier.fillMaxSize(),
                 )
             }
@@ -207,7 +199,7 @@ private fun CircuitSpatialLayout(
                         .offset(y = -TrackDownOffset, z = TrackForwardOffset),
                     horizontalAlignment = SpatialAlignment.CenterHorizontally,
                 ) {
-                    CircuitSpatialContent(dockUiState = dockUiState)
+                    CircuitSpatialContent(dockUiState = uiState.dockUiState)
                 }
 
                 // Anchor to this tall center slot (not the thin track volume)
@@ -223,9 +215,9 @@ private fun CircuitSpatialLayout(
                         circuitName = uiState.circuitName.ifBlank { "Silverstone" },
                         circuits = uiState.availableCircuits,
                         selectedCircuitId = uiState.circuitId,
-                        uiState = dockUiState,
-                        onCircuitSelected = onCircuitSelected,
-                        onOverlayToggle = onOverlayToggle,
+                        uiState = uiState.dockUiState,
+                        onCircuitSelected = { onIntent(CircuitIntent.SelectCircuit(it)) },
+                        onOverlayToggle = { onIntent(CircuitIntent.ToggleOverlay(it)) },
                         onResetClick = { /* view reset — wired later */ },
                     )
                 }

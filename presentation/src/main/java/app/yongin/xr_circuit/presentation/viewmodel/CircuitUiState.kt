@@ -1,5 +1,6 @@
 package app.yongin.xr_circuit.presentation.viewmodel
 
+import app.yongin.xr_circuit.presentation.component.CircuitControlDockUiState
 import app.yongin.xr_circuit.presentation.component.CircuitStatUi
 import app.yongin.xr_circuit.presentation.component.CircuitSummaryUi
 import app.yongin.xr_circuit.presentation.component.GridDriverUi
@@ -13,8 +14,7 @@ import app.yongin.xr_circuit.presentation.component.TrackWeatherUi
  *
  * Profile (Left) comes from local circuit assets; weather / grid are remote and
  * may be null while loading or after failure.
- * Overlay toggle selection lives in
- * [app.yongin.xr_circuit.presentation.component.CircuitControlDockUiState] on the screen.
+ * User selection, including overlay toggles, is managed by [CircuitViewModel].
  */
 data class CircuitUiState(
     val circuitId: String = CircuitViewModel.DEFAULT_CIRCUIT_ID,
@@ -24,6 +24,7 @@ data class CircuitUiState(
     val lapRecord: LapRecordUi? = null,
     val corners: List<KeyCornerUi> = emptyList(),
     val selectedCornerId: String? = null,
+    val dockUiState: CircuitControlDockUiState = CircuitControlDockUiState(),
     val weather: TrackWeatherUi? = null,
     val drivers: List<GridDriverUi> = emptyList(),
     val strategy: StrategyInsightUi? = null,

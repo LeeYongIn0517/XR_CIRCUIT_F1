@@ -32,11 +32,21 @@ class CircuitViewModel @Inject constructor(
         loadCircuit(DEFAULT_CIRCUIT_ID)
     }
 
-    fun selectCorner(cornerId: String) {
-        _uiState.update { it.copy(selectedCornerId = cornerId) }
+    fun onIntent(intent: CircuitIntent) {
+        when (intent) {
+            is CircuitIntent.SelectCorner -> {
+                _uiState.update { it.copy(selectedCornerId = intent.cornerId) }
+            }
+            is CircuitIntent.SelectCircuit -> selectCircuit(intent.circuitId)
+            is CircuitIntent.ToggleOverlay -> {
+                _uiState.update {
+                    it.copy(dockUiState = it.dockUiState.toggleOverlay(intent.overlayId))
+                }
+            }
+        }
     }
 
-    fun selectCircuit(circuitId: String) {
+    private fun selectCircuit(circuitId: String) {
         if (circuitId == _uiState.value.circuitId) return
         loadCircuit(circuitId)
     }
@@ -50,7 +60,7 @@ class CircuitViewModel @Inject constructor(
             }
     }
 
-    fun loadCircuit(circuitId: String) {
+    private fun loadCircuit(circuitId: String) {
         loadProfile(circuitId)
         loadWeather(circuitId)
         loadGrid(circuitId)

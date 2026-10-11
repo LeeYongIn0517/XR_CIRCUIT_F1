@@ -5,8 +5,8 @@ import app.yongin.xr_circuit.presentation.R
 /**
  * User-driven selection state for [CircuitControlDock] overlay toggles.
  *
- * Managed at the screen level ([app.yongin.xr_circuit.presentation.screen.CircuitMainScreen])
- * rather than in the circuit data ViewModel.
+ * Included in [app.yongin.xr_circuit.presentation.viewmodel.CircuitUiState] and
+ * managed by [app.yongin.xr_circuit.presentation.viewmodel.CircuitViewModel].
  */
 data class CircuitControlDockUiState(
     val overlays: List<OverlayToggleUi> = DefaultOverlayToggles,
