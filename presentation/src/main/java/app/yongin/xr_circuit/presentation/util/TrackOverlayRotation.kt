@@ -1,0 +1,47 @@
+package app.yongin.xr_circuit.presentation.util
+
+import androidx.xr.runtime.math.Quaternion
+import androidx.xr.runtime.math.Vector3
+import app.yongin.xr_circuit.domain.model.CircuitSummary
+
+/** Parent-space corrections in degrees, applied on top of the authored GLB rotation. */
+private data class OverlayAngles(
+    val yaw: Float = 0f,
+    val pitch: Float = 0f,
+    val roll: Float = 0f,
+) {
+    fun applyTo(authoredRotation: Quaternion): Quaternion =
+        Quaternion.fromAxisAngle(Vector3.Up, yaw) *
+            Quaternion.fromAxisAngle(Vector3.Right, pitch) *
+            Quaternion.fromAxisAngle(Vector3.Backward, roll) * authoredRotation
+}
+
+// Albert Park: edit these values independently for sectors and DRS.
+// yaw: Y axis (turn on the track plane), pitch: X axis, roll: Z axis.
+private val AlbertParkSectorAngles = OverlayAngles(yaw = 180f, pitch = 0f, roll = 180f)
+private val AlbertParkDrsAngles = OverlayAngles(yaw = 180f, pitch = 0f, roll = 180f)
+
+// Original Silverstone correction replaces the authored rotation: yaw * roll.
+private val LegacyOverlayRotation =
+    Quaternion.fromAxisAngle(Vector3.Up, 180f) *
+        Quaternion.fromAxisAngle(Vector3.Backward, 180f)
+
+/** Resolves overlay rotation; unrelated nodes keep their authored rotation. */
+internal fun resolveTrackOverlayRotation(
+    circuit: CircuitSummary,
+    nodeName: String,
+    authoredRotation: Quaternion,
+): Quaternion {
+    val isSector = nodeName.startsWith("SectorStrip_")
+    val isDrs = nodeName.startsWith("DrsStrip_")
+    if (!isSector && !isDrs) return authoredRotation
+
+    return when {
+        circuit.id == "albert_park" -> {
+            val angles = if (isSector) AlbertParkSectorAngles else AlbertParkDrsAngles
+            angles.applyTo(authoredRotation)
+        }
+        circuit.legacyOverlayRotation -> LegacyOverlayRotation
+        else -> authoredRotation
+    }
+}
