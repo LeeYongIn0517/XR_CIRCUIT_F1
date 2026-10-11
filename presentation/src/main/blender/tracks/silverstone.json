@@ -1,0 +1,634 @@
+{
+  "id": "silverstone",
+  "name": "Silverstone Circuit",
+  "assetPrefix": "Silverstone",
+  "waypointsAsset": "silverstone_waypoints.json",
+  "layoutYear": 2025,
+  "source": "https://www.fia.com/system/files/decision-document/2025_british_grand_prix_-_event_notes_-_circuit_map_v2.pdf",
+  "notes": "Stylized centreline traced from page 2 of FIA 2025 British GP Circuit Map V2 (03 July 2025), in the 893 x 1263 reference image. Starts at the control line in race direction. Sector 1 ends 110 m before T6, sector 2 ends 50 m after T14. DRS 1 activates 30 m after T5; DRS 2 activates at T14. Endpoints are visual approximations before T6/T15 braking, not survey coordinates. 2025 DRS layout, not 2026 active aero.",
+  "centerline": [
+    [
+      276,
+      750
+    ],
+    [
+      311,
+      701
+    ],
+    [
+      346,
+      652
+    ],
+    [
+      365,
+      628
+    ],
+    [
+      376,
+      622
+    ],
+    [
+      391,
+      622
+    ],
+    [
+      415,
+      625
+    ],
+    [
+      442,
+      627
+    ],
+    [
+      459,
+      623
+    ],
+    [
+      475,
+      614
+    ],
+    [
+      499,
+      594
+    ],
+    [
+      523,
+      574
+    ],
+    [
+      536,
+      566
+    ],
+    [
+      543,
+      568
+    ],
+    [
+      548,
+      582
+    ],
+    [
+      556,
+      605
+    ],
+    [
+      562,
+      615
+    ],
+    [
+      571,
+      616
+    ],
+    [
+      578,
+      605
+    ],
+    [
+      584,
+      585
+    ],
+    [
+      588,
+      565
+    ],
+    [
+      588,
+      549
+    ],
+    [
+      583,
+      540
+    ],
+    [
+      568,
+      528
+    ],
+    [
+      530,
+      496
+    ],
+    [
+      489,
+      462
+    ],
+    [
+      448,
+      428
+    ],
+    [
+      407,
+      394
+    ],
+    [
+      394,
+      381
+    ],
+    [
+      385,
+      375
+    ],
+    [
+      373,
+      375
+    ],
+    [
+      363,
+      380
+    ],
+    [
+      358,
+      388
+    ],
+    [
+      357,
+      407
+    ],
+    [
+      354,
+      421
+    ],
+    [
+      346,
+      431
+    ],
+    [
+      335,
+      434
+    ],
+    [
+      325,
+      430
+    ],
+    [
+      318,
+      423
+    ],
+    [
+      315,
+      414
+    ],
+    [
+      318,
+      402
+    ],
+    [
+      330,
+      375
+    ],
+    [
+      342,
+      349
+    ],
+    [
+      360,
+      331
+    ],
+    [
+      375,
+      319
+    ],
+    [
+      393,
+      313
+    ],
+    [
+      432,
+      307
+    ],
+    [
+      481,
+      301
+    ],
+    [
+      527,
+      296
+    ],
+    [
+      559,
+      293
+    ],
+    [
+      572,
+      294
+    ],
+    [
+      581,
+      301
+    ],
+    [
+      588,
+      315
+    ],
+    [
+      598,
+      343
+    ],
+    [
+      606,
+      372
+    ],
+    [
+      612,
+      404
+    ],
+    [
+      615,
+      438
+    ],
+    [
+      617,
+      472
+    ],
+    [
+      621,
+      494
+    ],
+    [
+      630,
+      509
+    ],
+    [
+      637,
+      522
+    ],
+    [
+      638,
+      532
+    ],
+    [
+      633,
+      551
+    ],
+    [
+      627,
+      570
+    ],
+    [
+      625,
+      584
+    ],
+    [
+      630,
+      599
+    ],
+    [
+      640,
+      614
+    ],
+    [
+      646,
+      626
+    ],
+    [
+      647,
+      638
+    ],
+    [
+      642,
+      649
+    ],
+    [
+      629,
+      659
+    ],
+    [
+      612,
+      669
+    ],
+    [
+      599,
+      680
+    ],
+    [
+      590,
+      697
+    ],
+    [
+      566,
+      741
+    ],
+    [
+      538,
+      795
+    ],
+    [
+      511,
+      847
+    ],
+    [
+      490,
+      889
+    ],
+    [
+      471,
+      919
+    ],
+    [
+      459,
+      938
+    ],
+    [
+      449,
+      947
+    ],
+    [
+      437,
+      952
+    ],
+    [
+      425,
+      953
+    ],
+    [
+      413,
+      949
+    ],
+    [
+      404,
+      940
+    ],
+    [
+      396,
+      925
+    ],
+    [
+      387,
+      910
+    ],
+    [
+      373,
+      891
+    ],
+    [
+      354,
+      870
+    ],
+    [
+      333,
+      847
+    ],
+    [
+      318,
+      831
+    ],
+    [
+      310,
+      826
+    ],
+    [
+      304,
+      833
+    ],
+    [
+      298,
+      840
+    ],
+    [
+      291,
+      843
+    ],
+    [
+      282,
+      839
+    ],
+    [
+      272,
+      827
+    ],
+    [
+      262,
+      812
+    ],
+    [
+      257,
+      798
+    ],
+    [
+      255,
+      789
+    ],
+    [
+      257,
+      781
+    ]
+  ],
+  "sectorBoundaries": [
+    [
+      424,
+      408
+    ],
+    [
+      590,
+      697
+    ]
+  ],
+  "drsZones": [
+    {
+      "index": 1,
+      "start": [
+        573,
+        532
+      ],
+      "end": [
+        403,
+        391
+      ]
+    },
+    {
+      "index": 2,
+      "start": [
+        599,
+        680
+      ],
+      "end": [
+        490,
+        889
+      ]
+    }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Abbey",
+      "point": [
+        376,
+        622
+      ],
+      "description": "고속 우코너. 랩 시작 직후 첫 도전 구간."
+    },
+    {
+      "number": 2,
+      "name": "Farm",
+      "point": [
+        442,
+        627
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Village",
+      "point": [
+        536,
+        566
+      ]
+    },
+    {
+      "number": 4,
+      "name": "The Loop",
+      "point": [
+        562,
+        615
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Aintree",
+      "point": [
+        583,
+        540
+      ]
+    },
+    {
+      "number": 6,
+      "name": "Brooklands",
+      "point": [
+        373,
+        375
+      ]
+    },
+    {
+      "number": 7,
+      "name": "Luffield",
+      "point": [
+        335,
+        434
+      ]
+    },
+    {
+      "number": 8,
+      "name": "Woodcote",
+      "point": [
+        375,
+        319
+      ]
+    },
+    {
+      "number": 9,
+      "name": "Copse",
+      "point": [
+        572,
+        294
+      ],
+      "description": "고속 우코너. 진입 290km/h 부근."
+    },
+    {
+      "number": 10,
+      "name": "Maggotts",
+      "point": [
+        621,
+        494
+      ],
+      "description": "연속 고속 S자. Silverstone의 시그니처 코너 콤플렉스."
+    },
+    {
+      "number": 11,
+      "name": "Maggotts",
+      "point": [
+        637,
+        522
+      ]
+    },
+    {
+      "number": 12,
+      "name": "Becketts",
+      "point": [
+        625,
+        584
+      ]
+    },
+    {
+      "number": 13,
+      "name": "Becketts",
+      "point": [
+        647,
+        638
+      ]
+    },
+    {
+      "number": 14,
+      "name": "Chapel",
+      "point": [
+        599,
+        680
+      ]
+    },
+    {
+      "number": 15,
+      "name": "Stowe",
+      "point": [
+        437,
+        952
+      ],
+      "description": "긴 직선 끝 브레이킹 존. 추월 기회가 자주 발생하는 코너."
+    },
+    {
+      "number": 16,
+      "name": "Vale",
+      "point": [
+        310,
+        826
+      ]
+    },
+    {
+      "number": 17,
+      "name": "Club",
+      "point": [
+        291,
+        843
+      ]
+    },
+    {
+      "number": 18,
+      "name": "Club",
+      "point": [
+        255,
+        789
+      ],
+      "description": "복합 코너로 피니시 직선 진입 전 마지막 도전."
+    }
+  ],
+  "profile": {
+    "country": "United Kingdom",
+    "lengthKm": 5.891,
+    "turns": 18,
+    "location": {
+      "latitude": 52.0786,
+      "longitude": -1.0169,
+      "locality": "Silverstone"
+    },
+    "characteristics": {
+      "elevationMinM": 148,
+      "elevationMaxM": 172,
+      "overtakingDifficulty": 2,
+      "tyreWearIndex": 5,
+      "fullThrottlePercent": 71
+    },
+    "lapRecord": {
+      "time": "1:27.097",
+      "driver": "Max Verstappen",
+      "team": "Red Bull Racing",
+      "year": 2020
+    }
+  },
+  "pitLane": {
+    "speedLimitKmh": 80,
+    "entry": [
+      373,
+      891
+    ],
+    "exit": [
+      442,
+      627
+    ]
+  }
+}

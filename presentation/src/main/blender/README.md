@@ -4,7 +4,7 @@
 
 - `models/`: editable Blender models (`.blend`).
 - `backups/`: preserved Blender backup files (`.blend1`).
-- `scripts/`: model generation and Silverstone export scripts.
+- `scripts/`: shared model generator and Silverstone compatibility entry points.
 - `tracks/`: authored track definitions.
 - `previews/`: rendered model previews.
 - `tests/`: asset validation tests.
@@ -31,13 +31,24 @@ Rebuild from the repository root (Blender 5.1):
   --python presentation/src/main/blender/scripts/build_track.py -- tracks/albert_park.json
 ```
 
-To export the existing Silverstone model from the repository root:
+## Silverstone
+
+`tracks/silverstone.json` traces page 2 of the [FIA 2025 British GP Circuit Map V2](https://www.fia.com/system/files/decision-document/2025_british_grand_prix_-_event_notes_-_circuit_map_v2.pdf).
+It uses the same generator, materials, cross section and 512 equally spaced
+waypoints as Albert Park: 18 turns, three sectors and two DRS zones.
+Coordinates refer to a 893 x 1263 rendering of the map, starting at the control
+line in race direction. Locations are visual approximations, not survey data.
+Sector boundaries are 110 m before T6 and 50 m after T14; DRS activation is
+30 m after T5 and at T14. This is the 2025 DRS layout.
 
 ```sh
 /Applications/Blender.app/Contents/MacOS/Blender --background \
-  presentation/src/main/blender/models/SilverstoneTrack.blend \
-  --python presentation/src/main/blender/scripts/export_silverstone_circuit.py
+  --python presentation/src/main/blender/scripts/build_track.py -- tracks/silverstone.json
 ```
+
+The generated editable model is `models/SilverstoneTrack.blend`, with preview
+`previews/SilverstonePreview.png`. The old `export_silverstone_*.py` entry points
+now rebuild all assets from this definition so stale overlay indices cannot return.
 
 Run in a separate background process: the script replaces that process's scene.
 The script writes the blend, preview, GLBs, equally spaced closed-loop waypoints,
@@ -59,7 +70,8 @@ The model, overlays and waypoints share a centred glTF Y-up coordinate system.
 4. Set `modelWidthMeters`, `modelHeightMeters`, `modelDepthMeters` to the full
    glTF bounds including the outline. Centre the combined model and waypoints
    around that bounding box. The generator writes these values automatically.
-   `legacyOverlayRotation` is only true for the existing Silverstone asset.
+   `legacyOverlayRotation` is false for both generated circuits. Both use the same
+   SceneCore overlay correction in `TrackOverlayRotation.kt`.
 5. Bundle all three assets (detail, combined GLB, waypoints). Only complete
    entries appear in the selector; planned entries stay in the catalog.
 

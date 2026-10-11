@@ -151,7 +151,10 @@ def main():
     bpy.context.preferences.filepaths.save_version = 0
     bpy.ops.wm.save_as_mainfile(filepath=str(MODELS/(prefix+'Track.blend')))
     bpy.ops.render.render(write_still=True)
-    detail=dict(config['profile'],id=config['id'],name=config['name'],drsZoneCount=len(zones),sectors=[dict(index=i+1,startWaypoint=boundaries[i],endWaypoint=boundaries[i+1],colorHex=['#FF0000','#00C8FF','#FFFF00'][i]) for i in range(3)],drsZones=drs,corners=[dict(number=c['number'],name=c['name'],turnCode='T'+str(c['number']),waypointIndex=nearest(c['point'])) for c in config['corners']])
+    detail=dict(config['profile'],id=config['id'],name=config['name'],drsZoneCount=len(zones),sectors=[dict(index=i+1,startWaypoint=boundaries[i],endWaypoint=boundaries[i+1],colorHex=['#FF0000','#00C8FF','#FFFF00'][i]) for i in range(3)],drsZones=drs,corners=[dict(number=c['number'],name=c['name'],turnCode='T'+str(c['number']),waypointIndex=nearest(c['point']), **({'description': c['description']} if 'description' in c else {})) for c in config['corners']])
+    if 'pitLane' in config:
+        pit = config['pitLane']
+        detail['pitLane'] = dict(speedLimitKmh=pit['speedLimitKmh'], entryWaypoint=nearest(pit['entry']), exitWaypoint=nearest(pit['exit']))
     (ROOT/'data/src/main/assets/circuits'/ (config['id']+'.json')).write_text(json.dumps(detail,indent=2)+'\n')
     catalog_path=ROOT/'data/src/main/assets/circuits/index.json'
     catalog=json.loads(catalog_path.read_text())

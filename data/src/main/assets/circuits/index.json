@@ -93,7 +93,10 @@
       "jolpicaCircuitId": "silverstone",
       "openF1CircuitKey": 2,
       "openF1CircuitShortName": "Silverstone",
-      "legacyOverlayRotation": true
+      "legacyOverlayRotation": false,
+      "modelWidthMeters": 16.519634,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 10.007112
     },
     {
       "id": "spa",
