@@ -150,3 +150,19 @@ height and forward vectors use the same elevation; path length includes it.
 Planar sampling remains uniform by 2D arc length, so ramp sample distances
 can be slightly longer in 3D. Existing definitions default to zero elevation.
 All map-derived positions are visual approximations of the 2025 layout.
+
+## Miami
+
+`tracks/miami.json` traces page 2 of the [FIA 2025 Miami GP map V1](https://www.fia.com/system/files/decision-document/2025_miami_grand_prix_-_event_notes_-_circuit_map_pit_lane_quarantine_zone_emergency_exits_and_red_zones_.pdf),
+issued 1 May 2025, rendered at 893 x 1263 pixels. The 5.412 km layout has
+19 turns, three sectors and three DRS zones. S1 is 110 m after T8; S2 is
+70 m after T16. DRS begins 30 m after T9, 525 m after T16, and at T19 apex.
+Zone 3 wraps the control-line seam. Endpoints approximate braking approaches
+to T11/T17/T1. Coordinates are visually traced approximations; the model is
+planar and does not reproduce surveyed terrain elevation.
+
+Rebuild with `scripts/build_track.py -- tracks/miami.json` in background Blender.
+Outputs: `models/MiamiTrack.blend`, `previews/MiamiPreview.png`,
+`MiamiCircuit.glb`, separate track/sector/DRS GLBs, and `miami_waypoints.json`
+with 512 samples. The shared materials, heights and overlay correction apply;
+track widths and offsets are uniformly reduced for the tight T14-T16 complex.

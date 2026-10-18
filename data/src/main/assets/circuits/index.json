@@ -46,11 +46,15 @@
       "id": "miami",
       "displayName": "Miami",
       "detailAssetPath": "circuits/miami.json",
-      "modelAsset": "MiamiTrack.glb",
+      "modelAsset": "MiamiCircuit.glb",
       "waypointsAsset": "miami_waypoints.json",
       "jolpicaCircuitId": "miami",
       "openF1CircuitKey": 151,
-      "openF1CircuitShortName": "Miami"
+      "openF1CircuitShortName": "Miami",
+      "modelWidthMeters": 16.258389,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 17.447061,
+      "legacyOverlayRotation": false
     },
     {
       "id": "villeneuve",
