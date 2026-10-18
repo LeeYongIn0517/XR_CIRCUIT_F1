@@ -24,7 +24,7 @@ class TrackAssetsTest(unittest.TestCase):
         catalog = json.loads((DATA/'circuits/index.json').read_text())['circuits']
         ready = [c for c in catalog if (DATA/c['detailAssetPath']).exists()
                  and (ASSETS/c['modelAsset']).exists() and (ASSETS/c['waypointsAsset']).exists()]
-        self.assertTrue({'silverstone', 'albert_park', 'shanghai', 'marina_bay', 'suzuka', 'miami', 'villeneuve', 'monaco', 'catalunya'}.issubset({c['id'] for c in ready}))
+        self.assertTrue({'silverstone', 'albert_park', 'shanghai', 'marina_bay', 'suzuka', 'miami', 'villeneuve', 'monaco', 'catalunya', 'red_bull_ring'}.issubset({c['id'] for c in ready}))
         self.assertEqual(len(ready), len({c['modelAsset'] for c in ready}))
         for c in ready:
             doc = glb(ASSETS/c['modelAsset'])
@@ -369,6 +369,46 @@ class TrackAssetsTest(unittest.TestCase):
         self.assertTrue(corners[8] < back['startWaypoint'] < back['endWaypoint'] < corners[9])
         main = detail['drsZones'][1]
         self.assertTrue(corners[13] < main['startWaypoint'] < 512)
+        self.assertTrue(0 < main['endWaypoint'] < corners[0])
+        distances = [math.dist(a['position'], b['position']) for a, b in zip(wp, wp[1:]+wp[:1])]
+        self.assertLess(max(distances)/min(distances), 1.08)
+        self.assertAlmostEqual(sum(distances), path['path_length_m'], places=4)
+        self.assertFalse(entry['legacyOverlayRotation'])
+        doc = glb(ASSETS/entry['modelAsset'])
+        bounds = [doc['accessors'][p['attributes']['POSITION']] for m in doc['meshes'] for p in m['primitives']]
+        for axis, key in enumerate(['modelWidthMeters', 'modelHeightMeters', 'modelDepthMeters']):
+            low = min(a['min'][axis] for a in bounds)
+            high = max(a['max'][axis] for a in bounds)
+            self.assertAlmostEqual(high-low, entry[key], places=4)
+            self.assertAlmostEqual(high+low, 0, places=4)
+
+    def test_red_bull_ring_generated_contract(self):
+        detail = json.loads((DATA/'circuits/red_bull_ring.json').read_text())
+        path = json.loads((ASSETS/'red_bull_ring_waypoints.json').read_text())
+        entry = next(c for c in json.loads((DATA/'circuits/index.json').read_text())['circuits'] if c['id'] == 'red_bull_ring')
+        wp = path['waypoints_gltf_yup']
+        self.assertEqual(2025, path['layout_year'])
+        self.assertIn('2025_austrian_grand_prix', path['source'])
+        self.assertTrue(path['closed_loop'])
+        self.assertEqual(512, len(wp))
+        self.assertEqual(list(range(512)), [p['index'] for p in wp])
+        self.assertEqual(list(range(1, 11)), [c['number'] for c in detail['corners']])
+        corners = [c['waypointIndex'] for c in detail['corners']]
+        self.assertTrue(all(a < b for a, b in zip(corners, corners[1:])))
+        self.assertEqual(3, len(detail['sectors']))
+        self.assertEqual(0, detail['sectors'][0]['startWaypoint'])
+        self.assertEqual(512, detail['sectors'][-1]['endWaypoint'])
+        for a, b in zip(detail['sectors'], detail['sectors'][1:]):
+            self.assertEqual(a['endWaypoint'], b['startWaypoint'])
+        self.assertTrue(corners[1] < detail['sectors'][0]['endWaypoint'] < corners[2])
+        self.assertTrue(corners[5] < detail['sectors'][1]['endWaypoint'] < corners[6])
+        self.assertEqual(3, len(detail['drsZones']))
+        back = detail['drsZones'][0]
+        self.assertTrue(corners[0] < back['startWaypoint'] < back['endWaypoint'] < corners[2])
+        second = detail['drsZones'][1]
+        self.assertTrue(corners[2] < second['startWaypoint'] < second['endWaypoint'] < corners[3])
+        main = detail['drsZones'][2]
+        self.assertTrue(corners[9] < main['startWaypoint'] < 512)
         self.assertTrue(0 < main['endWaypoint'] < corners[0])
         distances = [math.dist(a['position'], b['position']) for a, b in zip(wp, wp[1:]+wp[:1])]
         self.assertLess(max(distances)/min(distances), 1.08)

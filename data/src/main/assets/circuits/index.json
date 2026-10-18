@@ -102,11 +102,15 @@
       "id": "red_bull_ring",
       "displayName": "Red Bull Ring",
       "detailAssetPath": "circuits/red_bull_ring.json",
-      "modelAsset": "RedBullRingTrack.glb",
+      "modelAsset": "RedBullRingCircuit.glb",
       "waypointsAsset": "red_bull_ring_waypoints.json",
       "jolpicaCircuitId": "red_bull_ring",
       "openF1CircuitKey": 19,
-      "openF1CircuitShortName": "Spielberg"
+      "openF1CircuitShortName": "Spielberg",
+      "modelWidthMeters": 16.517713,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 25.839084,
+      "legacyOverlayRotation": false
     },
     {
       "id": "silverstone",

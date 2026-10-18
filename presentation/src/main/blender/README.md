@@ -211,3 +211,18 @@ Rebuild with `scripts/build_track.py -- tracks/catalunya.json` in background
 Blender. Outputs use the `Barcelona` prefix (combined and separate GLBs,
 editable blend, preview), and `barcelona_waypoints.json` with 512 samples.
 Materials, track cross section and overlay rotations match Albert Park.
+
+## Red Bull Ring
+
+`tracks/red_bull_ring.json` traces page 2 of the FIA 2025 Austrian GP event
+notes, Circuit Map V2 (26 June 2025), at 990 x 1400 pixels. The source URL
+is stored in the definition and exported waypoint metadata. Ten turns,
+three sectors and three DRS zones use one shared 512-sample centreline.
+S1 is 170 m before T3; S2 is 60 m before T7. DRS activation is 102 m after
+T1, 100 m after T3, and 106 m after T10. DRS ends approximate braking
+approaches; the last zone wraps the control line. The source map specifies
+4.326 km centreline length. Geometry is a planar visual approximation.
+
+Rebuild with `scripts/build_track.py -- tracks/red_bull_ring.json` in
+background Blender. RedBullRing assets use Albert Park materials, cross
+section, overlay heights and rotation handling.
