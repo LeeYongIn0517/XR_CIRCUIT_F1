@@ -138,7 +138,7 @@ def main():
     bpy.ops.object.camera_add(location=(0,-10,23))
     camera=bpy.context.object;camera.name='PreviewCamera'
     camera.rotation_euler=(Vector((0,0,0))-camera.location).to_track_quat('-Z','Y').to_euler()
-    camera.data.type='ORTHO';camera.data.ortho_scale=19
+    camera.data.type='ORTHO';camera.data.ortho_scale=config.get('previewOrthoScale', 19)
     scene.camera=camera
     scene.render.engine='BLENDER_WORKBENCH'
     scene.display.shading.light='STUDIO';scene.display.shading.color_type='MATERIAL'

@@ -24,7 +24,7 @@ class TrackAssetsTest(unittest.TestCase):
         catalog = json.loads((DATA/'circuits/index.json').read_text())['circuits']
         ready = [c for c in catalog if (DATA/c['detailAssetPath']).exists()
                  and (ASSETS/c['modelAsset']).exists() and (ASSETS/c['waypointsAsset']).exists()]
-        self.assertTrue({'silverstone', 'albert_park'}.issubset({c['id'] for c in ready}))
+        self.assertTrue({'silverstone', 'albert_park', 'shanghai'}.issubset({c['id'] for c in ready}))
         self.assertEqual(len(ready), len({c['modelAsset'] for c in ready}))
         for c in ready:
             doc = glb(ASSETS/c['modelAsset'])
@@ -100,5 +100,47 @@ class TrackAssetsTest(unittest.TestCase):
         self.assertIn('characteristics', detail)
         for key in ['entryWaypoint', 'exitWaypoint']:
             self.assertTrue(0 <= detail['pitLane'][key] < len(wp))
+
+    def test_shanghai_generated_contract(self):
+        detail = json.loads((DATA/'circuits/shanghai.json').read_text())
+        path = json.loads((ASSETS/'shanghai_waypoints.json').read_text())
+        entry = next(c for c in json.loads((DATA/'circuits/index.json').read_text())['circuits'] if c['id'] == 'shanghai')
+        wp = path['waypoints_gltf_yup']
+        self.assertEqual(2025, path['layout_year'])
+        self.assertIn('2025_chinese_grand_prix', path['source'])
+        self.assertTrue(path['closed_loop'])
+        self.assertEqual(512, len(wp))
+        self.assertEqual(list(range(512)), [p['index'] for p in wp])
+        self.assertEqual(list(range(1, 17)), [c['number'] for c in detail['corners']])
+        corners = [c['waypointIndex'] for c in detail['corners']]
+        self.assertTrue(all(a < b for a, b in zip(corners, corners[1:])))
+        self.assertEqual(3, len(detail['sectors']))
+        self.assertEqual(0, detail['sectors'][0]['startWaypoint'])
+        self.assertEqual(512, detail['sectors'][-1]['endWaypoint'])
+        for a, b in zip(detail['sectors'], detail['sectors'][1:]):
+            self.assertEqual(a['endWaypoint'], b['startWaypoint'])
+        self.assertTrue(corners[4] < detail['sectors'][0]['endWaypoint'] < corners[5])
+        self.assertTrue(corners[9] < detail['sectors'][1]['endWaypoint'] < corners[10])
+        self.assertEqual(2, len(detail['drsZones']))
+        back, main = detail['drsZones']
+        self.assertTrue(corners[12] < back['startWaypoint'] < back['endWaypoint'] < corners[13])
+        self.assertTrue(corners[15] < main['startWaypoint'] < 512)
+        self.assertTrue(0 < main['endWaypoint'] < corners[0])
+        distances = [math.dist(a['position'], b['position']) for a, b in zip(wp, wp[1:]+wp[:1])]
+        # Sampling is uniform along the curve. The straight chord across the
+        # tight T14 hairpin is shorter than its arc; other samples stay uniform.
+        hairpin = corners[13]
+        regular = [d for i, d in enumerate(distances) if abs(i-hairpin) > 1]
+        self.assertLess(max(regular)/min(regular), 1.08)
+        self.assertGreater(min(distances), .85 * max(distances))
+        self.assertAlmostEqual(sum(distances), path['path_length_m'], places=4)
+        self.assertFalse(entry['legacyOverlayRotation'])
+        doc = glb(ASSETS/entry['modelAsset'])
+        bounds = [doc['accessors'][p['attributes']['POSITION']] for m in doc['meshes'] for p in m['primitives']]
+        for axis, key in enumerate(['modelWidthMeters', 'modelHeightMeters', 'modelDepthMeters']):
+            low = min(a['min'][axis] for a in bounds)
+            high = max(a['max'][axis] for a in bounds)
+            self.assertAlmostEqual(high-low, entry[key], places=4)
+            self.assertAlmostEqual(high+low, 0, places=4)
 
 if __name__ == '__main__': unittest.main()

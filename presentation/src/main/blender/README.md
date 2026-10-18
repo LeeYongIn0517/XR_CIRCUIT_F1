@@ -57,6 +57,27 @@ Sector ranges are start-inclusive/end-exclusive; the final sector ends at the
 waypoint count (the seam). DRS ranges with end < start cross the start/finish line.
 The model, overlays and waypoints share a centred glTF Y-up coordinate system.
 
+## Shanghai
+
+`tracks/shanghai.json` traces page 2 of the [FIA 2025 Chinese GP Circuit Map V1](https://www.fia.com/system/files/decision-document/2025_chinese_grand_prix_-_event_notes_-_circuit_map_pit_lane_and_quarantine_zone.pdf),
+issued 20 March 2025, in a 893 x 1263 pixel rendering. It starts at the control
+line in race direction: 16 turns, 5.451 km, three sectors and two DRS zones.
+Sector boundaries are 150 m before T6 and 143 m before T11. DRS activates
+375 m after T13 and 98 m after T16; the latter crosses the start/finish seam.
+Endpoints approximate the T14/T1 braking approaches. The trace is a visual
+approximation, not survey data, and represents the 2025 DRS layout.
+
+```sh
+/Applications/Blender.app/Contents/MacOS/Blender --background \
+  --python presentation/src/main/blender/scripts/build_track.py -- tracks/shanghai.json
+```
+
+The shared generator produces `models/ShanghaiTrack.blend`,
+`previews/ShanghaiPreview.png`, `ShanghaiCircuit.glb`, separate track/sector/DRS
+GLBs and `shanghai_waypoints.json` with 512 samples. Materials, cross section,
+coordinate system and SceneCore overlay corrections match Albert Park.
+`previewOrthoScale` widens only the preview framing to fit Shanghai's proportions.
+
 ## Add another circuit
 
 1. Add a catalog entry in `data/src/main/assets/circuits/index.json` with a unique
@@ -70,14 +91,14 @@ The model, overlays and waypoints share a centred glTF Y-up coordinate system.
 4. Set `modelWidthMeters`, `modelHeightMeters`, `modelDepthMeters` to the full
    glTF bounds including the outline. Centre the combined model and waypoints
    around that bounding box. The generator writes these values automatically.
-   `legacyOverlayRotation` is false for both generated circuits. Both use the same
+   `legacyOverlayRotation` is false for all generated circuits. They use the same
    SceneCore overlay correction in `TrackOverlayRotation.kt`.
 5. Bundle all three assets (detail, combined GLB, waypoints). Only complete
    entries appear in the selector; planned entries stay in the catalog.
 
 `CircuitIntent.SelectCircuit` changes the profile, model and car path together.
 The old composition is disposed using the circuit ID as a key, restarting the
-lap animation. `CircuitIntent.ToggleOverlay` controls both circuits and preserves
+lap animation. `CircuitIntent.ToggleOverlay` controls all circuits and preserves
 user choices when switching. Previous weather/grid jobs are cancelled and their
 late results are ignored.
 
