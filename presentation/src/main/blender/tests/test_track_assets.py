@@ -24,7 +24,7 @@ class TrackAssetsTest(unittest.TestCase):
         catalog = json.loads((DATA/'circuits/index.json').read_text())['circuits']
         ready = [c for c in catalog if (DATA/c['detailAssetPath']).exists()
                  and (ASSETS/c['modelAsset']).exists() and (ASSETS/c['waypointsAsset']).exists()]
-        self.assertTrue({'silverstone', 'albert_park', 'shanghai', 'marina_bay'}.issubset({c['id'] for c in ready}))
+        self.assertTrue({'silverstone', 'albert_park', 'shanghai', 'marina_bay', 'suzuka'}.issubset({c['id'] for c in ready}))
         self.assertEqual(len(ready), len({c['modelAsset'] for c in ready}))
         for c in ready:
             doc = glb(ASSETS/c['modelAsset'])
@@ -171,6 +171,57 @@ class TrackAssetsTest(unittest.TestCase):
         self.assertTrue(0 < main['endWaypoint'] < corners[0])
         distances = [math.dist(a['position'], b['position']) for a, b in zip(wp, wp[1:]+wp[:1])]
         self.assertLess(max(distances)/min(distances), 1.08)
+        self.assertAlmostEqual(sum(distances), path['path_length_m'], places=4)
+        self.assertFalse(entry['legacyOverlayRotation'])
+        doc = glb(ASSETS/entry['modelAsset'])
+        bounds = [doc['accessors'][p['attributes']['POSITION']] for m in doc['meshes'] for p in m['primitives']]
+        for axis, key in enumerate(['modelWidthMeters', 'modelHeightMeters', 'modelDepthMeters']):
+            low = min(a['min'][axis] for a in bounds)
+            high = max(a['max'][axis] for a in bounds)
+            self.assertAlmostEqual(high-low, entry[key], places=4)
+            self.assertAlmostEqual(high+low, 0, places=4)
+
+    def test_suzuka_generated_contract(self):
+        detail = json.loads((DATA/'circuits/suzuka.json').read_text())
+        path = json.loads((ASSETS/'suzuka_waypoints.json').read_text())
+        entry = next(c for c in json.loads((DATA/'circuits/index.json').read_text())['circuits'] if c['id'] == 'suzuka')
+        wp = path['waypoints_gltf_yup']
+        self.assertEqual(2025, path['layout_year'])
+        self.assertIn('2025_japanese_grand_prix', path['source'])
+        self.assertTrue(path['closed_loop'])
+        self.assertEqual(512, len(wp))
+        self.assertEqual(list(range(512)), [p['index'] for p in wp])
+        self.assertEqual(list(range(1, 19)), [c['number'] for c in detail['corners']])
+        corners = [c['waypointIndex'] for c in detail['corners']]
+        self.assertTrue(all(a < b for a, b in zip(corners, corners[1:])))
+        self.assertEqual(3, len(detail['sectors']))
+        self.assertEqual(0, detail['sectors'][0]['startWaypoint'])
+        self.assertEqual(512, detail['sectors'][-1]['endWaypoint'])
+        for a, b in zip(detail['sectors'], detail['sectors'][1:]):
+            self.assertEqual(a['endWaypoint'], b['startWaypoint'])
+        self.assertTrue(corners[6] < detail['sectors'][0]['endWaypoint'] < corners[7])
+        self.assertTrue(corners[13] < detail['sectors'][1]['endWaypoint'] < corners[14])
+        self.assertEqual(1, len(detail['drsZones']))
+        main = detail['drsZones'][0]
+        self.assertTrue(corners[17] < main['startWaypoint'] < 512)
+        self.assertTrue(0 < main['endWaypoint'] < corners[0])
+        # At the figure-eight crossing the T14-T15 road must clear T9-T10.
+        lower = range(corners[8], corners[9]+1)
+        upper = range(corners[13], corners[14]+1)
+        a, b = min(((i, j) for i in lower for j in upper), key=lambda ij:
+            sum((wp[ij[0]]['position'][k]-wp[ij[1]]['position'][k])**2 for k in [0, 2]))
+        self.assertLess(math.dist([wp[a]['position'][k] for k in [0, 2]],
+                                  [wp[b]['position'][k] for k in [0, 2]]), .15)
+        self.assertGreater(wp[b]['position'][1]-wp[a]['position'][1], 1.0)
+        for i, point in enumerate(wp):
+            delta = [wp[(i+1)%512]['position'][k]-wp[(i-1)%512]['position'][k] for k in range(3)]
+            length = math.sqrt(sum(v*v for v in delta))
+            for actual, expected in zip(point['forward'], delta):
+                self.assertAlmostEqual(actual, expected/length, places=4)
+        distances = [math.dist(a['position'], b['position']) for a, b in zip(wp, wp[1:]+wp[:1])]
+        # Uniform plan-view arc sampling: ramps increase 3D lengths, while
+        # the tight T11 hairpin shortens the chord between adjacent samples.
+        self.assertLess(max(distances)/min(distances), 1.4)
         self.assertAlmostEqual(sum(distances), path['path_length_m'], places=4)
         self.assertFalse(entry['legacyOverlayRotation'])
         doc = glb(ASSETS/entry['modelAsset'])

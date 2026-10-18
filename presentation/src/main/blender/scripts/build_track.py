@@ -52,9 +52,20 @@ def main():
     mid_x = (max(p.x for p in samples) + min(p.x for p in samples)) / 2
     mid_y = (max(p.y for p in samples) + min(p.y for p in samples)) / 2
     path = [Vector(((p.y-mid_y)*scale, (p.x-mid_x)*scale, 0)) for p in samples]
-    length = sum((b-a).length for a,b in zip(path,path[1:]+path[:1]))
     def nearest(point):
         return min(range(COUNT), key=lambda i:(samples[i]-Vector(point)).length)
+    # Optional model-space heights; raised crossings share geometry with car paths.
+    elevation = [(nearest(k['point']), k['height']) for k in config.get('elevationProfile', [])]
+    if elevation:
+        if any(a[0] >= b[0] for a, b in zip(elevation, elevation[1:])):
+            raise ValueError('Elevation anchors must follow race order with distinct indices')
+        if elevation[0][1] != 0 or elevation[-1][1] != 0:
+            raise ValueError('Elevation profile must start and end at ground level')
+        for (start, low), (end, high) in zip(elevation, elevation[1:]):
+            for i in range(start, end+1):
+                t = (i-start)/(end-start)
+                path[i].z = low + (high-low)*(t*t*(3-2*t))
+    length = sum((b-a).length for a,b in zip(path,path[1:]+path[:1]))
     boundaries = [0] + [nearest(p) for p in config['sectorBoundaries']] + [COUNT]
     drs = [dict(index=z['index'], startWaypoint=nearest(z['start']), endWaypoint=nearest(z['end'])) for z in config['drsZones']]
     colors = [(1,.015,.035,1),(.0,.58,1,1),(1,.77,.015,1)]
@@ -79,11 +90,11 @@ def main():
         verts, faces = [], []
         for i in indices:
             tangent = (path[(i+1)%COUNT] - path[(i-1)%COUNT]).normalized()
-            normal = Vector((-tangent.y,tangent.x,0))
+            normal = Vector((-tangent.y,tangent.x,0)).normalized()
             center = path[i%COUNT] + normal*offset
             for side,z in [(-1,bottom),(1,bottom),(-1,top),(1,top)]:
                 p = center+normal*(side*width/2)
-                verts.append((p.x,p.y,z))
+                verts.append((p.x,p.y,p.z+z))
         for j in range(len(indices)-1):
             a,b = j*4,(j+1)*4
             faces += [(a+2,a+3,b+3,b+2),(a,b,b+1,a+1),(a,a+2,b+2,b),(a+1,b+1,b+3,a+3)]
@@ -117,7 +128,7 @@ def main():
     def waypoint(i):
         p=path[i]-center
         forward=(path[(i+1)%COUNT]-path[(i-1)%COUNT]).normalized()
-        return dict(index=i,position=[round(p.x,6),round(.32-center.z,6),round(-p.y,6)],forward=[forward.x,0,-forward.y])
+        return dict(index=i,position=[round(p.x,6),round(p.z+.32,6),round(-p.y,6)],forward=[forward.x,forward.z,-forward.y])
     path_data=dict(track=config['name'],source=config['source'],layout_year=config['layoutYear'],closed_loop=True,units='meters',path_length_m=length,waypoint_count=COUNT,waypoints_gltf_yup=[waypoint(i) for i in range(COUNT)])
     (ASSETS/config['waypointsAsset']).write_text(json.dumps(path_data,indent=2)+'\n')
     def export(name, objects):

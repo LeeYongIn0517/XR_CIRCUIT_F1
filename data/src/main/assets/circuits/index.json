@@ -32,11 +32,15 @@
       "id": "suzuka",
       "displayName": "Suzuka",
       "detailAssetPath": "circuits/suzuka.json",
-      "modelAsset": "SuzukaTrack.glb",
+      "modelAsset": "SuzukaCircuit.glb",
       "waypointsAsset": "suzuka_waypoints.json",
       "jolpicaCircuitId": "suzuka",
       "openF1CircuitKey": 46,
-      "openF1CircuitShortName": "Suzuka"
+      "openF1CircuitShortName": "Suzuka",
+      "modelWidthMeters": 16.259586,
+      "modelHeightMeters": 1.589,
+      "modelDepthMeters": 8.379183,
+      "legacyOverlayRotation": false
     },
     {
       "id": "miami",

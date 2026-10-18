@@ -1,0 +1,150 @@
+{
+  "country": "Japan",
+  "lengthKm": 5.807,
+  "turns": 18,
+  "location": {
+    "latitude": 34.8431,
+    "longitude": 136.541,
+    "locality": "Suzuka"
+  },
+  "id": "suzuka",
+  "name": "Suzuka International Racing Course",
+  "drsZoneCount": 1,
+  "sectors": [
+    {
+      "index": 1,
+      "startWaypoint": 0,
+      "endWaypoint": 192,
+      "colorHex": "#FF0000"
+    },
+    {
+      "index": 2,
+      "startWaypoint": 192,
+      "endWaypoint": 416,
+      "colorHex": "#00C8FF"
+    },
+    {
+      "index": 3,
+      "startWaypoint": 416,
+      "endWaypoint": 512,
+      "colorHex": "#FFFF00"
+    }
+  ],
+  "drsZones": [
+    {
+      "index": 1,
+      "startWaypoint": 503,
+      "endWaypoint": 55
+    }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Turn 1",
+      "turnCode": "T1",
+      "waypointIndex": 61
+    },
+    {
+      "number": 2,
+      "name": "Turn 2",
+      "turnCode": "T2",
+      "waypointIndex": 74
+    },
+    {
+      "number": 3,
+      "name": "Turn 3",
+      "turnCode": "T3",
+      "waypointIndex": 101
+    },
+    {
+      "number": 4,
+      "name": "Turn 4",
+      "turnCode": "T4",
+      "waypointIndex": 111
+    },
+    {
+      "number": 5,
+      "name": "Turn 5",
+      "turnCode": "T5",
+      "waypointIndex": 123
+    },
+    {
+      "number": 6,
+      "name": "Turn 6",
+      "turnCode": "T6",
+      "waypointIndex": 138
+    },
+    {
+      "number": 7,
+      "name": "Turn 7",
+      "turnCode": "T7",
+      "waypointIndex": 164
+    },
+    {
+      "number": 8,
+      "name": "Turn 8",
+      "turnCode": "T8",
+      "waypointIndex": 202
+    },
+    {
+      "number": 9,
+      "name": "Turn 9",
+      "turnCode": "T9",
+      "waypointIndex": 217
+    },
+    {
+      "number": 10,
+      "name": "Turn 10",
+      "turnCode": "T10",
+      "waypointIndex": 243
+    },
+    {
+      "number": 11,
+      "name": "Turn 11",
+      "turnCode": "T11",
+      "waypointIndex": 257
+    },
+    {
+      "number": 12,
+      "name": "Turn 12",
+      "turnCode": "T12",
+      "waypointIndex": 280
+    },
+    {
+      "number": 13,
+      "name": "Turn 13",
+      "turnCode": "T13",
+      "waypointIndex": 337
+    },
+    {
+      "number": 14,
+      "name": "Turn 14",
+      "turnCode": "T14",
+      "waypointIndex": 353
+    },
+    {
+      "number": 15,
+      "name": "Turn 15",
+      "turnCode": "T15",
+      "waypointIndex": 443
+    },
+    {
+      "number": 16,
+      "name": "Turn 16",
+      "turnCode": "T16",
+      "waypointIndex": 478
+    },
+    {
+      "number": 17,
+      "name": "Turn 17",
+      "turnCode": "T17",
+      "waypointIndex": 483
+    },
+    {
+      "number": 18,
+      "name": "Turn 18",
+      "turnCode": "T18",
+      "waypointIndex": 495
+    }
+  ]
+}

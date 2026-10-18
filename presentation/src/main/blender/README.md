@@ -133,3 +133,20 @@ track/sector/DRS GLBs, and `singapore_waypoints.json`. The same materials, heigh
 and overlay rotations apply. `trackWidthScale` uniformly scales the track,
 outline and overlay widths/offsets to avoid overlap between the nearby T8/T14
 roads; the centreline proportions remain unchanged.
+
+## Suzuka
+
+`tracks/suzuka.json` traces page 2 of the [FIA 2025 Japanese GP map V2](https://www.fia.com/system/files/decision-document/2025_japanese_grand_prix_-_event_notes_-_circuit_map_pit_lane_quarantine_and_red_zone.pdf)
+in a 893 x 1263 rendering: 5.807 km, 18 corners, three sectors and one DRS zone.
+S1 is 105 m before T8; S2 is 270 m before T15. DRS starts 100 m before the
+control line and wraps the lap seam, ending approximately before T1 braking.
+Rebuild with `scripts/build_track.py -- tracks/suzuka.json` in background Blender.
+Outputs use the `Suzuka` prefix, plus `suzuka_waypoints.json` (512 samples).
+
+The T14-T15 overpass is raised above T9-T10. `elevationProfile` contains
+race-ordered map anchors and illustrative model-space heights with smooth
+ramps, not surveyed elevation data. Track, overlays, editable path, waypoint
+height and forward vectors use the same elevation; path length includes it.
+Planar sampling remains uniform by 2D arc length, so ramp sample distances
+can be slightly longer in 3D. Existing definitions default to zero elevation.
+All map-derived positions are visual approximations of the 2025 layout.
