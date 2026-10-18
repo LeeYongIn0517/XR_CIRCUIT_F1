@@ -130,11 +130,15 @@
       "id": "spa",
       "displayName": "Spa-Francorchamps",
       "detailAssetPath": "circuits/spa.json",
-      "modelAsset": "SpaTrack.glb",
+      "modelAsset": "SpaCircuit.glb",
       "waypointsAsset": "spa_waypoints.json",
       "jolpicaCircuitId": "spa",
       "openF1CircuitKey": 7,
-      "openF1CircuitShortName": "Spa-Francorchamps"
+      "openF1CircuitShortName": "Spa-Francorchamps",
+      "modelWidthMeters": 16.500587,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 10.478116,
+      "legacyOverlayRotation": false
     },
     {
       "id": "hungaroring",

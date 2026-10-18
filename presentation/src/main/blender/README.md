@@ -226,3 +226,14 @@ approaches; the last zone wraps the control line. The source map specifies
 Rebuild with `scripts/build_track.py -- tracks/red_bull_ring.json` in
 background Blender. RedBullRing assets use Albert Park materials, cross
 section, overlay heights and rotation handling.
+
+## Spa-Francorchamps
+
+`tracks/spa.json` traces the FIA 2025 Belgian GP circuit map (page 2,
+V1 issued 11 June 2025) at 1132 x 1600 pixels; the full source URL is
+stored in the definition and waypoint metadata. The 19 corners, three
+sectors and two DRS overlays share a 512-point centreline, Albert Park
+materials, cross section and rotation handling. S1 is 145m before T5;
+S2 is 48m before T15. DRS starts 305m after T4 and 30m after T19, with
+approximate braking ends. This is a planar visual trace without elevation.
+Rebuild with `scripts/build_track.py -- tracks/spa.json` in background Blender.

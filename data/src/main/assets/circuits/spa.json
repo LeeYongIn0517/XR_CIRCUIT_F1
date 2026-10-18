@@ -1,0 +1,161 @@
+{
+  "country": "Belgium",
+  "lengthKm": 7.004,
+  "turns": 19,
+  "location": {
+    "latitude": 50.4372,
+    "longitude": 5.9714,
+    "locality": "Stavelot"
+  },
+  "id": "spa",
+  "name": "Spa-Francorchamps",
+  "drsZoneCount": 2,
+  "sectors": [
+    {
+      "index": 1,
+      "startWaypoint": 0,
+      "endWaypoint": 165,
+      "colorHex": "#FF0000"
+    },
+    {
+      "index": 2,
+      "startWaypoint": 165,
+      "endWaypoint": 372,
+      "colorHex": "#00C8FF"
+    },
+    {
+      "index": 3,
+      "startWaypoint": 372,
+      "endWaypoint": 512,
+      "colorHex": "#FFFF00"
+    }
+  ],
+  "drsZones": [
+    {
+      "index": 1,
+      "startWaypoint": 119,
+      "endWaypoint": 175
+    },
+    {
+      "index": 2,
+      "startWaypoint": 503,
+      "endWaypoint": 26
+    }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "La Source",
+      "turnCode": "T1",
+      "waypointIndex": 30
+    },
+    {
+      "number": 2,
+      "name": "Eau Rouge",
+      "turnCode": "T2",
+      "waypointIndex": 80
+    },
+    {
+      "number": 3,
+      "name": "Raidillon",
+      "turnCode": "T3",
+      "waypointIndex": 89
+    },
+    {
+      "number": 4,
+      "name": "Raidillon",
+      "turnCode": "T4",
+      "waypointIndex": 94
+    },
+    {
+      "number": 5,
+      "name": "Les Combes",
+      "turnCode": "T5",
+      "waypointIndex": 178
+    },
+    {
+      "number": 6,
+      "name": "Les Combes",
+      "turnCode": "T6",
+      "waypointIndex": 185
+    },
+    {
+      "number": 7,
+      "name": "Malmedy",
+      "turnCode": "T7",
+      "waypointIndex": 195
+    },
+    {
+      "number": 8,
+      "name": "Bruxelles",
+      "turnCode": "T8",
+      "waypointIndex": 221
+    },
+    {
+      "number": 9,
+      "name": "Speaker\u2019s Corner",
+      "turnCode": "T9",
+      "waypointIndex": 242
+    },
+    {
+      "number": 10,
+      "name": "Pouhon",
+      "turnCode": "T10",
+      "waypointIndex": 280
+    },
+    {
+      "number": 11,
+      "name": "Pouhon",
+      "turnCode": "T11",
+      "waypointIndex": 299
+    },
+    {
+      "number": 12,
+      "name": "Fagnes",
+      "turnCode": "T12",
+      "waypointIndex": 330
+    },
+    {
+      "number": 13,
+      "name": "Fagnes",
+      "turnCode": "T13",
+      "waypointIndex": 342
+    },
+    {
+      "number": 14,
+      "name": "Stavelot",
+      "turnCode": "T14",
+      "waypointIndex": 364
+    },
+    {
+      "number": 15,
+      "name": "Paul Fr\u00e8re",
+      "turnCode": "T15",
+      "waypointIndex": 382
+    },
+    {
+      "number": 16,
+      "name": "Blanchimont",
+      "turnCode": "T16",
+      "waypointIndex": 433
+    },
+    {
+      "number": 17,
+      "name": "Blanchimont",
+      "turnCode": "T17",
+      "waypointIndex": 455
+    },
+    {
+      "number": 18,
+      "name": "Bus Stop",
+      "turnCode": "T18",
+      "waypointIndex": 495
+    },
+    {
+      "number": 19,
+      "name": "Bus Stop",
+      "turnCode": "T19",
+      "waypointIndex": 499
+    }
+  ]
+}

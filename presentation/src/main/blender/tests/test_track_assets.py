@@ -24,7 +24,7 @@ class TrackAssetsTest(unittest.TestCase):
         catalog = json.loads((DATA/'circuits/index.json').read_text())['circuits']
         ready = [c for c in catalog if (DATA/c['detailAssetPath']).exists()
                  and (ASSETS/c['modelAsset']).exists() and (ASSETS/c['waypointsAsset']).exists()]
-        self.assertTrue({'silverstone', 'albert_park', 'shanghai', 'marina_bay', 'suzuka', 'miami', 'villeneuve', 'monaco', 'catalunya', 'red_bull_ring'}.issubset({c['id'] for c in ready}))
+        self.assertTrue({'silverstone', 'albert_park', 'shanghai', 'marina_bay', 'suzuka', 'miami', 'villeneuve', 'monaco', 'catalunya', 'red_bull_ring', 'spa'}.issubset({c['id'] for c in ready}))
         self.assertEqual(len(ready), len({c['modelAsset'] for c in ready}))
         for c in ready:
             doc = glb(ASSETS/c['modelAsset'])
@@ -412,6 +412,47 @@ class TrackAssetsTest(unittest.TestCase):
         self.assertTrue(0 < main['endWaypoint'] < corners[0])
         distances = [math.dist(a['position'], b['position']) for a, b in zip(wp, wp[1:]+wp[:1])]
         self.assertLess(max(distances)/min(distances), 1.08)
+        self.assertAlmostEqual(sum(distances), path['path_length_m'], places=4)
+        self.assertFalse(entry['legacyOverlayRotation'])
+        doc = glb(ASSETS/entry['modelAsset'])
+        bounds = [doc['accessors'][p['attributes']['POSITION']] for m in doc['meshes'] for p in m['primitives']]
+        for axis, key in enumerate(['modelWidthMeters', 'modelHeightMeters', 'modelDepthMeters']):
+            low = min(a['min'][axis] for a in bounds)
+            high = max(a['max'][axis] for a in bounds)
+            self.assertAlmostEqual(high-low, entry[key], places=4)
+            self.assertAlmostEqual(high+low, 0, places=4)
+
+    def test_spa_generated_contract(self):
+        detail = json.loads((DATA/'circuits/spa.json').read_text())
+        path = json.loads((ASSETS/'spa_waypoints.json').read_text())
+        entry = next(c for c in json.loads((DATA/'circuits/index.json').read_text())['circuits'] if c['id'] == 'spa')
+        wp = path['waypoints_gltf_yup']
+        self.assertEqual(2025, path['layout_year'])
+        self.assertIn('2025_belgian_grand_prix', path['source'])
+        self.assertTrue(path['closed_loop'])
+        self.assertEqual(512, len(wp))
+        self.assertEqual(list(range(512)), [p['index'] for p in wp])
+        self.assertEqual(list(range(1, 20)), [c['number'] for c in detail['corners']])
+        corners = [c['waypointIndex'] for c in detail['corners']]
+        self.assertTrue(all(a < b for a, b in zip(corners, corners[1:])))
+        self.assertEqual(3, len(detail['sectors']))
+        self.assertEqual(0, detail['sectors'][0]['startWaypoint'])
+        self.assertEqual(512, detail['sectors'][-1]['endWaypoint'])
+        for a, b in zip(detail['sectors'], detail['sectors'][1:]):
+            self.assertEqual(a['endWaypoint'], b['startWaypoint'])
+        self.assertTrue(corners[3] < detail['sectors'][0]['endWaypoint'] < corners[4])
+        self.assertTrue(corners[13] < detail['sectors'][1]['endWaypoint'] < corners[14])
+        self.assertEqual(2, len(detail['drsZones']))
+        back = detail['drsZones'][0]
+        self.assertTrue(corners[3] < back['startWaypoint'] < back['endWaypoint'] < corners[4])
+        main = detail['drsZones'][1]
+        self.assertTrue(corners[18] < main['startWaypoint'] < 512)
+        self.assertTrue(0 < main['endWaypoint'] < corners[0])
+        distances = [math.dist(a['position'], b['position']) for a, b in zip(wp, wp[1:]+wp[:1])]
+        # La Source's tight hairpin shortens the chord of an equal-arc sample.
+        regular = [d for i, d in enumerate(distances) if abs(i-corners[0]) > 1]
+        self.assertLess(max(regular)/min(regular), 1.08)
+        self.assertGreater(min(distances), .85 * max(distances))
         self.assertAlmostEqual(sum(distances), path['path_length_m'], places=4)
         self.assertFalse(entry['legacyOverlayRotation'])
         doc = glb(ASSETS/entry['modelAsset'])
