@@ -60,11 +60,15 @@
       "id": "villeneuve",
       "displayName": "Montreal",
       "detailAssetPath": "circuits/villeneuve.json",
-      "modelAsset": "MontrealTrack.glb",
+      "modelAsset": "MontrealCircuit.glb",
       "waypointsAsset": "montreal_waypoints.json",
       "jolpicaCircuitId": "villeneuve",
       "openF1CircuitKey": 23,
-      "openF1CircuitShortName": "Montreal"
+      "openF1CircuitShortName": "Montreal",
+      "modelWidthMeters": 16.259689,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 5.595105,
+      "legacyOverlayRotation": false
     },
     {
       "id": "monaco",

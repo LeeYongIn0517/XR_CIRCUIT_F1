@@ -166,3 +166,19 @@ Outputs: `models/MiamiTrack.blend`, `previews/MiamiPreview.png`,
 `MiamiCircuit.glb`, separate track/sector/DRS GLBs, and `miami_waypoints.json`
 with 512 samples. The shared materials, heights and overlay correction apply;
 track widths and offsets are uniformly reduced for the tight T14-T16 complex.
+
+## Montreal / Circuit Gilles-Villeneuve
+
+`tracks/villeneuve.json` traces page 3 of the [FIA 2025 Canadian GP map V1](https://www.fia.com/system/files/decision-document/2025_canadian_grand_prix_-_event_notes_-_circuit_map_pit_lane_emergency_exits_map_ers_battery_containment_area_red_zones.pdf),
+issued 21 May 2025, rendered at 893 x 1263 pixels: 4.361 km, 14 turns,
+three sectors and three DRS zones. S1 is 145 m before T6; S2 is 190 m before
+T10. DRS starts 95 m after T7, 155 m before T12, and 70 m after T14.
+Zone 3 wraps the control-line seam. Ends approximate T8/T13/T1 braking.
+All coordinates are visual approximations; the model is planar.
+
+Rebuild with `scripts/build_track.py -- tracks/villeneuve.json` in background
+Blender. Outputs include `models/MontrealTrack.blend`,
+`previews/MontrealPreview.png`, combined `MontrealCircuit.glb`, separate
+track/sector/DRS GLBs and `montreal_waypoints.json` with 512 samples.
+Shared materials, height and overlay correction apply. Widths are uniformly
+reduced to preserve clearance in the hairpin and tight chicanes.
