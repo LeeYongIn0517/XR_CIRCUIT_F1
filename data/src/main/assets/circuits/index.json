@@ -74,11 +74,15 @@
       "id": "monaco",
       "displayName": "Monaco",
       "detailAssetPath": "circuits/monaco.json",
-      "modelAsset": "MonacoTrack.glb",
+      "modelAsset": "MonacoCircuit.glb",
       "waypointsAsset": "monaco_waypoints.json",
       "jolpicaCircuitId": "monaco",
       "openF1CircuitKey": 22,
-      "openF1CircuitShortName": "Monte Carlo"
+      "openF1CircuitShortName": "Monte Carlo",
+      "modelWidthMeters": 16.258545,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 12.725923,
+      "legacyOverlayRotation": false
     },
     {
       "id": "catalunya",

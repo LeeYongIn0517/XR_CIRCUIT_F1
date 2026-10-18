@@ -182,3 +182,18 @@ Blender. Outputs include `models/MontrealTrack.blend`,
 track/sector/DRS GLBs and `montreal_waypoints.json` with 512 samples.
 Shared materials, height and overlay correction apply. Widths are uniformly
 reduced to preserve clearance in the hairpin and tight chicanes.
+
+## Monaco
+
+`tracks/monaco.json` traces page 2 of the [FIA 2025 Monaco revised map V3](https://www.fia.com/system/files/decision-document/2025_monaco_event_-_circuit_map_-_monaco_2025_revised_0.pdf),
+issued 22 May 2025, at 893 x 1263 pixels. The 3.337 km route has 19 turns,
+three sectors and one DRS zone. S1 is 60 m before T5; S2 is 67 m before T13.
+DRS starts 18 m after T19 and wraps the control-line seam, ending approximately
+before T1 braking. The model is a planar visual trace, not surveyed terrain;
+the tunnel follows the racing route but is not enclosed by a roof.
+
+Rebuild with `scripts/build_track.py -- tracks/monaco.json` in background Blender.
+Outputs use the `Monaco` prefix (combined and separate GLBs, editable blend,
+preview), plus `monaco_waypoints.json` with 512 samples. Shared materials,
+height and overlay rotations apply; widths are reduced for the tight hairpin
+and swimming-pool chicanes.
