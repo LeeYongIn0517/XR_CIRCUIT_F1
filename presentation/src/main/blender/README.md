@@ -114,3 +114,22 @@ closed-loop sampling and sector/DRS index ranges. ViewModel tests cover switchin
 unsupported IDs, overlay choices and late weather responses. Verify rendering and
 repeated toggles on an XR device/emulator as well; a desktop render cannot check
 SceneCore's material override behavior.
+
+## Singapore / Marina Bay
+
+`tracks/marina_bay.json` traces page 4 of the [FIA 2025 Singapore GP map V2](https://www.fia.com/system/files/decision-document/2025_singapore_grand_prix_-_event_notes_-_circuit_map_pit_lane_emergency_exits_map_and_quarantine_zone.pdf),
+issued 1 October 2025, rendered at 893 x 1263 pixels. The 4.927 km layout has
+19 corners, three sectors, four DRS zones and 512 generated waypoints.
+The trace begins at the control line in race direction. Sector boundaries are
+150 m before T7 and 140 m before T14. DRS starts 48 m after T5, 78 m after T13,
+100 m after T14 and at the exit of T19; the last zone crosses the lap seam.
+DRS endpoints are approximate braking locations; all traced coordinates are
+visual approximations, not survey data.
+
+Rebuild with `scripts/build_track.py -- tracks/marina_bay.json` in background
+Blender as above. Outputs include `models/SingaporeTrack.blend`,
+`previews/SingaporePreview.png`, the combined `SingaporeCircuit.glb`, separate
+track/sector/DRS GLBs, and `singapore_waypoints.json`. The same materials, heights
+and overlay rotations apply. `trackWidthScale` uniformly scales the track,
+outline and overlay widths/offsets to avoid overlap between the nearby T8/T14
+roads; the centreline proportions remain unchanged.

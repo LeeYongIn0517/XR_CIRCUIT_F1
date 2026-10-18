@@ -18,11 +18,15 @@
       "id": "shanghai",
       "displayName": "Shanghai",
       "detailAssetPath": "circuits/shanghai.json",
-      "modelAsset": "ShanghaiTrack.glb",
+      "modelAsset": "ShanghaiCircuit.glb",
       "waypointsAsset": "shanghai_waypoints.json",
       "jolpicaCircuitId": "shanghai",
       "openF1CircuitKey": 49,
-      "openF1CircuitShortName": "Shanghai"
+      "openF1CircuitShortName": "Shanghai",
+      "modelWidthMeters": 16.515595,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 18.404846,
+      "legacyOverlayRotation": false
     },
     {
       "id": "suzuka",
@@ -172,11 +176,15 @@
       "id": "marina_bay",
       "displayName": "Singapore",
       "detailAssetPath": "circuits/marina_bay.json",
-      "modelAsset": "SingaporeTrack.glb",
+      "modelAsset": "SingaporeCircuit.glb",
       "waypointsAsset": "singapore_waypoints.json",
       "jolpicaCircuitId": "marina_bay",
       "openF1CircuitKey": 61,
-      "openF1CircuitShortName": "Singapore"
+      "openF1CircuitShortName": "Singapore",
+      "modelWidthMeters": 16.25316,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 16.373695,
+      "legacyOverlayRotation": false
     },
     {
       "id": "americas",

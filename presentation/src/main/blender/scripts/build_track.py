@@ -73,6 +73,8 @@ def main():
     sector_mats = [material('Sector'+str(i+1), c) for i,c in enumerate(colors)]
     drs_mat = material('DRS', (.01,1,.11,1))
     def strip(name, start, end, width, offset, bottom, top, mat):
+        width *= config.get('trackWidthScale', 1.0)
+        offset *= config.get('trackWidthScale', 1.0)
         indices = list(range(start, end+1)) if end > start else list(range(start, end+COUNT+1))
         verts, faces = [], []
         for i in indices:
