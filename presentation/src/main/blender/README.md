@@ -197,3 +197,17 @@ Outputs use the `Monaco` prefix (combined and separate GLBs, editable blend,
 preview), plus `monaco_waypoints.json` with 512 samples. Shared materials,
 height and overlay rotations apply; widths are reduced for the tight hairpin
 and swimming-pool chicanes.
+
+## Barcelona / Catalunya
+
+`tracks/catalunya.json` traces page 3 of the [FIA 2025 Spanish GP map V1](https://www.fia.com/system/files/decision-document/2025_spanish_grand_prix_-_race_director_event_notes_-_circuit_map_pit_lane_quarantine_zone_and_red_zones.pdf),
+issued 24 April 2025, at 893 x 1263 pixels. The 4.657 km layout has 14 turns
+without the final chicane, three sectors and two DRS zones. S1 is 50 m before
+T4; S2 is 89 m before T10. DRS starts 40 m after T9 and 162 m after T14.
+The main straight zone wraps the control-line seam; endpoints approximate
+T10/T1 braking. Coordinates are visual approximations and terrain is planar.
+
+Rebuild with `scripts/build_track.py -- tracks/catalunya.json` in background
+Blender. Outputs use the `Barcelona` prefix (combined and separate GLBs,
+editable blend, preview), and `barcelona_waypoints.json` with 512 samples.
+Materials, track cross section and overlay rotations match Albert Park.

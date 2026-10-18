@@ -39,7 +39,7 @@ internal fun resolveTrackOverlayRotation(
     return when {
         circuit.id == "albert_park" || circuit.id == "silverstone" || circuit.id == "shanghai" ||
             circuit.id == "marina_bay" || circuit.id == "suzuka" || circuit.id == "miami" ||
-            circuit.id == "villeneuve" || circuit.id == "monaco" -> {
+            circuit.id == "villeneuve" || circuit.id == "monaco" || circuit.id == "catalunya" -> {
             val angles = if (isSector) GeneratedSectorAngles else GeneratedDrsAngles
             angles.applyTo(authoredRotation)
         }

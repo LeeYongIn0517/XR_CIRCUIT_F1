@@ -88,11 +88,15 @@
       "id": "catalunya",
       "displayName": "Barcelona",
       "detailAssetPath": "circuits/catalunya.json",
-      "modelAsset": "BarcelonaTrack.glb",
+      "modelAsset": "BarcelonaCircuit.glb",
       "waypointsAsset": "barcelona_waypoints.json",
       "jolpicaCircuitId": "catalunya",
       "openF1CircuitKey": 15,
-      "openF1CircuitShortName": "Catalunya"
+      "openF1CircuitShortName": "Catalunya",
+      "modelWidthMeters": 16.519318,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 13.864121,
+      "legacyOverlayRotation": false
     },
     {
       "id": "red_bull_ring",
