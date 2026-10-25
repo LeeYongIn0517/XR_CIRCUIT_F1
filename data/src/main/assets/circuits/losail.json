@@ -1,0 +1,138 @@
+{
+  "country": "Qatar",
+  "lengthKm": 5.419,
+  "turns": 16,
+  "location": {
+    "latitude": 25.49,
+    "longitude": 51.4542,
+    "locality": "Lusail"
+  },
+  "id": "losail",
+  "name": "Lusail International Circuit",
+  "drsZoneCount": 1,
+  "sectors": [
+    {
+      "index": 1,
+      "startWaypoint": 0,
+      "endWaypoint": 199,
+      "colorHex": "#FF0000"
+    },
+    {
+      "index": 2,
+      "startWaypoint": 199,
+      "endWaypoint": 348,
+      "colorHex": "#00C8FF"
+    },
+    {
+      "index": 3,
+      "startWaypoint": 348,
+      "endWaypoint": 512,
+      "colorHex": "#FFFF00"
+    }
+  ],
+  "drsZones": [
+    {
+      "index": 1,
+      "startWaypoint": 508,
+      "endWaypoint": 63
+    }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Turn 1",
+      "turnCode": "T1",
+      "waypointIndex": 75
+    },
+    {
+      "number": 2,
+      "name": "Turn 2",
+      "turnCode": "T2",
+      "waypointIndex": 105
+    },
+    {
+      "number": 3,
+      "name": "Turn 3",
+      "turnCode": "T3",
+      "waypointIndex": 127
+    },
+    {
+      "number": 4,
+      "name": "Turn 4",
+      "turnCode": "T4",
+      "waypointIndex": 165
+    },
+    {
+      "number": 5,
+      "name": "Turn 5",
+      "turnCode": "T5",
+      "waypointIndex": 181
+    },
+    {
+      "number": 6,
+      "name": "Turn 6",
+      "turnCode": "T6",
+      "waypointIndex": 209
+    },
+    {
+      "number": 7,
+      "name": "Turn 7",
+      "turnCode": "T7",
+      "waypointIndex": 249
+    },
+    {
+      "number": 8,
+      "name": "Turn 8",
+      "turnCode": "T8",
+      "waypointIndex": 266
+    },
+    {
+      "number": 9,
+      "name": "Turn 9",
+      "turnCode": "T9",
+      "waypointIndex": 279
+    },
+    {
+      "number": 10,
+      "name": "Turn 10",
+      "turnCode": "T10",
+      "waypointIndex": 302
+    },
+    {
+      "number": 11,
+      "name": "Turn 11",
+      "turnCode": "T11",
+      "waypointIndex": 332
+    },
+    {
+      "number": 12,
+      "name": "Turn 12",
+      "turnCode": "T12",
+      "waypointIndex": 361
+    },
+    {
+      "number": 13,
+      "name": "Turn 13",
+      "turnCode": "T13",
+      "waypointIndex": 378
+    },
+    {
+      "number": 14,
+      "name": "Turn 14",
+      "turnCode": "T14",
+      "waypointIndex": 397
+    },
+    {
+      "number": 15,
+      "name": "Turn 15",
+      "turnCode": "T15",
+      "waypointIndex": 428
+    },
+    {
+      "number": 16,
+      "name": "Turn 16",
+      "turnCode": "T16",
+      "waypointIndex": 473
+    }
+  ]
+}

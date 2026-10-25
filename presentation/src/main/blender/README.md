@@ -348,3 +348,14 @@ DRS2: 870m before T14. Braking endpoints approximate.
 Same generator, materials and 512 arc-length samples as Albert Park.
 Planar stylized geometry without surveyed elevations; width scale 0.55.
 Rebuild: `scripts/build_track.py -- tracks/las_vegas.json`.
+
+## Lusail International Circuit
+
+`tracks/lusail.json` visually traces FIA 2025 Qatar circuit map page 2,
+version 2 issued 27.11.25 at 1273x1800 pixels, starting at the control line.
+Source: https://www.fia.com/system/files/decision-document/2025_lusail_event_-_circuit_map_-_qatar_2025.pdf
+S1: 80m before T6; S2: 75m before T12. DRS: 305m after T16,
+wrapping across control line toward T1; braking endpoint approximate.
+Same generator, materials and 512 arc-length samples as Albert Park.
+Planar stylized geometry without surveyed elevations.
+Rebuild: `scripts/build_track.py -- tracks/lusail.json`.

@@ -298,11 +298,15 @@
       "id": "losail",
       "displayName": "Lusail",
       "detailAssetPath": "circuits/losail.json",
-      "modelAsset": "LusailTrack.glb",
+      "modelAsset": "LusailCircuit.glb",
       "waypointsAsset": "lusail_waypoints.json",
       "jolpicaCircuitId": "losail",
       "openF1CircuitKey": 150,
-      "openF1CircuitShortName": "Lusail"
+      "openF1CircuitShortName": "Lusail",
+      "modelWidthMeters": 16.518784,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 14.198289,
+      "legacyOverlayRotation": false
     },
     {
       "id": "yas_marina",
