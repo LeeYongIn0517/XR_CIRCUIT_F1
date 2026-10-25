@@ -1,0 +1,137 @@
+{
+  "country": "Brazil",
+  "lengthKm": 4.309,
+  "turns": 15,
+  "location": {
+    "latitude": -23.7036,
+    "longitude": -46.6997,
+    "locality": "S\u00e3o Paulo"
+  },
+  "id": "interlagos",
+  "name": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
+  "drsZoneCount": 2,
+  "sectors": [
+    {
+      "index": 1,
+      "startWaypoint": 0,
+      "endWaypoint": 147,
+      "colorHex": "#FF0000"
+    },
+    {
+      "index": 2,
+      "startWaypoint": 147,
+      "endWaypoint": 378,
+      "colorHex": "#00C8FF"
+    },
+    {
+      "index": 3,
+      "startWaypoint": 378,
+      "endWaypoint": 512,
+      "colorHex": "#FFFF00"
+    }
+  ],
+  "drsZones": [
+    {
+      "index": 1,
+      "startWaypoint": 99,
+      "endWaypoint": 161
+    },
+    {
+      "index": 2,
+      "startWaypoint": 456,
+      "endWaypoint": 37
+    }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Turn 1",
+      "turnCode": "T1",
+      "waypointIndex": 47
+    },
+    {
+      "number": 2,
+      "name": "Turn 2",
+      "turnCode": "T2",
+      "waypointIndex": 57
+    },
+    {
+      "number": 3,
+      "name": "Turn 3",
+      "turnCode": "T3",
+      "waypointIndex": 81
+    },
+    {
+      "number": 4,
+      "name": "Turn 4",
+      "turnCode": "T4",
+      "waypointIndex": 169
+    },
+    {
+      "number": 5,
+      "name": "Turn 5",
+      "turnCode": "T5",
+      "waypointIndex": 190
+    },
+    {
+      "number": 6,
+      "name": "Turn 6",
+      "turnCode": "T6",
+      "waypointIndex": 245
+    },
+    {
+      "number": 7,
+      "name": "Turn 7",
+      "turnCode": "T7",
+      "waypointIndex": 260
+    },
+    {
+      "number": 8,
+      "name": "Turn 8",
+      "turnCode": "T8",
+      "waypointIndex": 283
+    },
+    {
+      "number": 9,
+      "name": "Turn 9",
+      "turnCode": "T9",
+      "waypointIndex": 297
+    },
+    {
+      "number": 10,
+      "name": "Turn 10",
+      "turnCode": "T10",
+      "waypointIndex": 333
+    },
+    {
+      "number": 11,
+      "name": "Turn 11",
+      "turnCode": "T11",
+      "waypointIndex": 356
+    },
+    {
+      "number": 12,
+      "name": "Turn 12",
+      "turnCode": "T12",
+      "waypointIndex": 391
+    },
+    {
+      "number": 13,
+      "name": "Turn 13",
+      "turnCode": "T13",
+      "waypointIndex": 408
+    },
+    {
+      "number": 14,
+      "name": "Turn 14",
+      "turnCode": "T14",
+      "waypointIndex": 441
+    },
+    {
+      "number": 15,
+      "name": "Turn 15",
+      "turnCode": "T15",
+      "waypointIndex": 484
+    }
+  ]
+}

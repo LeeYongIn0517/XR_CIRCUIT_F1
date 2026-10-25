@@ -270,11 +270,15 @@
       "id": "interlagos",
       "displayName": "Interlagos",
       "detailAssetPath": "circuits/interlagos.json",
-      "modelAsset": "InterlagosTrack.glb",
+      "modelAsset": "InterlagosCircuit.glb",
       "waypointsAsset": "interlagos_waypoints.json",
       "jolpicaCircuitId": "interlagos",
       "openF1CircuitKey": 14,
-      "openF1CircuitShortName": "Interlagos"
+      "openF1CircuitShortName": "Interlagos",
+      "modelWidthMeters": 16.336202,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 10.516978,
+      "legacyOverlayRotation": false
     },
     {
       "id": "vegas",

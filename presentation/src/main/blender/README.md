@@ -328,3 +328,13 @@ DRS2: 240m after T17; DRS3: 115m after T3. Braking endpoints approximate.
 Same generator, materials and 512 arc-length samples as Albert Park.
 Planar stylized geometry without surveyed elevations; width scale 0.6.
 Rebuild: `scripts/build_track.py -- tracks/rodriguez.json`.
+
+## Interlagos (Autódromo José Carlos Pace)
+
+`tracks/interlagos.json` visually traces FIA 2025 Sao Paulo GP circuit map page 2,
+version 3 issued 06.11.2025, rendered at 1273x1800 pixels. Starts at control line.
+S1: 168m before T4; S2: 85m before T12. DRS1: 30m after T3;
+DRS2: 160m before T15, wrapping across control line. Braking endpoints approximate.
+Same generator, materials and 512 arc-length samples as Albert Park.
+Planar stylized geometry without surveyed elevations; width scale 0.65.
+Rebuild: `scripts/build_track.py -- tracks/interlagos.json`.
