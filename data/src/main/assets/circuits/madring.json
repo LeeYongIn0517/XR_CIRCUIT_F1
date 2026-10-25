@@ -1,0 +1,168 @@
+{
+  "country": "Spain",
+  "lengthKm": 5.4,
+  "turns": 22,
+  "location": {
+    "latitude": 40.467,
+    "longitude": -3.616,
+    "locality": "Madrid"
+  },
+  "id": "madring",
+  "name": "Madring",
+  "drsZoneCount": 0,
+  "sectors": [
+    {
+      "index": 1,
+      "startWaypoint": 0,
+      "endWaypoint": 171,
+      "colorHex": "#FF0000"
+    },
+    {
+      "index": 2,
+      "startWaypoint": 171,
+      "endWaypoint": 342,
+      "colorHex": "#00C8FF"
+    },
+    {
+      "index": 3,
+      "startWaypoint": 342,
+      "endWaypoint": 512,
+      "colorHex": "#FFFF00"
+    }
+  ],
+  "drsZones": [],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Turn 1",
+      "turnCode": "T1",
+      "waypointIndex": 18
+    },
+    {
+      "number": 2,
+      "name": "Turn 2",
+      "turnCode": "T2",
+      "waypointIndex": 23
+    },
+    {
+      "number": 3,
+      "name": "Hortaleza",
+      "turnCode": "T3",
+      "waypointIndex": 36
+    },
+    {
+      "number": 4,
+      "name": "Turn 4",
+      "turnCode": "T4",
+      "waypointIndex": 103
+    },
+    {
+      "number": 5,
+      "name": "Turn 5",
+      "turnCode": "T5",
+      "waypointIndex": 121
+    },
+    {
+      "number": 6,
+      "name": "Subida de las Carcavas",
+      "turnCode": "T6",
+      "waypointIndex": 124
+    },
+    {
+      "number": 7,
+      "name": "Turn 7",
+      "turnCode": "T7",
+      "waypointIndex": 142
+    },
+    {
+      "number": 8,
+      "name": "El Bunker",
+      "turnCode": "T8",
+      "waypointIndex": 158
+    },
+    {
+      "number": 9,
+      "name": "Turn 9",
+      "turnCode": "T9",
+      "waypointIndex": 165
+    },
+    {
+      "number": 10,
+      "name": "Turn 10",
+      "turnCode": "T10",
+      "waypointIndex": 195
+    },
+    {
+      "number": 11,
+      "name": "Turn 11",
+      "turnCode": "T11",
+      "waypointIndex": 201
+    },
+    {
+      "number": 12,
+      "name": "La Monumental",
+      "turnCode": "T12",
+      "waypointIndex": 231
+    },
+    {
+      "number": 13,
+      "name": "Turn 13",
+      "turnCode": "T13",
+      "waypointIndex": 288
+    },
+    {
+      "number": 14,
+      "name": "Turn 14",
+      "turnCode": "T14",
+      "waypointIndex": 309
+    },
+    {
+      "number": 15,
+      "name": "Turn 15",
+      "turnCode": "T15",
+      "waypointIndex": 331
+    },
+    {
+      "number": 16,
+      "name": "Turn 16",
+      "turnCode": "T16",
+      "waypointIndex": 349
+    },
+    {
+      "number": 17,
+      "name": "Turn 17",
+      "turnCode": "T17",
+      "waypointIndex": 354
+    },
+    {
+      "number": 18,
+      "name": "Norte",
+      "turnCode": "T18",
+      "waypointIndex": 380
+    },
+    {
+      "number": 19,
+      "name": "Turn 19",
+      "turnCode": "T19",
+      "waypointIndex": 396
+    },
+    {
+      "number": 20,
+      "name": "Turn 20",
+      "turnCode": "T20",
+      "waypointIndex": 429
+    },
+    {
+      "number": 21,
+      "name": "Turn 21",
+      "turnCode": "T21",
+      "waypointIndex": 443
+    },
+    {
+      "number": 22,
+      "name": "El Parque",
+      "turnCode": "T22",
+      "waypointIndex": 471
+    }
+  ]
+}

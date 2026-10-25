@@ -186,11 +186,15 @@
       "id": "madring",
       "displayName": "Madring",
       "detailAssetPath": "circuits/madring.json",
-      "modelAsset": "MadringTrack.glb",
+      "modelAsset": "MadringCircuit.glb",
       "waypointsAsset": "madring_waypoints.json",
       "jolpicaCircuitId": "madring",
       "openF1CircuitKey": 153,
-      "openF1CircuitShortName": "Madring"
+      "openF1CircuitShortName": "Madring",
+      "modelWidthMeters": 16.259816,
+      "modelHeightMeters": 0.489,
+      "modelDepthMeters": 10.110197,
+      "legacyOverlayRotation": false
     },
     {
       "id": "baku",

@@ -270,3 +270,17 @@ approximate. Uses the Albert Park generator, materials, 512-point path and
 overlay rotation. Width scale 0.55 preserves the tight chicanes. Planar visual
 trace without surveyed coordinates or elevation.
 Rebuild with background Blender: `scripts/build_track.py -- tracks/monza.json`.
+
+## Madring — 2025 published design
+
+`tracks/madring.json` traces the official 25 April 2025 MADRING design map,
+not a 2025 FIA race map. Source page and image URLs are stored in the definition.
+Image coordinates (1920 x 1254) are transposed to (y, x) for landscape rendering.
+Uses the Albert Park materials and 512-point closed path, with width scale 0.5.
+The 22 numbered corners follow race order. This is a planar visual trace:
+elevation, tunnel geometry and La Monumental banking are not modeled.
+The three colored sectors are PROVISIONAL equal-distance presentation thirds,
+not official timing boundaries. DRS is unspecified in the source and omitted;
+zero exported zones means unavailable data, not a confirmed race regulation.
+The generator skips the separate DRS GLB when there are no zones.
+Rebuild: `scripts/build_track.py -- tracks/madring.json` with background Blender.

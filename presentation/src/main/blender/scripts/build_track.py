@@ -139,7 +139,8 @@ def main():
     export(prefix+'Circuit.glb',all_meshes)
     export(prefix+'Track.glb',[track,outline])
     export(prefix+'Sectors.glb',sectors)
-    export(prefix+'Drs.glb',zones)
+    if zones:
+        export(prefix+'Drs.glb',zones)
     # Keep an editable centreline in the .blend, excluded from exported meshes.
     curve=bpy.data.curves.new('RacePath','CURVE');curve.dimensions='3D'
     spline=curve.splines.new('POLY');spline.points.add(COUNT-1)
