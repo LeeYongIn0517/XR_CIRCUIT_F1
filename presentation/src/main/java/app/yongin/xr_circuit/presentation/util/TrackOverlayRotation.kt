@@ -40,7 +40,8 @@ internal fun resolveTrackOverlayRotation(
         circuit.id == "albert_park" || circuit.id == "silverstone" || circuit.id == "shanghai" ||
             circuit.id == "marina_bay" || circuit.id == "suzuka" || circuit.id == "miami" ||
             circuit.id == "villeneuve" || circuit.id == "monaco" || circuit.id == "catalunya" ||
-            circuit.id == "red_bull_ring" || circuit.id == "spa" || circuit.id == "hungaroring" -> {
+            circuit.id == "red_bull_ring" || circuit.id == "spa" || circuit.id == "hungaroring" ||
+            circuit.id == "zandvoort" -> {
             val angles = if (isSector) GeneratedSectorAngles else GeneratedDrsAngles
             angles.applyTo(authoredRotation)
         }

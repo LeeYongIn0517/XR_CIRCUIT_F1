@@ -248,3 +248,14 @@ DRS braking endpoints are approximate. The planar visual model uses the
 Albert Park generator, materials, cross section, 512-point path and overlay
 rotation. It does not model actual elevation or surveyed coordinates.
 Rebuild: `scripts/build_track.py -- tracks/hungaroring.json` in background Blender.
+
+## Zandvoort
+
+`tracks/zandvoort.json` visually traces the FIA 2025 Dutch GP Circuit Map V1
+issued 15.08.25 (PDF page 2 at 1132x1600 pixels). Source URL is in the definition.
+S1 is 110m before T7; S2 is 150m before T11. DRS1 begins 50m after T10;
+DRS2 begins 40m after T13 and wraps across the control line. DRS braking
+endpoints are approximate. Uses the Albert Park generator, materials, cross
+section, 512-point path and overlay rotation. This is a planar visual model,
+without actual elevation, banking or surveyed coordinates.
+Rebuild: `scripts/build_track.py -- tracks/zandvoort.json` in background Blender.
