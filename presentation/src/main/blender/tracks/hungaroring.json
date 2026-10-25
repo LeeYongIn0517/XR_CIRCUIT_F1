@@ -1,0 +1,628 @@
+{
+  "id": "hungaroring",
+  "name": "Hungaroring",
+  "assetPrefix": "Hungaroring",
+  "waypointsAsset": "hungaroring_waypoints.json",
+  "layoutYear": 2025,
+  "source": "https://www.fia.com/news/f1-2025-hungarian-grand-prix-preview",
+  "notes": "Visual centreline trace from FIA 2025 Hungarian GP Preview page 2 image at 950x1348. Sector/DRS references cross-checked against Circuit Map V1 issued 08.07.25. S1 85m before T4; S2 100m after T11; DRS1 40m after T14; DRS2 6m after T1. DRS ends approximate braking approaches. Starts at control line in race direction. Planar stylized approximation, not surveyed coordinates.",
+  "referenceImage": "https://www.fia.com/sites/default/files/styles/content_details/public/f125_14_hungary_v2_page_2.png?itok=k8DJjNvm",
+  "referenceMap": "https://www.fia.com/system/files/decision-document/2025_hungarian_grand_prix_-_event_notes_-_circuit_map_pit_lane_emergency_exits_map_quarantine_zone_and_red_zones.pdf",
+  "centerline": [
+    [
+      625,
+      616
+    ],
+    [
+      601,
+      596
+    ],
+    [
+      578,
+      577
+    ],
+    [
+      554,
+      558
+    ],
+    [
+      530,
+      539
+    ],
+    [
+      506,
+      519
+    ],
+    [
+      482,
+      500
+    ],
+    [
+      460,
+      481
+    ],
+    [
+      442,
+      466
+    ],
+    [
+      436,
+      460
+    ],
+    [
+      435,
+      454
+    ],
+    [
+      437,
+      449
+    ],
+    [
+      442,
+      445
+    ],
+    [
+      451,
+      444
+    ],
+    [
+      465,
+      445
+    ],
+    [
+      481,
+      448
+    ],
+    [
+      496,
+      454
+    ],
+    [
+      511,
+      462
+    ],
+    [
+      532,
+      479
+    ],
+    [
+      553,
+      496
+    ],
+    [
+      574,
+      513
+    ],
+    [
+      585,
+      521
+    ],
+    [
+      595,
+      523
+    ],
+    [
+      604,
+      520
+    ],
+    [
+      611,
+      513
+    ],
+    [
+      615,
+      504
+    ],
+    [
+      614,
+      495
+    ],
+    [
+      607,
+      481
+    ],
+    [
+      599,
+      465
+    ],
+    [
+      594,
+      455
+    ],
+    [
+      593,
+      449
+    ],
+    [
+      596,
+      441
+    ],
+    [
+      610,
+      417
+    ],
+    [
+      624,
+      391
+    ],
+    [
+      638,
+      366
+    ],
+    [
+      651,
+      340
+    ],
+    [
+      662,
+      318
+    ],
+    [
+      672,
+      305
+    ],
+    [
+      681,
+      293
+    ],
+    [
+      684,
+      287
+    ],
+    [
+      683,
+      279
+    ],
+    [
+      679,
+      263
+    ],
+    [
+      675,
+      246
+    ],
+    [
+      671,
+      230
+    ],
+    [
+      668,
+      216
+    ],
+    [
+      669,
+      205
+    ],
+    [
+      673,
+      197
+    ],
+    [
+      679,
+      192
+    ],
+    [
+      688,
+      189
+    ],
+    [
+      697,
+      190
+    ],
+    [
+      709,
+      196
+    ],
+    [
+      723,
+      207
+    ],
+    [
+      738,
+      222
+    ],
+    [
+      753,
+      239
+    ],
+    [
+      767,
+      254
+    ],
+    [
+      771,
+      260
+    ],
+    [
+      771,
+      265
+    ],
+    [
+      767,
+      270
+    ],
+    [
+      764,
+      275
+    ],
+    [
+      765,
+      282
+    ],
+    [
+      769,
+      300
+    ],
+    [
+      773,
+      318
+    ],
+    [
+      776,
+      333
+    ],
+    [
+      779,
+      339
+    ],
+    [
+      785,
+      343
+    ],
+    [
+      796,
+      346
+    ],
+    [
+      812,
+      349
+    ],
+    [
+      823,
+      352
+    ],
+    [
+      830,
+      358
+    ],
+    [
+      834,
+      365
+    ],
+    [
+      834,
+      374
+    ],
+    [
+      832,
+      390
+    ],
+    [
+      829,
+      407
+    ],
+    [
+      826,
+      424
+    ],
+    [
+      827,
+      436
+    ],
+    [
+      832,
+      449
+    ],
+    [
+      841,
+      465
+    ],
+    [
+      850,
+      482
+    ],
+    [
+      855,
+      494
+    ],
+    [
+      856,
+      503
+    ],
+    [
+      853,
+      512
+    ],
+    [
+      847,
+      520
+    ],
+    [
+      832,
+      536
+    ],
+    [
+      815,
+      554
+    ],
+    [
+      797,
+      573
+    ],
+    [
+      778,
+      593
+    ],
+    [
+      761,
+      611
+    ],
+    [
+      753,
+      618
+    ],
+    [
+      747,
+      619
+    ],
+    [
+      740,
+      615
+    ],
+    [
+      730,
+      604
+    ],
+    [
+      719,
+      591
+    ],
+    [
+      706,
+      578
+    ],
+    [
+      693,
+      567
+    ],
+    [
+      686,
+      563
+    ],
+    [
+      678,
+      563
+    ],
+    [
+      671,
+      567
+    ],
+    [
+      667,
+      573
+    ],
+    [
+      665,
+      579
+    ],
+    [
+      667,
+      586
+    ],
+    [
+      673,
+      593
+    ],
+    [
+      687,
+      605
+    ],
+    [
+      700,
+      616
+    ],
+    [
+      710,
+      625
+    ],
+    [
+      715,
+      634
+    ],
+    [
+      718,
+      644
+    ],
+    [
+      716,
+      653
+    ],
+    [
+      712,
+      659
+    ],
+    [
+      705,
+      664
+    ],
+    [
+      697,
+      666
+    ],
+    [
+      688,
+      665
+    ],
+    [
+      678,
+      660
+    ],
+    [
+      665,
+      649
+    ],
+    [
+      646,
+      633
+    ]
+  ],
+  "sectorBoundaries": [
+    [
+      662,
+      318
+    ],
+    [
+      823,
+      545
+    ]
+  ],
+  "drsZones": [
+    {
+      "index": 1,
+      "start": [
+        665,
+        649
+      ],
+      "end": [
+        460,
+        481
+      ]
+    },
+    {
+      "index": 2,
+      "start": [
+        442,
+        445
+      ],
+      "end": [
+        574,
+        513
+      ]
+    }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Turn 1",
+      "point": [
+        435,
+        454
+      ]
+    },
+    {
+      "number": 2,
+      "name": "Turn 2",
+      "point": [
+        604,
+        520
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Turn 3",
+      "point": [
+        593,
+        449
+      ]
+    },
+    {
+      "number": 4,
+      "name": "Turn 4",
+      "point": [
+        684,
+        287
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Turn 5",
+      "point": [
+        679,
+        192
+      ]
+    },
+    {
+      "number": 6,
+      "name": "Turn 6",
+      "point": [
+        771,
+        260
+      ]
+    },
+    {
+      "number": 7,
+      "name": "Turn 7",
+      "point": [
+        764,
+        275
+      ]
+    },
+    {
+      "number": 8,
+      "name": "Turn 8",
+      "point": [
+        779,
+        339
+      ]
+    },
+    {
+      "number": 9,
+      "name": "Turn 9",
+      "point": [
+        834,
+        365
+      ]
+    },
+    {
+      "number": 10,
+      "name": "Turn 10",
+      "point": [
+        827,
+        436
+      ]
+    },
+    {
+      "number": 11,
+      "name": "Turn 11",
+      "point": [
+        856,
+        503
+      ]
+    },
+    {
+      "number": 12,
+      "name": "Turn 12",
+      "point": [
+        747,
+        619
+      ]
+    },
+    {
+      "number": 13,
+      "name": "Turn 13",
+      "point": [
+        665,
+        579
+      ]
+    },
+    {
+      "number": 14,
+      "name": "Turn 14",
+      "point": [
+        705,
+        664
+      ]
+    }
+  ],
+  "profile": {
+    "country": "Hungary",
+    "lengthKm": 4.381,
+    "turns": 14,
+    "location": {
+      "latitude": 47.5789,
+      "longitude": 19.2486,
+      "locality": "Mogyorod"
+    }
+  },
+  "previewOrthoScale": 23
+}

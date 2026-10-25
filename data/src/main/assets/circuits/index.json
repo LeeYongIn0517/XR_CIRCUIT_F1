@@ -144,11 +144,15 @@
       "id": "hungaroring",
       "displayName": "Hungaroring",
       "detailAssetPath": "circuits/hungaroring.json",
-      "modelAsset": "HungaroringTrack.glb",
+      "modelAsset": "HungaroringCircuit.glb",
       "waypointsAsset": "hungaroring_waypoints.json",
       "jolpicaCircuitId": "hungaroring",
       "openF1CircuitKey": 4,
-      "openF1CircuitShortName": "Hungaroring"
+      "openF1CircuitShortName": "Hungaroring",
+      "modelWidthMeters": 16.519414,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 14.639846,
+      "legacyOverlayRotation": false
     },
     {
       "id": "zandvoort",

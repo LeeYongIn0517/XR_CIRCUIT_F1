@@ -237,3 +237,14 @@ materials, cross section and rotation handling. S1 is 145m before T5;
 S2 is 48m before T15. DRS starts 305m after T4 and 30m after T19, with
 approximate braking ends. This is a planar visual trace without elevation.
 Rebuild with `scripts/build_track.py -- tracks/spa.json` in background Blender.
+
+## Hungaroring
+
+`tracks/hungaroring.json` traces the map in the FIA 2025 Hungarian GP
+Preview (page 2 image, 950 x 1348). Source URLs are in the definition.
+Sector and DRS anchors match Circuit Map V1 issued 08.07.25: S1 85m before
+T4, S2 100m after T11, DRS1 40m after T14, DRS2 6m after T1.
+DRS braking endpoints are approximate. The planar visual model uses the
+Albert Park generator, materials, cross section, 512-point path and overlay
+rotation. It does not model actual elevation or surveyed coordinates.
+Rebuild: `scripts/build_track.py -- tracks/hungaroring.json` in background Blender.
