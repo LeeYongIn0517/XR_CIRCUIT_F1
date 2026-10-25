@@ -284,3 +284,14 @@ not official timing boundaries. DRS is unspecified in the source and omitted;
 zero exported zones means unavailable data, not a confirmed race regulation.
 The generator skips the separate DRS GLB when there are no zones.
 Rebuild: `scripts/build_track.py -- tracks/madring.json` with background Blender.
+
+## Baku
+
+`tracks/baku.json` visually traces FIA 2025 Azerbaijan GP Circuit Map V1,
+issued 13.08.25, PDF page 3 at 1273x1800 pixels. Source URL is in the definition.
+S1: 46m before T5. S2: 56m before T16. DRS1: 54m after T2.
+DRS2: 347m after T20, wrapping across the control line. Braking endpoints
+are approximate. Albert Park's generator supplies materials, 512 path points,
+sector/DRS meshes and overlay rotation. Width scale 0.22 preserves separation
+of the adjacent straights and castle complex. Planar visual trace, no surveyed
+elevation. Rebuild: `scripts/build_track.py -- tracks/baku.json`.

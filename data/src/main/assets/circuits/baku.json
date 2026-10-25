@@ -1,0 +1,167 @@
+{
+  "country": "Azerbaijan",
+  "lengthKm": 6.003,
+  "turns": 20,
+  "location": {
+    "latitude": 40.3725,
+    "longitude": 49.8533,
+    "locality": "Baku"
+  },
+  "id": "baku",
+  "name": "Baku",
+  "drsZoneCount": 2,
+  "sectors": [
+    {
+      "index": 1,
+      "startWaypoint": 0,
+      "endWaypoint": 176,
+      "colorHex": "#FF0000"
+    },
+    {
+      "index": 2,
+      "startWaypoint": 176,
+      "endWaypoint": 349,
+      "colorHex": "#00C8FF"
+    },
+    {
+      "index": 3,
+      "startWaypoint": 349,
+      "endWaypoint": 512,
+      "colorHex": "#FFFF00"
+    }
+  ],
+  "drsZones": [
+    {
+      "index": 1,
+      "startWaypoint": 63,
+      "endWaypoint": 129
+    },
+    {
+      "index": 2,
+      "startWaypoint": 465,
+      "endWaypoint": 24
+    }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Turn 1",
+      "turnCode": "T1",
+      "waypointIndex": 28
+    },
+    {
+      "number": 2,
+      "name": "Turn 2",
+      "turnCode": "T2",
+      "waypointIndex": 58
+    },
+    {
+      "number": 3,
+      "name": "Turn 3",
+      "turnCode": "T3",
+      "waypointIndex": 132
+    },
+    {
+      "number": 4,
+      "name": "Turn 4",
+      "turnCode": "T4",
+      "waypointIndex": 152
+    },
+    {
+      "number": 5,
+      "name": "Turn 5",
+      "turnCode": "T5",
+      "waypointIndex": 180
+    },
+    {
+      "number": 6,
+      "name": "Turn 6",
+      "turnCode": "T6",
+      "waypointIndex": 185
+    },
+    {
+      "number": 7,
+      "name": "Turn 7",
+      "turnCode": "T7",
+      "waypointIndex": 219
+    },
+    {
+      "number": 8,
+      "name": "Turn 8",
+      "turnCode": "T8",
+      "waypointIndex": 237
+    },
+    {
+      "number": 9,
+      "name": "Turn 9",
+      "turnCode": "T9",
+      "waypointIndex": 239
+    },
+    {
+      "number": 10,
+      "name": "Turn 10",
+      "turnCode": "T10",
+      "waypointIndex": 242
+    },
+    {
+      "number": 11,
+      "name": "Turn 11",
+      "turnCode": "T11",
+      "waypointIndex": 245
+    },
+    {
+      "number": 12,
+      "name": "Turn 12",
+      "turnCode": "T12",
+      "waypointIndex": 251
+    },
+    {
+      "number": 13,
+      "name": "Turn 13",
+      "turnCode": "T13",
+      "waypointIndex": 285
+    },
+    {
+      "number": 14,
+      "name": "Turn 14",
+      "turnCode": "T14",
+      "waypointIndex": 303
+    },
+    {
+      "number": 15,
+      "name": "Turn 15",
+      "turnCode": "T15",
+      "waypointIndex": 323
+    },
+    {
+      "number": 16,
+      "name": "Turn 16",
+      "turnCode": "T16",
+      "waypointIndex": 354
+    },
+    {
+      "number": 17,
+      "name": "Turn 17",
+      "turnCode": "T17",
+      "waypointIndex": 369
+    },
+    {
+      "number": 18,
+      "name": "Turn 18",
+      "turnCode": "T18",
+      "waypointIndex": 391
+    },
+    {
+      "number": 19,
+      "name": "Turn 19",
+      "turnCode": "T19",
+      "waypointIndex": 403
+    },
+    {
+      "number": 20,
+      "name": "Turn 20",
+      "turnCode": "T20",
+      "waypointIndex": 435
+    }
+  ]
+}

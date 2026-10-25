@@ -200,11 +200,15 @@
       "id": "baku",
       "displayName": "Baku",
       "detailAssetPath": "circuits/baku.json",
-      "modelAsset": "BakuTrack.glb",
+      "modelAsset": "BakuCircuit.glb",
       "waypointsAsset": "baku_waypoints.json",
       "jolpicaCircuitId": "baku",
       "openF1CircuitKey": 144,
-      "openF1CircuitShortName": "Baku"
+      "openF1CircuitShortName": "Baku",
+      "modelWidthMeters": 16.111245,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 11.13728,
+      "legacyOverlayRotation": false
     },
     {
       "id": "sepang",
