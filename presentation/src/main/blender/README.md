@@ -338,3 +338,13 @@ DRS2: 160m before T15, wrapping across control line. Braking endpoints approxima
 Same generator, materials and 512 arc-length samples as Albert Park.
 Planar stylized geometry without surveyed elevations; width scale 0.65.
 Rebuild: `scripts/build_track.py -- tracks/interlagos.json`.
+
+## Las Vegas Strip Circuit
+
+`tracks/las_vegas.json` visually traces FIA 2025 Las Vegas circuit map page 2,
+version 2 issued 19.11.25 at 1273x1800 pixels, starting at the control line.
+S1: 90m after T5; S2: 140m after T12. DRS1: 20m after T4;
+DRS2: 870m before T14. Braking endpoints approximate.
+Same generator, materials and 512 arc-length samples as Albert Park.
+Planar stylized geometry without surveyed elevations; width scale 0.55.
+Rebuild: `scripts/build_track.py -- tracks/las_vegas.json`.

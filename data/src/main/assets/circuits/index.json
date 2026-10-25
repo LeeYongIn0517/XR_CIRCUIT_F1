@@ -284,11 +284,15 @@
       "id": "vegas",
       "displayName": "Las Vegas",
       "detailAssetPath": "circuits/vegas.json",
-      "modelAsset": "LasVegasTrack.glb",
+      "modelAsset": "LasVegasCircuit.glb",
       "waypointsAsset": "las_vegas_waypoints.json",
       "jolpicaCircuitId": "vegas",
       "openF1CircuitKey": 152,
-      "openF1CircuitShortName": "Las Vegas"
+      "openF1CircuitShortName": "Las Vegas",
+      "modelWidthMeters": 16.285412,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 9.763844,
+      "legacyOverlayRotation": false
     },
     {
       "id": "losail",
