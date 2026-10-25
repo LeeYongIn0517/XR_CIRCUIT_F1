@@ -259,3 +259,14 @@ endpoints are approximate. Uses the Albert Park generator, materials, cross
 section, 512-point path and overlay rotation. This is a planar visual model,
 without actual elevation, banking or surveyed coordinates.
 Rebuild: `scripts/build_track.py -- tracks/zandvoort.json` in background Blender.
+
+## Monza
+
+`tracks/monza.json` traces FIA 2025 Italian GP Circuit Map V2 issued 04.09.25,
+PDF page 2 rendered at 1273x1800 pixels. Source URL is in the definition.
+S1 is 233m before T4; S2 is 215m before T8. DRS1 starts 170m after T7;
+DRS2 starts 12m after the finish line (does not wrap). Braking endpoints are
+approximate. Uses the Albert Park generator, materials, 512-point path and
+overlay rotation. Width scale 0.55 preserves the tight chicanes. Planar visual
+trace without surveyed coordinates or elevation.
+Rebuild with background Blender: `scripts/build_track.py -- tracks/monza.json`.

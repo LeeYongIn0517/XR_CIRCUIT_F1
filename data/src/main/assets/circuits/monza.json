@@ -1,0 +1,113 @@
+{
+  "country": "Italy",
+  "lengthKm": 5.793,
+  "turns": 11,
+  "location": {
+    "latitude": 45.6156,
+    "longitude": 9.2811,
+    "locality": "Monza"
+  },
+  "id": "monza",
+  "name": "Monza",
+  "drsZoneCount": 2,
+  "sectors": [
+    {
+      "index": 1,
+      "startWaypoint": 0,
+      "endWaypoint": 171,
+      "colorHex": "#FF0000"
+    },
+    {
+      "index": 2,
+      "startWaypoint": 171,
+      "endWaypoint": 332,
+      "colorHex": "#00C8FF"
+    },
+    {
+      "index": 3,
+      "startWaypoint": 332,
+      "endWaypoint": 512,
+      "colorHex": "#FFFF00"
+    }
+  ],
+  "drsZones": [
+    {
+      "index": 1,
+      "startWaypoint": 273,
+      "endWaypoint": 344
+    },
+    {
+      "index": 2,
+      "startWaypoint": 2,
+      "endWaypoint": 79
+    }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Rettifilo 1",
+      "turnCode": "T1",
+      "waypointIndex": 84
+    },
+    {
+      "number": 2,
+      "name": "Rettifilo 2",
+      "turnCode": "T2",
+      "waypointIndex": 88
+    },
+    {
+      "number": 3,
+      "name": "Curva Grande",
+      "turnCode": "T3",
+      "waypointIndex": 135
+    },
+    {
+      "number": 4,
+      "name": "Roggia 1",
+      "turnCode": "T4",
+      "waypointIndex": 192
+    },
+    {
+      "number": 5,
+      "name": "Roggia 2",
+      "turnCode": "T5",
+      "waypointIndex": 195
+    },
+    {
+      "number": 6,
+      "name": "Lesmo 1",
+      "turnCode": "T6",
+      "waypointIndex": 231
+    },
+    {
+      "number": 7,
+      "name": "Lesmo 2",
+      "turnCode": "T7",
+      "waypointIndex": 257
+    },
+    {
+      "number": 8,
+      "name": "Ascari 1",
+      "turnCode": "T8",
+      "waypointIndex": 352
+    },
+    {
+      "number": 9,
+      "name": "Ascari 2",
+      "turnCode": "T9",
+      "waypointIndex": 361
+    },
+    {
+      "number": 10,
+      "name": "Ascari 3",
+      "turnCode": "T10",
+      "waypointIndex": 369
+    },
+    {
+      "number": 11,
+      "name": "Curva Alboreto",
+      "turnCode": "T11",
+      "waypointIndex": 465
+    }
+  ]
+}

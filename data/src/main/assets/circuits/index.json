@@ -172,11 +172,15 @@
       "id": "monza",
       "displayName": "Monza",
       "detailAssetPath": "circuits/monza.json",
-      "modelAsset": "MonzaTrack.glb",
+      "modelAsset": "MonzaCircuit.glb",
       "waypointsAsset": "monza_waypoints.json",
       "jolpicaCircuitId": "monza",
       "openF1CircuitKey": 39,
-      "openF1CircuitShortName": "Monza"
+      "openF1CircuitShortName": "Monza",
+      "modelWidthMeters": 16.285842,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 9.513308,
+      "legacyOverlayRotation": false
     },
     {
       "id": "madring",
