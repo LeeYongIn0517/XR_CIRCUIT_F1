@@ -24,7 +24,7 @@ class TrackAssetsTest(unittest.TestCase):
         catalog = json.loads((DATA/'circuits/index.json').read_text())['circuits']
         ready = [c for c in catalog if (DATA/c['detailAssetPath']).exists()
                  and (ASSETS/c['modelAsset']).exists() and (ASSETS/c['waypointsAsset']).exists()]
-        self.assertTrue({'silverstone', 'albert_park', 'shanghai', 'marina_bay', 'suzuka', 'miami', 'villeneuve', 'monaco', 'catalunya', 'red_bull_ring', 'spa', 'hungaroring', 'zandvoort', 'monza', 'baku'}.issubset({c['id'] for c in ready}))
+        self.assertTrue({'silverstone', 'albert_park', 'shanghai', 'marina_bay', 'suzuka', 'miami', 'villeneuve', 'monaco', 'catalunya', 'red_bull_ring', 'spa', 'hungaroring', 'zandvoort', 'monza', 'baku', 'sepang'}.issubset({c['id'] for c in ready}))
         self.assertEqual(len(ready), len({c['modelAsset'] for c in ready}))
         for c in ready:
             doc = glb(ASSETS/c['modelAsset'])
@@ -614,5 +614,39 @@ class TrackAssetsTest(unittest.TestCase):
             high = max(a['max'][axis] for a in bounds)
             self.assertAlmostEqual(high-low, entry[key], places=4)
             self.assertAlmostEqual(high+low, 0, places=4)
+
+    def test_sepang_generated_contract(self):
+        detail = json.loads((DATA/'circuits/sepang.json').read_text())
+        path = json.loads((ASSETS/'sepang_waypoints.json').read_text())
+        entry = next(c for c in json.loads((DATA/'circuits/index.json').read_text())['circuits'] if c['id'] == 'sepang')
+        self.assertEqual(2017, path['layout_year'])
+        self.assertIn('malaysian_grand_prix_2017', path['source'])
+        wp = path['waypoints_gltf_yup']
+        self.assertTrue(path['closed_loop'])
+        self.assertEqual(list(range(512)), [p['index'] for p in wp])
+        self.assertEqual(list(range(1, 16)), [c['number'] for c in detail['corners']])
+        corners = [c['waypointIndex'] for c in detail['corners']]
+        self.assertEqual(sorted(corners), corners)
+        self.assertTrue(corners[2] < detail['sectors'][0]['endWaypoint'] < corners[3])
+        self.assertTrue(corners[8] < detail['sectors'][1]['endWaypoint'] < corners[9])
+        self.assertEqual(0, detail['sectors'][0]['startWaypoint'])
+        self.assertEqual(512, detail['sectors'][-1]['endWaypoint'])
+        for a,b in zip(detail['sectors'],detail['sectors'][1:]):
+            self.assertEqual(a['endWaypoint'],b['startWaypoint'])
+        self.assertEqual(2, len(detail['drsZones']))
+        back,main = detail['drsZones']
+        self.assertTrue(corners[13] < back['startWaypoint'] < back['endWaypoint'] < corners[14])
+        self.assertTrue(corners[14] < main['startWaypoint'] < 512)
+        self.assertTrue(0 < main['endWaypoint'] < corners[0])
+        distances=[math.dist(a['position'],b['position']) for a,b in zip(wp,wp[1:]+wp[:1])]
+        self.assertLess(max(distances)/min(distances), 1.08)
+        self.assertAlmostEqual(sum(distances),path['path_length_m'],places=4)
+        self.assertFalse(entry['legacyOverlayRotation'])
+        doc=glb(ASSETS/entry['modelAsset'])
+        bounds=[doc['accessors'][p['attributes']['POSITION']] for m in doc['meshes'] for p in m['primitives']]
+        for axis,key in enumerate(['modelWidthMeters','modelHeightMeters','modelDepthMeters']):
+            low=min(a['min'][axis] for a in bounds);high=max(a['max'][axis] for a in bounds)
+            self.assertAlmostEqual(high-low,entry[key],places=4)
+            self.assertAlmostEqual(high+low,0,places=4)
 
 if __name__ == '__main__': unittest.main()

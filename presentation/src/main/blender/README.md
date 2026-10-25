@@ -295,3 +295,15 @@ are approximate. Albert Park's generator supplies materials, 512 path points,
 sector/DRS meshes and overlay rotation. Width scale 0.22 preserves separation
 of the adjacent straights and castle complex. Planar visual trace, no surveyed
 elevation. Rebuild: `scripts/build_track.py -- tracks/baku.json`.
+
+## Sepang
+
+`tracks/sepang.json` traces FIA 2017 Malaysian GP Doc 1, page 2, version 1
+issued 23.09.17 (1273x1800 reference pixels). No FIA 2025 F1 Sepang map was
+verified: source and layoutYear intentionally identify 2017, including DRS.
+S1: 151m before T4. S2: 80m after T9. DRS1: 104m after T14.
+DRS2: 28m after T15, wrapping across the control line. Braking endpoints
+are visual approximations. Uses Albert Park's generator, 512 path samples,
+materials, sector/DRS meshes and overlay rotation. Planar visual trace,
+not surveyed geometry; no elevation. Width scale 0.65.
+Rebuild: `scripts/build_track.py -- tracks/sepang.json`.

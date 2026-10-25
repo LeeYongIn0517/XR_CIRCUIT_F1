@@ -214,11 +214,15 @@
       "id": "sepang",
       "displayName": "Sepang",
       "detailAssetPath": "circuits/sepang.json",
-      "modelAsset": "SepangTrack.glb",
+      "modelAsset": "SepangCircuit.glb",
       "waypointsAsset": "sepang_waypoints.json",
       "jolpicaCircuitId": "sepang",
       "openF1CircuitKey": 12,
-      "openF1CircuitShortName": "Kuala Lumpur"
+      "openF1CircuitShortName": "Kuala Lumpur",
+      "modelWidthMeters": 16.337844,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 19.7904,
+      "legacyOverlayRotation": false
     },
     {
       "id": "marina_bay",

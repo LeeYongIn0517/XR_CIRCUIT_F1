@@ -1,0 +1,137 @@
+{
+  "country": "Malaysia",
+  "lengthKm": 5.543,
+  "turns": 15,
+  "location": {
+    "latitude": 2.76083,
+    "longitude": 101.738,
+    "locality": "Kuala Lumpur"
+  },
+  "id": "sepang",
+  "name": "Sepang International Circuit",
+  "drsZoneCount": 2,
+  "sectors": [
+    {
+      "index": 1,
+      "startWaypoint": 0,
+      "endWaypoint": 133,
+      "colorHex": "#FF0000"
+    },
+    {
+      "index": 2,
+      "startWaypoint": 133,
+      "endWaypoint": 303,
+      "colorHex": "#00C8FF"
+    },
+    {
+      "index": 3,
+      "startWaypoint": 303,
+      "endWaypoint": 512,
+      "colorHex": "#FFFF00"
+    }
+  ],
+  "drsZones": [
+    {
+      "index": 1,
+      "startWaypoint": 403,
+      "endWaypoint": 470
+    },
+    {
+      "index": 2,
+      "startWaypoint": 485,
+      "endWaypoint": 54
+    }
+  ],
+  "corners": [
+    {
+      "number": 1,
+      "name": "Turn 1",
+      "turnCode": "T1",
+      "waypointIndex": 62
+    },
+    {
+      "number": 2,
+      "name": "Turn 2",
+      "turnCode": "T2",
+      "waypointIndex": 76
+    },
+    {
+      "number": 3,
+      "name": "Turn 3",
+      "turnCode": "T3",
+      "waypointIndex": 101
+    },
+    {
+      "number": 4,
+      "name": "Turn 4",
+      "turnCode": "T4",
+      "waypointIndex": 148
+    },
+    {
+      "number": 5,
+      "name": "Turn 5",
+      "turnCode": "T5",
+      "waypointIndex": 186
+    },
+    {
+      "number": 6,
+      "name": "Turn 6",
+      "turnCode": "T6",
+      "waypointIndex": 204
+    },
+    {
+      "number": 7,
+      "name": "Turn 7",
+      "turnCode": "T7",
+      "waypointIndex": 239
+    },
+    {
+      "number": 8,
+      "name": "Turn 8",
+      "turnCode": "T8",
+      "waypointIndex": 249
+    },
+    {
+      "number": 9,
+      "name": "Turn 9",
+      "turnCode": "T9",
+      "waypointIndex": 295
+    },
+    {
+      "number": 10,
+      "name": "Turn 10",
+      "turnCode": "T10",
+      "waypointIndex": 306
+    },
+    {
+      "number": 11,
+      "name": "Turn 11",
+      "turnCode": "T11",
+      "waypointIndex": 327
+    },
+    {
+      "number": 12,
+      "name": "Turn 12",
+      "turnCode": "T12",
+      "waypointIndex": 359
+    },
+    {
+      "number": 13,
+      "name": "Turn 13",
+      "turnCode": "T13",
+      "waypointIndex": 372
+    },
+    {
+      "number": 14,
+      "name": "Turn 14",
+      "turnCode": "T14",
+      "waypointIndex": 389
+    },
+    {
+      "number": 15,
+      "name": "Turn 15",
+      "turnCode": "T15",
+      "waypointIndex": 478
+    }
+  ]
+}
