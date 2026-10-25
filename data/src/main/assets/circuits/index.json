@@ -242,11 +242,15 @@
       "id": "americas",
       "displayName": "Austin",
       "detailAssetPath": "circuits/americas.json",
-      "modelAsset": "AustinTrack.glb",
+      "modelAsset": "AustinCircuit.glb",
       "waypointsAsset": "austin_waypoints.json",
       "jolpicaCircuitId": "americas",
       "openF1CircuitKey": 9,
-      "openF1CircuitShortName": "Austin"
+      "openF1CircuitShortName": "Austin",
+      "modelWidthMeters": 16.337539,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 11.71989,
+      "legacyOverlayRotation": false
     },
     {
       "id": "rodriguez",

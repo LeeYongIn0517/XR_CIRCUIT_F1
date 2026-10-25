@@ -307,3 +307,14 @@ are visual approximations. Uses Albert Park's generator, 512 path samples,
 materials, sector/DRS meshes and overlay rotation. Planar visual trace,
 not surveyed geometry; no elevation. Width scale 0.65.
 Rebuild: `scripts/build_track.py -- tracks/sepang.json`.
+
+## Austin (Circuit of the Americas)
+
+`tracks/americas.json` traces FIA 2025 United States GP Doc 4 page 2,
+map version 1 issued 17.09.25, at 1273x1800 pixels. Starts at the control
+line in race order. S1: 55m before T7; S2: 65m before T13.
+DRS1: 345m after T11; DRS2: 80m after T20 (wraps across control line).
+Braking endpoints are visual approximations. Same generator, materials,
+512 equal-distance samples and overlay rotation as Albert Park.
+Planar stylized geometry, not surveyed geometry or elevation; width scale 0.65.
+Rebuild: `scripts/build_track.py -- tracks/americas.json`.
