@@ -318,3 +318,13 @@ Braking endpoints are visual approximations. Same generator, materials,
 512 equal-distance samples and overlay rotation as Albert Park.
 Planar stylized geometry, not surveyed geometry or elevation; width scale 0.65.
 Rebuild: `scripts/build_track.py -- tracks/americas.json`.
+
+## Mexico City (Autódromo Hermanos Rodríguez)
+
+`tracks/rodriguez.json` visually traces FIA 2025 Mexico City GP Doc 3 page 2,
+map version 2 issued 23.10.25, at 1273x1800 pixels. Starts at control line.
+S1: 136m before T4; S2: 242m before T12. DRS1: 80m after T11;
+DRS2: 240m after T17; DRS3: 115m after T3. Braking endpoints approximate.
+Same generator, materials and 512 arc-length samples as Albert Park.
+Planar stylized geometry without surveyed elevations; width scale 0.6.
+Rebuild: `scripts/build_track.py -- tracks/rodriguez.json`.

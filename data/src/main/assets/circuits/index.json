@@ -256,11 +256,15 @@
       "id": "rodriguez",
       "displayName": "Mexico City",
       "detailAssetPath": "circuits/rodriguez.json",
-      "modelAsset": "MexicoCityTrack.glb",
+      "modelAsset": "MexicoCityCircuit.glb",
       "waypointsAsset": "mexico_city_waypoints.json",
       "jolpicaCircuitId": "rodriguez",
       "openF1CircuitKey": 65,
-      "openF1CircuitShortName": "Mexico City"
+      "openF1CircuitShortName": "Mexico City",
+      "modelWidthMeters": 16.30792,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 11.77534,
+      "legacyOverlayRotation": false
     },
     {
       "id": "interlagos",
