@@ -1,6 +1,5 @@
 package app.yongin.xr_circuit.presentation.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import app.yongin.xr_circuit.domain.usecase.GetCircuitCatalogUseCase
@@ -56,7 +55,6 @@ class CircuitViewModel @Inject constructor(
 
     private fun selectCircuit(circuitId: String) {
         if (circuitId == _uiState.value.circuitId || catalog.none { it.id == circuitId }) {
-            Log.d("CircuitViewModel", "selectCircuit() called, Skipping circuit selection: $circuitId")
             return
         }
         loadCircuit(circuitId)
