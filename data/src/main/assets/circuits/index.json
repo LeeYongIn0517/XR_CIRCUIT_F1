@@ -312,11 +312,15 @@
       "id": "yas_marina",
       "displayName": "Yas Marina",
       "detailAssetPath": "circuits/yas_marina.json",
-      "modelAsset": "YasMarinaTrack.glb",
+      "modelAsset": "YasMarinaCircuit.glb",
       "waypointsAsset": "yas_marina_waypoints.json",
       "jolpicaCircuitId": "yas_marina",
       "openF1CircuitKey": 70,
-      "openF1CircuitShortName": "Yas Marina Circuit"
+      "openF1CircuitShortName": "Yas Marina Circuit",
+      "modelWidthMeters": 16.337574,
+      "modelHeightMeters": 0.497,
+      "modelDepthMeters": 7.762042,
+      "legacyOverlayRotation": false
     }
   ]
 }

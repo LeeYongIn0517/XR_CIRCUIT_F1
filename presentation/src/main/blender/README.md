@@ -359,3 +359,13 @@ wrapping across control line toward T1; braking endpoint approximate.
 Same generator, materials and 512 arc-length samples as Albert Park.
 Planar stylized geometry without surveyed elevations.
 Rebuild: `scripts/build_track.py -- tracks/lusail.json`.
+
+## Yas Marina Circuit
+
+`tracks/yas_marina.json` visually traces FIA 2025 Yas Marina circuit map page 2,
+version 4 issued 04.12.25 at 1273x1800 pixels, starting at the control line.
+Source: https://www.fia.com/system/files/decision-document/2025_yas_marina_event_-_circuit_map_-_yas_marina_2025.pdf
+S1: 205m before T5; S2: 100m before T9. DRS activation: 260m after T5
+and 165m after T7; braking endpoints approximate. Same generator,
+materials and 512 arc-length samples as Albert Park. Planar stylized geometry.
+Rebuild: `scripts/build_track.py -- tracks/yas_marina.json`.
