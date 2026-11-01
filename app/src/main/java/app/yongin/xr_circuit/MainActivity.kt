@@ -17,11 +17,7 @@ import app.yongin.xr_circuit.presentation.screen.CircuitMainScreen
 import app.yongin.xr_circuit.ui.theme.XR_CIRCUITTheme
 import dagger.hilt.android.AndroidEntryPoint
 
-/**
- * On XR devices the launcher activity starts in managed full space (see manifest
- * `android.window.PROPERTY_XR_ACTIVITY_START_MODE`). On non‑XR devices the spatial branch is
- * skipped and the flat UI is shown instead.
- */
+/** Flavor-selected screen: mobile Compose 2D or XR spatial UI. */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 

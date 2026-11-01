@@ -18,26 +18,6 @@ import androidx.compose.ui.unit.dp
 import app.yongin.xr_circuit.presentation.theme.XR_CIRCUITTheme
 
 /**
- * Identifiers for 3D overlay layers controlled by the dock.
- * Domain / ViewModel mapping can be added later.
- */
-enum class OverlayLayerId {
-    Sectors,
-    Drs,
-    Pins,
-}
-
-/**
- * Presentation model for a single overlay toggle in [CircuitControlDock].
- */
-data class OverlayToggleUi(
-    val id: OverlayLayerId,
-    val label: String,
-    val selected: Boolean,
-    @DrawableRes val iconRes: Int,
-)
-
-/**
  * Bottom Orbiter / Control Dock (Figma Nav, node `1:164`).
  *
  * Glass Material 3 surface composing:

@@ -32,5 +32,6 @@ data class CircuitUiState(
     val strategy: StrategyInsightUi? = null,
     val profileReady: Boolean = false,
     val weatherLoading: Boolean = false,
+    val contentError: Boolean = false,
     val weatherError: String? = null,
 )

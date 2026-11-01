@@ -15,7 +15,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object RepositoryModule {
-    @Provides @Singleton fun local(@ApplicationContext context: Context) = CircuitLocalDataSource(AndroidAssetReader(context), DataJson)
+    @Provides @Singleton fun local(@ApplicationContext context: Context) = CircuitLocalDataSource(AndroidAssetReader(context), DataJson, if (app.yongin.xr_circuit.BuildConfig.FLAVOR == "mobile") app.yongin.xr_circuit.data.local.CircuitAssetTarget.MOBILE else app.yongin.xr_circuit.data.local.CircuitAssetTarget.XR)
     @Provides @Singleton fun circuits(local: CircuitLocalDataSource): CircuitRepository = CircuitRepositoryImpl(local)
     @Provides @Singleton fun weather(@ApplicationContext context: Context, local: CircuitLocalDataSource): WeatherRepository =
         WeatherRepositoryImpl(local, OpenMeteoRemoteDataSource(OpenMeteoApiService(androidHttpClient(context, (context.applicationInfo.flags and android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE) != 0))))

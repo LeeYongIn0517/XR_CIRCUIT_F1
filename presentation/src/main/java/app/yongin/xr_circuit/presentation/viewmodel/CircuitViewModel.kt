@@ -41,6 +41,7 @@ internal fun CircuitState.toUiState() = CircuitUiState(
     selectedCornerId = selectedCornerId,
     dockUiState = CircuitControlDockUiState(DefaultOverlayToggles.map { it.copy(selected = Overlay.valueOf(it.id.name) in overlays) }),
     weather = weather?.toUi(), drivers = drivers.map { it.toUi() },
+    contentError = catalogError != null || profileError != null || selectionError != null,
     profileReady = detail != null, weatherLoading = weatherLoading,
     weatherError = weatherError?.let { "Weather unavailable" },
 )

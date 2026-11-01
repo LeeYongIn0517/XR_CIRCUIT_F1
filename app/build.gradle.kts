@@ -9,6 +9,11 @@ plugins {
 android {
     namespace = "app.yongin.xr_circuit"
     compileSdk = 36
+    flavorDimensions += "device"
+    productFlavors {
+        create("mobile") { dimension = "device" }
+        create("xr") { dimension = "device" }
+    }
 
     defaultConfig {
         applicationId = "app.yongin.xr_circuit"
@@ -21,6 +26,7 @@ android {
     }
 
     sourceSets["main"].assets.srcDir("../data/assets")
+    sourceSets["mobile"].assets.srcDir("../mobile-assets")
 
     buildTypes {
         release {
@@ -39,6 +45,7 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
+        buildConfig = true
         compose = true
     }
 }
@@ -68,10 +75,10 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.compose)
-    implementation(libs.androidx.xr.compose.material3)
-    implementation(libs.runtime)
-    implementation(libs.androidx.scenecore)
+    "xrImplementation"(libs.androidx.compose)
+    "xrImplementation"(libs.androidx.xr.compose.material3)
+    "xrImplementation"(libs.runtime)
+    "xrImplementation"(libs.androidx.scenecore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -10,10 +10,18 @@ plugins {
 android {
     namespace = "app.yongin.xr_circuit.presentation"
     compileSdk = 36
+    flavorDimensions += "device"
+    productFlavors {
+        create("mobile") { dimension = "device" }
+        create("xr") { dimension = "device" }
+    }
 
     defaultConfig {
         minSdk = 34
     }
+
+    sourceSets["main"].assets.setSrcDirs(emptyList<String>())
+    sourceSets["xr"].assets.srcDir("src/main/assets")
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -47,10 +55,10 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.material.icons.core)
-    implementation(libs.androidx.compose)
-    implementation(libs.androidx.xr.compose.material3)
-    implementation(libs.runtime)
-    implementation(libs.androidx.scenecore)
+    "xrImplementation"(libs.androidx.compose)
+    "xrImplementation"(libs.androidx.xr.compose.material3)
+    "xrImplementation"(libs.runtime)
+    "xrImplementation"(libs.androidx.scenecore)
     testImplementation(libs.junit)
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
     androidTestImplementation(libs.androidx.junit)

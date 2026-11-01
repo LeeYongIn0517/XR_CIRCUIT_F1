@@ -8,6 +8,7 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
@@ -111,6 +112,15 @@ fun CircuitMainScreen(
                 uiState = uiState,
                 onIntent = viewModel::onIntent,
             )
+        }
+    } else {
+        androidx.compose.foundation.layout.Column(
+            Modifier.fillMaxSize().then(Modifier.padding(24.dp)),
+            verticalArrangement = androidx.compose.foundation.layout.Arrangement.Center,
+        ) {
+            androidx.compose.material3.Text("XR spatial mode is unavailable. Use the mobile build for the 2D track.")
+            androidx.compose.material3.Text(uiState.circuitName)
+
         }
     }
 }
