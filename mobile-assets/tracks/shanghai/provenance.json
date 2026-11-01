@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_chinese_grand_prix_-_event_notes_-_circuit_map_pit_lane_and_quarantine_zone.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/shanghai_waypoints.json",
+  "sha256": "98453bab9809f33ab350e09647df03a06d29643fb276b59217f40cc3ed7bc22a",
+  "detailSha256": "209b6807cf37ebb15eb55ff470743370e0aed0228e5b91cd0292c7a385103a0d",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

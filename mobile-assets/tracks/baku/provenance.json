@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_azerbaijan_grand_prix_-_event_notes_-_circuit_map_pit_lane_quarantine_zone_and_red_zone.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/baku_waypoints.json",
+  "sha256": "87e83bec33f1b91339da4d6bebcdf21ce40442fe725c289240fe8f7d549d9b56",
+  "detailSha256": "f1b7980d1f66ccb19e7eb77b0793452cac0d6da308d26f033bd8a6044ed5c8b3",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

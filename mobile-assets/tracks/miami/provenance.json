@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_miami_grand_prix_-_event_notes_-_circuit_map_pit_lane_quarantine_zone_emergency_exits_and_red_zones_.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/miami_waypoints.json",
+  "sha256": "fd6de49b83b55671b35f55db9624676a045cc19ca5f622f8150b569ab27541b4",
+  "detailSha256": "e37247169ea3bd45edde82bbcc0563b82f04ed1cfb793a5b5ea16246b92b45b0",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

@@ -5,5 +5,5 @@
   "sha256": "3c6b7ab9ccc0762d69a2c813b68f9efad642041a231fbcb7064701d8b141b8e0",
   "detailSha256": "8ce7fbac7931147ca7b23a898cd388be8a1037efb78e5708c73b35c10d8df4fa",
   "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
-  "accuracy": "Map-derived stylized centreline, not survey data. 2025 DRS layout. Suzuka elevation flattened in 2D; traversal remains ordered."
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
 }

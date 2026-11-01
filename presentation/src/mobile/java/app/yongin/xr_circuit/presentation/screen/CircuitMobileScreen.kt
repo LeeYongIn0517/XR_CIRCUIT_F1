@@ -97,7 +97,7 @@ fun CircuitMobileScreen(viewModel: CircuitViewModel = hiltViewModel()) {
                         viewModel.onIntent(CircuitIntent.SelectCorner(corner.id))
                     }
                 } }
-                Text("45-second visual lap · 2025 layout", style = MaterialTheme.typography.bodySmall)
+                Text("45-second visual lap · bundled layout", style = MaterialTheme.typography.bodySmall)
             }
             Text("Circuit Profile", style = MaterialTheme.typography.titleLarge)
             if (!state.profileReady && !state.contentError) CircularProgressIndicator(Modifier.semantics { contentDescription = "Loading circuit profile" })

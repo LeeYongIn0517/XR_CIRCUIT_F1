@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_las_vegas_grand_prix_-_event_notes_-_circuit_map_v2_pit_lane_drawing_emergency_map_exits_quarantine_zone_and_red_zones.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/las_vegas_waypoints.json",
+  "sha256": "26d1de4db3997b44d556a3ca3db12b352fa2e5469efe720cb06a3f2b816fde74",
+  "detailSha256": "bbb41a7804e20e534daab1347b8a7b015de5de17133dcf267cf6b4ed03ce4b24",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

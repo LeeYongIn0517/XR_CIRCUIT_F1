@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/sites/default/files/formula_one_malaysian_grand_prix_2017_document_-_doc_1.pdf",
+  "layoutYear": 2017,
+  "derivedFrom": "presentation/src/main/assets/sepang_waypoints.json",
+  "sha256": "7db46820ba9c26a0c2cd40fdcc56e019c4f6eb591b490b4723f8b24a1407667b",
+  "detailSha256": "0822f3226addff9472ac3235de1a9ae6933d60279856af082ba55fd962e4bbff",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2017; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

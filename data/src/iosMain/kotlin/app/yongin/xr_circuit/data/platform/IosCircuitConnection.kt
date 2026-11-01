@@ -29,6 +29,7 @@ class IosCircuitConnection {
         }), scope)
     fun observe(onState: (CircuitState) -> Unit): CircuitObservation = store.observe(scope, onState)
     fun selectCircuit(id: String) = store.selectCircuit(id)
+    fun selectCorner(id: String) = store.selectCorner(id)
     fun toggleOverlay(overlay: Overlay) = store.toggleOverlay(overlay)
     fun retry() = store.retry()
     fun close() { store.close(); scope.cancel(); client.close() }

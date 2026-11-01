@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/news/f1-2025-hungarian-grand-prix-preview",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/hungaroring_waypoints.json",
+  "sha256": "dbd054f3c0d3d89b30875f9f67694912735f32770844661b4da0b8ffe367c80e",
+  "detailSha256": "8e9ef515a0a66c7d97d3838717fe776a967aab751724509de923ca0914c6d033",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

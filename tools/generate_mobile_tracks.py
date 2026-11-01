@@ -1,4 +1,4 @@
-"""Generate representative mobile assets from checked-in XR paths. Requires Pillow.
+"""Generate all catalog mobile assets from checked-in XR paths. Requires Pillow.
 Run from repo root: python3 tools/generate_mobile_tracks.py
 No network, Blender, or generated geographic imagery is used.
 """
@@ -12,9 +12,10 @@ SIZE, PAD, AA = 1024, 0.08, 3
 def write(path, value):
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n')
 
-def generate(cid):
-    source = ROOT / f'presentation/src/main/assets/{cid}_waypoints.json'
-    detail_source = ROOT / f'data/assets/circuits/{cid}.json'
+def generate(entry):
+    cid = entry['id']
+    source = ROOT / 'presentation/src/main/assets' / entry['waypointsAsset']
+    detail_source = ROOT / 'data/assets' / entry['detailAssetPath']
     raw = json.loads(source.read_text())
     detail = json.loads(detail_source.read_text())
     # glTF X right, Z down, top view: no per-platform rotation/reflection.
@@ -38,7 +39,7 @@ def generate(cid):
             xy=[(points[i%n][0]*SIZE*AA,points[i%n][1]*SIZE*AA) for i in indices]
             draw.line(xy,fill=color,width=round(width*AA),joint='curve')
             radius=width*AA/2
-            for x,y in (xy[0],xy[-1]):
+            for x,y in xy:
                 draw.ellipse((x-radius,y-radius,x+radius,y+radius),fill=color)
         im.resize((SIZE,SIZE),Image.Resampling.LANCZOS).save(out/name)
     def indices(a,b):
@@ -58,9 +59,9 @@ def generate(cid):
         'derivedFrom':str(source.relative_to(ROOT)), 'sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
         'detailSha256':hashlib.sha256(detail_source.read_bytes()).hexdigest(),
         'rights':'Existing repository trace; no explicit redistribution license verified. Release permission review remains open.',
-        'accuracy':'Map-derived stylized centreline, not survey data. 2025 DRS layout. Suzuka elevation flattened in 2D; traversal remains ordered.'})
+        'accuracy':f"Repository-derived stylized centreline, not survey data. Source layout year {raw['layout_year']}; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."})
     return {'circuitId':cid,'track':f'tracks/{cid}/track.png','sectors':f'tracks/{cid}/sectors.png','drs':f'tracks/{cid}/drs.png','path':f'tracks/{cid}/path.json','width':SIZE,'height':SIZE}
 
 if __name__=='__main__':
     OUT.mkdir(parents=True,exist_ok=True)
-    write(OUT/'index.json',{'schemaVersion':1,'circuits':[generate(c) for c in ('silverstone','suzuka')]})
+    write(OUT/'index.json',{'schemaVersion':1,'circuits':[generate(c) for c in json.loads((ROOT/'data/assets/circuits/index.json').read_text())['circuits']]})

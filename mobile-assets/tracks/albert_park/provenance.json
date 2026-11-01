@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_australian_grand_prix_-_event_notes_-_circuit_map_pit_lane_and_quarantine_zone.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/melbourne_waypoints.json",
+  "sha256": "751bed061635e259a78a7c58ad20bdbc330816bb58411d2e63d05f280d5b0f45",
+  "detailSha256": "234abd554522ecddb3b3adfc09bb428793ef839c2a026c25330f2472e9281878",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_belgian_grand_prix_-_event_notes_-_circuit_map_pit_lane_emergency_exits_quarantine_zone_and_red_zones.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/spa_waypoints.json",
+  "sha256": "7d0280e45775f3c55d0a134fc61e01a7f39b6b867172e4ab440bd2bea8dc4273",
+  "detailSha256": "8fe1f17377278d60d8e4ff6a83dd405b51d581b4b3e0a397f6354b5d27a83022",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

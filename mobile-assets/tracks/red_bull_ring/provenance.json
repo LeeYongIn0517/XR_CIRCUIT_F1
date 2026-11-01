@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_austrian_grand_prix_-_event_notes_-_circuit_map_pit_lane_emergency_exit_map_quarantine_zone_red_zones.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/red_bull_ring_waypoints.json",
+  "sha256": "76a87af1110f85e1cf80b706de22c900cd7ae75b233a12e7bf906401904e035e",
+  "detailSha256": "a25ce731f79a830f41df58662f49ca1eb726c30102bda068095fd3e905905b6e",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

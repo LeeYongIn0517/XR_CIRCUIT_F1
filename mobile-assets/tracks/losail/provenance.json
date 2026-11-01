@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_lusail_event_-_circuit_map_-_qatar_2025.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/lusail_waypoints.json",
+  "sha256": "5ccac18669705c7d78bd468935d3d3e733fc87a63008fdaa2c4a559989dd1bb9",
+  "detailSha256": "3c831dc5bccdea48829d27d984b7758c85fd364a3ecf46b99369318ee1c5c516",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

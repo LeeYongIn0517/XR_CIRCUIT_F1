@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_singapore_grand_prix_-_event_notes_-_circuit_map_pit_lane_emergency_exits_map_and_quarantine_zone.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/singapore_waypoints.json",
+  "sha256": "ace7f3f3a2dabff19a5f6840b55481985797dce6c95f3b13d3aaf16d168bc85c",
+  "detailSha256": "6f1ab78d843b204183a0b82b6e9e4bb2e343d5989af14af56536d81480023a2c",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

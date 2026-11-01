@@ -1,0 +1,9 @@
+{
+  "source": "https://www.madring.com/notas-prensa/diseno-circuito",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/madring_waypoints.json",
+  "sha256": "a7738e1d9e0dd2ce9b273078ab1680c338dc497af8da47fbe2bd45d84ba4fa03",
+  "detailSha256": "6566cd6621cac1cb6404508d5f2ae008f68e4a945ce2f2de55d10833adbb27b5",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

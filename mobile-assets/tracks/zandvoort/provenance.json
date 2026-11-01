@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_dutch_grand_prix_-_event_notes_-_circuit_map_pit_lane_map_emergency_exit_map_quarantine_zone_and_red_zones_.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/zandvoort_waypoints.json",
+  "sha256": "73ecf98bf19dbfb07918fb745ed24ac0a70f3989d930c7500954f020597a44d9",
+  "detailSha256": "9d5a9f029366d7f5bd58d3632e848541d39cf52f632cd251b8558c6a337b6325",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

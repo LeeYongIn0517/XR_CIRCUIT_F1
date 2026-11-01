@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_yas_marina_event_-_circuit_map_-_yas_marina_2025.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/yas_marina_waypoints.json",
+  "sha256": "0ae0c0ea33a5046fd8501c45c2f7b5ff1f4ecbc1e3757eff8408f4b52a550863",
+  "detailSha256": "98f4173417fad994989ae073f87f0d46b18bbf5812bc67bd194f407d7f2f221a",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

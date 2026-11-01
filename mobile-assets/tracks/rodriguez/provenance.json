@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_mexico_city_grand_prix_-_event_notes_-_circuit_map_pit_lane_drawing_emergency_exits_map_and_quarantine_zone_area.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/mexico_city_waypoints.json",
+  "sha256": "5f010bea9e616e0a707f23d13e64c168fe190b7636a18d9e26f4307b48d75dbf",
+  "detailSha256": "5248b183b33d59cb8a37d81ba0bffa0effd4f14d3c1c3f31d8403b64a4cd0c0e",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_sao_paulo_grand_prix_-_event_notes_-_circuit_map_pit_lane_drawing_emergency_exits_map_quarantine_zone_and_red_zones_map.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/interlagos_waypoints.json",
+  "sha256": "3658d693fe4103947850f4e37c47deb9d89f5d6c9b7665200fc7cf785bba8698",
+  "detailSha256": "9c7725c3a27352a5cfb084eea151893ee2b74a7f36c1ede8fe2f7f745c283134",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}

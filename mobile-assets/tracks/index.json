@@ -2,11 +2,20 @@
   "schemaVersion": 1,
   "circuits": [
     {
-      "circuitId": "silverstone",
-      "track": "tracks/silverstone/track.png",
-      "sectors": "tracks/silverstone/sectors.png",
-      "drs": "tracks/silverstone/drs.png",
-      "path": "tracks/silverstone/path.json",
+      "circuitId": "albert_park",
+      "track": "tracks/albert_park/track.png",
+      "sectors": "tracks/albert_park/sectors.png",
+      "drs": "tracks/albert_park/drs.png",
+      "path": "tracks/albert_park/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "shanghai",
+      "track": "tracks/shanghai/track.png",
+      "sectors": "tracks/shanghai/sectors.png",
+      "drs": "tracks/shanghai/drs.png",
+      "path": "tracks/shanghai/path.json",
       "width": 1024,
       "height": 1024
     },
@@ -16,6 +25,186 @@
       "sectors": "tracks/suzuka/sectors.png",
       "drs": "tracks/suzuka/drs.png",
       "path": "tracks/suzuka/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "miami",
+      "track": "tracks/miami/track.png",
+      "sectors": "tracks/miami/sectors.png",
+      "drs": "tracks/miami/drs.png",
+      "path": "tracks/miami/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "villeneuve",
+      "track": "tracks/villeneuve/track.png",
+      "sectors": "tracks/villeneuve/sectors.png",
+      "drs": "tracks/villeneuve/drs.png",
+      "path": "tracks/villeneuve/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "monaco",
+      "track": "tracks/monaco/track.png",
+      "sectors": "tracks/monaco/sectors.png",
+      "drs": "tracks/monaco/drs.png",
+      "path": "tracks/monaco/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "catalunya",
+      "track": "tracks/catalunya/track.png",
+      "sectors": "tracks/catalunya/sectors.png",
+      "drs": "tracks/catalunya/drs.png",
+      "path": "tracks/catalunya/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "red_bull_ring",
+      "track": "tracks/red_bull_ring/track.png",
+      "sectors": "tracks/red_bull_ring/sectors.png",
+      "drs": "tracks/red_bull_ring/drs.png",
+      "path": "tracks/red_bull_ring/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "silverstone",
+      "track": "tracks/silverstone/track.png",
+      "sectors": "tracks/silverstone/sectors.png",
+      "drs": "tracks/silverstone/drs.png",
+      "path": "tracks/silverstone/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "spa",
+      "track": "tracks/spa/track.png",
+      "sectors": "tracks/spa/sectors.png",
+      "drs": "tracks/spa/drs.png",
+      "path": "tracks/spa/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "hungaroring",
+      "track": "tracks/hungaroring/track.png",
+      "sectors": "tracks/hungaroring/sectors.png",
+      "drs": "tracks/hungaroring/drs.png",
+      "path": "tracks/hungaroring/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "zandvoort",
+      "track": "tracks/zandvoort/track.png",
+      "sectors": "tracks/zandvoort/sectors.png",
+      "drs": "tracks/zandvoort/drs.png",
+      "path": "tracks/zandvoort/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "monza",
+      "track": "tracks/monza/track.png",
+      "sectors": "tracks/monza/sectors.png",
+      "drs": "tracks/monza/drs.png",
+      "path": "tracks/monza/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "madring",
+      "track": "tracks/madring/track.png",
+      "sectors": "tracks/madring/sectors.png",
+      "drs": "tracks/madring/drs.png",
+      "path": "tracks/madring/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "baku",
+      "track": "tracks/baku/track.png",
+      "sectors": "tracks/baku/sectors.png",
+      "drs": "tracks/baku/drs.png",
+      "path": "tracks/baku/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "sepang",
+      "track": "tracks/sepang/track.png",
+      "sectors": "tracks/sepang/sectors.png",
+      "drs": "tracks/sepang/drs.png",
+      "path": "tracks/sepang/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "marina_bay",
+      "track": "tracks/marina_bay/track.png",
+      "sectors": "tracks/marina_bay/sectors.png",
+      "drs": "tracks/marina_bay/drs.png",
+      "path": "tracks/marina_bay/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "americas",
+      "track": "tracks/americas/track.png",
+      "sectors": "tracks/americas/sectors.png",
+      "drs": "tracks/americas/drs.png",
+      "path": "tracks/americas/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "rodriguez",
+      "track": "tracks/rodriguez/track.png",
+      "sectors": "tracks/rodriguez/sectors.png",
+      "drs": "tracks/rodriguez/drs.png",
+      "path": "tracks/rodriguez/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "interlagos",
+      "track": "tracks/interlagos/track.png",
+      "sectors": "tracks/interlagos/sectors.png",
+      "drs": "tracks/interlagos/drs.png",
+      "path": "tracks/interlagos/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "vegas",
+      "track": "tracks/vegas/track.png",
+      "sectors": "tracks/vegas/sectors.png",
+      "drs": "tracks/vegas/drs.png",
+      "path": "tracks/vegas/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "losail",
+      "track": "tracks/losail/track.png",
+      "sectors": "tracks/losail/sectors.png",
+      "drs": "tracks/losail/drs.png",
+      "path": "tracks/losail/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "yas_marina",
+      "track": "tracks/yas_marina/track.png",
+      "sectors": "tracks/yas_marina/sectors.png",
+      "drs": "tracks/yas_marina/drs.png",
+      "path": "tracks/yas_marina/path.json",
       "width": 1024,
       "height": 1024
     }

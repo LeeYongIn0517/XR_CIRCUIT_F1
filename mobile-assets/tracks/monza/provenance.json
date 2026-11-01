@@ -1,0 +1,9 @@
+{
+  "source": "https://www.fia.com/system/files/decision-document/2025_italian_grand_prix_-_event_notes_-_circuit_map_pit_lane_emergency_exit_map_quarantine_zone_and_red_zones.pdf",
+  "layoutYear": 2025,
+  "derivedFrom": "presentation/src/main/assets/monza_waypoints.json",
+  "sha256": "8dfb3e386e0446a56a2fa0dedc14bc489e644cf4d7b9b309c61e0087ec9df70b",
+  "detailSha256": "5e6837fa44cdb4123fac8c56f499e1bca6f3733e9fbb9792c106666f35061553",
+  "rights": "Existing repository trace; no explicit redistribution license verified. Release permission review remains open.",
+  "accuracy": "Repository-derived stylized centreline, not survey data. Source layout year 2025; not verified against the current season. Elevation flattened in 2D; traversal remains ordered."
+}
