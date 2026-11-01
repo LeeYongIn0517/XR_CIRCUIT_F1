@@ -2,7 +2,7 @@ import json,math,struct,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[5]
 ASSETS=ROOT/'presentation/src/main/assets'
-DATA=ROOT/'data/src/main/assets/circuits'
+DATA=ROOT/'data/assets/circuits'
 class MadringAssetsTest(unittest.TestCase):
  def test_design_path_and_model_contract(self):
   definition=json.loads((ROOT/'presentation/src/main/blender/tracks/madring.json').read_text())

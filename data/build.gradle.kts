@@ -1,47 +1,45 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.android.kmp.library)
     alias(libs.plugins.kotlin.serialization)
-    alias(libs.plugins.kotlin.kapt)
-    alias(libs.plugins.hilt.android)
 }
-
-android {
-    namespace = "app.yongin.xr_circuit.data"
-    compileSdk = 36
-
-    defaultConfig {
+kotlin {
+    jvmToolchain(17)
+    androidLibrary {
+        namespace = "app.yongin.xr_circuit.data"
+        compileSdk = 36
         minSdk = 34
+        compilerOptions { jvmTarget.set(JvmTarget.JVM_11) }
+        withHostTestBuilder {}.configure {}
     }
-
-    buildFeatures {
-        buildConfig = true
+    listOf(iosArm64(), iosSimulatorArm64()).forEach { target ->
+        target.binaries.framework {
+            baseName = "CircuitData"
+            isStatic = true
+            export(project(":domain"))
+        }
     }
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+    sourceSets {
+        if (providers.gradleProperty("stage3HttpIntegration").isPresent) {
+            getByName("iosSimulatorArm64Test").kotlin.srcDir("src/iosIntegrationTest/kotlin")
+        }
+        commonMain.dependencies {
+            api(project(":domain"))
+            implementation(libs.kotlinx.serialization.json)
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+            implementation("io.ktor:ktor-client-core:3.0.3")
+        }
+        androidMain.dependencies {
+            implementation("io.ktor:ktor-client-okhttp:3.0.3")
+            implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+        }
+        getByName("androidHostTest").dependencies { implementation("com.squareup.okhttp3:mockwebserver:4.12.0") }
+        iosMain.dependencies { implementation("io.ktor:ktor-client-darwin:3.0.3") }
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
+            implementation("io.ktor:ktor-client-mock:3.0.3")
+        }
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
-}
-
-kapt {
-    correctErrorTypes = true
-}
-
-dependencies {
-    implementation(project(":domain"))
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.kotlinx.serialization.json)
-    implementation("com.squareup.retrofit2:retrofit:${libs.versions.retrofit.get()}")
-    implementation("com.squareup.retrofit2:converter-kotlinx-serialization:${libs.versions.retrofit.get()}")
-    implementation("com.squareup.okhttp3:okhttp:${libs.versions.okhttp.get()}")
-    implementation("com.squareup.okhttp3:logging-interceptor:${libs.versions.okhttp.get()}")
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }

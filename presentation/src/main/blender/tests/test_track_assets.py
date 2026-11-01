@@ -7,7 +7,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[5]
 ASSETS = ROOT / 'presentation/src/main/assets'
-DATA = ROOT / 'data/src/main/assets'
+DATA = ROOT / 'data/assets'
 
 
 def glb(path):

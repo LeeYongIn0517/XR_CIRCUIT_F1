@@ -52,7 +52,7 @@ now rebuild all assets from this definition so stale overlay indices cannot retu
 
 Run in a separate background process: the script replaces that process's scene.
 The script writes the blend, preview, GLBs, equally spaced closed-loop waypoints,
-profile JSON and matching bounds in `data/src/main/assets/circuits/index.json`.
+profile JSON and matching bounds in `data/assets/circuits/index.json`.
 Sector ranges are start-inclusive/end-exclusive; the final sector ends at the
 waypoint count (the seam). DRS ranges with end < start cross the start/finish line.
 The model, overlays and waypoints share a centred glTF Y-up coordinate system.
@@ -80,7 +80,7 @@ coordinate system and SceneCore overlay corrections match Albert Park.
 
 ## Add another circuit
 
-1. Add a catalog entry in `data/src/main/assets/circuits/index.json` with a unique
+1. Add a catalog entry in `data/assets/circuits/index.json` with a unique
    ID, display name, combined `modelAsset`, `waypointsAsset`, detail path and API IDs.
 2. Add an authored definition like `tracks/albert_park.json`, with traced points
    in race order, two sector boundaries, any number of DRS ranges, corners and
@@ -106,7 +106,7 @@ Validation:
 
 ```sh
 python3 -m unittest discover -s presentation/src/main/blender/tests -p 'test_*.py'
-./gradlew :app:assembleDebug :data:testDebugUnitTest :presentation:testDebugUnitTest :domain:test
+./gradlew :app:assembleDebug :data:testAndroidHostTest :presentation:testDebugUnitTest :domain:testAndroidHostTest
 ```
 
 The Python tests check bundled asset resolution, glTF overlay nodes, model bounds,

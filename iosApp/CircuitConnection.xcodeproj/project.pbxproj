@@ -102,7 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C404BBDC3FC64D2447EA950 /* Build configuration list for PBXNativeTarget "CircuitConnection" */;
 			buildPhases = (
-				8C3EDE747DCD846A2EF6A1A6 /* Build shared domain framework */,
+				8C3EDE747DCD846A2EF6A1A6 /* Build shared data framework */,
 				A6B7956CFA679DB919554481 /* Sources */,
 				6131705EC5F0847ED25DDC55 /* Frameworks */,
 				1FB6373D7FB9A5C970E59264 /* Resources */,
@@ -180,7 +180,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8C3EDE747DCD846A2EF6A1A6 /* Build shared domain framework */ = {
+		8C3EDE747DCD846A2EF6A1A6 /* Build shared data framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,14 +189,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Build shared domain framework";
+			name = "Build shared data framework";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eu\ncd \"$SRCROOT/..\"\nif [ -z \"${JAVA_HOME:-}\" ]; then\n  export JAVA_HOME=$(/usr/libexec/java_home -v 17)\nfi\ncase \"$PLATFORM_NAME\" in\n  iphonesimulator) target=IosSimulatorArm64 ;;\n  iphoneos) target=IosArm64 ;;\n  *) echo \"Unsupported platform: $PLATFORM_NAME\"; exit 1 ;;\nesac\n./gradlew \":domain:link${CONFIGURATION}Framework${target}\" --console=plain\n";
+			shellScript = "set -eu\ncd \"$SRCROOT/..\"\nif [ -z \"${JAVA_HOME:-}\" ]; then\n  export JAVA_HOME=$(/usr/libexec/java_home -v 17)\nfi\ncase \"$PLATFORM_NAME\" in\n  iphonesimulator) target=IosSimulatorArm64 ;;\n  iphoneos) target=IosArm64 ;;\n  *) echo \"Unsupported platform: $PLATFORM_NAME\"; exit 1 ;;\nesac\n./gradlew \":data:link${CONFIGURATION}Framework${target}\" --console=plain\nmkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\"\ncp -R data/assets/circuits \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -293,7 +293,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../domain/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
+					"$(SRCROOT)/../data/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,7 +305,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
-					CircuitDomain,
+					CircuitData,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "app.yongin.xr-circuit.connection";
 				SDKROOT = iphoneos;
@@ -384,7 +384,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../domain/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
+					"$(SRCROOT)/../data/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -394,7 +394,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
-					CircuitDomain,
+					CircuitData,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "app.yongin.xr-circuit.connection.tests";
 				SDKROOT = iphoneos;
@@ -414,7 +414,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../domain/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
+					"$(SRCROOT)/../data/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,7 +426,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
-					CircuitDomain,
+					CircuitData,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "app.yongin.xr-circuit.connection";
 				SDKROOT = iphoneos;
@@ -445,7 +445,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../domain/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
+					"$(SRCROOT)/../data/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -455,7 +455,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
-					CircuitDomain,
+					CircuitData,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "app.yongin.xr-circuit.connection.tests";
 				SDKROOT = iphoneos;

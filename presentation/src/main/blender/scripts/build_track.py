@@ -169,8 +169,8 @@ def main():
     if 'pitLane' in config:
         pit = config['pitLane']
         detail['pitLane'] = dict(speedLimitKmh=pit['speedLimitKmh'], entryWaypoint=nearest(pit['entry']), exitWaypoint=nearest(pit['exit']))
-    (ROOT/'data/src/main/assets/circuits'/ (config['id']+'.json')).write_text(json.dumps(detail,indent=2)+'\n')
-    catalog_path=ROOT/'data/src/main/assets/circuits/index.json'
+    (ROOT/'data/assets/circuits'/ (config['id']+'.json')).write_text(json.dumps(detail,indent=2)+'\n')
+    catalog_path=ROOT/'data/assets/circuits/index.json'
     catalog=json.loads(catalog_path.read_text())
     entry=next(e for e in catalog['circuits'] if e['id']==config['id'])
     entry.update(modelAsset=prefix+'Circuit.glb',waypointsAsset=config['waypointsAsset'],modelWidthMeters=round(maxs.x-mins.x,6),modelHeightMeters=round(maxs.z-mins.z,6),modelDepthMeters=round(maxs.y-mins.y,6),legacyOverlayRotation=False)

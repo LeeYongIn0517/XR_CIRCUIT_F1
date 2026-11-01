@@ -20,6 +20,8 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    sourceSets["main"].assets.srcDir("../data/assets")
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -47,6 +49,8 @@ kapt {
 
 dependencies {
     implementation(project(":data"))
+    implementation(libs.kotlinx.serialization.json)
+    implementation("io.ktor:ktor-client-core:3.0.3")
     implementation(project(":presentation"))
 
     implementation(libs.hilt.android)
