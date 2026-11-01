@@ -1,6 +1,7 @@
 package app.yongin.xr_circuit.data.platform
 
 import app.yongin.xr_circuit.data.local.CircuitLocalDataSource
+import app.yongin.xr_circuit.data.local.CircuitAssetTarget
 import app.yongin.xr_circuit.data.network.DataJson
 import app.yongin.xr_circuit.data.repository.*
 import app.yongin.xr_circuit.data.remote.openmeteo.*
@@ -15,11 +16,10 @@ import kotlinx.coroutines.*
 class IosCircuitConnection {
     private val client = iosHttpClient()
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
-    private val local = CircuitLocalDataSource(IosAssetReader(), DataJson)
-    // Stage 4 probe catalog only. Product asset availability belongs to stage 5.
+    private val local = CircuitLocalDataSource(IosAssetReader(), DataJson, CircuitAssetTarget.MOBILE)
+    // Product availability uses the mobile manifest and never requires GLB.
     private val circuits = object : CircuitRepository {
-        override fun getCatalog() = local.loadCatalog().circuits
-            .filter { it.id in listOf("silverstone", "suzuka") }.map { it.toDomain() }
+        override fun getCatalog() = local.loadAvailableCatalogEntries().map { it.toDomain() }
         override fun getCircuitDetail(circuitId: String) = local.loadCircuitDetail(circuitId).toDomain()
     }
     private val weather = WeatherRepositoryImpl(local, OpenMeteoRemoteDataSource(OpenMeteoApiService(client)))

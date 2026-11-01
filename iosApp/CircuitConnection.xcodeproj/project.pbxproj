@@ -196,7 +196,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eu\ncd \"$SRCROOT/..\"\nif [ -z \"${JAVA_HOME:-}\" ]; then\n  export JAVA_HOME=$(/usr/libexec/java_home -v 17)\nfi\ncase \"$PLATFORM_NAME\" in\n  iphonesimulator) target=IosSimulatorArm64 ;;\n  iphoneos) target=IosArm64 ;;\n  *) echo \"Unsupported platform: $PLATFORM_NAME\"; exit 1 ;;\nesac\n./gradlew \":data:link${CONFIGURATION}Framework${target}\" --console=plain\nmkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\"\ncp -R data/assets/circuits \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/\"\n";
+			shellScript = "set -eu\ncd \"$SRCROOT/..\"\nif [ -z \"${JAVA_HOME:-}\" ]; then\n  export JAVA_HOME=$(/usr/libexec/java_home -v 17)\nfi\ncase \"$PLATFORM_NAME\" in\n  iphonesimulator) target=IosSimulatorArm64 ;;\n  iphoneos) target=IosArm64 ;;\n  *) echo \"Unsupported platform: $PLATFORM_NAME\"; exit 1 ;;\nesac\n./gradlew \":data:link${CONFIGURATION}Framework${target}\" --console=plain\nmkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\"\ncp -R data/assets/circuits \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/\"\ncp -R mobile-assets/tracks \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

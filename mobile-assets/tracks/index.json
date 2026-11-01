@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "circuits": [
+    {
+      "circuitId": "silverstone",
+      "track": "tracks/silverstone/track.png",
+      "sectors": "tracks/silverstone/sectors.png",
+      "drs": "tracks/silverstone/drs.png",
+      "path": "tracks/silverstone/path.json",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "circuitId": "suzuka",
+      "track": "tracks/suzuka/track.png",
+      "sectors": "tracks/suzuka/sectors.png",
+      "drs": "tracks/suzuka/drs.png",
+      "path": "tracks/suzuka/path.json",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}

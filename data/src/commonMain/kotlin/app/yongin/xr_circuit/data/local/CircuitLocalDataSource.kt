@@ -14,19 +14,23 @@ import kotlinx.serialization.json.Json
 class CircuitLocalDataSource constructor(
     private val assets: AssetReader,
     private val json: Json,
+    private val target: CircuitAssetTarget = CircuitAssetTarget.XR,
 ) {
 
     fun loadCatalog(): CircuitCatalogDto {
         return decodeAsset(CATALOG_PATH)
     }
 
-    /** Planned catalog entries become selectable once all three assets are bundled. */
-    fun loadAvailableCatalogEntries(): List<CircuitCatalogEntryDto> =
-        loadCatalog().circuits.filter { entry ->
-            listOf(entry.detailAssetPath, entry.modelAsset, entry.waypointsAsset).all { path ->
-                assets.exists(path)
+    /** Availability is a packaging decision, independent of API identifiers. */
+    fun loadAvailableCatalogEntries(): List<CircuitCatalogEntryDto> {
+        val mobile = if (target == CircuitAssetTarget.MOBILE) MobileTrackResolver(assets, json).available() else emptyMap()
+        return loadCatalog().circuits.filter { entry ->
+            assets.exists(entry.detailAssetPath) && when (target) {
+                CircuitAssetTarget.XR -> assets.exists(entry.modelAsset) && assets.exists(entry.waypointsAsset)
+                CircuitAssetTarget.MOBILE -> entry.id in mobile
             }
         }
+    }
 
     fun loadCatalogEntry(circuitId: String): CircuitCatalogEntryDto {
         return loadCatalog().circuits.firstOrNull { it.id == circuitId }
