@@ -8,3 +8,13 @@ build/
 .externalNativeBuild
 .cxx
 local.properties
+
+# Release credentials must never enter version control.
+*.jks
+*.keystore
+*.p12
+*.mobileprovision
+keystore.properties
+.env
+
+.kotlin/sessions/

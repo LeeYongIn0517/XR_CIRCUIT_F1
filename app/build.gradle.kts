@@ -6,6 +6,14 @@ plugins {
     alias(libs.plugins.hilt.android)
 }
 
+// Supply secrets only through the environment; never fall back to the debug key.
+val releaseSigningNames = listOf("ANDROID_KEYSTORE_PATH", "ANDROID_KEYSTORE_PASSWORD", "ANDROID_KEY_ALIAS", "ANDROID_KEY_PASSWORD")
+val releaseSigningValues = releaseSigningNames.map { providers.environmentVariable(it).orNull }
+require(releaseSigningValues.all { it.isNullOrBlank() } || releaseSigningValues.all { !it.isNullOrBlank() }) {
+    "Release signing requires all four ANDROID_KEYSTORE_* / ANDROID_KEY_* environment variables."
+}
+val hasReleaseSigning = releaseSigningValues.all { !it.isNullOrBlank() }
+
 android {
     namespace = "app.yongin.xr_circuit"
     compileSdk = 36
@@ -28,8 +36,17 @@ android {
     sourceSets["main"].assets.srcDir("../data/assets")
     sourceSets["mobile"].assets.srcDir("../mobile-assets")
 
+    signingConfigs {
+        if (hasReleaseSigning) create("release") {
+            storeFile = file(releaseSigningValues[0]!!)
+            storePassword = releaseSigningValues[1]
+            keyAlias = releaseSigningValues[2]
+            keyPassword = releaseSigningValues[3]
+        }
+    }
     buildTypes {
         release {
+            if (hasReleaseSigning) signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

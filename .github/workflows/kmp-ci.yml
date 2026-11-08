@@ -1,0 +1,60 @@
+name: KMP release checks
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: kmp-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  android:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - run: sdkmanager 'platforms;android-36' 'build-tools;35.0.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow==11.0.0
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Assets and fixtures
+        run: |
+          python tools/validate_mobile_tracks.py
+          python tools/generate_circuit_regression_fixture.py --check
+          python -m unittest discover -s presentation/src/main/blender/tests -p 'test_*.py'
+      - name: Android common and variant unit tests
+        run: ./gradlew :domain:testAndroidHostTest :data:testAndroidHostTest :presentation:testMobileReleaseUnitTest :presentation:testXrReleaseUnitTest :app:testMobileReleaseUnitTest :app:testXrReleaseUnitTest --console=plain
+      - name: Unsigned APKs and bundles (no store upload)
+        run: ./gradlew :app:assembleMobileRelease :app:assembleXrRelease :app:bundleMobileRelease :app:bundleXrRelease --console=plain
+  apple:
+    runs-on: macos-15
+    timeout-minutes: 60
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - run: sdkmanager 'platforms;android-36' 'build-tools;35.0.0'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Toolchain (Apple Silicon required by declared Kotlin target)
+        run: |
+          test "$(uname -m)" = arm64
+          xcodebuild -version
+      - name: Native common tests
+        run: ./gradlew :domain:iosSimulatorArm64Test :data:iosSimulatorArm64Test --console=plain
+      - name: Compile Swift tests on simulator
+        run: xcodebuild -project iosApp/CircuitConnection.xcodeproj -target CircuitConnectionTests -sdk iphonesimulator -configuration Debug SYMROOT="$PWD/build/ios-products" CODE_SIGNING_ALLOWED=NO ARCHS=arm64 build
+      - name: Unsigned device archive (no export or store upload)
+        run: bash tools/archive-ios.sh "$PWD/build/release/CircuitConnection-unsigned.xcarchive"

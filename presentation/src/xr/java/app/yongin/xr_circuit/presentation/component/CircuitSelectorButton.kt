@@ -1,6 +1,5 @@
 package app.yongin.xr_circuit.presentation.component
 
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -169,7 +168,6 @@ fun CircuitSelectorDropdown(
                     },
                     onClick = {
                         expanded = false
-                        Log.d("CircuitSelectorDropdown", "onClick: ${circuit.id}")
                         onCircuitSelected(circuit.id)
                     },
                     leadingIcon = if (selected) {
