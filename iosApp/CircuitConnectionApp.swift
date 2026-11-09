@@ -3,7 +3,41 @@ import CircuitData
 
 @main
 struct CircuitConnectionApp: App {
-    var body: some Scene { WindowGroup { CircuitScreen() } }
+    var body: some Scene { WindowGroup { SplashHost() } }
+}
+
+private struct SplashHost: View {
+    @State private var showingSplash = true
+
+    var body: some View {
+        ZStack {
+            CircuitScreen()
+                .accessibilityHidden(showingSplash)
+                .allowsHitTesting(!showingSplash)
+            if showingSplash {
+                GeometryReader { geometry in
+                    ZStack {
+                        Image("SplashBackground")
+                            .resizable()
+                            .frame(width: geometry.size.width, height: geometry.size.height)
+                        Image("SplashBrandMark")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 240, height: 240)
+                    }
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                }
+                .ignoresSafeArea()
+                .accessibilityHidden(true)
+            }
+        }
+        .task {
+            guard showingSplash else { return }
+            do { try await Task.sleep(for: .milliseconds(700)) }
+            catch { return }
+            showingSplash = false
+        }
+    }
 }
 
 /// One owner per screen. All shared actions and callbacks run on the main actor.

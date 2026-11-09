@@ -2,4 +2,12 @@
 <resources>
 
     <style name="Theme.XR_CIRCUIT" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.XR_CIRCUIT.Starting" parent="Theme.XR_CIRCUIT">
+        <item name="android:windowSplashScreenBackground">#F0F7FD</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_empty_icon</item>
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
 </resources>

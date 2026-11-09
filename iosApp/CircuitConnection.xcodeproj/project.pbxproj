@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B23E21DA0B594BA98E2CAE01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23E21DA0B594BA98E2CAE02 /* LaunchScreen.storyboard */; };
 		D77E4EAE125A4CDE9268B8F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77E4EAE125A4CDE9268B8F1 /* Assets.xcassets */; };
 		43DD5081506923203BE5909E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE227B7AB0461B313F72CB6 /* Foundation.framework */; };
 		6EC9A0A3AA74ABF0B7BF154F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE227B7AB0461B313F72CB6 /* Foundation.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B23E21DA0B594BA98E2CAE02 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D77E4EAE125A4CDE9268B8F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1073FF64B948E49EB5FD361D /* CircuitConnectionApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CircuitConnectionApp.swift; sourceTree = "<group>"; };
 		9737A592BA1DC4495987540F /* CircuitConnectionTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CircuitConnectionTests.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		F90A9E39CE06D924284C4500 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B23E21DA0B594BA98E2CAE02 /* LaunchScreen.storyboard */,
 				D77E4EAE125A4CDE9268B8F1 /* Assets.xcassets */,
 				1073FF64B948E49EB5FD361D /* CircuitConnectionApp.swift */,
 				9737A592BA1DC4495987540F /* CircuitConnectionTests.swift */,
@@ -179,6 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23E21DA0B594BA98E2CAE01 /* LaunchScreen.storyboard in Resources */,
 				D77E4EAE125A4CDE9268B8F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +314,7 @@
 					"$(SRCROOT)/../data/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				KOTLIN_BUILD_TYPE = debug;
 				"KOTLIN_TARGET[sdk=iphoneos*]" = iosArm64;
@@ -436,7 +440,7 @@
 					"$(SRCROOT)/../data/build/bin/$(KOTLIN_TARGET)/$(KOTLIN_BUILD_TYPE)Framework",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				KOTLIN_BUILD_TYPE = release;
 				"KOTLIN_TARGET[sdk=iphoneos*]" = iosArm64;
