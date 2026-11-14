@@ -254,7 +254,7 @@ struct TrackView: View {
                             if state.overlays.contains(Overlay.drs) { context.draw(Image(uiImage: images.drs), in: rect) }
                             if let code = state.detail?.corners.first(where: { $0.id == state.selectedCornerId })?.turnCode,
                                let corner = images.path.corners.first(where: { $0.id == code }) {
-                                dot(&context, v.project(point: TrackPoint2D(x: corner.x, y: corner.y)), radius: 8, color: .cyan)
+                                cornerMarker(&context, v.project(point: TrackPoint2D(x: corner.x, y: corner.y)))
                             }
                             if marker {
                                 let progress = Float(max(0, timeline.date.timeIntervalSince(epoch)).truncatingRemainder(dividingBy: 45) / 45)
@@ -286,6 +286,25 @@ struct TrackView: View {
             } catch is CancellationError { } catch { if !Task.isCancelled { failed = true } }
         }.onChange(of: scenePhase) { _, phase in if phase == .active { epoch = Date() } }
             .onChange(of: marker) { _, _ in epoch = Date() }
+    }
+    private func cornerMarker(_ context: inout GraphicsContext, _ point: TrackPoint2D) {
+        let center = CGPoint(x: CGFloat(point.x), y: CGFloat(point.y))
+        let accent = Color(red: 1, green: 173.0 / 255, blue: 102.0 / 255)
+        let radius: CGFloat = 10
+        let glowRadius: CGFloat = 20
+        let glow = Path(ellipseIn: CGRect(x: center.x - glowRadius, y: center.y - glowRadius,
+                                          width: glowRadius * 2, height: glowRadius * 2))
+        context.fill(glow, with: .radialGradient(Gradient(stops: [
+            .init(color: .clear, location: 0),
+            .init(color: accent.opacity(0.08), location: 0.4),
+            .init(color: accent.opacity(0.28), location: 0.5),
+            .init(color: .clear, location: 1)
+        ]), center: center, startRadius: 0, endRadius: glowRadius))
+        // Keep the track visible through the center and emphasize the boundary.
+        let ring = Path(ellipseIn: CGRect(x: center.x - radius, y: center.y - radius,
+                                          width: radius * 2, height: radius * 2))
+        context.fill(ring, with: .color(accent.opacity(0.14)))
+        context.stroke(ring, with: .color(accent.opacity(0.95)), lineWidth: 2)
     }
     private func dot(_ context: inout GraphicsContext, _ p: TrackPoint2D, radius: CGFloat, color: Color) {
         context.fill(Path(ellipseIn: CGRect(x: CGFloat(p.x)-radius, y: CGFloat(p.y)-radius, width: radius*2, height: radius*2)), with: .color(color))

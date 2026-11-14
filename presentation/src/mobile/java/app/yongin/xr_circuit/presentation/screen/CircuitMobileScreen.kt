@@ -13,6 +13,8 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
@@ -209,7 +211,26 @@ private fun MobileTrack(state: CircuitUiState, marker: Boolean, retryKey: Int, r
         if (state.dockUiState.overlays.any { it.id == OverlayLayerId.Sectors && it.selected }) layer(data.sectors)
         if (state.dockUiState.overlays.any { it.id == OverlayLayerId.Drs && it.selected }) layer(data.drs)
         data.corners.firstOrNull { it.id == selectedCode }?.let {
-            val p=v.project(it.position); drawCircle(Color.Cyan, 8.dp.toPx(), Offset(p.x,p.y))
+            val p = v.project(it.position)
+            val center = Offset(p.x, p.y)
+            val accent = Color(0xFFFFAD66)
+            val radius = 10.dp.toPx()
+            val glowRadius = 20.dp.toPx()
+            // A translucent center preserves the track; the ring locates the turn.
+            drawCircle(
+                brush = Brush.radialGradient(
+                    0f to Color.Transparent,
+                    0.4f to accent.copy(alpha = 0.08f),
+                    0.5f to accent.copy(alpha = 0.28f),
+                    1f to Color.Transparent,
+                    center = center,
+                    radius = glowRadius
+                ),
+                radius = glowRadius,
+                center = center
+            )
+            drawCircle(accent.copy(alpha = 0.14f), radius, center)
+            drawCircle(accent.copy(alpha = 0.95f), radius, center, style = Stroke(2.dp.toPx()))
         }
         if (marker) { val p=v.project(data.sample(progress)); drawCircle(Color.White,5.dp.toPx(),Offset(p.x,p.y)) }
     }
