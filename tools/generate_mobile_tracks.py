@@ -8,6 +8,10 @@ from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'mobile-assets/tracks'
 SIZE, PAD, AA = 1024, 0.08, 3
+# Achromatic DRS stays distinct from red/cyan/yellow sectors. The black casing
+# provides >3:1 contrast against every sector; white remains visible on dark track.
+DRS_COLOR, DRS_OUTLINE = '#FFFFFF', '#000000'
+DRS_WIDTH, DRS_OUTLINE_WIDTH = 5, 9
 
 def write(path, value):
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n')
@@ -47,7 +51,12 @@ def generate(entry):
         return range(a,b+1)
     render('track.png',[(range(n+1),'#465363',22),(range(n+1),'#DCE4EE',16)])
     render('sectors.png',[(indices(s['startWaypoint'],s['endWaypoint']),s['colorHex'],10) for s in detail['sectors']])
-    render('drs.png',[(indices(s['startWaypoint'],s['endWaypoint']),'#38EB85',5) for s in detail['drsZones']])
+    # Draw all casings first so overlapping zones cannot cover another white core.
+    render('drs.png', [
+        (indices(s['startWaypoint'], s['endWaypoint']), color, width)
+        for color, width in ((DRS_OUTLINE, DRS_OUTLINE_WIDTH), (DRS_COLOR, DRS_WIDTH))
+        for s in detail['drsZones']
+    ])
     path={'schemaVersion':1,'circuitId':cid,'width':SIZE,'height':SIZE,'closedLoop':True,
           'progressBasis':'normalized 3D polyline arc length; same traversal order as XR',
           'projection':{'xAxis':'gltf +X','yAxis':'gltf +Z','rotationDegrees':0,'padding':PAD,'scale':scale,'centerX':(minx+maxx)/2,'centerZ':(minz+maxz)/2},

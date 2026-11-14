@@ -47,6 +47,11 @@ for entry in manifest['circuits']:
   im=Image.open(assets/entry[name]); assert im.size==(1024,1024) and im.mode=='RGBA'
   assert im.getpixel((0,0))[3]==0
   if name=='drs' and not p['drsZones']: assert im.getchannel('A').getbbox() is None
+  if name=='drs' and p['drsZones']:
+   colors=set(im.getdata())
+   assert (255,255,255,255) in colors,(cid,'missing white DRS core')
+   assert (0,0,0,255) in colors,(cid,'missing black DRS casing')
+   assert (56,235,133,255) not in colors,(cid,'stale green DRS overlay')
   ranges=range(n) if name!='drs' else [i%n for z in p['drsZones'] for i in range(z['startWaypoint'],z['endWaypoint']+(n if z['endWaypoint']<=z['startWaypoint'] else 0)+1)]
   for i in ranges:
    q=pts[i]; assert im.getpixel((round(q['x']*1024),round(q['y']*1024)))[3]>200,(cid,name,i)
