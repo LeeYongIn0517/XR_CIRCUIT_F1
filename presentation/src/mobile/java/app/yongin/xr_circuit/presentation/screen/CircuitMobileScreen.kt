@@ -39,6 +39,12 @@ import org.json.JSONObject
 import kotlin.math.hypot
 import kotlin.math.roundToInt
 
+private enum class CircuitDetailTab(val title: String) {
+    Profile("Circuit Profile"),
+    Conditions("Track Conditions"),
+    Corners("Key Corners")
+}
+
 internal data class Point(val position: TrackPoint2D, val progress: Float)
 internal data class Corner(val id: String, val position: TrackPoint2D)
 internal data class Track(val base: ImageBitmap, val sectors: ImageBitmap, val drs: ImageBitmap,
@@ -53,10 +59,11 @@ internal data class Track(val base: ImageBitmap, val sectors: ImageBitmap, val d
     }
 }
 
-@OptIn(ExperimentalLayoutApi::class)
+@OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun CircuitMobileScreen(viewModel: CircuitViewModel = hiltViewModel()) {
     val state by viewModel.uiState.collectAsStateWithLifecycle()
+    var selectedTab by rememberSaveable { mutableStateOf(CircuitDetailTab.Profile) }
     var expanded by remember { mutableStateOf(false) }
     var marker by rememberSaveable { mutableStateOf(true) }
     var assetRetry by remember { mutableIntStateOf(0) }
@@ -99,32 +106,51 @@ fun CircuitMobileScreen(viewModel: CircuitViewModel = hiltViewModel()) {
                 } }
                 Text("45-second visual lap · bundled layout", style = MaterialTheme.typography.bodySmall)
             }
-            Text("Circuit Profile", style = MaterialTheme.typography.titleLarge)
-            if (!state.profileReady && !state.contentError) CircularProgressIndicator(Modifier.semantics { contentDescription = "Loading circuit profile" })
-            // Shared cards also used by the XR panels; one column avoids clipped large text.
-            state.stats.forEach { CircuitStatCard(it.label, it.value, unit = it.unit) }
-            state.lapRecord?.let { LapRecordCard(it.time, it.driver, it.team, it.year) }
-            Text("Track Conditions", style = MaterialTheme.typography.titleLarge)
-            if (state.weatherLoading) {
-                Text("Loading weather…")
-                LinearProgressIndicator(Modifier.fillMaxWidth())
-            } else if (state.weatherError != null) {
-                Text("Weather unavailable")
-                Button(onClick = retry) { Text("Retry weather") }
-            } else state.weather?.let {
-                // Flexible height for large fonts; same mapped values as XR.
-                ElevatedCard(Modifier.fillMaxWidth()) {
-                    Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Text(it.airTemperature, style = MaterialTheme.typography.headlineMedium)
-                        Text(it.trackTemperatureLabel); Text(it.rainChanceLabel); Text(it.windLabel)
-                    }
+            PrimaryScrollableTabRow(
+                selectedTabIndex = selectedTab.ordinal,
+                edgePadding = 0.dp,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                CircuitDetailTab.entries.forEach { tab ->
+                    Tab(
+                        selected = selectedTab == tab,
+                        onClick = { selectedTab = tab },
+                        text = { Text(tab.title) },
+                        modifier = Modifier.heightIn(min = 48.dp)
+                    )
                 }
             }
-            Text("Key Corners", style = MaterialTheme.typography.titleLarge)
-            state.corners.forEach { corner ->
-                OutlinedButton(onClick = { viewModel.onIntent(CircuitIntent.SelectCorner(corner.id)) },
-                    modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                    Text("${if (corner.id == state.selectedCornerId) "● " else ""}${corner.turnCode} · ${corner.name}")
+            when (selectedTab) {
+                CircuitDetailTab.Profile -> {
+                    if (!state.profileReady && !state.contentError) CircularProgressIndicator(Modifier.semantics { contentDescription = "Loading circuit profile" })
+                    // Shared cards also used by the XR panels; one column avoids clipped large text.
+                    state.stats.forEach { CircuitStatCard(it.label, it.value, unit = it.unit) }
+                    state.lapRecord?.let { LapRecordCard(it.time, it.driver, it.team, it.year) }
+                }
+                CircuitDetailTab.Conditions -> {
+                    if (state.weatherLoading) {
+                        Text("Loading weather…")
+                        LinearProgressIndicator(Modifier.fillMaxWidth())
+                    } else if (state.weatherError != null) {
+                        Text("Weather unavailable")
+                        Button(onClick = retry) { Text("Retry weather") }
+                    } else state.weather?.let {
+                        // Flexible height for large fonts; same mapped values as XR.
+                        ElevatedCard(Modifier.fillMaxWidth()) {
+                            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                Text(it.airTemperature, style = MaterialTheme.typography.headlineMedium)
+                                Text(it.trackTemperatureLabel); Text(it.rainChanceLabel); Text(it.windLabel)
+                            }
+                        }
+                    }
+                }
+                CircuitDetailTab.Corners -> {
+                    state.corners.forEach { corner ->
+                        OutlinedButton(onClick = { viewModel.onIntent(CircuitIntent.SelectCorner(corner.id)) },
+                            modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                            Text("${if (corner.id == state.selectedCornerId) "● " else ""}${corner.turnCode} · ${corner.name}")
+                        }
+                    }
                 }
             }
         }
@@ -166,7 +192,7 @@ private fun MobileTrack(state: CircuitUiState, marker: Boolean, retryKey: Int, r
     val trackHeight = if (configuration.screenWidthDp > configuration.screenHeightDp) 220.dp
         else minOf(configuration.screenWidthDp - 32, 380).dp
     Canvas(Modifier.fillMaxWidth().height(trackHeight).background(Color(0xFF101B27))
-        .semantics { contentDescription = "${state.circuitName} 2D track. Selected corner ${selectedCode.orEmpty()}. Corner controls follow below." }
+        .semantics { contentDescription = "${state.circuitName} 2D track. Selected corner ${selectedCode.orEmpty()}. Select the Key Corners tab below for corner controls." }
         .pointerInput(data, radius) { detectTapGestures { tap ->
             val viewport = TrackViewport(1024f,1024f,size.width.toFloat(),size.height.toFloat())
             if (viewport.unproject(tap.x,tap.y) != null) data.corners.minByOrNull {

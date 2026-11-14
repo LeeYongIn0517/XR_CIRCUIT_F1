@@ -106,8 +106,15 @@ struct TrackImages {
     }
 }
 
+private enum CircuitDetailTab: String, CaseIterable {
+    case profile = "Circuit Profile"
+    case conditions = "Track Conditions"
+    case corners = "Key Corners"
+}
+
 struct CircuitScreen: View {
     @StateObject private var model = CircuitScreenModel()
+    @State private var selectedTab: CircuitDetailTab = .profile
     @State private var marker = true
     @State private var assetRetry = 0
     var body: some View {
@@ -140,44 +147,75 @@ struct CircuitScreen: View {
                             }).id(selected.id)
                             Text("45-second visual lap · bundled layout").font(.caption).foregroundStyle(.secondary)
                         }
-                        Text("Circuit Profile").font(.title2.bold()).accessibilityAddTraits(.isHeader)
-                        if let detail = state.detail {
-                            info("Length", String(format: "%.3f km", detail.lengthKm))
-                            info("Turns", "\(detail.turns)")
-                            info("DRS Zones", "\(detail.drsZoneCount)")
-                            if let elevation = detail.elevationDeltaM { info("Elevation", String(format: "%.0f m", elevation.doubleValue)) }
-                            if let lap = detail.lapRecord {
-                                VStack(alignment: .leading, spacing: 6) {
-                                    Text("Lap Record").font(.headline)
-                                    Text(lap.time).font(.title2.monospacedDigit())
-                                    Text("\(lap.driver) · \(lap.team) · \(String(lap.year))")
+                        detailTabs
+                        switch selectedTab {
+                        case .profile:
+                            if let detail = state.detail {
+                                info("Length", String(format: "%.3f km", detail.lengthKm))
+                                info("Turns", "\(detail.turns)")
+                                info("DRS Zones", "\(detail.drsZoneCount)")
+                                if let elevation = detail.elevationDeltaM { info("Elevation", String(format: "%.0f m", elevation.doubleValue)) }
+                                if let lap = detail.lapRecord {
+                                    VStack(alignment: .leading, spacing: 6) {
+                                        Text("Lap Record").font(.headline)
+                                        Text(lap.time).font(.title2.monospacedDigit())
+                                        Text("\(lap.driver) · \(lap.team) · \(String(lap.year))")
+                                    }.frame(maxWidth: .infinity, alignment: .leading).padding().background(.quaternary, in: RoundedRectangle(cornerRadius: 12))
+                                }
+                            } else if state.profileError == nil { ProgressView("Loading circuit profile…") }
+                        case .conditions:
+                            if state.weatherLoading { ProgressView("Loading weather…") }
+                            else if state.weatherError != nil {
+                                Text("Weather unavailable")
+                                Button("Retry weather") { model.retry() }.frame(minHeight: 48)
+                            } else if let weather = state.weather {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text(String(format: "%.0f°C", weather.temperatureC)).font(.largeTitle)
+                                    Text(String(format: "Precip: %.1f mm", weather.precipitationMm))
+                                    Text("\(weather.precipitationProbabilityPercent?.intValue ?? 0)% Rain")
+                                    Text("Wind: \(Int(weather.windSpeedKmh.rounded()))km/h \(compass(weather.windDirectionDeg))")
                                 }.frame(maxWidth: .infinity, alignment: .leading).padding().background(.quaternary, in: RoundedRectangle(cornerRadius: 12))
                             }
-                        } else if state.profileError == nil { ProgressView("Loading circuit profile…") }
-                        Text("Track Conditions").font(.title2.bold()).accessibilityAddTraits(.isHeader)
-                        if state.weatherLoading { ProgressView("Loading weather…") }
-                        else if state.weatherError != nil {
-                            Text("Weather unavailable")
-                            Button("Retry weather") { model.retry() }.frame(minHeight: 48)
-                        } else if let weather = state.weather {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text(String(format: "%.0f°C", weather.temperatureC)).font(.largeTitle)
-                                Text(String(format: "Precip: %.1f mm", weather.precipitationMm))
-                                Text("\(weather.precipitationProbabilityPercent?.intValue ?? 0)% Rain")
-                                Text("Wind: \(Int(weather.windSpeedKmh.rounded()))km/h \(compass(weather.windDirectionDeg))")
-                            }.frame(maxWidth: .infinity, alignment: .leading).padding().background(.quaternary, in: RoundedRectangle(cornerRadius: 12))
-                        }
-                        Text("Key Corners").font(.title2.bold()).accessibilityAddTraits(.isHeader)
-                        ForEach(state.detail?.corners ?? [], id: \.id) { corner in
-                            Button { model.corner(corner.id) } label: {
-                                HStack { Text("\(corner.turnCode) · \(corner.name)"); Spacer(); if corner.id == state.selectedCornerId { Image(systemName: "checkmark.circle.fill") } }
-                                    .frame(minHeight: 48).contentShape(Rectangle())
-                            }.accessibilityAddTraits(corner.id == state.selectedCornerId ? .isSelected : [])
+                        case .corners:
+                            ForEach(state.detail?.corners ?? [], id: \.id) { corner in
+                                Button { model.corner(corner.id) } label: {
+                                    HStack { Text("\(corner.turnCode) · \(corner.name)"); Spacer(); if corner.id == state.selectedCornerId { Image(systemName: "checkmark.circle.fill") } }
+                                        .frame(minHeight: 48).contentShape(Rectangle())
+                                }.accessibilityAddTraits(corner.id == state.selectedCornerId ? .isSelected : [])
+                            }
                         }
                     } else { ProgressView("Loading circuits…") }
                 }.padding(16)
             }.navigationTitle("Circuit").navigationBarTitleDisplayMode(.inline)
         }.onAppear { model.start() }.onDisappear { model.stop() }
+    }
+    private var detailTabs: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 0) {
+                ForEach(CircuitDetailTab.allCases, id: \.self) { tab in
+                    Button {
+                        selectedTab = tab
+                    } label: {
+                        Text(tab.rawValue)
+                            .font(.subheadline.weight(selectedTab == tab ? .semibold : .regular))
+                            .fixedSize(horizontal: true, vertical: false)
+                            .padding(.horizontal, 16)
+                            .frame(minHeight: 48)
+                            .foregroundStyle(selectedTab == tab ? Color.accentColor : .secondary)
+                            .overlay(alignment: .bottom) {
+                                if selectedTab == tab {
+                                    Rectangle().fill(Color.accentColor).frame(height: 3)
+                                }
+                            }
+                            .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(selectedTab == tab ? .isSelected : [])
+                }
+            }
+        }
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel("Circuit details tabs")
     }
     private func overlay(_ value: Overlay) -> Binding<Bool> {
         Binding(get: { model.state?.overlays.contains(value) ?? false }, set: { _ in model.toggle(value) })
@@ -233,7 +271,7 @@ struct TrackView: View {
                     .accessibilityElement(children: .ignore)
                     .accessibilityLabel("\(state.selectedCircuit?.displayName ?? circuitID) 2D track")
                     .accessibilityValue("Selected corner \(state.detail?.corners.first(where: { $0.id == state.selectedCornerId })?.turnCode ?? "none")")
-                    .accessibilityHint("Use Key Corners buttons below to select a corner")
+                    .accessibilityHint("Select the Key Corners tab below to choose a corner")
             } else if failed { Text("Track image unavailable"); Button("Retry track", action: retry).frame(minHeight: 48) }
             else { ProgressView("Loading track…").frame(height: 300) }
         }.task(id: retryKey) {
