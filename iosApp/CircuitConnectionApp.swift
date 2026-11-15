@@ -112,101 +112,290 @@ private enum CircuitDetailTab: String, CaseIterable {
     case corners = "Key Corners"
 }
 
+// Mirrors presentation/theme and the Material 3 cards used by CircuitMobileScreen.
+private enum CircuitStyle {
+    private static func color(_ light: UInt32, _ dark: UInt32) -> Color {
+        func uiColor(_ hex: UInt32) -> UIColor {
+            UIColor(red: CGFloat((hex >> 16) & 255) / 255,
+                    green: CGFloat((hex >> 8) & 255) / 255,
+                    blue: CGFloat(hex & 255) / 255, alpha: 1)
+        }
+        return Color(uiColor: UIColor { $0.userInterfaceStyle == .dark ? uiColor(dark) : uiColor(light) })
+    }
+    static let primary = color(0x2563EB, 0xADC6FF)
+    static let onPrimary = color(0xFFFFFF, 0x001A41)
+    static let primaryContainer = color(0xEFF6FF, 0x002E69)
+    static let onPrimaryContainer = color(0x1D4ED8, 0xD8E2FF)
+    static let secondaryContainer = color(0xBFDBFE, 0x002E69)
+    static let surface = color(0xFFFFFF, 0x1A1C1E)
+    static let onSurface = color(0x0F172A, 0xE2E2E6)
+    static let muted = color(0x64748B, 0x8C9198)
+    static let outline = color(0x94A3B8, 0x8C9198)
+    static let border = color(0xE2E8F0, 0x42474E)
+
+    static func font(_ size: CGFloat, weight: Font.Weight = .regular,
+                     design: Font.Design = .default, relativeTo style: Font.TextStyle = .body) -> Font {
+        let textStyle: UIFont.TextStyle
+        switch style {
+        case .caption2: textStyle = .caption2
+        case .caption: textStyle = .caption1
+        case .title2: textStyle = .title2
+        case .title: textStyle = .title1
+        default: textStyle = .body
+        }
+        let uiWeight: UIFont.Weight = weight == .bold ? .bold : weight == .medium ? .medium : .regular
+        let base = design == .monospaced
+            ? UIFont.monospacedSystemFont(ofSize: size, weight: uiWeight)
+            : UIFont.systemFont(ofSize: size, weight: uiWeight)
+        return Font(UIFontMetrics(forTextStyle: textStyle).scaledFont(for: base))
+    }
+}
+
+private struct CircuitButtonStyle: ButtonStyle {
+    var filled = false
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(CircuitStyle.font(14, weight: .medium))
+            .multilineTextAlignment(.center)
+            .padding(.horizontal, 24)
+            .padding(.vertical, 10)
+            .frame(minHeight: 48)
+            .foregroundStyle(filled ? CircuitStyle.onPrimary : CircuitStyle.primary)
+            .background(filled ? CircuitStyle.primary : Color.clear, in: Capsule())
+            .overlay(Capsule().strokeBorder(filled ? Color.clear : CircuitStyle.outline, lineWidth: 1))
+            .opacity(configuration.isPressed ? 0.7 : 1)
+    }
+}
+
+private struct CircuitChip: View {
+    let title: String
+    @Binding var selected: Bool
+    var body: some View {
+        Button { selected.toggle() } label: {
+            Text(title)
+                .font(CircuitStyle.font(14, weight: .medium))
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .foregroundStyle(selected ? CircuitStyle.onPrimaryContainer : CircuitStyle.muted)
+                .background(selected ? CircuitStyle.secondaryContainer : Color.clear,
+                            in: RoundedRectangle(cornerRadius: 8))
+                .overlay(RoundedRectangle(cornerRadius: 8)
+                    .strokeBorder(selected ? Color.clear : CircuitStyle.outline, lineWidth: 1))
+                .frame(minHeight: 48)
+                .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(title)
+        .accessibilityValue(selected ? "On" : "Off")
+        .accessibilityAddTraits(selected ? .isSelected : [])
+    }
+}
+
+// Wrap chips like Android FlowRow, including when accessibility text grows.
+private struct CircuitChipLayout: Layout {
+    private func positions(_ subviews: Subviews, width: CGFloat) -> (points: [CGPoint], size: CGSize) {
+        var points: [CGPoint] = []
+        var x: CGFloat = 0
+        var y: CGFloat = 0
+        var rowHeight: CGFloat = 0
+        var usedWidth: CGFloat = 0
+        for view in subviews {
+            let size = view.sizeThatFits(.unspecified)
+            if x > 0 && x + size.width > width {
+                x = 0
+                y += rowHeight
+                rowHeight = 0
+            }
+            points.append(CGPoint(x: x, y: y))
+            usedWidth = max(usedWidth, x + size.width)
+            x += size.width + 8
+            rowHeight = max(rowHeight, size.height)
+        }
+        return (points, CGSize(width: usedWidth, height: y + rowHeight))
+    }
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        positions(subviews, width: proposal.width ?? .infinity).size
+    }
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        let layout = positions(subviews, width: bounds.width)
+        for (index, view) in subviews.enumerated() {
+            view.place(at: CGPoint(x: bounds.minX + layout.points[index].x,
+                                   y: bounds.minY + layout.points[index].y),
+                       proposal: ProposedViewSize(view.sizeThatFits(.unspecified)))
+        }
+    }
+}
+
+private struct CircuitStatCard: View {
+    let name: String
+    let value: String
+    var unit: String? = nil
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(name.uppercased())
+                .font(CircuitStyle.font(10, relativeTo: .caption2)).tracking(0.5)
+                .foregroundStyle(CircuitStyle.muted)
+                .frame(minHeight: 15)
+            HStack(alignment: .firstTextBaseline, spacing: 4) {
+                Text(value)
+                    .font(CircuitStyle.font(24, weight: .bold, design: .monospaced, relativeTo: .title2))
+                if let unit {
+                    Text(unit).font(CircuitStyle.font(12, weight: .bold, design: .monospaced, relativeTo: .caption))
+                }
+            }
+            .tracking(1.2)
+            .foregroundStyle(CircuitStyle.primary)
+            .frame(minHeight: 32, alignment: .bottomLeading)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(12)
+        .background(CircuitStyle.surface.opacity(0.5), in: RoundedRectangle(cornerRadius: 4))
+        .overlay(RoundedRectangle(cornerRadius: 4).strokeBorder(CircuitStyle.border, lineWidth: 1))
+    }
+}
+
+private struct CircuitLapRecordCard: View {
+    let time: String
+    let driver: String
+    let team: String
+    let year: Int32
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            HStack {
+                Text("Lap Record").foregroundStyle(CircuitStyle.primary)
+                Spacer()
+                Text(String(year)).foregroundStyle(CircuitStyle.outline)
+            }.font(CircuitStyle.font(10, relativeTo: .caption2)).tracking(0.5)
+                .frame(minHeight: 15)
+            Text(time)
+                .font(CircuitStyle.font(28, weight: .medium, design: .monospaced, relativeTo: .title))
+                .foregroundStyle(CircuitStyle.onPrimaryContainer)
+                .padding(.top, 4)
+                .frame(minHeight: 42, alignment: .leading)
+            Text("\(driver) (\(team))")
+                .font(CircuitStyle.font(14)).tracking(0.25)
+                .foregroundStyle(CircuitStyle.muted)
+                .frame(minHeight: 20)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(16)
+        .background(CircuitStyle.primaryContainer, in: RoundedRectangle(cornerRadius: 8))
+        .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(CircuitStyle.secondaryContainer, lineWidth: 1))
+    }
+}
+
 struct CircuitScreen: View {
     @StateObject private var model = CircuitScreenModel()
     @State private var selectedTab: CircuitDetailTab = .profile
     @State private var marker = true
     @State private var assetRetry = 0
     var body: some View {
-        NavigationStack {
+        GeometryReader { geometry in
             ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
-                    Text("CIRCUIT / 2D").font(.caption.weight(.semibold)).foregroundStyle(.secondary)
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("CIRCUIT / 2D").font(CircuitStyle.font(14, weight: .medium))
                     if let state = model.state {
                         Menu {
                             ForEach(state.catalog, id: \.id) { entry in
                                 Button(entry.displayName) { model.select(entry.id) }
                             }
                         } label: {
-                            HStack { Text(state.selectedCircuit?.displayName ?? "Select circuit"); Spacer(); Image(systemName: "chevron.down") }
-                                .frame(minHeight: 48)
-                        }.accessibilityLabel("Select circuit").accessibilityValue(state.selectedCircuit?.displayName ?? "None")
+                            Text(state.selectedCircuit?.displayName ?? "Select circuit")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(CircuitButtonStyle())
+                        .accessibilityLabel("Select circuit")
+                        .accessibilityValue(state.selectedCircuit?.displayName ?? "None")
                         if state.catalogError != nil || state.profileError != nil || state.selectionError != nil || state.catalog.isEmpty {
                             Text("Circuit information unavailable")
-                            Button("Retry circuit") { model.retry() }.frame(minHeight: 48)
+                            Button("Retry circuit") { model.retry() }.buttonStyle(CircuitButtonStyle(filled: true))
                         }
                         if let selected = state.selectedCircuit {
-                            VStack(alignment: .leading) {
-                                Toggle("Sectors", isOn: overlay(.sectors))
-                                Toggle("DRS", isOn: overlay(.drs))
-                                Toggle("Marker", isOn: $marker)
-                            }.toggleStyle(.switch)
+                            CircuitChipLayout {
+                                CircuitChip(title: "Sectors", selected: overlay(.sectors))
+                                CircuitChip(title: "DRS", selected: overlay(.drs))
+                                CircuitChip(title: "Marker", selected: $marker)
+                            }.frame(maxWidth: .infinity, alignment: .leading)
                             TrackView(circuitID: selected.id, state: state, marker: marker, retryKey: assetRetry,
+                                      height: geometry.size.width > geometry.size.height ? 220 : min(max(0, geometry.size.width - 32), 380),
                                       retry: { assetRetry += 1; model.retry() }, select: { code in
                                 if let corner = state.detail?.corners.first(where: { $0.turnCode == code }) { model.corner(corner.id) }
                             }).id(selected.id)
-                            Text("45-second visual lap · bundled layout").font(.caption).foregroundStyle(.secondary)
+                            Text("45-second visual lap · bundled layout")
+                                .font(CircuitStyle.font(12, relativeTo: .caption)).tracking(0.4)
                         }
                         detailTabs
                         switch selectedTab {
                         case .profile:
                             if let detail = state.detail {
-                                info("Length", String(format: "%.3f km", detail.lengthKm))
-                                info("Turns", "\(detail.turns)")
-                                info("DRS Zones", "\(detail.drsZoneCount)")
-                                if let elevation = detail.elevationDeltaM { info("Elevation", String(format: "%.0f m", elevation.doubleValue)) }
-                                if let lap = detail.lapRecord {
-                                    VStack(alignment: .leading, spacing: 6) {
-                                        Text("Lap Record").font(.headline)
-                                        Text(lap.time).font(.title2.monospacedDigit())
-                                        Text("\(lap.driver) · \(lap.team) · \(String(lap.year))")
-                                    }.frame(maxWidth: .infinity, alignment: .leading).padding().background(.quaternary, in: RoundedRectangle(cornerRadius: 12))
+                                CircuitStatCard(name: "Length", value: String(format: "%.3f", detail.lengthKm), unit: "km")
+                                CircuitStatCard(name: "Turns", value: "\(detail.turns)")
+                                CircuitStatCard(name: "DRS Zones", value: "\(detail.drsZoneCount)")
+                                if let elevation = detail.elevationDeltaM {
+                                    CircuitStatCard(name: "Elevation", value: String(format: "%.0f", elevation.doubleValue), unit: "m")
                                 }
-                            } else if state.profileError == nil { ProgressView("Loading circuit profile…") }
+                                if let lap = detail.lapRecord {
+                                    CircuitLapRecordCard(time: lap.time, driver: lap.driver, team: lap.team, year: lap.year)
+                                }
+                            } else if state.profileError == nil { ProgressView().accessibilityLabel("Loading circuit profile") }
                         case .conditions:
-                            if state.weatherLoading { ProgressView("Loading weather…") }
-                            else if state.weatherError != nil {
+                            if state.weatherLoading {
+                                Text("Loading weather…")
+                                ProgressView().frame(maxWidth: .infinity)
+                            } else if state.weatherError != nil {
                                 Text("Weather unavailable")
-                                Button("Retry weather") { model.retry() }.frame(minHeight: 48)
+                                Button("Retry weather") { model.retry() }.buttonStyle(CircuitButtonStyle(filled: true))
                             } else if let weather = state.weather {
                                 VStack(alignment: .leading, spacing: 8) {
-                                    Text(String(format: "%.0f°C", weather.temperatureC)).font(.largeTitle)
+                                    Text(String(format: "%.0f°C", weather.temperatureC))
+                                        .font(CircuitStyle.font(28, weight: .medium, relativeTo: .title))
                                     Text(String(format: "Precip: %.1f mm", weather.precipitationMm))
                                     Text("\(weather.precipitationProbabilityPercent?.intValue ?? 0)% Rain")
                                     Text("Wind: \(Int(weather.windSpeedKmh.rounded()))km/h \(compass(weather.windDirectionDeg))")
-                                }.frame(maxWidth: .infinity, alignment: .leading).padding().background(.quaternary, in: RoundedRectangle(cornerRadius: 12))
+                                }
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(16)
+                                .background(CircuitStyle.surface, in: RoundedRectangle(cornerRadius: 12))
+                                .shadow(color: .black.opacity(0.12), radius: 2, y: 1)
                             }
                         case .corners:
                             ForEach(state.detail?.corners ?? [], id: \.id) { corner in
                                 Button { model.corner(corner.id) } label: {
-                                    HStack { Text("\(corner.turnCode) · \(corner.name)"); Spacer(); if corner.id == state.selectedCornerId { Image(systemName: "checkmark.circle.fill") } }
-                                        .frame(minHeight: 48).contentShape(Rectangle())
-                                }.accessibilityAddTraits(corner.id == state.selectedCornerId ? .isSelected : [])
+                                    Text("\(corner.id == state.selectedCornerId ? "● " : "")\(corner.turnCode) · \(corner.name)")
+                                        .frame(maxWidth: .infinity)
+                                }
+                                .buttonStyle(CircuitButtonStyle())
+                                .accessibilityAddTraits(corner.id == state.selectedCornerId ? .isSelected : [])
                             }
                         }
                     } else { ProgressView("Loading circuits…") }
                 }.padding(16)
-            }.navigationTitle("Circuit").navigationBarTitleDisplayMode(.inline)
-        }.onAppear { model.start() }.onDisappear { model.stop() }
+            }
+            .background(CircuitStyle.surface.ignoresSafeArea())
+        }
+        .font(CircuitStyle.font(16))
+        .foregroundStyle(CircuitStyle.onSurface)
+        .tint(CircuitStyle.primary)
+        .onAppear { model.start() }.onDisappear { model.stop() }
     }
     private var detailTabs: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 0) {
                 ForEach(CircuitDetailTab.allCases, id: \.self) { tab in
-                    Button {
-                        selectedTab = tab
-                    } label: {
+                    Button { selectedTab = tab } label: {
                         Text(tab.rawValue)
-                            .font(.subheadline.weight(selectedTab == tab ? .semibold : .regular))
+                            .font(CircuitStyle.font(14, weight: .medium))
                             .fixedSize(horizontal: true, vertical: false)
-                            .padding(.horizontal, 16)
+                            .padding(.vertical, 12)
                             .frame(minHeight: 48)
-                            .foregroundStyle(selectedTab == tab ? Color.accentColor : .secondary)
+                            .foregroundStyle(selectedTab == tab ? CircuitStyle.primary : CircuitStyle.muted)
                             .overlay(alignment: .bottom) {
                                 if selectedTab == tab {
-                                    Rectangle().fill(Color.accentColor).frame(height: 3)
+                                    UnevenRoundedRectangle(topLeadingRadius: 3, topTrailingRadius: 3)
+                                        .fill(CircuitStyle.primary).frame(height: 3)
                                 }
                             }
+                            .padding(.horizontal, 16)
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
@@ -214,15 +403,12 @@ struct CircuitScreen: View {
                 }
             }
         }
+        .background(alignment: .bottom) { CircuitStyle.border.frame(height: 1) }
         .accessibilityElement(children: .contain)
         .accessibilityLabel("Circuit details tabs")
     }
     private func overlay(_ value: Overlay) -> Binding<Bool> {
         Binding(get: { model.state?.overlays.contains(value) ?? false }, set: { _ in model.toggle(value) })
-    }
-    private func info(_ name: String, _ value: String) -> some View {
-        VStack(alignment: .leading, spacing: 4) { Text(name).font(.caption).foregroundStyle(.secondary); Text(value).font(.title3) }
-            .frame(maxWidth: .infinity, alignment: .leading).padding().background(.quaternary, in: RoundedRectangle(cornerRadius: 12))
     }
     private func compass(_ degrees: Double) -> String {
         let directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
@@ -235,6 +421,7 @@ struct TrackView: View {
     let state: CircuitState
     let marker: Bool
     let retryKey: Int
+    let height: CGFloat
     let retry: () -> Void
     let select: (String) -> Void
     @Environment(\.scenePhase) private var scenePhase
@@ -267,13 +454,13 @@ struct TrackView: View {
                         if let nearest = images.path.corners.min(by: { distance($0, v, x, y) < distance($1, v, x, y) }),
                            distance(nearest, v, x, y) <= 24 { select(nearest.id) }
                     })
-                }.frame(height: 300)
+                }.frame(height: height)
                     .accessibilityElement(children: .ignore)
                     .accessibilityLabel("\(state.selectedCircuit?.displayName ?? circuitID) 2D track")
                     .accessibilityValue("Selected corner \(state.detail?.corners.first(where: { $0.id == state.selectedCornerId })?.turnCode ?? "none")")
                     .accessibilityHint("Select the Key Corners tab below to choose a corner")
-            } else if failed { Text("Track image unavailable"); Button("Retry track", action: retry).frame(minHeight: 48) }
-            else { ProgressView("Loading track…").frame(height: 300) }
+            } else if failed { Text("Track image unavailable"); Button("Retry track", action: retry).buttonStyle(CircuitButtonStyle(filled: true)) }
+            else { ProgressView("Loading track…").frame(height: height) }
         }.task(id: retryKey) {
             images = nil; failed = false
             let id = circuitID
