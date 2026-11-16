@@ -1,0 +1,4930 @@
+{
+  "circuitId": "marina_bay",
+  "displayName": "Singapore",
+  "appLengthKm": 4.927,
+  "appCenter": [
+    103.864,
+    1.2914
+  ],
+  "queries": [
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=103.8581595,1.2855610,103.8698405,1.2972390",
+      "sha256": "5b3dba4006a03a6cf3b4dde59382526338030b1ccaf87a8e4b20de7f7a2f7004",
+      "bytes": 4887783,
+      "radiusMeters": 650
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/421263/full",
+      "sha256": "95c91449e6c0a01c3c356a702c32e5f688a8f6ef381a2c2e697efc9bd711d9c9",
+      "bytes": 119010
+    }
+  ],
+  "elements": [
+    {
+      "type": "node",
+      "id": 4281759834,
+      "version": "3",
+      "timestamp": "2026-05-14T04:17:07Z",
+      "tags": {
+        "name": "Start Line",
+        "race course": "start_end"
+      },
+      "url": "https://www.openstreetmap.org/node/4281759834",
+      "coordinates": [
+        103.8642117,
+        1.2916929
+      ]
+    },
+    {
+      "type": "node",
+      "id": 13826310653,
+      "version": "1",
+      "timestamp": "2026-05-14T04:17:07Z",
+      "tags": {
+        "name": "Finish Line"
+      },
+      "url": "https://www.openstreetmap.org/node/13826310653",
+      "coordinates": [
+        103.8643543,
+        1.290463
+      ]
+    },
+    {
+      "type": "relation",
+      "id": 421263,
+      "version": "107",
+      "timestamp": "2026-05-14T04:17:07Z",
+      "tags": {
+        "name": "Marina Bay Street Circuit",
+        "type": "circuit",
+        "wikidata": "Q171390",
+        "wikipedia": "en:Marina Bay Street Circuit"
+      },
+      "url": "https://www.openstreetmap.org/relation/421263",
+      "members": [
+        {
+          "type": "way",
+          "ref": 686335807,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 100484287,
+          "role": "pitlane"
+        },
+        {
+          "type": "way",
+          "ref": 686335806,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 747875236,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 747875237,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 475217889,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 759511978,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 448084962,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 684544691,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1015882723,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1015882722,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 1121759130,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 475215022,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 480247943,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 29377119,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1121759129,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1121759131,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1206760203,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 528539591,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 767388313,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 35037538,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 750071184,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 581766308,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 479605911,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 479565613,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 764062390,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 479565612,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 634832601,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 633311062,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 764062389,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 303314681,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 767388315,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 763531722,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 633343709,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 633340452,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 479565608,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 842953325,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 633340456,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 635394837,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 180551367,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 581942152,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 173791995,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 152783801,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 479284866,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 303311924,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 465064165,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 686323967,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 686335799,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 686323968,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 686335800,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 21805129,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 654223306,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 672222982,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 174262763,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 383365018,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 528537303,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 383365019,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 584419619,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 176298699,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 479540202,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 633871920,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 1415079998,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 1415079999,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 633871919,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 479745479,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 479745478,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 649944021,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 479540200,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 635373148,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 545362403,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 545362402,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 723073393,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 75067163,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 635375722,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 649336906,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 763525862,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 1498693105,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 21701074,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 763525863,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 763525864,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 51511352,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 459186771,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 831044956,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 16688065,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 51511339,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1303467716,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 156457347,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 650084964,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 634770511,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 750071183,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1392512181,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 479565615,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 173779754,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 845894319,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 647084783,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 649520780,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 480250096,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 155907160,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 21584500,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 173791997,
+          "role": "backward"
+        },
+        {
+          "type": "node",
+          "ref": 4281759834,
+          "role": "start"
+        },
+        {
+          "type": "node",
+          "ref": 13826310653,
+          "role": "finish"
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 16688065,
+      "version": "26",
+      "timestamp": "2026-02-02T10:55:17Z",
+      "tags": {
+        "highway": "trunk",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "70",
+        "name": "Nicoll Highway",
+        "name:ms": "Lebuhraya Nicoll",
+        "name:ta": "நிகோல் நெடுஞ்சாலை",
+        "name:zh": "尼诰大道",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/16688065",
+      "nodeIds": [
+        233879753,
+        8169664152,
+        2466494373,
+        8169664154,
+        1818164136
+      ],
+      "coordinates": [
+        [
+          103.8548655,
+          1.2914505
+        ],
+        [
+          103.8549025,
+          1.2915357
+        ],
+        [
+          103.8549246,
+          1.2915866
+        ],
+        [
+          103.8550798,
+          1.2918822
+        ],
+        [
+          103.8552936,
+          1.2922894
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 21584500,
+      "version": "25",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Saint Andrew's Road",
+        "name:zh": "圣安德烈路",
+        "oneway": "yes",
+        "sidewalk:left": "yes",
+        "sidewalk:right": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/21584500",
+      "nodeIds": [
+        6997023277,
+        4689967578,
+        5270928837,
+        232279092
+      ],
+      "coordinates": [
+        [
+          103.8517392,
+          1.2896701
+        ],
+        [
+          103.8523289,
+          1.2907304
+        ],
+        [
+          103.8524116,
+          1.2908769
+        ],
+        [
+          103.8524294,
+          1.2909086
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 21701074,
+      "version": "32",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/21701074",
+      "nodeIds": [
+        3059486888,
+        233879798
+      ],
+      "coordinates": [
+        [
+          103.856514,
+          1.2927809
+        ],
+        [
+          103.8568682,
+          1.2925727
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 21805129,
+      "version": "34",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Republic Boulevard",
+        "name:en": "Republic Boulevard",
+        "name:zh": "共和国林荫道",
+        "oneway": "yes",
+        "sidewalk": "left",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/21805129",
+      "nodeIds": [
+        462263951,
+        6340950174,
+        6340950175,
+        1188527792,
+        7863541446,
+        235070526,
+        235070560,
+        6340950170,
+        6340950171,
+        6433028834
+      ],
+      "coordinates": [
+        [
+          103.8628486,
+          1.2915327
+        ],
+        [
+          103.8628898,
+          1.2916159
+        ],
+        [
+          103.8629054,
+          1.2916981
+        ],
+        [
+          103.8629088,
+          1.2918067
+        ],
+        [
+          103.8628983,
+          1.2919464
+        ],
+        [
+          103.8628904,
+          1.292052
+        ],
+        [
+          103.8628207,
+          1.2924838
+        ],
+        [
+          103.8627941,
+          1.292604
+        ],
+        [
+          103.8627184,
+          1.2928397
+        ],
+        [
+          103.8625264,
+          1.2933616
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 29377119,
+      "version": "30",
+      "timestamp": "2026-10-13T04:07:30Z",
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Anderson Bridge",
+        "highway": "footway",
+        "image": "https://images.mapillary.com/4kwZ6YR3RVToi_vUG8YcJg/thumb-2048.jpg",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "layer": "1",
+        "lit": "yes",
+        "mapillary": "1215895535872042",
+        "name": "Fullerton Road",
+        "name:en": "Fullerton Road",
+        "name:zh": "浮尔顿路",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through",
+        "turn:lanes:forward": "through"
+      },
+      "url": "https://www.openstreetmap.org/way/29377119",
+      "nodeIds": [
+        9370421307,
+        237054799
+      ],
+      "coordinates": [
+        [
+          103.8527757,
+          1.2874994
+        ],
+        [
+          103.8532676,
+          1.2871039
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 35037538,
+      "version": "21",
+      "timestamp": "2026-05-07T19:51:23Z",
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Esplanade Bridge",
+        "busway:left": "lane",
+        "highway": "trunk",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "layer": "1",
+        "lit": "yes",
+        "maxspeed": "70",
+        "name": "Esplanade Drive",
+        "name:en": "Esplanade Drive",
+        "name:zh": "海滨公园通道",
+        "oneway": "yes",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "source": "Yahoo aerial images",
+        "start_date": "1997",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/35037538",
+      "nodeIds": [
+        3010901881,
+        410939418
+      ],
+      "coordinates": [
+        [
+          103.8537803,
+          1.2867007
+        ],
+        [
+          103.854266,
+          1.2892613
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 51511339,
+      "version": "11",
+      "timestamp": "2026-05-07T19:49:33Z",
+      "tags": {
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Stamford Road",
+        "name:en": "Stamford Road",
+        "name:zh": "史丹福路",
+        "oneway": "yes",
+        "source": "GPS & Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/51511339",
+      "nodeIds": [
+        233879753,
+        12071463879
+      ],
+      "coordinates": [
+        [
+          103.8548655,
+          1.2914505
+        ],
+        [
+          103.8547543,
+          1.2915628
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 51511352,
+      "version": "16",
+      "timestamp": "2026-05-07T19:49:33Z",
+      "tags": {
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Bras Basah Road",
+        "name:en": "Bras Basah Road",
+        "name:zh": "勿拉士巴沙路",
+        "oneway": "yes",
+        "source": "GPS & Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/51511352",
+      "nodeIds": [
+        172510077,
+        233497179
+      ],
+      "coordinates": [
+        [
+          103.8558226,
+          1.293172
+        ],
+        [
+          103.8559769,
+          1.2930831
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 75067163,
+      "version": "25",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/75067163",
+      "nodeIds": [
+        233880373,
+        6782303342,
+        595497945
+      ],
+      "coordinates": [
+        [
+          103.8572319,
+          1.2923557
+        ],
+        [
+          103.8576827,
+          1.292102
+        ],
+        [
+          103.8577256,
+          1.2920774
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 100484287,
+      "version": "14",
+      "timestamp": "2022-08-22T15:33:15Z",
+      "tags": {
+        "access": "private",
+        "highway": "raceway",
+        "name": "Pit Lane",
+        "oneway": "yes",
+        "raceway": "pitlane",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/100484287",
+      "nodeIds": [
+        1161613127,
+        1161613227,
+        1161613033,
+        5411304516,
+        1161613230,
+        5411304517,
+        1446076194,
+        1161613118,
+        1161613185,
+        1161612960,
+        1446076209,
+        1161613167,
+        9814205647,
+        9814205648,
+        6340950165,
+        9814205649,
+        6340950163,
+        1161612996,
+        1446076218,
+        1161613002,
+        1161613070,
+        1161613131,
+        1161613173,
+        6340950161,
+        5411304505,
+        6340950160,
+        5411304502
+      ],
+      "coordinates": [
+        [
+          103.8628407,
+          1.2887014
+        ],
+        [
+          103.8632536,
+          1.2887279
+        ],
+        [
+          103.8638073,
+          1.2887453
+        ],
+        [
+          103.8638756,
+          1.2887568
+        ],
+        [
+          103.8639319,
+          1.2887864
+        ],
+        [
+          103.863974,
+          1.2888263
+        ],
+        [
+          103.8640347,
+          1.288917
+        ],
+        [
+          103.8642651,
+          1.2892835
+        ],
+        [
+          103.8643031,
+          1.2893596
+        ],
+        [
+          103.8643271,
+          1.2894651
+        ],
+        [
+          103.8643387,
+          1.2895766
+        ],
+        [
+          103.8643313,
+          1.2896515
+        ],
+        [
+          103.8638851,
+          1.2929856
+        ],
+        [
+          103.8638658,
+          1.2931305
+        ],
+        [
+          103.8638606,
+          1.2932544
+        ],
+        [
+          103.8638425,
+          1.2934466
+        ],
+        [
+          103.8637574,
+          1.2940416
+        ],
+        [
+          103.8637308,
+          1.2941208
+        ],
+        [
+          103.8636644,
+          1.2941967
+        ],
+        [
+          103.8636063,
+          1.294232
+        ],
+        [
+          103.8635345,
+          1.294257
+        ],
+        [
+          103.8634356,
+          1.2942787
+        ],
+        [
+          103.8633351,
+          1.294299
+        ],
+        [
+          103.8632484,
+          1.2943371
+        ],
+        [
+          103.8631271,
+          1.2944147
+        ],
+        [
+          103.8630531,
+          1.2944754
+        ],
+        [
+          103.8630464,
+          1.294522
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 152783801,
+      "version": "16",
+      "timestamp": "2024-10-15T14:27:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through;right"
+      },
+      "url": "https://www.openstreetmap.org/way/152783801",
+      "nodeIds": [
+        233879603,
+        479983003
+      ],
+      "coordinates": [
+        [
+          103.8609857,
+          1.2895592
+        ],
+        [
+          103.8608765,
+          1.289565
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 155907160,
+      "version": "16",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Saint Andrew's Road",
+        "name:zh": "圣安德烈路",
+        "oneway": "yes",
+        "sidewalk:left": "yes",
+        "sidewalk:right": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/155907160",
+      "nodeIds": [
+        232279092,
+        4732525705
+      ],
+      "coordinates": [
+        [
+          103.8524294,
+          1.2909086
+        ],
+        [
+          103.8525268,
+          1.2910839
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 156457347,
+      "version": "16",
+      "timestamp": "2026-05-07T19:49:33Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Stamford Road",
+        "name:en": "Stamford Road",
+        "name:zh": "史丹福路",
+        "oneway": "yes",
+        "source": "GPS & Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/156457347",
+      "nodeIds": [
+        1398079475,
+        232353353
+      ],
+      "coordinates": [
+        [
+          103.854655,
+          1.291663
+        ],
+        [
+          103.854467,
+          1.2918487
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 173779754,
+      "version": "14",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Saint Andrew's Road",
+        "name:zh": "圣安德烈路",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/173779754",
+      "nodeIds": [
+        232376467,
+        1683099954,
+        1188509769,
+        232353226
+      ],
+      "coordinates": [
+        [
+          103.853252,
+          1.2923897
+        ],
+        [
+          103.8533954,
+          1.2925175
+        ],
+        [
+          103.8534982,
+          1.2925756
+        ],
+        [
+          103.8536185,
+          1.2926038
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 173791995,
+      "version": "24",
+      "timestamp": "2026-08-24T10:32:34Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/173791995",
+      "nodeIds": [
+        479983003,
+        14108930868,
+        5165925965
+      ],
+      "coordinates": [
+        [
+          103.8608765,
+          1.289565
+        ],
+        [
+          103.860775,
+          1.2895704
+        ],
+        [
+          103.8605926,
+          1.2895801
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 173791997,
+      "version": "24",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/173791997",
+      "nodeIds": [
+        595497945,
+        6782303341
+      ],
+      "coordinates": [
+        [
+          103.8577256,
+          1.2920774
+        ],
+        [
+          103.8578775,
+          1.2919894
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 174262763,
+      "version": "20",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|right|right"
+      },
+      "url": "https://www.openstreetmap.org/way/174262763",
+      "nodeIds": [
+        3736885019,
+        3076643620
+      ],
+      "coordinates": [
+        [
+          103.8619805,
+          1.291294
+        ],
+        [
+          103.862347,
+          1.2912552
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 176298699,
+      "version": "20",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/176298699",
+      "nodeIds": [
+        233879872,
+        233879899
+      ],
+      "coordinates": [
+        [
+          103.8608319,
+          1.2913301
+        ],
+        [
+          103.8609332,
+          1.2913321
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 180551367,
+      "version": "23",
+      "timestamp": "2026-08-24T10:32:34Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "sidewalk": "left",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/180551367",
+      "nodeIds": [
+        6340950179,
+        1832823579
+      ],
+      "coordinates": [
+        [
+          103.8599725,
+          1.289613
+        ],
+        [
+          103.8596687,
+          1.2896305
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 303311924,
+      "version": "10",
+      "timestamp": "2026-07-14T11:55:55Z",
+      "tags": {
+        "access": "private",
+        "highway": "raceway",
+        "name": "Marina Bay Street Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/303311924",
+      "nodeIds": [
+        634071195,
+        3076643611,
+        14014460565,
+        3076643603,
+        14014460566,
+        3076643605,
+        6340950180,
+        3076643622,
+        5411304722,
+        3076644036,
+        6340950181,
+        3076643616,
+        6374444454,
+        3076643588
+      ],
+      "coordinates": [
+        [
+          103.8610813,
+          1.2895478
+        ],
+        [
+          103.8612069,
+          1.2894944
+        ],
+        [
+          103.8612471,
+          1.2894509
+        ],
+        [
+          103.861277,
+          1.2893749
+        ],
+        [
+          103.861277,
+          1.2893402
+        ],
+        [
+          103.861277,
+          1.2892211
+        ],
+        [
+          103.8612786,
+          1.2891389
+        ],
+        [
+          103.8612981,
+          1.28906
+        ],
+        [
+          103.8613328,
+          1.2889754
+        ],
+        [
+          103.8613893,
+          1.2889054
+        ],
+        [
+          103.8614754,
+          1.2888544
+        ],
+        [
+          103.861576,
+          1.2888304
+        ],
+        [
+          103.8618303,
+          1.2888019
+        ],
+        [
+          103.8619413,
+          1.2887895
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 303314681,
+      "version": "14",
+      "timestamp": "2026-01-30T13:46:09Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through;right"
+      },
+      "url": "https://www.openstreetmap.org/way/303314681",
+      "nodeIds": [
+        2466494363,
+        2466494275,
+        1818161326,
+        1832823589,
+        5270623340
+      ],
+      "coordinates": [
+        [
+          103.8575749,
+          1.2897405
+        ],
+        [
+          103.8574822,
+          1.2897454
+        ],
+        [
+          103.8574561,
+          1.2897468
+        ],
+        [
+          103.8573305,
+          1.2897535
+        ],
+        [
+          103.8573058,
+          1.2897548
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 383365018,
+      "version": "12",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/383365018",
+      "nodeIds": [
+        3736885022,
+        3736885019
+      ],
+      "coordinates": [
+        [
+          103.8616157,
+          1.2913406
+        ],
+        [
+          103.8619805,
+          1.291294
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 383365019,
+      "version": "15",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/383365019",
+      "nodeIds": [
+        4726227141,
+        5136090633
+      ],
+      "coordinates": [
+        [
+          103.8610957,
+          1.2913369
+        ],
+        [
+          103.8615148,
+          1.2913404
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 448084962,
+      "version": "15",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Connaught Drive",
+        "name:zh": "康乐通道",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through",
+        "turn:lanes:forward": "through"
+      },
+      "url": "https://www.openstreetmap.org/way/448084962",
+      "nodeIds": [
+        3010901912,
+        6413721257
+      ],
+      "coordinates": [
+        [
+          103.8516398,
+          1.2889492
+        ],
+        [
+          103.851867,
+          1.2887807
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 459186771,
+      "version": "10",
+      "timestamp": "2026-02-02T10:56:18Z",
+      "tags": {
+        "highway": "trunk",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "70",
+        "name": "Nicoll Highway",
+        "name:ms": "Lebuhraya Nicoll",
+        "name:ta": "நிகோல் நெடுஞ்சாலை",
+        "name:zh": "尼诰大道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through;right|right|right"
+      },
+      "url": "https://www.openstreetmap.org/way/459186771",
+      "nodeIds": [
+        7759646003,
+        3071267371,
+        172510077
+      ],
+      "coordinates": [
+        [
+          103.855412,
+          1.2924992
+        ],
+        [
+          103.8556295,
+          1.2928507
+        ],
+        [
+          103.8558226,
+          1.293172
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 465064165,
+      "version": "11",
+      "timestamp": "2026-04-01T10:30:05Z",
+      "tags": {
+        "access": "private",
+        "foot": "no",
+        "highway": "raceway",
+        "name": "Marina Bay Street Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/465064165",
+      "nodeIds": [
+        5411304502,
+        6340950167,
+        1446076223,
+        5411304510,
+        3076643614,
+        5411304511,
+        3076643628,
+        13698051659,
+        5864381389,
+        235070001,
+        6340950168,
+        6340950169,
+        1161612993
+      ],
+      "coordinates": [
+        [
+          103.8630464,
+          1.294522
+        ],
+        [
+          103.8630271,
+          1.2945495
+        ],
+        [
+          103.8629806,
+          1.2946271
+        ],
+        [
+          103.8629382,
+          1.2947144
+        ],
+        [
+          103.8628791,
+          1.294785
+        ],
+        [
+          103.8628109,
+          1.2948213
+        ],
+        [
+          103.8627335,
+          1.2948393
+        ],
+        [
+          103.8626592,
+          1.2948392
+        ],
+        [
+          103.8625906,
+          1.2948194
+        ],
+        [
+          103.8625153,
+          1.2947585
+        ],
+        [
+          103.8624761,
+          1.2947048
+        ],
+        [
+          103.8624309,
+          1.2946376
+        ],
+        [
+          103.8623862,
+          1.2945431
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 475215022,
+      "version": "25",
+      "timestamp": "2026-10-13T04:07:30Z",
+      "tags": {
+        "foot": "yes",
+        "highway": "footway",
+        "lit": "yes",
+        "motor_vehicle": "yes",
+        "name": "Fullerton Road",
+        "name:en": "Fullerton Road",
+        "name:zh": "浮尔顿路",
+        "surface": "cobblestone:flattened"
+      },
+      "url": "https://www.openstreetmap.org/way/475215022",
+      "nodeIds": [
+        6988663055,
+        9383172239,
+        5133993153,
+        9383172240,
+        10046842560,
+        4451336947
+      ],
+      "coordinates": [
+        [
+          103.8525432,
+          1.2877239
+        ],
+        [
+          103.8524516,
+          1.2878349
+        ],
+        [
+          103.8523772,
+          1.2880957
+        ],
+        [
+          103.8523827,
+          1.2882495
+        ],
+        [
+          103.8523895,
+          1.2882719
+        ],
+        [
+          103.8524101,
+          1.288339
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 475217889,
+      "version": "13",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Connaught Drive",
+        "name:zh": "康乐通道",
+        "oneway": "yes",
+        "sidewalk": "right",
+        "surface": "asphalt",
+        "turn:lanes": "through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/475217889",
+      "nodeIds": [
+        6856578455,
+        9370421303,
+        9370421302,
+        232353925
+      ],
+      "coordinates": [
+        [
+          103.8514513,
+          1.289092
+        ],
+        [
+          103.8514573,
+          1.2891414
+        ],
+        [
+          103.8514743,
+          1.2891874
+        ],
+        [
+          103.8515745,
+          1.2893739
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479284866,
+      "version": "9",
+      "timestamp": "2024-10-15T14:27:47Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source": "aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|through|through;right|right"
+      },
+      "url": "https://www.openstreetmap.org/way/479284866",
+      "nodeIds": [
+        634071195,
+        233879603
+      ],
+      "coordinates": [
+        [
+          103.8610813,
+          1.2895478
+        ],
+        [
+          103.8609857,
+          1.2895592
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479540200,
+      "version": "23",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/479540200",
+      "nodeIds": [
+        1720073355,
+        233879856,
+        1832823669,
+        6743567258,
+        1720073406
+      ],
+      "coordinates": [
+        [
+          103.8585312,
+          1.291612
+        ],
+        [
+          103.858703,
+          1.2915475
+        ],
+        [
+          103.8587725,
+          1.2915233
+        ],
+        [
+          103.8588089,
+          1.2915103
+        ],
+        [
+          103.8590169,
+          1.2914743
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479540202,
+      "version": "13",
+      "timestamp": "2026-08-21T04:10:13Z",
+      "tags": {
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|through;right|right"
+      },
+      "url": "https://www.openstreetmap.org/way/479540202",
+      "nodeIds": [
+        4600854642,
+        14108930882,
+        233879872
+      ],
+      "coordinates": [
+        [
+          103.86038,
+          1.2913836
+        ],
+        [
+          103.8607617,
+          1.2913384
+        ],
+        [
+          103.8608319,
+          1.2913301
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479565608,
+      "version": "10",
+      "timestamp": "2026-01-25T20:04:09Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/479565608",
+      "nodeIds": [
+        1832823584,
+        1780184887,
+        233879574
+      ],
+      "coordinates": [
+        [
+          103.8588597,
+          1.2896723
+        ],
+        [
+          103.8587507,
+          1.289678
+        ],
+        [
+          103.8586061,
+          1.2896858
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479565612,
+      "version": "14",
+      "timestamp": "2026-08-26T04:10:33Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "sidewalk": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|through|through|through|right"
+      },
+      "url": "https://www.openstreetmap.org/way/479565612",
+      "nodeIds": [
+        1743939385,
+        12878473097,
+        2466494365,
+        12878476505,
+        233879440
+      ],
+      "coordinates": [
+        [
+          103.8561749,
+          1.2903222
+        ],
+        [
+          103.8560384,
+          1.2904397
+        ],
+        [
+          103.8559972,
+          1.2904752
+        ],
+        [
+          103.8558644,
+          1.2905895
+        ],
+        [
+          103.8557948,
+          1.2906494
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479565613,
+      "version": "10",
+      "timestamp": "2026-08-26T04:10:33Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left|left;through|through|through|through;right|right"
+      },
+      "url": "https://www.openstreetmap.org/way/479565613",
+      "nodeIds": [
+        7138225045,
+        2466494277,
+        4726775783
+      ],
+      "coordinates": [
+        [
+          103.8554503,
+          1.2909459
+        ],
+        [
+          103.8552358,
+          1.2911304
+        ],
+        [
+          103.8552168,
+          1.2911468
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479565615,
+      "version": "8",
+      "timestamp": "2026-05-07T19:49:37Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Stamford Road",
+        "name:en": "Stamford Road",
+        "name:zh": "史丹福路",
+        "oneway": "yes",
+        "source": "GPS & Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/479565615",
+      "nodeIds": [
+        3071267396,
+        7867763422,
+        232353226
+      ],
+      "coordinates": [
+        [
+          103.8539248,
+          1.2924047
+        ],
+        [
+          103.8537917,
+          1.2924912
+        ],
+        [
+          103.8536185,
+          1.2926038
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479605911,
+      "version": "9",
+      "timestamp": "2026-08-26T04:10:33Z",
+      "tags": {
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|through|through|through;right|right"
+      },
+      "url": "https://www.openstreetmap.org/way/479605911",
+      "nodeIds": [
+        4726775783,
+        2466494309,
+        233879421
+      ],
+      "coordinates": [
+        [
+          103.8552168,
+          1.2911468
+        ],
+        [
+          103.855059,
+          1.2912783
+        ],
+        [
+          103.8550077,
+          1.291324
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479745478,
+      "version": "17",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxheight": "4.5",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "tunnel": "building_passage"
+      },
+      "url": "https://www.openstreetmap.org/way/479745478",
+      "nodeIds": [
+        4727947772,
+        7023019223,
+        4281759839
+      ],
+      "coordinates": [
+        [
+          103.8591706,
+          1.2914593
+        ],
+        [
+          103.8592734,
+          1.2914491
+        ],
+        [
+          103.8593764,
+          1.2914445
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 479745479,
+      "version": "17",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/479745479",
+      "nodeIds": [
+        4281759839,
+        9946316970,
+        5864347585
+      ],
+      "coordinates": [
+        [
+          103.8593764,
+          1.2914445
+        ],
+        [
+          103.8596063,
+          1.2914304
+        ],
+        [
+          103.8597007,
+          1.2914253
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 480247943,
+      "version": "20",
+      "timestamp": "2026-10-13T04:07:30Z",
+      "tags": {
+        "highway": "footway",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "name": "Fullerton Road",
+        "name:en": "Fullerton Road",
+        "name:zh": "浮尔顿路",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through",
+        "turn:lanes:forward": "through"
+      },
+      "url": "https://www.openstreetmap.org/way/480247943",
+      "nodeIds": [
+        6988663055,
+        9370421304,
+        9370421308,
+        9370421307
+      ],
+      "coordinates": [
+        [
+          103.8525432,
+          1.2877239
+        ],
+        [
+          103.8526038,
+          1.2876704
+        ],
+        [
+          103.8526136,
+          1.2876606
+        ],
+        [
+          103.8527757,
+          1.2874994
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 480250096,
+      "version": "13",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Saint Andrew's Road",
+        "name:zh": "圣安德烈路",
+        "oneway": "yes",
+        "sidewalk": "left",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/480250096",
+      "nodeIds": [
+        4732525705,
+        6095372887
+      ],
+      "coordinates": [
+        [
+          103.8525268,
+          1.2910839
+        ],
+        [
+          103.8526354,
+          1.2912821
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 528537303,
+      "version": "11",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/528537303",
+      "nodeIds": [
+        5136090633,
+        3736885022
+      ],
+      "coordinates": [
+        [
+          103.8615148,
+          1.2913404
+        ],
+        [
+          103.8616157,
+          1.2913406
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 528539591,
+      "version": "10",
+      "timestamp": "2026-05-07T19:51:23Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "trunk",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "70",
+        "name": "Esplanade Drive",
+        "name:en": "Esplanade Drive",
+        "name:zh": "海滨公园通道",
+        "oneway": "yes",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/528539591",
+      "nodeIds": [
+        237012287,
+        5136107116,
+        3010901881
+      ],
+      "coordinates": [
+        [
+          103.8537625,
+          1.2866054
+        ],
+        [
+          103.8537699,
+          1.2866461
+        ],
+        [
+          103.8537803,
+          1.2867007
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 545362402,
+      "version": "15",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxheight": "4.5",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "tunnel": "building_passage"
+      },
+      "url": "https://www.openstreetmap.org/way/545362402",
+      "nodeIds": [
+        5270981856,
+        12169571327,
+        12169568595,
+        1832823705
+      ],
+      "coordinates": [
+        [
+          103.8578896,
+          1.291982
+        ],
+        [
+          103.8580435,
+          1.2918934
+        ],
+        [
+          103.8580705,
+          1.2918776
+        ],
+        [
+          103.8582423,
+          1.291779
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 545362403,
+      "version": "11",
+      "timestamp": "2026-07-03T08:57:02Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "maxheight": "4.5",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "tunnel": "building_passage",
+        "turn:lanes": "left;through|through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/545362403",
+      "nodeIds": [
+        1832823705,
+        5270981855
+      ],
+      "coordinates": [
+        [
+          103.8582423,
+          1.291779
+        ],
+        [
+          103.8582593,
+          1.2917694
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 581766308,
+      "version": "5",
+      "timestamp": "2026-05-07T19:51:23Z",
+      "tags": {
+        "highway": "trunk",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "70",
+        "name": "Esplanade Drive",
+        "name:en": "Esplanade Drive",
+        "name:zh": "海滨公园通道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/581766308",
+      "nodeIds": [
+        233879421,
+        4726775785
+      ],
+      "coordinates": [
+        [
+          103.8550077,
+          1.291324
+        ],
+        [
+          103.8549222,
+          1.2910827
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 581942152,
+      "version": "12",
+      "timestamp": "2026-08-24T10:32:34Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "sidewalk": "left",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/581942152",
+      "nodeIds": [
+        5165925965,
+        7863612116,
+        6340950179
+      ],
+      "coordinates": [
+        [
+          103.8605926,
+          1.2895801
+        ],
+        [
+          103.8603161,
+          1.2895948
+        ],
+        [
+          103.8599725,
+          1.289613
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 584419619,
+      "version": "12",
+      "timestamp": "2026-08-21T04:10:13Z",
+      "tags": {
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/584419619",
+      "nodeIds": [
+        233879899,
+        14108930883,
+        4726227141
+      ],
+      "coordinates": [
+        [
+          103.8609332,
+          1.2913321
+        ],
+        [
+          103.8609809,
+          1.2913335
+        ],
+        [
+          103.8610957,
+          1.2913369
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 633311062,
+      "version": "12",
+      "timestamp": "2026-08-26T04:10:33Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "sidewalk": "separate",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/633311062",
+      "nodeIds": [
+        1446076214,
+        1764796983,
+        233879502,
+        2466494375,
+        1764796984,
+        2466494264,
+        1720073678,
+        2466494397,
+        233879466,
+        1764796980
+      ],
+      "coordinates": [
+        [
+          103.8569869,
+          1.289794
+        ],
+        [
+          103.8568781,
+          1.2898254
+        ],
+        [
+          103.8567861,
+          1.2898549
+        ],
+        [
+          103.8567376,
+          1.2898782
+        ],
+        [
+          103.8566645,
+          1.2899135
+        ],
+        [
+          103.8565763,
+          1.2899715
+        ],
+        [
+          103.8565472,
+          1.2899906
+        ],
+        [
+          103.8564514,
+          1.2900794
+        ],
+        [
+          103.8563522,
+          1.2901714
+        ],
+        [
+          103.8562871,
+          1.2902257
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 633340452,
+      "version": "10",
+      "timestamp": "2026-01-25T20:04:14Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/633340452",
+      "nodeIds": [
+        233879574,
+        5978628576
+      ],
+      "coordinates": [
+        [
+          103.8586061,
+          1.2896858
+        ],
+        [
+          103.858293,
+          1.2897023
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 633340456,
+      "version": "12",
+      "timestamp": "2026-01-25T20:03:56Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "sidewalk": "left",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/633340456",
+      "nodeIds": [
+        1832823581,
+        1832823583
+      ],
+      "coordinates": [
+        [
+          103.8595101,
+          1.2896398
+        ],
+        [
+          103.8591787,
+          1.2896553
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 633343709,
+      "version": "9",
+      "timestamp": "2026-01-25T20:04:11Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "sidewalk": "right",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/633343709",
+      "nodeIds": [
+        5978628576,
+        1832823586
+      ],
+      "coordinates": [
+        [
+          103.858293,
+          1.2897023
+        ],
+        [
+          103.8580786,
+          1.2897137
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 633871919,
+      "version": "12",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|none|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/633871919",
+      "nodeIds": [
+        5864347585,
+        9946316973
+      ],
+      "coordinates": [
+        [
+          103.8597007,
+          1.2914253
+        ],
+        [
+          103.8599232,
+          1.2914117
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 633871920,
+      "version": "10",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through|through|through;right|right"
+      },
+      "url": "https://www.openstreetmap.org/way/633871920",
+      "nodeIds": [
+        1832823668,
+        4600854642
+      ],
+      "coordinates": [
+        [
+          103.8600553,
+          1.2914033
+        ],
+        [
+          103.86038,
+          1.2913836
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 634770511,
+      "version": "9",
+      "timestamp": "2026-05-07T19:49:47Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Stamford Road",
+        "name:en": "Stamford Road",
+        "name:zh": "史丹福路",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "GPS & Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/634770511",
+      "nodeIds": [
+        4513378919,
+        232353185
+      ],
+      "coordinates": [
+        [
+          103.8543182,
+          1.2920088
+        ],
+        [
+          103.8540982,
+          1.2922316
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 634832601,
+      "version": "11",
+      "timestamp": "2026-08-26T04:10:33Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "sidewalk": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/634832601",
+      "nodeIds": [
+        1764796980,
+        1743939385
+      ],
+      "coordinates": [
+        [
+          103.8562871,
+          1.2902257
+        ],
+        [
+          103.8561749,
+          1.2903222
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 635373148,
+      "version": "17",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/635373148",
+      "nodeIds": [
+        5270981855,
+        6769049627,
+        1720073355
+      ],
+      "coordinates": [
+        [
+          103.8582593,
+          1.2917694
+        ],
+        [
+          103.8583143,
+          1.2917362
+        ],
+        [
+          103.8585312,
+          1.291612
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 635375722,
+      "version": "9",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left|left;through|through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/635375722",
+      "nodeIds": [
+        1720073397,
+        233880373
+      ],
+      "coordinates": [
+        [
+          103.857176,
+          1.2923891
+        ],
+        [
+          103.8572319,
+          1.2923557
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 635394837,
+      "version": "10",
+      "timestamp": "2026-08-24T10:32:34Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "sidewalk": "left",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/635394837",
+      "nodeIds": [
+        1832823579,
+        1832823581
+      ],
+      "coordinates": [
+        [
+          103.8596687,
+          1.2896305
+        ],
+        [
+          103.8595101,
+          1.2896398
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 647084783,
+      "version": "13",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Saint Andrew's Road",
+        "name:zh": "圣安德烈路",
+        "oneway": "yes",
+        "sidewalk": "left",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/647084783",
+      "nodeIds": [
+        6077839914,
+        9370423135,
+        7891770123
+      ],
+      "coordinates": [
+        [
+          103.8529922,
+          1.2919144
+        ],
+        [
+          103.8530832,
+          1.2920809
+        ],
+        [
+          103.853132,
+          1.2921701
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 649336906,
+      "version": "8",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left|left;through|through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/649336906",
+      "nodeIds": [
+        6094193512,
+        1720073397
+      ],
+      "coordinates": [
+        [
+          103.8570723,
+          1.2924516
+        ],
+        [
+          103.857176,
+          1.2923891
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 649520780,
+      "version": "9",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Saint Andrew's Road",
+        "name:zh": "圣安德烈路",
+        "oneway": "yes",
+        "sidewalk": "left",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/649520780",
+      "nodeIds": [
+        6095372887,
+        6077839914
+      ],
+      "coordinates": [
+        [
+          103.8526354,
+          1.2912821
+        ],
+        [
+          103.8529922,
+          1.2919144
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 649944021,
+      "version": "12",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/649944021",
+      "nodeIds": [
+        1720073406,
+        4727947772
+      ],
+      "coordinates": [
+        [
+          103.8590169,
+          1.2914743
+        ],
+        [
+          103.8591706,
+          1.2914593
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 650084964,
+      "version": "8",
+      "timestamp": "2026-05-07T19:49:50Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Stamford Road",
+        "name:en": "Stamford Road",
+        "name:zh": "史丹福路",
+        "oneway": "yes",
+        "source": "GPS & Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/650084964",
+      "nodeIds": [
+        232353353,
+        4513378919
+      ],
+      "coordinates": [
+        [
+          103.854467,
+          1.2918487
+        ],
+        [
+          103.8543182,
+          1.2920088
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 654223306,
+      "version": "10",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Republic Boulevard",
+        "name:en": "Republic Boulevard",
+        "name:zh": "共和国林荫道",
+        "oneway": "yes",
+        "sidewalk": "left",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/654223306",
+      "nodeIds": [
+        235070344,
+        6665734167,
+        4600842968,
+        6340950173,
+        462263951
+      ],
+      "coordinates": [
+        [
+          103.862531,
+          1.2913032
+        ],
+        [
+          103.8626721,
+          1.2913649
+        ],
+        [
+          103.862765,
+          1.2914334
+        ],
+        [
+          103.8628065,
+          1.2914723
+        ],
+        [
+          103.8628486,
+          1.2915327
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 672222982,
+      "version": "6",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Republic Boulevard",
+        "name:en": "Republic Boulevard",
+        "name:zh": "共和国林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left|left"
+      },
+      "url": "https://www.openstreetmap.org/way/672222982",
+      "nodeIds": [
+        3076643620,
+        235070344
+      ],
+      "coordinates": [
+        [
+          103.862347,
+          1.2912552
+        ],
+        [
+          103.862531,
+          1.2913032
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 684544691,
+      "version": "9",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "lanes:backward": "1",
+        "lanes:forward": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Connaught Drive",
+        "name:zh": "康乐通道",
+        "surface": "asphalt",
+        "turn:lanes:backward": "through;right",
+        "turn:lanes:forward": "through"
+      },
+      "url": "https://www.openstreetmap.org/way/684544691",
+      "nodeIds": [
+        6413721257,
+        6413721265
+      ],
+      "coordinates": [
+        [
+          103.851867,
+          1.2887807
+        ],
+        [
+          103.8520374,
+          1.2886636
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 686323967,
+      "version": "7",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Republic Boulevard",
+        "name:en": "Republic Boulevard",
+        "name:zh": "共和国林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/686323967",
+      "nodeIds": [
+        6432919892,
+        6046754591,
+        1161612993
+      ],
+      "coordinates": [
+        [
+          103.8623708,
+          1.2943413
+        ],
+        [
+          103.8623818,
+          1.2944856
+        ],
+        [
+          103.8623862,
+          1.2945431
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 686323968,
+      "version": "9",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "image": "https://images.mapillary.com/AYKz9KrqqwYJuXU8KLXNuA/thumb-2048.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "mapillary": "1146291622500301",
+        "maxspeed": "60",
+        "name": "Republic Boulevard",
+        "name:en": "Republic Boulevard",
+        "name:zh": "共和国林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/686323968",
+      "nodeIds": [
+        1446076215,
+        6433028833
+      ],
+      "coordinates": [
+        [
+          103.8623795,
+          1.2937185
+        ],
+        [
+          103.8623658,
+          1.2937976
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 686335799,
+      "version": "8",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "image": "https://images.mapillary.com/AYKz9KrqqwYJuXU8KLXNuA/thumb-2048.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "mapillary": "1146291622500301",
+        "maxspeed": "60",
+        "name": "Republic Boulevard",
+        "name:en": "Republic Boulevard",
+        "name:zh": "共和国林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/686335799",
+      "nodeIds": [
+        6433028833,
+        1446076217,
+        235070624,
+        6432919892
+      ],
+      "coordinates": [
+        [
+          103.8623658,
+          1.2937976
+        ],
+        [
+          103.862354,
+          1.293866
+        ],
+        [
+          103.862346,
+          1.2940148
+        ],
+        [
+          103.8623708,
+          1.2943413
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 686335800,
+      "version": "8",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "image": "https://images.mapillary.com/o72ouKUNKmshV92TGsV5zw/thumb-2048.jpg",
+        "lanes": "2",
+        "lit": "yes",
+        "mapillary": "212247987118309",
+        "maxspeed": "60",
+        "name": "Republic Boulevard",
+        "name:en": "Republic Boulevard",
+        "name:zh": "共和国林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/686335800",
+      "nodeIds": [
+        6433028834,
+        235070587,
+        1446076215
+      ],
+      "coordinates": [
+        [
+          103.8625264,
+          1.2933616
+        ],
+        [
+          103.8624291,
+          1.2935764
+        ],
+        [
+          103.8623795,
+          1.2937185
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 686335806,
+      "version": "3",
+      "timestamp": "2022-10-13T17:09:44Z",
+      "tags": {
+        "access": "private",
+        "highway": "raceway",
+        "image": "https://images.mapillary.com/8ANa6_FW5wLK1ixdGUS1MQ/thumb-2048.jpg",
+        "mapillary": "212396450442941",
+        "name": "Marina Bay Street Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/686335806",
+      "nodeIds": [
+        3076643588,
+        5157731601,
+        1161613127
+      ],
+      "coordinates": [
+        [
+          103.8619413,
+          1.2887895
+        ],
+        [
+          103.8627747,
+          1.2887046
+        ],
+        [
+          103.8628407,
+          1.2887014
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 686335807,
+      "version": "4",
+      "timestamp": "2026-05-14T04:17:07Z",
+      "tags": {
+        "access": "private",
+        "highway": "raceway",
+        "name": "Marina Bay Street Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/686335807",
+      "nodeIds": [
+        1161613127,
+        3076643626,
+        3076643594,
+        5411304515,
+        3076643589,
+        5411304514,
+        3076643632,
+        3076643619,
+        5411304513,
+        3076644037,
+        3076643606,
+        13826310653,
+        4281759834,
+        5411304500,
+        5411304501,
+        6340950159,
+        3076643623,
+        3076643629,
+        5411304507,
+        3076643627,
+        5411304506,
+        5411304508,
+        5411304502
+      ],
+      "coordinates": [
+        [
+          103.8628407,
+          1.2887014
+        ],
+        [
+          103.8635476,
+          1.2886748
+        ],
+        [
+          103.8638731,
+          1.2886587
+        ],
+        [
+          103.8639349,
+          1.2886633
+        ],
+        [
+          103.8639715,
+          1.288677
+        ],
+        [
+          103.8640023,
+          1.2887063
+        ],
+        [
+          103.8640496,
+          1.2887646
+        ],
+        [
+          103.8643984,
+          1.2893103
+        ],
+        [
+          103.8644413,
+          1.2893969
+        ],
+        [
+          103.8644596,
+          1.2895026
+        ],
+        [
+          103.8644482,
+          1.2896534
+        ],
+        [
+          103.8643543,
+          1.290463
+        ],
+        [
+          103.8642117,
+          1.2916929
+        ],
+        [
+          103.8638557,
+          1.2940727
+        ],
+        [
+          103.8638501,
+          1.2941585
+        ],
+        [
+          103.8638328,
+          1.2942661
+        ],
+        [
+          103.8637918,
+          1.2943212
+        ],
+        [
+          103.8637208,
+          1.2943578
+        ],
+        [
+          103.8636225,
+          1.2943588
+        ],
+        [
+          103.8635351,
+          1.2943517
+        ],
+        [
+          103.8634118,
+          1.2943611
+        ],
+        [
+          103.8632824,
+          1.2944007
+        ],
+        [
+          103.8630464,
+          1.294522
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 723073393,
+      "version": "9",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/723073393",
+      "nodeIds": [
+        6782303341,
+        5270981856
+      ],
+      "coordinates": [
+        [
+          103.8578775,
+          1.2919894
+        ],
+        [
+          103.8578896,
+          1.291982
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 747875236,
+      "version": "8",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Saint Andrew's Road",
+        "name:zh": "圣安德烈路",
+        "oneway": "yes",
+        "sidewalk:left": "yes",
+        "sidewalk:right": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/747875236",
+      "nodeIds": [
+        6997023278,
+        6997023277
+      ],
+      "coordinates": [
+        [
+          103.8516524,
+          1.289514
+        ],
+        [
+          103.8517392,
+          1.2896701
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 747875237,
+      "version": "8",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Saint Andrew's Road",
+        "name:zh": "圣安德烈路",
+        "oneway": "yes",
+        "sidewalk:left": "yes",
+        "sidewalk:right": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/747875237",
+      "nodeIds": [
+        232353925,
+        6997023278
+      ],
+      "coordinates": [
+        [
+          103.8515745,
+          1.2893739
+        ],
+        [
+          103.8516524,
+          1.289514
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 750071183,
+      "version": "9",
+      "timestamp": "2026-05-07T19:49:54Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Stamford Road",
+        "name:en": "Stamford Road",
+        "name:zh": "史丹福路",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "GPS & Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|through|right"
+      },
+      "url": "https://www.openstreetmap.org/way/750071183",
+      "nodeIds": [
+        232353185,
+        12522242614,
+        12522242619
+      ],
+      "coordinates": [
+        [
+          103.8540982,
+          1.2922316
+        ],
+        [
+          103.8540891,
+          1.2922407
+        ],
+        [
+          103.8539328,
+          1.2923967
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 750071184,
+      "version": "7",
+      "timestamp": "2026-05-07T19:51:23Z",
+      "tags": {
+        "highway": "trunk",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "70",
+        "name": "Esplanade Drive",
+        "name:en": "Esplanade Drive",
+        "name:zh": "海滨公园通道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/750071184",
+      "nodeIds": [
+        4726775785,
+        2466494354,
+        12878473076,
+        1832823650
+      ],
+      "coordinates": [
+        [
+          103.8549222,
+          1.2910827
+        ],
+        [
+          103.8548828,
+          1.2909735
+        ],
+        [
+          103.8547722,
+          1.2906554
+        ],
+        [
+          103.8546839,
+          1.2904014
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 759511978,
+      "version": "6",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "residential",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Connaught Drive",
+        "name:zh": "康乐通道",
+        "surface": "asphalt",
+        "turn:lanes": "through"
+      },
+      "url": "https://www.openstreetmap.org/way/759511978",
+      "nodeIds": [
+        3010901912,
+        6856578455
+      ],
+      "coordinates": [
+        [
+          103.8516398,
+          1.2889492
+        ],
+        [
+          103.8514513,
+          1.289092
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 763525862,
+      "version": "8",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left|left;through|through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/763525862",
+      "nodeIds": [
+        3059486893,
+        6094193512
+      ],
+      "coordinates": [
+        [
+          103.8569856,
+          1.2925027
+        ],
+        [
+          103.8570723,
+          1.2924516
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 763525863,
+      "version": "6",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|through|none|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/763525863",
+      "nodeIds": [
+        6355011388,
+        3059486888
+      ],
+      "coordinates": [
+        [
+          103.8562154,
+          1.2929484
+        ],
+        [
+          103.856514,
+          1.2927809
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 763525864,
+      "version": "6",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/763525864",
+      "nodeIds": [
+        233497179,
+        6355011388
+      ],
+      "coordinates": [
+        [
+          103.8559769,
+          1.2930831
+        ],
+        [
+          103.8562154,
+          1.2929484
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 763531722,
+      "version": "6",
+      "timestamp": "2025-09-05T16:45:12Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through;right"
+      },
+      "url": "https://www.openstreetmap.org/way/763531722",
+      "nodeIds": [
+        1832823586,
+        1780184888
+      ],
+      "coordinates": [
+        [
+          103.8580786,
+          1.2897137
+        ],
+        [
+          103.8577561,
+          1.2897309
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 764062389,
+      "version": "5",
+      "timestamp": "2026-02-01T19:16:27Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/764062389",
+      "nodeIds": [
+        5270623340,
+        1446076213,
+        3010901923,
+        1446076214
+      ],
+      "coordinates": [
+        [
+          103.8573058,
+          1.2897548
+        ],
+        [
+          103.8572552,
+          1.2897557
+        ],
+        [
+          103.8571045,
+          1.2897751
+        ],
+        [
+          103.8569869,
+          1.289794
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 764062390,
+      "version": "7",
+      "timestamp": "2026-08-26T04:10:33Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "raceway": "sometimes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|through|through|through;right"
+      },
+      "url": "https://www.openstreetmap.org/way/764062390",
+      "nodeIds": [
+        233879440,
+        7138225045
+      ],
+      "coordinates": [
+        [
+          103.8557948,
+          1.2906494
+        ],
+        [
+          103.8554503,
+          1.2909459
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 767388313,
+      "version": "5",
+      "timestamp": "2023-09-19T10:39:38Z",
+      "tags": {
+        "highway": "raceway",
+        "name": "Marina Bay Street Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/767388313",
+      "nodeIds": [
+        410939418,
+        1832823650
+      ],
+      "coordinates": [
+        [
+          103.854266,
+          1.2892613
+        ],
+        [
+          103.8546839,
+          1.2904014
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 767388315,
+      "version": "5",
+      "timestamp": "2024-10-15T14:29:58Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through;right"
+      },
+      "url": "https://www.openstreetmap.org/way/767388315",
+      "nodeIds": [
+        1780184888,
+        2466494363
+      ],
+      "coordinates": [
+        [
+          103.8577561,
+          1.2897309
+        ],
+        [
+          103.8575749,
+          1.2897405
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 831044956,
+      "version": "4",
+      "timestamp": "2026-02-02T10:56:13Z",
+      "tags": {
+        "highway": "trunk",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "70",
+        "name": "Nicoll Highway",
+        "name:ms": "Lebuhraya Nicoll",
+        "name:ta": "நிகோல் நெடுஞ்சாலை",
+        "name:zh": "尼诰大道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through;right|right"
+      },
+      "url": "https://www.openstreetmap.org/way/831044956",
+      "nodeIds": [
+        1818164136,
+        7759646003
+      ],
+      "coordinates": [
+        [
+          103.8552936,
+          1.2922894
+        ],
+        [
+          103.855412,
+          1.2924992
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 842953325,
+      "version": "5",
+      "timestamp": "2026-01-25T20:03:58Z",
+      "tags": {
+        "busway:left": "lane",
+        "highway": "primary",
+        "lanes": "4",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Avenue",
+        "name:zh": "莱佛士大道",
+        "note": "Part of it estimated ???",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "smoothness": "excellent",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "none|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/842953325",
+      "nodeIds": [
+        1832823583,
+        1832823584
+      ],
+      "coordinates": [
+        [
+          103.8591787,
+          1.2896553
+        ],
+        [
+          103.8588597,
+          1.2896723
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 845894319,
+      "version": "5",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Saint Andrew's Road",
+        "name:zh": "圣安德烈路",
+        "oneway": "yes",
+        "sidewalk": "left",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left|left;slight_right|slight_right|slight_right"
+      },
+      "url": "https://www.openstreetmap.org/way/845894319",
+      "nodeIds": [
+        7891770123,
+        232376467
+      ],
+      "coordinates": [
+        [
+          103.853132,
+          1.2921701
+        ],
+        [
+          103.853252,
+          1.2923897
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1015882722,
+      "version": "3",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "residential",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Connaught Drive",
+        "name:zh": "康乐通道",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "through"
+      },
+      "url": "https://www.openstreetmap.org/way/1015882722",
+      "nodeIds": [
+        4451336954,
+        5233693837,
+        5233693838,
+        9370421301
+      ],
+      "coordinates": [
+        [
+          103.8523418,
+          1.2884014
+        ],
+        [
+          103.8522876,
+          1.288464
+        ],
+        [
+          103.8522399,
+          1.2885016
+        ],
+        [
+          103.8520792,
+          1.2886362
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1015882723,
+      "version": "3",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "residential",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Connaught Drive",
+        "name:zh": "康乐通道",
+        "surface": "asphalt",
+        "turn:lanes": "through"
+      },
+      "url": "https://www.openstreetmap.org/way/1015882723",
+      "nodeIds": [
+        6413721265,
+        9370421301
+      ],
+      "coordinates": [
+        [
+          103.8520374,
+          1.2886636
+        ],
+        [
+          103.8520792,
+          1.2886362
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1121759129,
+      "version": "7",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Fullerton Road",
+        "name:zh": "浮尔顿路",
+        "oneway": "yes"
+      },
+      "url": "https://www.openstreetmap.org/way/1121759129",
+      "nodeIds": [
+        237054799,
+        12762090856,
+        12762090857,
+        12762090858,
+        9569954749
+      ],
+      "coordinates": [
+        [
+          103.8532676,
+          1.2871039
+        ],
+        [
+          103.8533008,
+          1.2870678
+        ],
+        [
+          103.8533443,
+          1.2870013
+        ],
+        [
+          103.8533754,
+          1.2869481
+        ],
+        [
+          103.8534399,
+          1.2868763
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1121759130,
+      "version": "3",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "residential",
+        "junction": "roundabout",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Connaught Drive",
+        "name:zh": "康乐通道",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "right"
+      },
+      "url": "https://www.openstreetmap.org/way/1121759130",
+      "nodeIds": [
+        4451336947,
+        4451336935,
+        4732505517,
+        4451336954
+      ],
+      "coordinates": [
+        [
+          103.8524101,
+          1.288339
+        ],
+        [
+          103.8523788,
+          1.2883511
+        ],
+        [
+          103.8523538,
+          1.2883751
+        ],
+        [
+          103.8523418,
+          1.2884014
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1121759131,
+      "version": "7",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Fullerton Road",
+        "name:zh": "浮尔顿路"
+      },
+      "url": "https://www.openstreetmap.org/way/1121759131",
+      "nodeIds": [
+        9569954749,
+        9569954750,
+        9569954751,
+        2511487801
+      ],
+      "coordinates": [
+        [
+          103.8534399,
+          1.2868763
+        ],
+        [
+          103.8535107,
+          1.286772
+        ],
+        [
+          103.8536251,
+          1.2866113
+        ],
+        [
+          103.85365,
+          1.2865708
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1206760203,
+      "version": "6",
+      "timestamp": "2026-10-22T08:49:32Z",
+      "tags": {
+        "highway": "service",
+        "lit": "yes",
+        "name": "Fullerton Road",
+        "name:zh": "浮尔顿路",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1206760203",
+      "nodeIds": [
+        2511487801,
+        9569954753,
+        14308551817,
+        9569954754,
+        237012287
+      ],
+      "coordinates": [
+        [
+          103.85365,
+          1.2865708
+        ],
+        [
+          103.8536782,
+          1.2865738
+        ],
+        [
+          103.8536927,
+          1.2865771
+        ],
+        [
+          103.8537184,
+          1.2865829
+        ],
+        [
+          103.8537625,
+          1.2866054
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1303467716,
+      "version": "3",
+      "timestamp": "2026-05-07T19:49:56Z",
+      "tags": {
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Stamford Road",
+        "name:en": "Stamford Road",
+        "name:zh": "史丹福路",
+        "oneway": "yes",
+        "source": "GPS & Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1303467716",
+      "nodeIds": [
+        12071463879,
+        1398079475
+      ],
+      "coordinates": [
+        [
+          103.8547543,
+          1.2915628
+        ],
+        [
+          103.854655,
+          1.291663
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1392512181,
+      "version": "2",
+      "timestamp": "2026-05-07T19:49:56Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Stamford Road",
+        "name:en": "Stamford Road",
+        "name:zh": "史丹福路",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "GPS & Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|through|right"
+      },
+      "url": "https://www.openstreetmap.org/way/1392512181",
+      "nodeIds": [
+        12522242619,
+        3071267396
+      ],
+      "coordinates": [
+        [
+          103.8539328,
+          1.2923967
+        ],
+        [
+          103.8539248,
+          1.2924047
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1415079998,
+      "version": "3",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|none|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/1415079998",
+      "nodeIds": [
+        13003578482,
+        1832823668
+      ],
+      "coordinates": [
+        [
+          103.860022,
+          1.2914054
+        ],
+        [
+          103.8600553,
+          1.2914033
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1415079999,
+      "version": "3",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "busway:left": "lane",
+        "foot": "yes",
+        "highway": "primary",
+        "lanes": "5",
+        "lanes:bus": "1",
+        "lanes:bus:conditional": "1 @ (Mo-Sa 07:30-23:00)",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt",
+        "turn:lanes": "left;through|none|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/1415079999",
+      "nodeIds": [
+        9946316973,
+        13003578482
+      ],
+      "coordinates": [
+        [
+          103.8599232,
+          1.2914117
+        ],
+        [
+          103.860022,
+          1.2914054
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1498693105,
+      "version": "2",
+      "timestamp": "2026-05-07T20:01:46Z",
+      "tags": {
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Raffles Boulevard",
+        "name:en": "Raffles Boulevard",
+        "name:zh": "莱佛士林荫道",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "Yahoo aerial images",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1498693105",
+      "nodeIds": [
+        233879798,
+        3059486893
+      ],
+      "coordinates": [
+        [
+          103.8568682,
+          1.2925727
+        ],
+        [
+          103.8569856,
+          1.2925027
+        ]
+      ],
+      "closed": false
+    }
+  ],
+  "errors": [],
+  "retrievedAtUtc": "2026-11-15T12:25:57.798623+00:00",
+  "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+}

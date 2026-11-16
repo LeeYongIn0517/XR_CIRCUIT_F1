@@ -1,0 +1,2197 @@
+[
+  {
+    "circuitId": "monaco",
+    "displayName": "Monaco",
+    "appLengthKm": 3.337,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 41,
+        "nodeCount": 423,
+        "lengthKm": 3.3884,
+        "components": 1,
+        "degreeHistogram": {
+          "1": 3,
+          "2": 417,
+          "3": 3
+        },
+        "closedSingleLoop": false,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 148194,
+        "name": "Circuit de Monaco",
+        "tags": {
+          "length": "3337",
+          "name": "Circuit de Monaco",
+          "sport": "motor",
+          "start_date": "1929",
+          "type": "circuit",
+          "wikidata": "Q171400",
+          "wikipedia": "en:Circuit de Monaco"
+        },
+        "wayIds": [
+          39839529,
+          1081401615,
+          214636589,
+          1081401614,
+          503475642,
+          485746484,
+          1081401613,
+          348019480,
+          1451501763,
+          4229536,
+          161775592,
+          1082515450,
+          161752645,
+          4229658,
+          4230009,
+          4230006,
+          434567309,
+          166399501,
+          568187257,
+          4230007,
+          1148675745,
+          1470365906,
+          1470365907,
+          1148199871,
+          41929969,
+          4230891,
+          1230247123,
+          160004393,
+          1081401617,
+          168681959,
+          60767229,
+          4226740,
+          1019174508,
+          166399479,
+          1453878835,
+          1081401616,
+          157719644,
+          254596486,
+          1551240830,
+          1551240829,
+          1388331347
+        ],
+        "url": "https://www.openstreetmap.org/relation/148194",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 41,
+        "nodeCount": 423,
+        "lengthKm": 3.3884,
+        "components": 1,
+        "degreeHistogram": {
+          "1": 3,
+          "2": 417,
+          "3": 3
+        },
+        "closedSingleLoop": false,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 9716363,
+        "name": "Monaco ePrix",
+        "tags": {
+          "name": "Monaco ePrix",
+          "start_date": "2015",
+          "type": "circuit",
+          "wikidata": "Q19946292",
+          "wikipedia": "en:Monaco ePrix"
+        },
+        "wayIds": [
+          39839529,
+          1081401615,
+          214636589,
+          1081401614,
+          503475642,
+          485746484,
+          1081401613,
+          348019480,
+          1451501763,
+          4229536,
+          161775592,
+          1082515450,
+          161752645,
+          4229658,
+          4230009,
+          4230006,
+          434567309,
+          166399501,
+          568187257,
+          4230007,
+          1148675745,
+          1470365906,
+          1470365907,
+          1148199871,
+          41929969,
+          4230891,
+          1230247123,
+          160004393,
+          1081401617,
+          168681959,
+          60767229,
+          4226740,
+          1019174508,
+          166399479,
+          1453878835,
+          1081401616,
+          157719644,
+          254596486,
+          1551240830,
+          1551240829,
+          1388331347
+        ],
+        "url": "https://www.openstreetmap.org/relation/9716363",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 46
+  },
+  {
+    "circuitId": "albert_park",
+    "displayName": "Melbourne",
+    "appLengthKm": 5.278,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 30,
+        "nodeCount": 308,
+        "lengthKm": 5.3084,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 308
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 280443,
+        "name": "Albert Park Circuit",
+        "tags": {
+          "highway": "raceway",
+          "name": "Albert Park Circuit",
+          "name:en": "Albert Park Circuit",
+          "name:fr": "Circuit de l'Albert Park",
+          "oneway": "yes",
+          "sport": "motor",
+          "start_date": "1953",
+          "type": "circuit",
+          "wikidata": "Q171288",
+          "wikipedia": "en:Albert Park Circuit"
+        },
+        "wayIds": [
+          987030977,
+          784076843,
+          784076839,
+          987030969,
+          1070446542,
+          784087846,
+          987030978,
+          987030966,
+          784083210,
+          987030982,
+          1050371045,
+          1013633268,
+          1013633269,
+          1050342733,
+          1021617920,
+          1021617874,
+          15856988,
+          979723480,
+          987030968,
+          784071296,
+          979723479,
+          979723477,
+          1253159342,
+          979723478,
+          1126808201,
+          987030972,
+          987030985,
+          987030974,
+          987030973,
+          784076847
+        ],
+        "url": "https://www.openstreetmap.org/relation/280443",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 33
+  },
+  {
+    "circuitId": "interlagos",
+    "displayName": "Interlagos",
+    "appLengthKm": 4.309,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 25,
+        "nodeCount": 296,
+        "lengthKm": 4.3082,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 296
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 6781071,
+        "name": "Autódromo José Carlos Pace",
+        "tags": {
+          "alt_name": "Autódromo de Interlagos",
+          "name": "Autódromo José Carlos Pace",
+          "type": "circuit",
+          "wikidata": "Q171387",
+          "wikipedia": "pt:Autódromo de Interlagos"
+        },
+        "wayIds": [
+          138567241,
+          131439569,
+          189535473,
+          807691487,
+          138566995,
+          138567001,
+          138566996,
+          807691486,
+          138567000,
+          138566997,
+          138566994,
+          138567002,
+          190164735,
+          138566998,
+          138566993,
+          190164734,
+          138566999,
+          138567236,
+          189535472,
+          190164736,
+          138567242,
+          190164737,
+          138567239,
+          138567234,
+          190164733
+        ],
+        "url": "https://www.openstreetmap.org/relation/6781071",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 57
+  },
+  {
+    "circuitId": "baku",
+    "displayName": "Baku",
+    "appLengthKm": 6.003,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 50,
+        "nodeCount": 217,
+        "lengthKm": 5.9685,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 217
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 11266687,
+        "name": "Baku City Circuit",
+        "tags": {
+          "highway": "raceway",
+          "name": "Baku City Circuit",
+          "sport": "motor",
+          "surface": "asphalt",
+          "type": "circuit",
+          "wikidata": "Q17004958",
+          "wikipedia": "en:Baku City Circuit"
+        },
+        "wayIds": [
+          1069034735,
+          1413965638,
+          167173315,
+          290633714,
+          1415085014,
+          1415085013,
+          1548322894,
+          1548322893,
+          1548322892,
+          1548322891,
+          1558832738,
+          177431273,
+          182645384,
+          1558832740,
+          1558832743,
+          1415075090,
+          1415063178,
+          1415075088,
+          1415063177,
+          1570371147,
+          165695131,
+          1558829712,
+          25402777,
+          1168829202,
+          1329392228,
+          1168829203,
+          766787796,
+          179238852,
+          1555062568,
+          323377758,
+          131835265,
+          1558855505,
+          249018354,
+          822375070,
+          500527621,
+          1050381555,
+          167173308,
+          1050381554,
+          476752810,
+          926192527,
+          1279858618,
+          476752809,
+          639403533,
+          1558832741,
+          1558829713,
+          1558832742,
+          1558837058,
+          1558839567,
+          338326554,
+          1558855504
+        ],
+        "url": "https://www.openstreetmap.org/relation/11266687",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 54
+  },
+  {
+    "circuitId": "miami",
+    "displayName": "Miami",
+    "appLengthKm": 5.412,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 4,
+        "nodeCount": 92,
+        "lengthKm": 2.1873,
+        "components": 2,
+        "degreeHistogram": {
+          "1": 4,
+          "2": 88
+        },
+        "closedSingleLoop": false,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 20204222,
+        "name": "Miami International Autodrome",
+        "tags": {
+          "name": "Miami International Autodrome",
+          "surface": "asphalt",
+          "type": "circuit"
+        },
+        "wayIds": [
+          1485453199,
+          1476932802,
+          1485453205,
+          1485453203
+        ],
+        "url": "https://www.openstreetmap.org/relation/20204222",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 18
+  },
+  {
+    "circuitId": "monza",
+    "displayName": "Monza",
+    "appLengthKm": 5.793,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 20,
+        "nodeCount": 293,
+        "lengthKm": 5.7941,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 293
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 284565,
+        "name": "Monza Circuit",
+        "tags": {
+          "access": "no",
+          "highway": "raceway",
+          "importance": "international",
+          "name": "Autodromo Nazionale di Monza",
+          "name:en": "Monza Circuit",
+          "name:it": "Autodromo Nazionale di Monza",
+          "name:ru": "Монца",
+          "type": "circuit",
+          "wikidata": "Q171417",
+          "wikipedia": "it:Autodromo Nazionale di Monza"
+        },
+        "wayIds": [
+          179968257,
+          179968239,
+          179968249,
+          179968226,
+          179968254,
+          1443867793,
+          1443867792,
+          179968228,
+          179968252,
+          179968230,
+          179968251,
+          179968229,
+          179968263,
+          179968245,
+          179968262,
+          179968220,
+          179968264,
+          179968242,
+          19842206,
+          179968234
+        ],
+        "url": "https://www.openstreetmap.org/relation/284565",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 36
+  },
+  {
+    "circuitId": "villeneuve",
+    "displayName": "Montreal",
+    "appLengthKm": 4.361,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 1,
+        "nodeCount": 232,
+        "lengthKm": 4.3622,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 232
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 284595,
+        "name": "Circuit Gilles Villeneuve",
+        "tags": {
+          "area": "no",
+          "name": "Circuit Gilles Villeneuve",
+          "old_name": "Circuit Île-Notre-Dame",
+          "type": "circuit",
+          "wikidata": "Q172860",
+          "wikipedia": "en:Circuit Gilles Villeneuve"
+        },
+        "wayIds": [
+          136717490
+        ],
+        "url": "https://www.openstreetmap.org/relation/284595",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 232,
+        "lengthKm": 4.3622,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 232
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 136717490,
+        "name": "Circuit Gilles-Villeneuve",
+        "tags": {
+          "area": "no",
+          "highway": "raceway",
+          "lcn": "yes",
+          "lit": "yes",
+          "maxspeed": "30",
+          "name": "Circuit Gilles-Villeneuve",
+          "oneway": "yes",
+          "sport": "motor",
+          "surface": "asphalt",
+          "width": "8"
+        },
+        "wayIds": [
+          136717490
+        ],
+        "url": "https://www.openstreetmap.org/way/136717490"
+      }
+    ],
+    "errors": [],
+    "elementCount": 4
+  },
+  {
+    "circuitId": "losail",
+    "displayName": "Lusail",
+    "appLengthKm": 5.419,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 4,
+        "nodeCount": 327,
+        "lengthKm": 5.8953,
+        "components": 1,
+        "degreeHistogram": {
+          "1": 1,
+          "2": 323,
+          "3": 3
+        },
+        "closedSingleLoop": false,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 21297662,
+        "name": "Lusail Grand Prix Circuit",
+        "tags": {
+          "highway": "raceway",
+          "name": "Lusail Grand Prix Circuit",
+          "sport": "motor",
+          "type": "circuit",
+          "website": "https://www.lcsc.qa/"
+        },
+        "wayIds": [
+          1037707300,
+          152483595,
+          1553605580,
+          1004121313
+        ],
+        "url": "https://www.openstreetmap.org/relation/21297662",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 186,
+        "lengthKm": 1.0208,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 186
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 1316259420,
+        "name": "",
+        "tags": {
+          "highway": "raceway",
+          "oneway": "yes",
+          "sport": "karting"
+        },
+        "wayIds": [
+          1316259420
+        ],
+        "url": "https://www.openstreetmap.org/way/1316259420"
+      }
+    ],
+    "errors": [],
+    "elementCount": 20
+  },
+  {
+    "circuitId": "rodriguez",
+    "displayName": "Mexico City",
+    "appLengthKm": 4.304,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 9,
+        "nodeCount": 204,
+        "lengthKm": 4.3117,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 204
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 16251935,
+        "name": "Mexican Grand Prix",
+        "tags": {
+          "highway": "raceway",
+          "name": "Mexican Grand Prix",
+          "name:es": "Gran Premio de México",
+          "sport": "motor",
+          "type": "circuit",
+          "wikidata": "Q8109",
+          "wikipedia": "es:Gran Premio de México",
+          "wikipedia:en": "https://en.wikipedia.org/wiki/Mexican_Grand_Prix"
+        },
+        "wayIds": [
+          772755821,
+          1313598528,
+          772754605,
+          772754608,
+          1128592398,
+          1128592396,
+          772755824,
+          823823141,
+          823823140
+        ],
+        "url": "https://www.openstreetmap.org/relation/16251935",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 11,
+        "nodeCount": 179,
+        "lengthKm": 2.6161,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 179
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 10715575,
+        "name": "Mexico City E-Prix",
+        "tags": {
+          "name": "Mexico City E-Prix",
+          "name:es": "E-Prix de la Ciudad de México",
+          "type": "circuit",
+          "wikidata": "Q23044632",
+          "wikipedia": "es:E-Prix de la Ciudad de México"
+        },
+        "wayIds": [
+          823823139,
+          772755822,
+          772755821,
+          772754606,
+          772754609,
+          772754604,
+          772754608,
+          1128592397,
+          1128592396,
+          772755824,
+          823823141
+        ],
+        "url": "https://www.openstreetmap.org/relation/10715575",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 35
+  },
+  {
+    "circuitId": "marina_bay",
+    "displayName": "Singapore",
+    "appLengthKm": 4.927,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 99,
+        "nodeCount": 225,
+        "lengthKm": 4.9665,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 225
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 421263,
+        "name": "Marina Bay Street Circuit",
+        "tags": {
+          "name": "Marina Bay Street Circuit",
+          "type": "circuit",
+          "wikidata": "Q171390",
+          "wikipedia": "en:Marina Bay Street Circuit"
+        },
+        "wayIds": [
+          686335807,
+          686335806,
+          747875236,
+          747875237,
+          475217889,
+          759511978,
+          448084962,
+          684544691,
+          1015882723,
+          1015882722,
+          1121759130,
+          475215022,
+          480247943,
+          29377119,
+          1121759129,
+          1121759131,
+          1206760203,
+          528539591,
+          767388313,
+          35037538,
+          750071184,
+          581766308,
+          479605911,
+          479565613,
+          764062390,
+          479565612,
+          634832601,
+          633311062,
+          764062389,
+          303314681,
+          767388315,
+          763531722,
+          633343709,
+          633340452,
+          479565608,
+          842953325,
+          633340456,
+          635394837,
+          180551367,
+          581942152,
+          173791995,
+          152783801,
+          479284866,
+          303311924,
+          465064165,
+          686323967,
+          686335799,
+          686323968,
+          686335800,
+          21805129,
+          654223306,
+          672222982,
+          174262763,
+          383365018,
+          528537303,
+          383365019,
+          584419619,
+          176298699,
+          479540202,
+          633871920,
+          1415079998,
+          1415079999,
+          633871919,
+          479745479,
+          479745478,
+          649944021,
+          479540200,
+          635373148,
+          545362403,
+          545362402,
+          723073393,
+          75067163,
+          635375722,
+          649336906,
+          763525862,
+          1498693105,
+          21701074,
+          763525863,
+          763525864,
+          51511352,
+          459186771,
+          831044956,
+          16688065,
+          51511339,
+          1303467716,
+          156457347,
+          650084964,
+          634770511,
+          750071183,
+          1392512181,
+          479565615,
+          173779754,
+          845894319,
+          647084783,
+          649520780,
+          480250096,
+          155907160,
+          21584500,
+          173791997
+        ],
+        "url": "https://www.openstreetmap.org/relation/421263",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 103
+  },
+  {
+    "circuitId": "sepang",
+    "displayName": "Sepang",
+    "appLengthKm": 5.543,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 20,
+        "nodeCount": 180,
+        "lengthKm": 5.5462,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 180
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 284496,
+        "name": "Sepang International Circuit",
+        "tags": {
+          "name": "Sepang International Circuit",
+          "type": "circuit"
+        },
+        "wayIds": [
+          1561055767,
+          1561055768,
+          23410503,
+          1561055766,
+          1561055765,
+          1561055771,
+          1561055770,
+          1561055764,
+          1561055763,
+          1561055762,
+          1561055761,
+          1561055760,
+          1561055759,
+          144359489,
+          1561055758,
+          1561055757,
+          1561055756,
+          1561055769,
+          1561055755,
+          1561055754
+        ],
+        "url": "https://www.openstreetmap.org/relation/284496",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 8,
+        "nodeCount": 111,
+        "lengthKm": 2.7908,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 111
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 1954693,
+        "name": "North Track",
+        "tags": {
+          "name": "North Track",
+          "type": "circuit"
+        },
+        "wayIds": [
+          107364033,
+          1561055754,
+          1561055755,
+          1561055769,
+          1561055756,
+          1561055757,
+          1561055758,
+          144359489
+        ],
+        "url": "https://www.openstreetmap.org/relation/1954693",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 116,
+        "lengthKm": 1.5025,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 116
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 1330126000,
+        "name": "Handling Circuit",
+        "tags": {
+          "highway": "raceway",
+          "name": "Handling Circuit",
+          "name:en": "Handling Circuit",
+          "sport": "motor"
+        },
+        "wayIds": [
+          1330126000
+        ],
+        "url": "https://www.openstreetmap.org/way/1330126000"
+      }
+    ],
+    "errors": [],
+    "elementCount": 38
+  },
+  {
+    "circuitId": "silverstone",
+    "displayName": "Silverstone",
+    "appLengthKm": 5.891,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 27,
+        "nodeCount": 506,
+        "lengthKm": 5.8806,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 506
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 51160,
+        "name": "Silverstone Grand Prix",
+        "tags": {
+          "highway": "raceway",
+          "name": "Silverstone Grand Prix",
+          "sport": "motor",
+          "type": "circuit"
+        },
+        "wayIds": [
+          169800225,
+          169848882,
+          169800224,
+          169800222,
+          169618242,
+          169618240,
+          169618241,
+          169618245,
+          169609611,
+          169730588,
+          3571477,
+          169730585,
+          169730587,
+          169733768,
+          169730586,
+          430075118,
+          169733766,
+          169733769,
+          169733770,
+          169848880,
+          169848884,
+          169848881,
+          55224168,
+          55224167,
+          169854842,
+          169800226,
+          169800223
+        ],
+        "url": "https://www.openstreetmap.org/relation/51160",
+        "duplicateMemberRefs": 26
+      },
+      {
+        "wayCount": 26,
+        "nodeCount": 484,
+        "lengthKm": 5.5489,
+        "components": 1,
+        "degreeHistogram": {
+          "1": 2,
+          "2": 482
+        },
+        "closedSingleLoop": false,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 51162,
+        "name": "Silverstone International",
+        "tags": {
+          "fixme": "verify name",
+          "name": "Silverstone International",
+          "type": "circuit",
+          "wikidata": "Q171402",
+          "wikipedia": "en:Silverstone Circuit"
+        },
+        "wayIds": [
+          169733766,
+          169733769,
+          169733770,
+          169848880,
+          169848881,
+          55224168,
+          55224167,
+          169854842,
+          169800226,
+          169800223,
+          169800225,
+          169848882,
+          169800224,
+          169800222,
+          169618242,
+          169618240,
+          169618241,
+          169618245,
+          169609611,
+          169730588,
+          3571477,
+          169730585,
+          169730587,
+          169733768,
+          169730586,
+          430075118
+        ],
+        "url": "https://www.openstreetmap.org/relation/51162",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 50
+  },
+  {
+    "circuitId": "vegas",
+    "displayName": "Las Vegas",
+    "appLengthKm": 6.201,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 81,
+        "nodeCount": 244,
+        "lengthKm": 6.3226,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 242,
+          "3": 2
+        },
+        "closedSingleLoop": false,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 16696508,
+        "name": "Las Vegas Strip Circuit",
+        "tags": {
+          "name": "Las Vegas Strip Circuit",
+          "route": "circuit",
+          "type": "circuit",
+          "wikidata": "Q113112116",
+          "wikipedia": "en:Las Vegas Strip Circuit"
+        },
+        "wayIds": [
+          1456078477,
+          1456078476,
+          1223479151,
+          1456078475,
+          1224841829,
+          999044776,
+          999044779,
+          1016805774,
+          601671174,
+          601671136,
+          1032613489,
+          1032789814,
+          847458816,
+          847458817,
+          601666023,
+          1030280930,
+          600520431,
+          14323635,
+          1456078474,
+          1456078473,
+          1364789152,
+          1238536330,
+          601645722,
+          1454797801,
+          601644239,
+          1456078472,
+          1101647963,
+          1101647964,
+          1101647965,
+          1101647962,
+          1101647966,
+          1101647967,
+          1009061534,
+          1417454723,
+          1009061533,
+          601644233,
+          1071482657,
+          1071482658,
+          1071482659,
+          1071482660,
+          1547082474,
+          1071482661,
+          1071482662,
+          600023001,
+          1071482663,
+          1043551491,
+          1059801988,
+          674621867,
+          423689767,
+          1486896083,
+          423686460,
+          1362569857,
+          1032776580,
+          421265955,
+          1043464439,
+          742140361,
+          1119837129,
+          1016480470,
+          1016480469,
+          1030067968,
+          423686234,
+          1036842429,
+          1033820973,
+          1436769040,
+          1030066598,
+          1030066599,
+          1381561592,
+          1030290852,
+          1456078471,
+          1030290854,
+          1030290855,
+          281237566,
+          1030290856,
+          600519166,
+          435490976,
+          1436762463,
+          435490978,
+          601666019,
+          1456078478,
+          1456078470,
+          1364789153
+        ],
+        "url": "https://www.openstreetmap.org/relation/16696508",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 102
+  },
+  {
+    "circuitId": "zandvoort",
+    "displayName": "Zandvoort",
+    "appLengthKm": 4.259,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 24,
+        "nodeCount": 597,
+        "lengthKm": 4.2532,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 597
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 13545573,
+        "name": "Dutch Grand Prix",
+        "tags": {
+          "name": "Grand Prix Formule 1 van Nederland",
+          "name:en": "Dutch Grand Prix",
+          "name:fr": "Grand Prix automobile des Pays-Bas",
+          "type": "circuit"
+        },
+        "wayIds": [
+          1311522212,
+          1313671989,
+          1311522213,
+          1313671990,
+          1311522214,
+          1311522215,
+          1311522216,
+          1311522217,
+          1311522218,
+          1311566938,
+          1311566937,
+          1313671991,
+          1311566939,
+          1313671992,
+          1311566940,
+          1311710253,
+          24626850,
+          1311765615,
+          1311802779,
+          1311822339,
+          1311822340,
+          1311822341,
+          1311879069,
+          1311522211
+        ],
+        "url": "https://www.openstreetmap.org/relation/13545573",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 33
+  },
+  {
+    "circuitId": "red_bull_ring",
+    "displayName": "Red Bull Ring",
+    "appLengthKm": 4.326,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 16,
+        "nodeCount": 276,
+        "lengthKm": 4.8165,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 271,
+          "3": 4,
+          "4": 1
+        },
+        "closedSingleLoop": false,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 5309181,
+        "name": "Red Bull Ring",
+        "tags": {
+          "name": "Red Bull Ring",
+          "type": "circuit"
+        },
+        "wayIds": [
+          347958266,
+          822592398,
+          822592399,
+          822592400,
+          822592401,
+          822592402,
+          822592405,
+          822592406,
+          822592407,
+          822592408,
+          822592409,
+          822592410,
+          822592403,
+          822592404,
+          823820476,
+          1077423714
+        ],
+        "url": "https://www.openstreetmap.org/relation/5309181",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 83,
+        "lengthKm": 0.4865,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 83
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 562879458,
+        "name": "",
+        "tags": {
+          "highway": "raceway",
+          "oneway": "yes",
+          "sport": "motor"
+        },
+        "wayIds": [
+          562879458
+        ],
+        "url": "https://www.openstreetmap.org/way/562879458"
+      }
+    ],
+    "errors": [],
+    "elementCount": 53
+  },
+  {
+    "circuitId": "catalunya",
+    "displayName": "Barcelona",
+    "appLengthKm": 4.657,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 7,
+        "nodeCount": 214,
+        "lengthKm": 4.6612,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 214
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 284540,
+        "name": "Grand Prix Circuit Without Chicane",
+        "tags": {
+          "name": "Circuit de Catalunya GP",
+          "name:br": "Priz Bras kirri Katalonia",
+          "name:en": "Grand Prix Circuit Without Chicane",
+          "type": "circuit"
+        },
+        "wayIds": [
+          831804327,
+          1560896065,
+          1560896066,
+          1560896061,
+          893732520,
+          831804325,
+          990483278
+        ],
+        "url": "https://www.openstreetmap.org/relation/284540",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 7,
+        "nodeCount": 214,
+        "lengthKm": 4.6612,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 214
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 21420925,
+        "name": "Circuit de Catalunya MotoGP",
+        "tags": {
+          "name": "Circuit de Catalunya MotoGP",
+          "name:br": "Priz Bras kirri Katalonia",
+          "type": "circuit"
+        },
+        "wayIds": [
+          831804327,
+          1560896065,
+          1560896066,
+          1560896061,
+          893732520,
+          831804325,
+          990483278
+        ],
+        "url": "https://www.openstreetmap.org/relation/21420925",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 8,
+        "nodeCount": 220,
+        "lengthKm": 4.6773,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 220
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 2049529,
+        "name": "Grand Prix Circuit With Chicane",
+        "tags": {
+          "name": "Circuit de Catalunya GP",
+          "name:br": "Priz Bras kirri Katalonia",
+          "name:en": "Grand Prix Circuit With Chicane",
+          "type": "circuit"
+        },
+        "wayIds": [
+          1560896061,
+          1560896066,
+          1560896065,
+          831804327,
+          1560896067,
+          1560896068,
+          1560896062,
+          1560896063
+        ],
+        "url": "https://www.openstreetmap.org/relation/2049529",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 13,
+        "nodeCount": 109,
+        "lengthKm": 1.3526,
+        "components": 1,
+        "degreeHistogram": {
+          "1": 1,
+          "2": 107,
+          "3": 1
+        },
+        "closedSingleLoop": false,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 11362868,
+        "name": "World RX of Barcelona",
+        "tags": {
+          "name": "World RX of Barcelona",
+          "sport": "rallycross",
+          "type": "circuit"
+        },
+        "wayIds": [
+          1560896065,
+          1057826347,
+          967275593,
+          921317982,
+          1560896059,
+          1560896062,
+          921317983,
+          921317984,
+          893732520,
+          1560896061,
+          1560896060,
+          921317981,
+          1560896064
+        ],
+        "url": "https://www.openstreetmap.org/relation/11362868",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 81,
+        "lengthKm": 0.3388,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 81
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 235224639,
+        "name": "Karting",
+        "tags": {
+          "highway": "raceway",
+          "name": "Karting",
+          "oneway": "yes",
+          "sport": "karting"
+        },
+        "wayIds": [
+          235224639
+        ],
+        "url": "https://www.openstreetmap.org/way/235224639"
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 29,
+        "lengthKm": 0.0945,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 29
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 831789329,
+        "name": "",
+        "tags": {
+          "highway": "raceway",
+          "sport": "motor"
+        },
+        "wayIds": [
+          831789329
+        ],
+        "url": "https://www.openstreetmap.org/way/831789329"
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 31,
+        "lengthKm": 0.0655,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 31
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 831789327,
+        "name": "",
+        "tags": {
+          "highway": "raceway",
+          "sport": "motor"
+        },
+        "wayIds": [
+          831789327
+        ],
+        "url": "https://www.openstreetmap.org/way/831789327"
+      }
+    ],
+    "errors": [],
+    "elementCount": 49
+  },
+  {
+    "circuitId": "shanghai",
+    "displayName": "Shanghai",
+    "appLengthKm": 5.451,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 1,
+        "nodeCount": 256,
+        "lengthKm": 5.4591,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 256
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 2094941,
+        "name": "Shanghai International Circuit",
+        "tags": {
+          "name": "Shanghai International Circuit",
+          "type": "circuit",
+          "wikidata": "Q171358",
+          "wikipedia": "en:Shanghai International Circuit"
+        },
+        "wayIds": [
+          156328670
+        ],
+        "url": "https://www.openstreetmap.org/relation/2094941",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 256,
+        "lengthKm": 5.4591,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 256
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 156328670,
+        "name": "",
+        "tags": {
+          "highway": "raceway",
+          "sport": "motor",
+          "surface": "asphalt"
+        },
+        "wayIds": [
+          156328670
+        ],
+        "url": "https://www.openstreetmap.org/way/156328670"
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 154,
+        "lengthKm": 1.2346,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 154
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 329189199,
+        "name": "",
+        "tags": {
+          "highway": "raceway",
+          "sport": "motor",
+          "surface": "asphalt"
+        },
+        "wayIds": [
+          329189199
+        ],
+        "url": "https://www.openstreetmap.org/way/329189199"
+      }
+    ],
+    "errors": [],
+    "elementCount": 20
+  },
+  {
+    "circuitId": "madring",
+    "displayName": "Madring",
+    "appLengthKm": 5.4,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 22,
+        "nodeCount": 215,
+        "lengthKm": 5.4422,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 215
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 18813472,
+        "name": "MadRing",
+        "tags": {
+          "name": "MadRing",
+          "route": "raceway",
+          "type": "route",
+          "wikidata": "Q126193406"
+        },
+        "wayIds": [
+          1366550168,
+          23289136,
+          1378267450,
+          335668169,
+          1378267451,
+          1378267452,
+          34049751,
+          1366550166,
+          87096580,
+          1366550177,
+          827423914,
+          1366550176,
+          1552313288,
+          1366550173,
+          140749280,
+          517956353,
+          517956351,
+          140749278,
+          517956352,
+          518393514,
+          1366550171,
+          1366550169
+        ],
+        "url": "https://www.openstreetmap.org/relation/18813472",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [
+      "HTTP Error 400: Bad Request"
+    ],
+    "elementCount": 24
+  },
+  {
+    "circuitId": "yas_marina",
+    "displayName": "Yas Marina",
+    "appLengthKm": 5.281,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 6,
+        "nodeCount": 249,
+        "lengthKm": 5.297,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 249
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 11378665,
+        "name": "Yas Marina Circuit",
+        "tags": {
+          "name": "Yas Marina Circuit",
+          "name:en": "Yas Marina Circuit",
+          "name:fr": "Circuit Yas Marina",
+          "type": "circuit"
+        },
+        "wayIds": [
+          1255169703,
+          1255169704,
+          168477013,
+          1469184731,
+          1469184732,
+          188337196
+        ],
+        "url": "https://www.openstreetmap.org/relation/11378665",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 6,
+        "nodeCount": 236,
+        "lengthKm": 4.584,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 236
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 20123689,
+        "name": "Grand Prix Corkscrew Circuit",
+        "tags": {
+          "name": "Grand Prix Corkscrew Circuit",
+          "type": "circuit"
+        },
+        "wayIds": [
+          168477013,
+          188337195,
+          1469184732,
+          188337196,
+          1255169703,
+          1255169704
+        ],
+        "url": "https://www.openstreetmap.org/relation/20123689",
+        "duplicateMemberRefs": 0
+      }
+    ],
+    "errors": [],
+    "elementCount": 50
+  },
+  {
+    "circuitId": "americas",
+    "displayName": "Austin",
+    "appLengthKm": 5.513,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 30,
+        "nodeCount": 346,
+        "lengthKm": 5.5019,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 346
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 6537729,
+        "name": "Circuit of the Americas",
+        "tags": {
+          "name": "Circuit of the Americas",
+          "type": "circuit",
+          "wikidata": "Q59626",
+          "wikipedia": "en:Circuit of the Americas"
+        },
+        "wayIds": [
+          118258939,
+          118258950,
+          118258954,
+          118258956,
+          514758200,
+          514820043,
+          514820041,
+          118258930,
+          118258958,
+          118258962,
+          118258931,
+          118258929,
+          118258946,
+          118258935,
+          118258951,
+          118258940,
+          1571489343,
+          118258942,
+          118258947,
+          118258943,
+          118258961,
+          118258928,
+          514836010,
+          118258933,
+          118258937,
+          118258952,
+          514836011,
+          118256423,
+          118258957,
+          118258959
+        ],
+        "url": "https://www.openstreetmap.org/relation/6537729",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 25,
+        "nodeCount": 289,
+        "lengthKm": 3.9894,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 289
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 20260686,
+        "name": "COTA Short Track",
+        "tags": {
+          "name": "COTA Short Track",
+          "surface": "asphalt",
+          "type": "circuit"
+        },
+        "wayIds": [
+          118258939,
+          118258950,
+          118258954,
+          118258956,
+          514758200,
+          514820043,
+          514820041,
+          118258930,
+          1571489347,
+          514845765,
+          1571489346,
+          1571489343,
+          118258942,
+          118258947,
+          118258943,
+          118258961,
+          118258928,
+          514836010,
+          118258933,
+          118258937,
+          118258952,
+          514836011,
+          118256423,
+          118258957,
+          118258959
+        ],
+        "url": "https://www.openstreetmap.org/relation/20260686",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 148,
+        "lengthKm": 0.98,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 148
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 741114682,
+        "name": "COTA Karting",
+        "tags": {
+          "highway": "raceway",
+          "lit": "yes",
+          "name": "COTA Karting",
+          "oneway": "yes",
+          "sport": "karting",
+          "surface": "asphalt",
+          "website": "https://circuitoftheamericas.com/karting/"
+        },
+        "wayIds": [
+          741114682
+        ],
+        "url": "https://www.openstreetmap.org/way/741114682"
+      }
+    ],
+    "errors": [],
+    "elementCount": 41
+  },
+  {
+    "circuitId": "hungaroring",
+    "displayName": "Hungaroring",
+    "appLengthKm": 4.381,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 2,
+        "nodeCount": 428,
+        "lengthKm": 4.3667,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 428
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 284557,
+        "name": "Hungaroring",
+        "tags": {
+          "name": "Hungaroring",
+          "type": "circuit"
+        },
+        "wayIds": [
+          1333262244,
+          231328650
+        ],
+        "url": "https://www.openstreetmap.org/relation/284557",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 90,
+        "lengthKm": 0.421,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 90
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 231430227,
+        "name": "Hungaroring Kart Center",
+        "tags": {
+          "access": "customers",
+          "highway": "raceway",
+          "lanes": "1",
+          "name": "Hungaroring Kart Center",
+          "oneway": "yes",
+          "smoothness": "bad",
+          "sport": "karting",
+          "surface": "asphalt"
+        },
+        "wayIds": [
+          231430227
+        ],
+        "url": "https://www.openstreetmap.org/way/231430227"
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 71,
+        "lengthKm": 0.2759,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 71
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 231420545,
+        "name": "",
+        "tags": {
+          "highway": "raceway",
+          "sport": "karting",
+          "surface": "asphalt"
+        },
+        "wayIds": [
+          231420545
+        ],
+        "url": "https://www.openstreetmap.org/way/231420545"
+      }
+    ],
+    "errors": [],
+    "elementCount": 20
+  },
+  {
+    "circuitId": "spa",
+    "displayName": "Spa-Francorchamps",
+    "appLengthKm": 7.004,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 30,
+        "nodeCount": 329,
+        "lengthKm": 6.9947,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 329
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 284560,
+        "name": "Spa-Francorchamps Circuit",
+        "tags": {
+          "name": "Circuit de Spa Francorchamps",
+          "name:en": "Spa-Francorchamps Circuit",
+          "type": "circuit",
+          "wikidata": "Q172851",
+          "wikipedia": "en:Circuit de Spa-Francorchamps"
+        },
+        "wayIds": [
+          175178448,
+          175178443,
+          126807099,
+          637268672,
+          613486590,
+          126807105,
+          176133745,
+          126807114,
+          176133746,
+          126807100,
+          175371365,
+          175371353,
+          126807116,
+          126807109,
+          126807101,
+          126807103,
+          1359025267,
+          126807106,
+          1359025268,
+          126807112,
+          126807111,
+          175195997,
+          126807113,
+          24449918,
+          1430527230,
+          126835638,
+          126835637,
+          126835639,
+          126807110,
+          178964809
+        ],
+        "url": "https://www.openstreetmap.org/relation/284560",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 135,
+        "lengthKm": 1.0875,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 135
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 34403881,
+        "name": "Kart",
+        "tags": {
+          "highway": "raceway",
+          "name": "Kart",
+          "sport": "karting"
+        },
+        "wayIds": [
+          34403881
+        ],
+        "url": "https://www.openstreetmap.org/way/34403881"
+      }
+    ],
+    "errors": [],
+    "elementCount": 38
+  },
+  {
+    "circuitId": "suzuka",
+    "displayName": "Suzuka",
+    "appLengthKm": 5.807,
+    "registered": true,
+    "candidates": [
+      {
+        "wayCount": 40,
+        "nodeCount": 268,
+        "lengthKm": 5.8065,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 268
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "relation",
+        "id": 284570,
+        "name": "Suzuka International Racing Course",
+        "tags": {
+          "name": "鈴鹿サーキット",
+          "name:en": "Suzuka International Racing Course",
+          "type": "circuit",
+          "wikidata": "Q174170",
+          "wikipedia": "en:Suzuka Circuit"
+        },
+        "wayIds": [
+          183391643,
+          175231434,
+          183391652,
+          183391660,
+          411289989,
+          183391637,
+          183391639,
+          183391638,
+          183391640,
+          183391661,
+          183391665,
+          183391645,
+          183391644,
+          183391657,
+          183391636,
+          183391641,
+          411295349,
+          183391642,
+          183391630,
+          183391632,
+          183391631,
+          183391633,
+          183391629,
+          183391634,
+          183391628,
+          183391635,
+          411295348,
+          183391648,
+          411295351,
+          183391647,
+          183391649,
+          411295347,
+          183391651,
+          183391659,
+          183391646,
+          183391658,
+          183391662,
+          183391655,
+          183391664,
+          183391656
+        ],
+        "url": "https://www.openstreetmap.org/relation/284570",
+        "duplicateMemberRefs": 0
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 85,
+        "lengthKm": 0.4794,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 85
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 153525698,
+        "name": "アドバンスカート",
+        "tags": {
+          "highway": "raceway",
+          "name": "アドバンスカート",
+          "sport": "karting"
+        },
+        "wayIds": [
+          153525698
+        ],
+        "url": "https://www.openstreetmap.org/way/153525698"
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 61,
+        "lengthKm": 0.4621,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 61
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 465846808,
+        "name": "ene-1",
+        "tags": {
+          "highway": "raceway",
+          "name": "ene-1",
+          "oneway": "yes",
+          "sport": "karting"
+        },
+        "wayIds": [
+          465846808
+        ],
+        "url": "https://www.openstreetmap.org/way/465846808"
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 49,
+        "lengthKm": 0.2045,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 49
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 183393709,
+        "name": "",
+        "tags": {
+          "highway": "raceway",
+          "sport": "karting"
+        },
+        "wayIds": [
+          183393709
+        ],
+        "url": "https://www.openstreetmap.org/way/183393709"
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 50,
+        "lengthKm": 0.1438,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 50
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 466005781,
+        "name": "ツーリングバイク コースマップ",
+        "tags": {
+          "highway": "raceway",
+          "name": "ツーリングバイク コースマップ",
+          "oneway": "yes",
+          "sport": "karting"
+        },
+        "wayIds": [
+          466005781
+        ],
+        "url": "https://www.openstreetmap.org/way/466005781"
+      },
+      {
+        "wayCount": 1,
+        "nodeCount": 35,
+        "lengthKm": 0.0692,
+        "components": 1,
+        "degreeHistogram": {
+          "2": 35
+        },
+        "closedSingleLoop": true,
+        "missingCoordinates": 0,
+        "type": "way",
+        "id": 466005789,
+        "name": "",
+        "tags": {
+          "highway": "raceway",
+          "sport": "karting"
+        },
+        "wayIds": [
+          466005789
+        ],
+        "url": "https://www.openstreetmap.org/way/466005789"
+      }
+    ],
+    "errors": [],
+    "elementCount": 61
+  }
+]

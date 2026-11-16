@@ -1,0 +1,688 @@
+{
+  "scope": "bounded bbox and relevant relation/full snapshots; no complete OSM history; Miami nested relation additionally fetched",
+  "circuits": [
+    {
+      "circuitId": "albert_park",
+      "displayName": "Melbourne",
+      "appLengthKm": 5.278,
+      "appCenter": [
+        144.968,
+        -37.8497
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=144.9606053,-37.8555390,144.9753947,-37.8438610",
+          "sha256": "bbc1069a3913b5dc77c6276e60287885229a9a43890d0bf9bec242c0ae8b90fa",
+          "bytes": 3583160,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/280443/full",
+          "sha256": "14e59201d73ea3c51e11e99e6393495590fa593fa1a14d781912c0f77cae5b62",
+          "bytes": 81677
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:24:56.873491+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "shanghai",
+      "displayName": "Shanghai",
+      "appLengthKm": 5.451,
+      "appCenter": [
+        121.22,
+        31.3389
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=121.2131636,31.3330610,121.2268364,31.3447390",
+          "sha256": "97c8986cfd3e7344e3d8d14170cb8967558484ec583f58ba947ffbf580fdd231",
+          "bytes": 1444915,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/2094941/full",
+          "sha256": "aebc76f54f20081f2965d03848254ca5c669d3b78efabbf36db7a1a9321cdbb5",
+          "bytes": 56344
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:24:52.405569+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "suzuka",
+      "displayName": "Suzuka",
+      "appLengthKm": 5.807,
+      "appCenter": [
+        136.541,
+        34.8431
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=136.5338855,34.8372610,136.5481145,34.8489390",
+          "sha256": "dfb29fb7827c04546b1b18107a2705b7e431b3bd4a5cb2b09a8fc7c1b90aa8a5",
+          "bytes": 2793696,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/284570/full",
+          "sha256": "462ae7e3e68bdb4482526b1373b40fe4530e29042bd5ccffc4782c84018f5d44",
+          "bytes": 77699
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:24:59.083461+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "miami",
+      "displayName": "Miami",
+      "appLengthKm": 5.412,
+      "appCenter": [
+        -80.2389,
+        25.9581
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-80.2453942,25.9522610,-80.2324058,25.9639390",
+          "sha256": "3b6181427423d82bf041de3f42a4c32de538f65e1381d63de707bf55ea0ea1d0",
+          "bytes": 2344761,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/20204222/full",
+          "sha256": "9c4b3ca97fb28c32ef5372596e60f01b8ee5e7412b46f918c008884ad08e824d",
+          "bytes": 954
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/20204221/full",
+          "sha256": "bfdcfb086081098c5c436c406e172eeedd10fc2ac22ac68ad59d6498ea252052",
+          "bytes": 19709,
+          "reason": "nested member relation"
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:02.386078+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "villeneuve",
+      "displayName": "Montreal",
+      "appLengthKm": 4.361,
+      "appCenter": [
+        -73.5228,
+        45.5
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-73.5311306,45.4941610,-73.5144694,45.5058390",
+          "sha256": "9798f18f1b983cebf0406defabafbf41cac1fe9e47e5932d9f65779e308694d2",
+          "bytes": 3658087,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/284595/full",
+          "sha256": "bc9464914c5772859acb8505d040766202396f7440f90a6364727592249f11c6",
+          "bytes": 54701
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:06.446845+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "monaco",
+      "displayName": "Monaco",
+      "appLengthKm": 3.337,
+      "appCenter": [
+        7.42056,
+        43.7347
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=7.4124789,43.7288610,7.4286411,43.7405390",
+          "sha256": "73e67017578cd2576c61cc62ed148ad9c7b04ed54a7148562e425fae952074a9",
+          "bytes": 9485234,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/148194/full",
+          "sha256": "4422e35187ba342396beebe7a3f6974b7a6a51ba14942bab7e1e759cd8e9bbc8",
+          "bytes": 117107
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/9716363/full",
+          "sha256": "297887f615154fb9d7fdb6a56c6fbaf5b930d09fad18a208cf8180815138467b",
+          "bytes": 116981
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:15.361224+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "catalunya",
+      "displayName": "Barcelona",
+      "appLengthKm": 4.657,
+      "appCenter": [
+        2.2611,
+        41.57
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=2.2532953,41.5641610,2.2689047,41.5758390",
+          "sha256": "251739bb9bc544b69342a1f8d524f4b2e4695f10fe7a42b5e116bb571501d3e8",
+          "bytes": 2282268,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/284540/full",
+          "sha256": "5af69090a41034b562d2acbb92b2308460c057eb5f8df204314f4c24325dbd0f",
+          "bytes": 52207
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/2049529/full",
+          "sha256": "d66bf5b6a1d457b32e2c71823c6148894e2dbbdf0df277bd8effee5806979958",
+          "bytes": 53722
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/11362868/full",
+          "sha256": "8868b6e1d77d821f60ac4547fdf4fe92c9e92d27338314de49d4758a7f4bf595",
+          "bytes": 31495
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/21420925/full",
+          "sha256": "2c645f04d089999e84538322688e0b2ec75c0f4eda7c9294ee04cf79c57313bc",
+          "bytes": 58629
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:16.674197+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "red_bull_ring",
+      "displayName": "Red Bull Ring",
+      "appLengthKm": 4.326,
+      "appCenter": [
+        14.7647,
+        47.2197
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=14.7561029,47.2138610,14.7732971,47.2255390",
+          "sha256": "25d6eab7bf33a7e2982191edd2f60fcc6e3d137bf6e352800b865d342ac37fe2",
+          "bytes": 1450820,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/5309181/full",
+          "sha256": "deca75f02fab825b9b8d0942ca6d4859d2f2cf4ebf7bef90f392d77916dba87b",
+          "bytes": 67457
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/8062336/full",
+          "sha256": "f4f139f63079771305ca5f179a1f70c5e4f961e4de7a748fdbf0066b72392280",
+          "bytes": 79064
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:21.739296+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "silverstone",
+      "displayName": "Silverstone",
+      "appLengthKm": 5.891,
+      "appCenter": [
+        -1.0169,
+        52.0786
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-1.0264008,52.0727610,-1.0073992,52.0844390",
+          "sha256": "d84aea253357d6ee4a43803f8dbcd5afd523a2aa38a58d663ad858ca3ef7da23",
+          "bytes": 3397663,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/51160/full",
+          "sha256": "bc02991987e80f23a108e7a75dc5070e9c12e391151ff361e8eb25ef8ed9cf08",
+          "bytes": 126445
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/51162/full",
+          "sha256": "e60e1095bfc02ced3fca11489dc7b2a024622ae7c2e668afb0f1ed46c8e9b12f",
+          "bytes": 106028
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:23.795696+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "spa",
+      "displayName": "Spa-Francorchamps",
+      "appLengthKm": 7.004,
+      "appCenter": [
+        5.9714,
+        50.4372
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=5.9622325,50.4313610,5.9805675,50.4430390",
+          "sha256": "76d51f1cd475d292199e382eca5307f71136331bfcbeb95c8c8bd2eddfa1075f",
+          "bytes": 2065751,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/284560/full",
+          "sha256": "cff86a6922d77be14443d2b0ac6748a9943a0d350927e4c3acf840429f23774d",
+          "bytes": 89797
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:26.661866+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "hungaroring",
+      "displayName": "Hungaroring",
+      "appLengthKm": 4.381,
+      "appCenter": [
+        19.2486,
+        47.5789
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=19.2399441,47.5730610,19.2572559,47.5847390",
+          "sha256": "6f58be8f41e2f491cde19a006697e33054d8c5cdcc71befcd05902f42e716b57",
+          "bytes": 801749,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/284557/full",
+          "sha256": "37ffdc6d909004709fcffd37b75f8a0282a12eda8df33a49b1ece108bec387ad",
+          "bytes": 97971
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/3938368/full",
+          "sha256": "4d72dd773330bf6ee373cf16cee8a5d178af26263b84bb16e69738412b874880",
+          "bytes": 26514
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:29.773027+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "zandvoort",
+      "displayName": "Zandvoort",
+      "appLengthKm": 4.259,
+      "appCenter": [
+        4.5409,
+        52.3888
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=4.5313325,52.3829610,4.5504675,52.3946390",
+          "sha256": "dc8f5b0d3d0758fedd605519227d0b6e0541c2ff83cbf8d6c9ace32911584f9d",
+          "bytes": 4343443,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/13545573/full",
+          "sha256": "02298fbd2f5a6e2d50b859e821fc87afed3d0178ebb6922111f2f845b39fa0af",
+          "bytes": 131185
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:35.623674+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "monza",
+      "displayName": "Monza",
+      "appLengthKm": 5.793,
+      "appCenter": [
+        9.2811,
+        45.6156
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=9.2727522,45.6097610,9.2894478,45.6214390",
+          "sha256": "7398b0365df9b05d2e02675efa5db5bcf0e1faf223d9428c84a2791a584b94bd",
+          "bytes": 1789036,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/284565/full",
+          "sha256": "c3e8fd5d3c05b68bec17f79b097f2ad0fd54680c2b21802c4fdceff1535b2a19",
+          "bytes": 72327
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:35.718569+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "madring",
+      "displayName": "Madring",
+      "appLengthKm": 5.4,
+      "appCenter": [
+        -3.616,
+        40.467
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-3.6236750,40.4611610,-3.6083250,40.4728390",
+          "sha256": "b9803090d06d681c3239d9f1dcf6eec950e81c8f34001f3a8bfe0061c8047912",
+          "bytes": 3224884,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/18813472/full",
+          "sha256": "0876c1cda42be8692218bd42f73e060ffb1cdc3308baee0ffa3976700f6f6638",
+          "bytes": 53994
+        }
+      ],
+      "errors": [
+        "HTTP Error 400: Bad Request"
+      ],
+      "retrievedAtUtc": "2026-11-15T12:25:49.086988+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "baku",
+      "displayName": "Baku",
+      "appLengthKm": 6.003,
+      "appCenter": [
+        49.8533,
+        40.3725
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=49.8456357,40.3666610,49.8609643,40.3783390",
+          "sha256": "5257259b86e4939d063a6963a5997d01d302f2e13b90517a56b9c8a647a65d6b",
+          "bytes": 2826470,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/11266687/full",
+          "sha256": "2f8ffe9fb6a6ea2d194f86ece4f9a9342c9fa32b9f90e904fe155d493e4e46d8",
+          "bytes": 79277
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:43.436068+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "sepang",
+      "displayName": "Sepang",
+      "appLengthKm": 5.543,
+      "appCenter": [
+        101.738,
+        2.76083
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=101.7321542,2.7549910,101.7438458,2.7666690",
+          "sha256": "89a623207e23b7b6b2c1bdef78a434ee335a9943ec81be4a37baaedc764c538e",
+          "bytes": 2580900,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/284496/full",
+          "sha256": "88813d17b923d4ff57eaa8f2fb2f3c36f2b787a5204dffb48581c188a363e81e",
+          "bytes": 51443
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/1954693/full",
+          "sha256": "83b0eee8d7620cbd8d6919ac506d60c5f5f0c1ab06a9a204ef306f0ad36c625d",
+          "bytes": 32017
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/21393969/full",
+          "sha256": "a879a3d4527047b74f995097e26d9440c66ad68dd389fe5596bdda5fb1fc5abf",
+          "bytes": 100796
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/21425047/full",
+          "sha256": "a1e2b547b41d1ef58351ffae5f6f5e879cb6afb7fde8a1f2fd64180ba4a81024",
+          "bytes": 69627
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:55.112954+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "marina_bay",
+      "displayName": "Singapore",
+      "appLengthKm": 4.927,
+      "appCenter": [
+        103.864,
+        1.2914
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=103.8581595,1.2855610,103.8698405,1.2972390",
+          "sha256": "5b3dba4006a03a6cf3b4dde59382526338030b1ccaf87a8e4b20de7f7a2f7004",
+          "bytes": 4887783,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/421263/full",
+          "sha256": "95c91449e6c0a01c3c356a702c32e5f688a8f6ef381a2c2e697efc9bd711d9c9",
+          "bytes": 119010
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:25:57.798623+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "americas",
+      "displayName": "Austin",
+      "appLengthKm": 5.513,
+      "appCenter": [
+        -97.6411,
+        30.1328
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-97.6478514,30.1269610,-97.6343486,30.1386390",
+          "sha256": "aec98cedc7458e9fa95735843357e90183b1a52dbbbe25ba737970dc795ca21c",
+          "bytes": 2115556,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/6537729/full",
+          "sha256": "a7b64cf257ca83452b0227f68114b18fd50f591d5a22764bf0b1424cf51d5889",
+          "bytes": 86606
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/20260686/full",
+          "sha256": "1aaab72f3ddf23e4e26301fd63219f0638456f17916f03a04fe6a7d6d319f4bd",
+          "bytes": 66388
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:26:03.345182+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "rodriguez",
+      "displayName": "Mexico City",
+      "appLengthKm": 4.304,
+      "appCenter": [
+        -99.0907,
+        19.4042
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-99.0968907,19.3983610,-99.0845093,19.4100390",
+          "sha256": "2bf94653f53e8a7328687136ef105d1dca6817d12b766d36ef102470a3267eee",
+          "bytes": 2109714,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/10715575/full",
+          "sha256": "794ced7b84864dd1e66e57db49197678d823b99957a8b0d462085431841383ba",
+          "bytes": 40357
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/16251935/full",
+          "sha256": "a5b9cdcc49b2309c133dc4edfefb68c487def4462a4bea05c4d0ac7db00f70ae",
+          "bytes": 51315
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/17956306/full",
+          "sha256": "276f7ad81667c4fd221924a4e2b8001f5e97ee4b1ab04eaa24bdc0e2e3d0b0ac",
+          "bytes": 99252
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:26:05.278492+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "interlagos",
+      "displayName": "Interlagos",
+      "appLengthKm": 4.309,
+      "appCenter": [
+        -46.6997,
+        -23.7036
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-46.7060770,-23.7094390,-46.6933230,-23.6977610",
+          "sha256": "1da3ec59cef61312c783bdf04d48f52fd243e2528bc039abb874ea3619b7ab3e",
+          "bytes": 8048883,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/2560355/full",
+          "sha256": "3df8e8a72dcc73b41d392cbf8d547341d1aad111e059f7eda0dd4b128a6dda10",
+          "bytes": 38852
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/6781071/full",
+          "sha256": "05d279a9d5951aa9e60a1f2bb94635201faa41aa5edd2489bddcd3d2dc5ab71d",
+          "bytes": 86051
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/17956608/full",
+          "sha256": "a1310b79b3cd6e99848ba17a1c8f68604eab95bcbd28217bfb7b7335a78dcaaa",
+          "bytes": 145667
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:26:18.803266+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "vegas",
+      "displayName": "Las Vegas",
+      "appLengthKm": 6.201,
+      "appCenter": [
+        -115.173,
+        36.1147
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-115.1802280,36.1088610,-115.1657720,36.1205390",
+          "sha256": "890a10a1b26012d615ea5f0a7ffb5f02c547326b36605845f50e9a98defcbeeb",
+          "bytes": 4260743,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/16696508/full",
+          "sha256": "5674fc6290e45b51c37f4e91cf9272e2faa9651e4fd0001493b5fcb0d55b6f7d",
+          "bytes": 122105
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:26:13.124867+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "losail",
+      "displayName": "Lusail",
+      "appLengthKm": 5.419,
+      "appCenter": [
+        51.4542,
+        25.49
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=51.4477313,25.4841610,51.4606687,25.4958390",
+          "sha256": "f4fa019edc1d9a349eb22fe672639d3c56a251a2b9a54715cb5ec3508e58f41b",
+          "bytes": 2866275,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/18052714/full",
+          "sha256": "37312c211f763df0b7021caa1fc0ac33f9fea99eb78d06c2cafeae6ee22c68e2",
+          "bytes": 187866
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/21297662/full",
+          "sha256": "9cda469f033161947f6c5c272007117319aef59164c2f88b9dde8ff9d0018981",
+          "bytes": 72081
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:26:21.500595+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    },
+    {
+      "circuitId": "yas_marina",
+      "displayName": "Yas Marina",
+      "appLengthKm": 5.281,
+      "appCenter": [
+        54.6031,
+        24.4672
+      ],
+      "queries": [
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/map?bbox=54.5966849,24.4613610,54.6095151,24.4730390",
+          "sha256": "7b8dd431b1e800214e7e5f371e6dd4194141e8d0bf641f25e53aaae9b884f279",
+          "bytes": 6141352,
+          "radiusMeters": 650
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/6941673/full",
+          "sha256": "85b5740e83ce3ccf48ad1a835466deb5792235b27639d0ef8a707f6557da80e3",
+          "bytes": 174055
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/11378665/full",
+          "sha256": "4b0c284dfa90b1782f3d5b4f2735db21ae24665124ff80964fc23ffeb5cdcf09",
+          "bytes": 56958
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/18145580/full",
+          "sha256": "72bf7f91e1d453e9b4c32b9c414e4161b6054d6e90c1b7141c2ad4f46802be5e",
+          "bytes": 210981
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/20123689/full",
+          "sha256": "3084b905e868465de63a49df6412f0e502c21fceb2cd7cda104609661835bbee",
+          "bytes": 49901
+        },
+        {
+          "url": "https://www.openstreetmap.org/api/0.6/relation/21892763/full",
+          "sha256": "21de2e721e86bc116d04377eac59e1bd9333e3dc5f4f577502a0b80319a359b9",
+          "bytes": 26512
+        }
+      ],
+      "errors": [],
+      "retrievedAtUtc": "2026-11-15T12:26:35.388804+00:00",
+      "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+    }
+  ]
+}

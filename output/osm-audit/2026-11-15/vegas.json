@@ -1,0 +1,4747 @@
+{
+  "circuitId": "vegas",
+  "displayName": "Las Vegas",
+  "appLengthKm": 6.201,
+  "appCenter": [
+    -115.173,
+    36.1147
+  ],
+  "queries": [
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=-115.1802280,36.1088610,-115.1657720,36.1205390",
+      "sha256": "890a10a1b26012d615ea5f0a7ffb5f02c547326b36605845f50e9a98defcbeeb",
+      "bytes": 4260743,
+      "radiusMeters": 650
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/16696508/full",
+      "sha256": "5674fc6290e45b51c37f4e91cf9272e2faa9651e4fd0001493b5fcb0d55b6f7d",
+      "bytes": 122105
+    }
+  ],
+  "elements": [
+    {
+      "type": "node",
+      "id": 137402143,
+      "version": "6",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "10"
+      },
+      "url": "https://www.openstreetmap.org/node/137402143",
+      "coordinates": [
+        -115.1659988,
+        36.1230733
+      ]
+    },
+    {
+      "type": "node",
+      "id": 137743393,
+      "version": "9",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "5"
+      },
+      "url": "https://www.openstreetmap.org/node/137743393",
+      "coordinates": [
+        -115.1639952,
+        36.1192075
+      ]
+    },
+    {
+      "type": "node",
+      "id": 1490596713,
+      "version": "11",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "12"
+      },
+      "url": "https://www.openstreetmap.org/node/1490596713",
+      "coordinates": [
+        -115.1693784,
+        36.1255587
+      ]
+    },
+    {
+      "type": "node",
+      "id": 1598856720,
+      "version": "8",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "13"
+      },
+      "url": "https://www.openstreetmap.org/node/1598856720",
+      "coordinates": [
+        -115.172521,
+        36.1201017
+      ]
+    },
+    {
+      "type": "node",
+      "id": 2852160857,
+      "version": "5",
+      "timestamp": "2026-05-27T21:03:40Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "14"
+      },
+      "url": "https://www.openstreetmap.org/node/2852160857",
+      "coordinates": [
+        -115.1731517,
+        36.1088112
+      ]
+    },
+    {
+      "type": "node",
+      "id": 2852160859,
+      "version": "7",
+      "timestamp": "2026-05-27T21:03:40Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "15"
+      },
+      "url": "https://www.openstreetmap.org/node/2852160859",
+      "coordinates": [
+        -115.1728055,
+        36.1085274
+      ]
+    },
+    {
+      "type": "node",
+      "id": 2852160864,
+      "version": "5",
+      "timestamp": "2026-05-27T23:05:08Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "16"
+      },
+      "url": "https://www.openstreetmap.org/node/2852160864",
+      "coordinates": [
+        -115.1717973,
+        36.1079798
+      ]
+    },
+    {
+      "type": "node",
+      "id": 5717585567,
+      "version": "3",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "4"
+      },
+      "url": "https://www.openstreetmap.org/node/5717585567",
+      "coordinates": [
+        -115.1639284,
+        36.1111544
+      ]
+    },
+    {
+      "type": "node",
+      "id": 11348753612,
+      "version": "4",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "1"
+      },
+      "url": "https://www.openstreetmap.org/node/11348753612",
+      "coordinates": [
+        -115.160364,
+        36.1107004
+      ]
+    },
+    {
+      "type": "node",
+      "id": 11348753615,
+      "version": "4",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "2"
+      },
+      "url": "https://www.openstreetmap.org/node/11348753615",
+      "coordinates": [
+        -115.1605274,
+        36.1110678
+      ]
+    },
+    {
+      "type": "node",
+      "id": 11348753622,
+      "version": "4",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "3"
+      },
+      "url": "https://www.openstreetmap.org/node/11348753622",
+      "coordinates": [
+        -115.1629216,
+        36.1104429
+      ]
+    },
+    {
+      "type": "node",
+      "id": 12059212382,
+      "version": "4",
+      "timestamp": "2026-04-06T20:40:09Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "9"
+      },
+      "url": "https://www.openstreetmap.org/node/12059212382",
+      "coordinates": [
+        -115.1604062,
+        36.1222364
+      ]
+    },
+    {
+      "type": "node",
+      "id": 12626696512,
+      "version": "4",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "6"
+      },
+      "url": "https://www.openstreetmap.org/node/12626696512",
+      "coordinates": [
+        -115.1611853,
+        36.1191725
+      ]
+    },
+    {
+      "type": "node",
+      "id": 12638889512,
+      "version": "4",
+      "timestamp": "2026-04-06T20:40:09Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "7"
+      },
+      "url": "https://www.openstreetmap.org/node/12638889512",
+      "coordinates": [
+        -115.1601131,
+        36.1207408
+      ]
+    },
+    {
+      "type": "node",
+      "id": 12638889528,
+      "version": "4",
+      "timestamp": "2026-04-06T20:40:09Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "8"
+      },
+      "url": "https://www.openstreetmap.org/node/12638889528",
+      "coordinates": [
+        -115.160671,
+        36.1209393
+      ]
+    },
+    {
+      "type": "node",
+      "id": 13016217985,
+      "version": "2",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "raceway": "finish"
+      },
+      "url": "https://www.openstreetmap.org/node/13016217985",
+      "coordinates": [
+        -115.1625601,
+        36.1086649
+      ]
+    },
+    {
+      "type": "node",
+      "id": 13016217986,
+      "version": "2",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "raceway": "start"
+      },
+      "url": "https://www.openstreetmap.org/node/13016217986",
+      "coordinates": [
+        -115.1618816,
+        36.1092838
+      ]
+    },
+    {
+      "type": "node",
+      "id": 13250780586,
+      "version": "3",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "11"
+      },
+      "url": "https://www.openstreetmap.org/node/13250780586",
+      "coordinates": [
+        -115.1668882,
+        36.124717
+      ]
+    },
+    {
+      "type": "node",
+      "id": 13341696778,
+      "version": "3",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "junction": "yes",
+        "ref": "17"
+      },
+      "url": "https://www.openstreetmap.org/node/13341696778",
+      "coordinates": [
+        -115.1639015,
+        36.1079696
+      ]
+    },
+    {
+      "type": "relation",
+      "id": 16696508,
+      "version": "24",
+      "timestamp": "2026-08-04T00:51:50Z",
+      "tags": {
+        "name": "Las Vegas Strip Circuit",
+        "route": "circuit",
+        "type": "circuit",
+        "wikidata": "Q113112116",
+        "wikipedia": "en:Las Vegas Strip Circuit"
+      },
+      "url": "https://www.openstreetmap.org/relation/16696508",
+      "members": [
+        {
+          "type": "node",
+          "ref": 13016217986,
+          "role": "start"
+        },
+        {
+          "type": "way",
+          "ref": 1456078477,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 11348753612,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1456078476,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 11348753615,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1223479151,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 11348753622,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1456078475,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 5717585567,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1224841829,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 999044776,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 999044779,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1016805774,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 601671174,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 601671136,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1032613489,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1032789814,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 847458816,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 847458817,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 601666023,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1030280930,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 600520431,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 137743393,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 14323635,
+          "role": "backward"
+        },
+        {
+          "type": "node",
+          "ref": 12626696512,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1456078474,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 12638889512,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1456078473,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 12638889528,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1364789152,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 12059212382,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1238536330,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 601645722,
+          "role": "backward"
+        },
+        {
+          "type": "way",
+          "ref": 1454797801,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 601644239,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 137402143,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1456078472,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1101647963,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1101647964,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 13250780586,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1101647965,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1101647962,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1101647966,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1101647967,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1009061534,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1417454723,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 1490596713,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1009061533,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 601644233,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1071482657,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1071482658,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1071482659,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1071482660,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1547082474,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1071482661,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1071482662,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 600023001,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1071482663,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 1598856720,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1043551491,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1059801988,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 674621867,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 423689767,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1486896083,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 423686460,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1362569857,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1032776580,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 421265955,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1043464439,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 742140361,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1119837129,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1016480470,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1016480469,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1030067968,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 423686234,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1036842429,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1033820973,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1436769040,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1030066598,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 2852160857,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1030066599,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1381561592,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 2852160859,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1030290852,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 2852160864,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1456078471,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1030290854,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1030290855,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 281237566,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1030290856,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 600519166,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 435490976,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1436762463,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 435490978,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 601666019,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 13341696778,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1456078478,
+          "role": "forward"
+        },
+        {
+          "type": "node",
+          "ref": 13016217985,
+          "role": "finish"
+        },
+        {
+          "type": "way",
+          "ref": 1456078470,
+          "role": "forward"
+        },
+        {
+          "type": "way",
+          "ref": 1364789153,
+          "role": "alternative"
+        },
+        {
+          "type": "way",
+          "ref": 1223479152,
+          "role": "pit_lane"
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 14323635,
+      "version": "26",
+      "timestamp": "2026-05-29T07:34:26Z",
+      "tags": {
+        "access": "yes",
+        "covered": "no",
+        "highway": "unclassified",
+        "lanes": "2",
+        "name": "Westchester Drive",
+        "oneway": "no",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Westchester",
+        "tiger:name_type": "Cir",
+        "tiger:reviewed": "no"
+      },
+      "url": "https://www.openstreetmap.org/way/14323635",
+      "nodeIds": [
+        12626696512,
+        12680908708,
+        2747919652,
+        13893272558,
+        13179859985,
+        137743393
+      ],
+      "coordinates": [
+        [
+          -115.1611853,
+          36.1191725
+        ],
+        [
+          -115.1619476,
+          36.1191844
+        ],
+        [
+          -115.1629772,
+          36.1192046
+        ],
+        [
+          -115.1630677,
+          36.1192049
+        ],
+        [
+          -115.1639282,
+          36.1192073
+        ],
+        [
+          -115.1639952,
+          36.1192075
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 281237566,
+      "version": "17",
+      "timestamp": "2026-09-23T02:57:02Z",
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/281237566",
+      "nodeIds": [
+        13341696770,
+        2852160866
+      ],
+      "coordinates": [
+        [
+          -115.169857,
+          36.1079609
+        ],
+        [
+          -115.1687066,
+          36.1079497
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 421265955,
+      "version": "22",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "bicycle": "yes",
+        "foot": "no",
+        "highway": "primary",
+        "lane_markings": "no",
+        "lanes": "5",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "placement": "middle_of:4",
+        "sidewalk": "no",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/421265955",
+      "nodeIds": [
+        13060798867,
+        1307215340
+      ],
+      "coordinates": [
+        [
+          -115.1729831,
+          36.11477
+        ],
+        [
+          -115.1729939,
+          36.1145996
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 423686234,
+      "version": "18",
+      "timestamp": "2026-09-22T03:36:05Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/423686234",
+      "nodeIds": [
+        247493048,
+        3783743618,
+        3165620433
+      ],
+      "coordinates": [
+        [
+          -115.1731307,
+          36.1110604
+        ],
+        [
+          -115.173134,
+          36.1109576
+        ],
+        [
+          -115.1731358,
+          36.1108004
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 423686460,
+      "version": "23",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/423686460",
+      "nodeIds": [
+        13615751772,
+        6091215746,
+        3783743845
+      ],
+      "coordinates": [
+        [
+          -115.1729892,
+          36.1173174
+        ],
+        [
+          -115.17299,
+          36.1172671
+        ],
+        [
+          -115.1729874,
+          36.1169699
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 423689767,
+      "version": "23",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/423689767",
+      "nodeIds": [
+        3783744003,
+        1307215330,
+        4804173975,
+        3529524396,
+        6091215751,
+        13615751771
+      ],
+      "coordinates": [
+        [
+          -115.1729085,
+          36.1183621
+        ],
+        [
+          -115.1729379,
+          36.1181543
+        ],
+        [
+          -115.172944,
+          36.1180652
+        ],
+        [
+          -115.172981,
+          36.117511
+        ],
+        [
+          -115.1729839,
+          36.1174745
+        ],
+        [
+          -115.1729847,
+          36.117413
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 435490976,
+      "version": "9",
+      "timestamp": "2026-09-23T02:55:08Z",
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/435490976",
+      "nodeIds": [
+        2852160868,
+        9781059410,
+        2852160870,
+        7226402466
+      ],
+      "coordinates": [
+        [
+          -115.1675992,
+          36.107954
+        ],
+        [
+          -115.166236,
+          36.1079523
+        ],
+        [
+          -115.165763,
+          36.1079537
+        ],
+        [
+          -115.1652369,
+          36.1079473
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 435490978,
+      "version": "8",
+      "timestamp": "2026-09-23T02:55:00Z",
+      "tags": {
+        "highway": "secondary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "placement": "middle_of:4",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|||right"
+      },
+      "url": "https://www.openstreetmap.org/way/435490978",
+      "nodeIds": [
+        4334050761,
+        5717585571,
+        4331663605,
+        13341696775
+      ],
+      "coordinates": [
+        [
+          -115.1647319,
+          36.1079514
+        ],
+        [
+          -115.1641459,
+          36.107952
+        ],
+        [
+          -115.1641079,
+          36.107952
+        ],
+        [
+          -115.1640271,
+          36.1079521
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 600023001,
+      "version": "22",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/600023001",
+      "nodeIds": [
+        13154585537,
+        1307215334,
+        1307215324,
+        9832606129
+      ],
+      "coordinates": [
+        [
+          -115.171638,
+          36.1221555
+        ],
+        [
+          -115.172014,
+          36.1214556
+        ],
+        [
+          -115.1722903,
+          36.1207385
+        ],
+        [
+          -115.1723277,
+          36.1206341
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 600519166,
+      "version": "8",
+      "timestamp": "2026-09-23T02:55:22Z",
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/600519166",
+      "nodeIds": [
+        5509252567,
+        13341696773,
+        13207647702,
+        2852160868
+      ],
+      "coordinates": [
+        [
+          -115.1678538,
+          36.1079535
+        ],
+        [
+          -115.1677684,
+          36.1079537
+        ],
+        [
+          -115.1677215,
+          36.1079538
+        ],
+        [
+          -115.1675992,
+          36.107954
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 600520431,
+      "version": "14",
+      "timestamp": "2025-11-30T02:59:50Z",
+      "tags": {
+        "flood_prone": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "35 mph",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln"
+      },
+      "url": "https://www.openstreetmap.org/way/600520431",
+      "nodeIds": [
+        13341696788,
+        3196293414,
+        3196293416,
+        12488446340,
+        137743393
+      ],
+      "coordinates": [
+        [
+          -115.1639816,
+          36.117303
+        ],
+        [
+          -115.163989,
+          36.1180848
+        ],
+        [
+          -115.163988,
+          36.1182312
+        ],
+        [
+          -115.1639955,
+          36.1190399
+        ],
+        [
+          -115.1639952,
+          36.1192075
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 601644233,
+      "version": "18",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "foot": "no",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:both": "no",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/601644233",
+      "nodeIds": [
+        1490596685,
+        1307215327,
+        2820167020
+      ],
+      "coordinates": [
+        [
+          -115.1694739,
+          36.1254108
+        ],
+        [
+          -115.1696134,
+          36.1251778
+        ],
+        [
+          -115.1696691,
+          36.1250904
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 601644239,
+      "version": "15",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Sands",
+        "tiger:name_type": "Ave"
+      },
+      "url": "https://www.openstreetmap.org/way/601644239",
+      "nodeIds": [
+        13341696794,
+        13179859946,
+        137402154,
+        137402151,
+        137402148,
+        137402146,
+        137402143
+      ],
+      "coordinates": [
+        [
+          -115.1641615,
+          36.122469
+        ],
+        [
+          -115.1642735,
+          36.1224736
+        ],
+        [
+          -115.1647887,
+          36.1224945
+        ],
+        [
+          -115.1652328,
+          36.1225776
+        ],
+        [
+          -115.1654862,
+          36.1226808
+        ],
+        [
+          -115.1657711,
+          36.1228819
+        ],
+        [
+          -115.1659988,
+          36.1230733
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 601645722,
+      "version": "21",
+      "timestamp": "2025-11-10T02:00:33Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxheight": "default",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "smoothness": "good",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/601645722",
+      "nodeIds": [
+        5717469572,
+        13179859940,
+        9577000545
+      ],
+      "coordinates": [
+        [
+          -115.1640396,
+          36.1222899
+        ],
+        [
+          -115.1639532,
+          36.1222901
+        ],
+        [
+          -115.1636873,
+          36.1222909
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 601666019,
+      "version": "7",
+      "timestamp": "2026-09-23T02:54:58Z",
+      "tags": {
+        "highway": "secondary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "placement": "middle_of:4",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|||right"
+      },
+      "url": "https://www.openstreetmap.org/way/601666019",
+      "nodeIds": [
+        13341696775,
+        13341696778
+      ],
+      "coordinates": [
+        [
+          -115.1640271,
+          36.1079521
+        ],
+        [
+          -115.1639015,
+          36.1079696
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 601666023,
+      "version": "12",
+      "timestamp": "2025-06-03T22:46:56Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "no",
+        "maxspeed": "35 mph",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "shoulder": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln"
+      },
+      "url": "https://www.openstreetmap.org/way/601666023",
+      "nodeIds": [
+        3524173094,
+        9497308570
+      ],
+      "coordinates": [
+        [
+          -115.16397,
+          36.1162599
+        ],
+        [
+          -115.1639758,
+          36.1168073
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 601671136,
+      "version": "11",
+      "timestamp": "2025-11-30T02:59:50Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln"
+      },
+      "url": "https://www.openstreetmap.org/way/601671136",
+      "nodeIds": [
+        13341696785,
+        3524185693,
+        9514191337
+      ],
+      "coordinates": [
+        [
+          -115.16397,
+          36.1145884
+        ],
+        [
+          -115.1639713,
+          36.1146818
+        ],
+        [
+          -115.1639637,
+          36.1153643
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 601671174,
+      "version": "9",
+      "timestamp": "2026-01-10T20:58:47Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lane_markings": "no",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln"
+      },
+      "url": "https://www.openstreetmap.org/way/601671174",
+      "nodeIds": [
+        13341696784,
+        13341696785
+      ],
+      "coordinates": [
+        [
+          -115.1639683,
+          36.1144377
+        ],
+        [
+          -115.16397,
+          36.1145884
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 674621867,
+      "version": "15",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/674621867",
+      "nodeIds": [
+        4210496188,
+        1307215329,
+        3783744003
+      ],
+      "coordinates": [
+        [
+          -115.1727632,
+          36.1192581
+        ],
+        [
+          -115.1728294,
+          36.1189207
+        ],
+        [
+          -115.1729085,
+          36.1183621
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 742140361,
+      "version": "13",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/742140361",
+      "nodeIds": [
+        2278824741,
+        10242226579
+      ],
+      "coordinates": [
+        [
+          -115.1730301,
+          36.114029
+        ],
+        [
+          -115.1730485,
+          36.1130171
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 847458816,
+      "version": "7",
+      "timestamp": "2025-06-03T22:47:00Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln",
+        "turn:lanes": "||right"
+      },
+      "url": "https://www.openstreetmap.org/way/847458816",
+      "nodeIds": [
+        9515657013,
+        5711218684
+      ],
+      "coordinates": [
+        [
+          -115.1639635,
+          36.1157291
+        ],
+        [
+          -115.1639649,
+          36.115895
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 847458817,
+      "version": "8",
+      "timestamp": "2025-06-03T22:47:00Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln",
+        "turn:lanes": "none|none|right"
+      },
+      "url": "https://www.openstreetmap.org/way/847458817",
+      "nodeIds": [
+        5711218684,
+        3524173094
+      ],
+      "coordinates": [
+        [
+          -115.1639649,
+          36.115895
+        ],
+        [
+          -115.16397,
+          36.1162599
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 999044776,
+      "version": "5",
+      "timestamp": "2025-10-08T20:17:49Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln"
+      },
+      "url": "https://www.openstreetmap.org/way/999044776",
+      "nodeIds": [
+        137476745,
+        5513161675
+      ],
+      "coordinates": [
+        [
+          -115.1639338,
+          36.1115256
+        ],
+        [
+          -115.1639411,
+          36.1117715
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 999044779,
+      "version": "6",
+      "timestamp": "2025-10-08T20:17:49Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln"
+      },
+      "url": "https://www.openstreetmap.org/way/999044779",
+      "nodeIds": [
+        5513161675,
+        1161959432,
+        5509253032
+      ],
+      "coordinates": [
+        [
+          -115.1639411,
+          36.1117715
+        ],
+        [
+          -115.1639408,
+          36.1126502
+        ],
+        [
+          -115.163947,
+          36.1127628
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1009061533,
+      "version": "12",
+      "timestamp": "2026-09-22T03:36:14Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:both": "no",
+        "smoothness": "good",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1009061533",
+      "nodeIds": [
+        1490596713,
+        1490596685
+      ],
+      "coordinates": [
+        [
+          -115.1693784,
+          36.1255587
+        ],
+        [
+          -115.1694739,
+          36.1254108
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1009061534,
+      "version": "12",
+      "timestamp": "2026-09-22T03:36:13Z",
+      "tags": {
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "45 mph",
+        "name": "Sands Avenue",
+        "old_name": "D4–C Ranch Road",
+        "oneway": "yes",
+        "sidewalk:both": "no",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Sands",
+        "tiger:name_direction_prefix": "E",
+        "tiger:name_type": "Ave",
+        "turn:lanes": "left|left|||||"
+      },
+      "url": "https://www.openstreetmap.org/way/1009061534",
+      "nodeIds": [
+        137402120,
+        12781971625
+      ],
+      "coordinates": [
+        [
+          -115.1691519,
+          36.1255324
+        ],
+        [
+          -115.1692652,
+          36.1255456
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1016480469,
+      "version": "13",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "bicycle": "yes",
+        "foot": "no",
+        "hgv": "no",
+        "highway": "primary",
+        "horse": "permissive",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "motor_vehicle": "yes",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/1016480469",
+      "nodeIds": [
+        1307232382,
+        10278507117,
+        1307215317
+      ],
+      "coordinates": [
+        [
+          -115.1731117,
+          36.1115157
+        ],
+        [
+          -115.1731204,
+          36.1112997
+        ],
+        [
+          -115.173124,
+          36.111214
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1016480470,
+      "version": "10",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "8",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|left|none|none|none|none|right"
+      },
+      "url": "https://www.openstreetmap.org/way/1016480470",
+      "nodeIds": [
+        9603432066,
+        9375435424,
+        1307232383,
+        1307232382
+      ],
+      "coordinates": [
+        [
+          -115.1730844,
+          36.1121837
+        ],
+        [
+          -115.1730951,
+          36.1119352
+        ],
+        [
+          -115.1731008,
+          36.1117604
+        ],
+        [
+          -115.1731117,
+          36.1115157
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1016805774,
+      "version": "7",
+      "timestamp": "2025-11-30T02:59:50Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln"
+      },
+      "url": "https://www.openstreetmap.org/way/1016805774",
+      "nodeIds": [
+        5509253032,
+        7359177854,
+        5509253038,
+        5509253044,
+        5509253039,
+        5509253047,
+        2777542741,
+        5717585565,
+        6222356723,
+        13341696784
+      ],
+      "coordinates": [
+        [
+          -115.163947,
+          36.1127628
+        ],
+        [
+          -115.1639551,
+          36.1133774
+        ],
+        [
+          -115.1639578,
+          36.1135874
+        ],
+        [
+          -115.1639591,
+          36.1136851
+        ],
+        [
+          -115.1639614,
+          36.1138594
+        ],
+        [
+          -115.1639626,
+          36.1139494
+        ],
+        [
+          -115.1639658,
+          36.1141937
+        ],
+        [
+          -115.1639685,
+          36.1143116
+        ],
+        [
+          -115.1639691,
+          36.1143382
+        ],
+        [
+          -115.1639683,
+          36.1144377
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1030066598,
+      "version": "9",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "bicycle": "yes",
+        "highway": "primary",
+        "lanes": "6",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "motor_vehicle": "yes",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "sidewalk:both": "no",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|none|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/1030066598",
+      "nodeIds": [
+        11348729066,
+        2852160857
+      ],
+      "coordinates": [
+        [
+          -115.1731444,
+          36.1090018
+        ],
+        [
+          -115.1731517,
+          36.1088112
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1030066599,
+      "version": "9",
+      "timestamp": "2026-05-27T21:03:40Z",
+      "tags": {
+        "expressway": "yes",
+        "highway": "secondary",
+        "maxspeed": "35 mph",
+        "name": "West Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:both": "no",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1030066599",
+      "nodeIds": [
+        2852160857,
+        13889692414
+      ],
+      "coordinates": [
+        [
+          -115.1731517,
+          36.1088112
+        ],
+        [
+          -115.1729806,
+          36.108676
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1030067968,
+      "version": "7",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1030067968",
+      "nodeIds": [
+        1307215317,
+        247493048
+      ],
+      "coordinates": [
+        [
+          -115.173124,
+          36.111214
+        ],
+        [
+          -115.1731307,
+          36.1110604
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1030280930,
+      "version": "10",
+      "timestamp": "2025-11-30T02:59:50Z",
+      "tags": {
+        "flood_prone": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "35 mph",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln",
+        "turn:lanes": "left||"
+      },
+      "url": "https://www.openstreetmap.org/way/1030280930",
+      "nodeIds": [
+        9497308570,
+        9968242168,
+        137344634,
+        3524177103,
+        13341696788
+      ],
+      "coordinates": [
+        [
+          -115.1639758,
+          36.1168073
+        ],
+        [
+          -115.1639758,
+          36.1168687
+        ],
+        [
+          -115.1639797,
+          36.1171757
+        ],
+        [
+          -115.16398,
+          36.1172027
+        ],
+        [
+          -115.1639816,
+          36.117303
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1030290852,
+      "version": "7",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "bicycle": "yes",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "35 mph",
+        "motor_vehicle": "yes",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1030290852",
+      "nodeIds": [
+        2852160859,
+        2852160860,
+        2852160861,
+        2820167009,
+        4380087444,
+        2852160862,
+        6715647930,
+        2852160863,
+        2852160864
+      ],
+      "coordinates": [
+        [
+          -115.1728055,
+          36.1085274
+        ],
+        [
+          -115.1725615,
+          36.1083292
+        ],
+        [
+          -115.1723422,
+          36.1081655
+        ],
+        [
+          -115.1722746,
+          36.1081206
+        ],
+        [
+          -115.1721925,
+          36.1080654
+        ],
+        [
+          -115.1721079,
+          36.1080252
+        ],
+        [
+          -115.1720264,
+          36.1080024
+        ],
+        [
+          -115.1719151,
+          36.1079856
+        ],
+        [
+          -115.1717973,
+          36.1079798
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1030290854,
+      "version": "6",
+      "timestamp": "2026-09-23T02:55:56Z",
+      "tags": {
+        "highway": "secondary",
+        "lanes": "5",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "reverse;left|left|none|none|right"
+      },
+      "url": "https://www.openstreetmap.org/way/1030290854",
+      "nodeIds": [
+        9497407198,
+        2852160865,
+        11666697675,
+        13341696769
+      ],
+      "coordinates": [
+        [
+          -115.1709059,
+          36.1079698
+        ],
+        [
+          -115.1701953,
+          36.1079651
+        ],
+        [
+          -115.1701034,
+          36.1079629
+        ],
+        [
+          -115.1699644,
+          36.1079617
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1030290855,
+      "version": "7",
+      "timestamp": "2026-09-23T02:56:52Z",
+      "tags": {
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1030290855",
+      "nodeIds": [
+        13341696769,
+        13341696770
+      ],
+      "coordinates": [
+        [
+          -115.1699644,
+          36.1079617
+        ],
+        [
+          -115.169857,
+          36.1079609
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1030290856,
+      "version": "4",
+      "timestamp": "2026-09-23T02:55:21Z",
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/1030290856",
+      "nodeIds": [
+        2852160866,
+        2852160855,
+        2852160853,
+        5509252567
+      ],
+      "coordinates": [
+        [
+          -115.1687066,
+          36.1079497
+        ],
+        [
+          -115.1686009,
+          36.1079508
+        ],
+        [
+          -115.1684604,
+          36.1079522
+        ],
+        [
+          -115.1678538,
+          36.1079535
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1032613489,
+      "version": "7",
+      "timestamp": "2025-10-08T20:17:49Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln",
+        "turn:lanes": "left|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/1032613489",
+      "nodeIds": [
+        9514191337,
+        5711218691
+      ],
+      "coordinates": [
+        [
+          -115.1639637,
+          36.1153643
+        ],
+        [
+          -115.1639633,
+          36.1155905
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1032776580,
+      "version": "14",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "foot": "no",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxheight": "default",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "placement": "middle_of:4",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|none|none|none|right"
+      },
+      "url": "https://www.openstreetmap.org/way/1032776580",
+      "nodeIds": [
+        9515536209,
+        1307215338,
+        13060798867
+      ],
+      "coordinates": [
+        [
+          -115.1729916,
+          36.115944
+        ],
+        [
+          -115.1729841,
+          36.1149132
+        ],
+        [
+          -115.1729831,
+          36.11477
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1032789814,
+      "version": "7",
+      "timestamp": "2025-10-08T20:17:49Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln"
+      },
+      "url": "https://www.openstreetmap.org/way/1032789814",
+      "nodeIds": [
+        5711218691,
+        9515657013
+      ],
+      "coordinates": [
+        [
+          -115.1639633,
+          36.1155905
+        ],
+        [
+          -115.1639635,
+          36.1157291
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1033820973,
+      "version": "14",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "bicycle": "yes",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxheight": "default",
+        "maxspeed": "30 mph",
+        "motor_vehicle": "yes",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|none|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/1033820973",
+      "nodeIds": [
+        9552067667,
+        7059210713,
+        1307215323,
+        2820167011
+      ],
+      "coordinates": [
+        [
+          -115.1731403,
+          36.110362
+        ],
+        [
+          -115.1731416,
+          36.1103222
+        ],
+        [
+          -115.1731452,
+          36.1098834
+        ],
+        [
+          -115.1731439,
+          36.1094381
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1036842429,
+      "version": "7",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1036842429",
+      "nodeIds": [
+        3165620433,
+        7386205445,
+        9552067667
+      ],
+      "coordinates": [
+        [
+          -115.1731358,
+          36.1108004
+        ],
+        [
+          -115.1731398,
+          36.1104429
+        ],
+        [
+          -115.1731403,
+          36.110362
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1043464439,
+      "version": "9",
+      "timestamp": "2026-09-22T03:36:06Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "foot": "no",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "placement": "middle_of:3",
+        "sidewalk": "no",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1043464439",
+      "nodeIds": [
+        1307215340,
+        2278824741
+      ],
+      "coordinates": [
+        [
+          -115.1729939,
+          36.1145996
+        ],
+        [
+          -115.1730301,
+          36.114029
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1043551491,
+      "version": "13",
+      "timestamp": "2026-09-22T03:36:08Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1043551491",
+      "nodeIds": [
+        1598856720,
+        13154585535,
+        3783743557,
+        1912068000,
+        1307215331
+      ],
+      "coordinates": [
+        [
+          -115.172521,
+          36.1201017
+        ],
+        [
+          -115.1725947,
+          36.119876
+        ],
+        [
+          -115.172601,
+          36.1198499
+        ],
+        [
+          -115.1726338,
+          36.1197458
+        ],
+        [
+          -115.1726712,
+          36.119614
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1059801988,
+      "version": "12",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "parking:both": "no",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "reverse;left|none|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/1059801988",
+      "nodeIds": [
+        1307215331,
+        4804173974,
+        4210496188
+      ],
+      "coordinates": [
+        [
+          -115.1726712,
+          36.119614
+        ],
+        [
+          -115.1726996,
+          36.1194996
+        ],
+        [
+          -115.1727632,
+          36.1192581
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1071482657,
+      "version": "11",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1071482657",
+      "nodeIds": [
+        2820167020,
+        1307215339,
+        9832606127
+      ],
+      "coordinates": [
+        [
+          -115.1696691,
+          36.1250904
+        ],
+        [
+          -115.1701752,
+          36.124296
+        ],
+        [
+          -115.170427,
+          36.123913
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1071482658,
+      "version": "12",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "7",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|||||"
+      },
+      "url": "https://www.openstreetmap.org/way/1071482658",
+      "nodeIds": [
+        9832606127,
+        1307215322,
+        13154585543
+      ],
+      "coordinates": [
+        [
+          -115.170427,
+          36.123913
+        ],
+        [
+          -115.1706376,
+          36.123593
+        ],
+        [
+          -115.170758,
+          36.12341
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1071482659,
+      "version": "11",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left||||"
+      },
+      "url": "https://www.openstreetmap.org/way/1071482659",
+      "nodeIds": [
+        13154585543,
+        1675637835
+      ],
+      "coordinates": [
+        [
+          -115.170758,
+          36.12341
+        ],
+        [
+          -115.170827,
+          36.1233035
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1071482660,
+      "version": "14",
+      "timestamp": "2026-09-22T03:36:09Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxheight": "default",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1071482660",
+      "nodeIds": [
+        1675637835,
+        9835431642
+      ],
+      "coordinates": [
+        [
+          -115.170827,
+          36.1233035
+        ],
+        [
+          -115.1709547,
+          36.123125
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1071482661,
+      "version": "11",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "7",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|||||"
+      },
+      "url": "https://www.openstreetmap.org/way/1071482661",
+      "nodeIds": [
+        9832606128,
+        5450834124
+      ],
+      "coordinates": [
+        [
+          -115.171321,
+          36.1226113
+        ],
+        [
+          -115.1714903,
+          36.122373
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1071482662,
+      "version": "14",
+      "timestamp": "2026-09-22T03:32:55Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left||||"
+      },
+      "url": "https://www.openstreetmap.org/way/1071482662",
+      "nodeIds": [
+        5450834124,
+        252504202,
+        5255307360,
+        13154585537
+      ],
+      "coordinates": [
+        [
+          -115.1714903,
+          36.122373
+        ],
+        [
+          -115.1715734,
+          36.1222558
+        ],
+        [
+          -115.1715999,
+          36.1222157
+        ],
+        [
+          -115.171638,
+          36.1221555
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1071482663,
+      "version": "15",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "reverse||||"
+      },
+      "url": "https://www.openstreetmap.org/way/1071482663",
+      "nodeIds": [
+        9832606129,
+        13154585534,
+        1598856720
+      ],
+      "coordinates": [
+        [
+          -115.1723277,
+          36.1206341
+        ],
+        [
+          -115.1724872,
+          36.1201947
+        ],
+        [
+          -115.172521,
+          36.1201017
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1101647962,
+      "version": "14",
+      "timestamp": "2025-10-22T22:32:31Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "sidewalk:right:surface": "concrete",
+        "smoothness": "excellent",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1101647962",
+      "nodeIds": [
+        13250780583,
+        9034386146,
+        137402126,
+        137402123,
+        10681393781,
+        137402122
+      ],
+      "coordinates": [
+        [
+          -115.166993,
+          36.1248066
+        ],
+        [
+          -115.1671943,
+          36.124955
+        ],
+        [
+          -115.1674034,
+          36.1251091
+        ],
+        [
+          -115.1676067,
+          36.125224
+        ],
+        [
+          -115.1678766,
+          36.1253047
+        ],
+        [
+          -115.1679779,
+          36.1253346
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1101647963,
+      "version": "8",
+      "timestamp": "2025-09-29T08:00:24Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Sands",
+        "tiger:name_type": "Ave",
+        "turn:lanes": "left|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/1101647963",
+      "nodeIds": [
+        10081276857,
+        10081276858
+      ],
+      "coordinates": [
+        [
+          -115.1665792,
+          36.1241594
+        ],
+        [
+          -115.1666627,
+          36.124339
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1101647964,
+      "version": "10",
+      "timestamp": "2025-10-22T22:32:31Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Sands",
+        "tiger:name_type": "Ave",
+        "turn:lanes": "left|none|none|none|none|right"
+      },
+      "url": "https://www.openstreetmap.org/way/1101647964",
+      "nodeIds": [
+        10081276858,
+        137402135,
+        13179906318,
+        4869411040,
+        13250780586
+      ],
+      "coordinates": [
+        [
+          -115.1666627,
+          36.124339
+        ],
+        [
+          -115.1667193,
+          36.1244624
+        ],
+        [
+          -115.1668003,
+          36.1245943
+        ],
+        [
+          -115.1668161,
+          36.1246163
+        ],
+        [
+          -115.1668882,
+          36.124717
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1101647965,
+      "version": "7",
+      "timestamp": "2025-10-22T22:32:31Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Sands",
+        "tiger:name_type": "Ave"
+      },
+      "url": "https://www.openstreetmap.org/way/1101647965",
+      "nodeIds": [
+        13250780586,
+        13250780583
+      ],
+      "coordinates": [
+        [
+          -115.1668882,
+          36.124717
+        ],
+        [
+          -115.166993,
+          36.1248066
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1101647966,
+      "version": "10",
+      "timestamp": "2025-09-29T08:00:24Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "7",
+        "lit": "yes",
+        "maxheight": "default",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|none|none|none|none|right"
+      },
+      "url": "https://www.openstreetmap.org/way/1101647966",
+      "nodeIds": [
+        137402122,
+        1590310741,
+        2820167021
+      ],
+      "coordinates": [
+        [
+          -115.1679779,
+          36.1253346
+        ],
+        [
+          -115.1683482,
+          36.1254094
+        ],
+        [
+          -115.168732,
+          36.1254672
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1101647967,
+      "version": "9",
+      "timestamp": "2025-09-29T08:00:24Z",
+      "tags": {
+        "foot": "no",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "7",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|none|none|none|none|right"
+      },
+      "url": "https://www.openstreetmap.org/way/1101647967",
+      "nodeIds": [
+        2820167021,
+        13060955056,
+        137402120
+      ],
+      "coordinates": [
+        [
+          -115.168732,
+          36.1254672
+        ],
+        [
+          -115.1690052,
+          36.1255088
+        ],
+        [
+          -115.1691519,
+          36.1255324
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1119837129,
+      "version": "7",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "5",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "||||right"
+      },
+      "url": "https://www.openstreetmap.org/way/1119837129",
+      "nodeIds": [
+        10242226579,
+        10278555026,
+        9603432066
+      ],
+      "coordinates": [
+        [
+          -115.1730485,
+          36.1130171
+        ],
+        [
+          -115.1730662,
+          36.1125952
+        ],
+        [
+          -115.1730844,
+          36.1121837
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1223479151,
+      "version": "9",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "highway": "raceway",
+        "name": "Las Vegas Strip Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1223479151",
+      "nodeIds": [
+        11348753615,
+        13016217993,
+        11348753616,
+        13016217990,
+        13016217991,
+        13016217992,
+        13016217999,
+        11348753619,
+        11348753620,
+        11348753621,
+        13016217996,
+        13016217997,
+        11348753622
+      ],
+      "coordinates": [
+        [
+          -115.1605274,
+          36.1110678
+        ],
+        [
+          -115.1606445,
+          36.1111163
+        ],
+        [
+          -115.1607862,
+          36.1111515
+        ],
+        [
+          -115.1609986,
+          36.1111757
+        ],
+        [
+          -115.1612056,
+          36.1111669
+        ],
+        [
+          -115.1613881,
+          36.1111251
+        ],
+        [
+          -115.1615733,
+          36.111048
+        ],
+        [
+          -115.1618403,
+          36.1109028
+        ],
+        [
+          -115.1622526,
+          36.1105837
+        ],
+        [
+          -115.1623878,
+          36.1105089
+        ],
+        [
+          -115.1625512,
+          36.1104649
+        ],
+        [
+          -115.1627527,
+          36.1104407
+        ],
+        [
+          -115.1629216,
+          36.1104429
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1223479152,
+      "version": "6",
+      "timestamp": "2025-12-04T16:28:09Z",
+      "tags": {
+        "highway": "raceway",
+        "noname": "yes",
+        "oneway": "yes",
+        "raceway": "pitlane",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1223479152",
+      "nodeIds": [
+        13341696778,
+        13341696780,
+        13341696779,
+        11348753646,
+        11348753645,
+        11348753644,
+        11348753643,
+        11348753642,
+        11348753641,
+        11348753640,
+        11348753639,
+        11348753638,
+        11348753629,
+        11348753630,
+        11348753631,
+        11348753632,
+        11348753633,
+        13016217994,
+        11348753616
+      ],
+      "coordinates": [
+        [
+          -115.1639015,
+          36.1079696
+        ],
+        [
+          -115.1638115,
+          36.1080475
+        ],
+        [
+          -115.1637627,
+          36.1080897
+        ],
+        [
+          -115.1637191,
+          36.1081275
+        ],
+        [
+          -115.1635344,
+          36.1082113
+        ],
+        [
+          -115.1633988,
+          36.1082835
+        ],
+        [
+          -115.1633268,
+          36.1083475
+        ],
+        [
+          -115.1631586,
+          36.1085439
+        ],
+        [
+          -115.1630878,
+          36.1085879
+        ],
+        [
+          -115.1630061,
+          36.1086055
+        ],
+        [
+          -115.1628644,
+          36.1086165
+        ],
+        [
+          -115.1627718,
+          36.1086429
+        ],
+        [
+          -115.1627024,
+          36.1087119
+        ],
+        [
+          -115.1605846,
+          36.1106321
+        ],
+        [
+          -115.1605274,
+          36.1107334
+        ],
+        [
+          -115.1605247,
+          36.1107994
+        ],
+        [
+          -115.1605465,
+          36.1108852
+        ],
+        [
+          -115.1606146,
+          36.1109754
+        ],
+        [
+          -115.1607862,
+          36.1111515
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1224841829,
+      "version": "6",
+      "timestamp": "2025-11-30T01:52:00Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "name": "Koval Lane",
+        "oneway": "yes",
+        "sidewalk:both": "no",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Koval",
+        "tiger:name_type": "Ln"
+      },
+      "url": "https://www.openstreetmap.org/way/1224841829",
+      "nodeIds": [
+        5717585567,
+        137476745
+      ],
+      "coordinates": [
+        [
+          -115.1639284,
+          36.1111544
+        ],
+        [
+          -115.1639338,
+          36.1115256
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1238536330,
+      "version": "8",
+      "timestamp": "2025-11-30T01:52:00Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxheight": "default",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "good",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1238536330",
+      "nodeIds": [
+        9577000545,
+        5717469571,
+        5717469570,
+        11328804622,
+        5717469569,
+        5717469568,
+        11052835397,
+        12059212382
+      ],
+      "coordinates": [
+        [
+          -115.1636873,
+          36.1222909
+        ],
+        [
+          -115.1636656,
+          36.122291
+        ],
+        [
+          -115.1630379,
+          36.122292
+        ],
+        [
+          -115.1627863,
+          36.1222864
+        ],
+        [
+          -115.1621823,
+          36.1222704
+        ],
+        [
+          -115.1616209,
+          36.1222552
+        ],
+        [
+          -115.1607641,
+          36.1222416
+        ],
+        [
+          -115.1604062,
+          36.1222364
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1362569857,
+      "version": "6",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1362569857",
+      "nodeIds": [
+        3783743845,
+        9515536209
+      ],
+      "coordinates": [
+        [
+          -115.1729874,
+          36.1169699
+        ],
+        [
+          -115.1729916,
+          36.115944
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1364789152,
+      "version": "9",
+      "timestamp": "2026-04-06T20:40:09Z",
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1364789152",
+      "nodeIds": [
+        12638889528,
+        13712353318,
+        13712353317,
+        13712353319,
+        13712353315,
+        12638889529,
+        13712353313,
+        13712353314,
+        12638889530,
+        12638889521,
+        12638889522,
+        13712353312,
+        12638889523,
+        12488446343,
+        13179859976,
+        12059212382
+      ],
+      "coordinates": [
+        [
+          -115.160671,
+          36.1209393
+        ],
+        [
+          -115.1607007,
+          36.1209824
+        ],
+        [
+          -115.1607216,
+          36.1210281
+        ],
+        [
+          -115.1607394,
+          36.121078
+        ],
+        [
+          -115.1607443,
+          36.121124
+        ],
+        [
+          -115.1607461,
+          36.1211994
+        ],
+        [
+          -115.160735,
+          36.1212621
+        ],
+        [
+          -115.1607151,
+          36.1213259
+        ],
+        [
+          -115.1606927,
+          36.1213767
+        ],
+        [
+          -115.1606187,
+          36.1215084
+        ],
+        [
+          -115.1604448,
+          36.121783
+        ],
+        [
+          -115.1604279,
+          36.1218206
+        ],
+        [
+          -115.1604184,
+          36.1218616
+        ],
+        [
+          -115.1604095,
+          36.1221363
+        ],
+        [
+          -115.1604071,
+          36.1221723
+        ],
+        [
+          -115.1604062,
+          36.1222364
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1364789153,
+      "version": "5",
+      "timestamp": "2026-04-06T20:40:09Z",
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1364789153",
+      "nodeIds": [
+        12638889512,
+        12638889513,
+        13712353322,
+        13712353320,
+        13712353321,
+        12638889514,
+        13712353323,
+        12638889515,
+        12638889516,
+        13712353324,
+        12638889517,
+        13712353326,
+        13712353325,
+        12638889518,
+        13712353327,
+        12638889519,
+        12638889520,
+        12638889521
+      ],
+      "coordinates": [
+        [
+          -115.1601131,
+          36.1207408
+        ],
+        [
+          -115.1601132,
+          36.1208915
+        ],
+        [
+          -115.1601165,
+          36.1209146
+        ],
+        [
+          -115.1601263,
+          36.120934
+        ],
+        [
+          -115.1601416,
+          36.1209531
+        ],
+        [
+          -115.1601652,
+          36.1209662
+        ],
+        [
+          -115.160215,
+          36.120982
+        ],
+        [
+          -115.1602639,
+          36.1209926
+        ],
+        [
+          -115.1603217,
+          36.120996
+        ],
+        [
+          -115.1603971,
+          36.1210039
+        ],
+        [
+          -115.1604632,
+          36.1210251
+        ],
+        [
+          -115.1605017,
+          36.1210463
+        ],
+        [
+          -115.1605356,
+          36.1210735
+        ],
+        [
+          -115.1605693,
+          36.1211226
+        ],
+        [
+          -115.160585,
+          36.1211587
+        ],
+        [
+          -115.1605933,
+          36.121197
+        ],
+        [
+          -115.1606076,
+          36.1213544
+        ],
+        [
+          -115.1606187,
+          36.1215084
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1381561592,
+      "version": "5",
+      "timestamp": "2026-05-27T21:03:40Z",
+      "tags": {
+        "expressway": "yes",
+        "highway": "secondary",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:both": "no",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1381561592",
+      "nodeIds": [
+        13889692414,
+        2852160859
+      ],
+      "coordinates": [
+        [
+          -115.1729806,
+          36.108676
+        ],
+        [
+          -115.1728055,
+          36.1085274
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1417454723,
+      "version": "6",
+      "timestamp": "2026-09-22T03:36:16Z",
+      "tags": {
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "maxspeed": "45 mph",
+        "name": "Spring Mountain Road",
+        "name:en": "Spring Mountain Road",
+        "name:zh-Hans": "春山路",
+        "name:zh-Hant": "春山路",
+        "old_name": "D4–C Ranch Road",
+        "oneway": "yes",
+        "sidewalk:both": "no",
+        "smoothness": "excellent",
+        "surface": "asphalt",
+        "tiger:reviewed": "yes",
+        "turn:lanes": "left|left|||||"
+      },
+      "url": "https://www.openstreetmap.org/way/1417454723",
+      "nodeIds": [
+        12781971625,
+        1490596713
+      ],
+      "coordinates": [
+        [
+          -115.1692652,
+          36.1255456
+        ],
+        [
+          -115.1693784,
+          36.1255587
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1436762463,
+      "version": "2",
+      "timestamp": "2025-11-30T20:01:37Z",
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "35 mph",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1436762463",
+      "nodeIds": [
+        7226402466,
+        4334050761
+      ],
+      "coordinates": [
+        [
+          -115.1652369,
+          36.1079473
+        ],
+        [
+          -115.1647319,
+          36.1079514
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1436769040,
+      "version": "2",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "bicycle": "yes",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "6",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxheight": "default",
+        "maxspeed": "30 mph",
+        "motor_vehicle": "yes",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "sidewalk:both": "no",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt",
+        "turn:lanes": "left|left|none|none|none|none"
+      },
+      "url": "https://www.openstreetmap.org/way/1436769040",
+      "nodeIds": [
+        2820167011,
+        259859639,
+        11348729066
+      ],
+      "coordinates": [
+        [
+          -115.1731439,
+          36.1094381
+        ],
+        [
+          -115.1731416,
+          36.1091467
+        ],
+        [
+          -115.1731444,
+          36.1090018
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1454797801,
+      "version": "2",
+      "timestamp": "2025-11-30T02:59:50Z",
+      "tags": {
+        "fixme": "How do racers get from the Sphere onto Sands Avenue westbound if it's blocked off by a physical barrier?",
+        "highway": "raceway",
+        "name": "Las Vegas Strip Circuit",
+        "oneway": "yes",
+        "placement": "transition",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1454797801",
+      "nodeIds": [
+        5717469572,
+        13341696794
+      ],
+      "coordinates": [
+        [
+          -115.1640396,
+          36.1222899
+        ],
+        [
+          -115.1641615,
+          36.122469
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1456078470,
+      "version": "1",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "highway": "raceway",
+        "name": "Las Vegas Strip Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1456078470",
+      "nodeIds": [
+        13016217985,
+        13016217986
+      ],
+      "coordinates": [
+        [
+          -115.1625601,
+          36.1086649
+        ],
+        [
+          -115.1618816,
+          36.1092838
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1456078471,
+      "version": "2",
+      "timestamp": "2026-09-23T02:56:17Z",
+      "tags": {
+        "bicycle": "yes",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "35 mph",
+        "motor_vehicle": "yes",
+        "name": "East Harmon Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1456078471",
+      "nodeIds": [
+        2852160864,
+        5509252535,
+        9497407198
+      ],
+      "coordinates": [
+        [
+          -115.1717973,
+          36.1079798
+        ],
+        [
+          -115.1712832,
+          36.1079671
+        ],
+        [
+          -115.1709059,
+          36.1079698
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1456078472,
+      "version": "3",
+      "timestamp": "2026-07-23T14:08:49Z",
+      "tags": {
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "35 mph",
+        "name": "Sands Avenue",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:hgv": "https://library.municode.com/nv/clark_county/codes/code_of_ordinances?nodeId=TIT14TR_CH14.46COVERE_14.46.030TRRODE",
+        "surface": "asphalt",
+        "tiger:cfcc": "A41",
+        "tiger:county": "Clark, NV",
+        "tiger:name_base": "Sands",
+        "tiger:name_type": "Ave"
+      },
+      "url": "https://www.openstreetmap.org/way/1456078472",
+      "nodeIds": [
+        137402143,
+        137402141,
+        137402137,
+        10081276856,
+        10081276857
+      ],
+      "coordinates": [
+        [
+          -115.1659988,
+          36.1230733
+        ],
+        [
+          -115.166099,
+          36.1231973
+        ],
+        [
+          -115.166263,
+          36.1234745
+        ],
+        [
+          -115.1665776,
+          36.1241561
+        ],
+        [
+          -115.1665792,
+          36.1241594
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1456078473,
+      "version": "2",
+      "timestamp": "2026-04-06T20:40:09Z",
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1456078473",
+      "nodeIds": [
+        12638889512,
+        12638889524,
+        12638889525,
+        13712353316,
+        13712353328,
+        12638889526,
+        12638889527,
+        12638889528
+      ],
+      "coordinates": [
+        [
+          -115.1601131,
+          36.1207408
+        ],
+        [
+          -115.1602507,
+          36.1207656
+        ],
+        [
+          -115.1603927,
+          36.1207924
+        ],
+        [
+          -115.1604773,
+          36.1208123
+        ],
+        [
+          -115.1605177,
+          36.1208295
+        ],
+        [
+          -115.1605654,
+          36.1208579
+        ],
+        [
+          -115.1606121,
+          36.1208892
+        ],
+        [
+          -115.160671,
+          36.1209393
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1456078474,
+      "version": "2",
+      "timestamp": "2026-05-25T08:24:06Z",
+      "tags": {
+        "highway": "service",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1456078474",
+      "nodeIds": [
+        12626696512,
+        13341705711,
+        13875610403,
+        12638889506,
+        12638889507,
+        12638889508,
+        12949325892,
+        12949325891,
+        12638889509,
+        12638889510,
+        12638889511,
+        12638889512
+      ],
+      "coordinates": [
+        [
+          -115.1611853,
+          36.1191725
+        ],
+        [
+          -115.1610652,
+          36.1192393
+        ],
+        [
+          -115.1609534,
+          36.1193016
+        ],
+        [
+          -115.1609218,
+          36.1193192
+        ],
+        [
+          -115.1605614,
+          36.1196028
+        ],
+        [
+          -115.1604001,
+          36.1197837
+        ],
+        [
+          -115.1603002,
+          36.1199581
+        ],
+        [
+          -115.1602819,
+          36.1199921
+        ],
+        [
+          -115.1601987,
+          36.1201468
+        ],
+        [
+          -115.1601417,
+          36.1203662
+        ],
+        [
+          -115.1601122,
+          36.1206152
+        ],
+        [
+          -115.1601131,
+          36.1207408
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1456078475,
+      "version": "1",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "highway": "raceway",
+        "name": "Las Vegas Strip Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1456078475",
+      "nodeIds": [
+        11348753622,
+        13016217998,
+        11348753623,
+        11348753624,
+        11348753625,
+        11348753626,
+        5717585567
+      ],
+      "coordinates": [
+        [
+          -115.1629216,
+          36.1104429
+        ],
+        [
+          -115.1631041,
+          36.1104891
+        ],
+        [
+          -115.1632648,
+          36.1105397
+        ],
+        [
+          -115.163431,
+          36.1106145
+        ],
+        [
+          -115.1636107,
+          36.11074
+        ],
+        [
+          -115.1637578,
+          36.1108918
+        ],
+        [
+          -115.1639284,
+          36.1111544
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1456078476,
+      "version": "1",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "highway": "raceway",
+        "name": "Las Vegas Strip Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1456078476",
+      "nodeIds": [
+        11348753612,
+        13016217995,
+        11348753613,
+        11348753614,
+        11348753615
+      ],
+      "coordinates": [
+        [
+          -115.160364,
+          36.1107004
+        ],
+        [
+          -115.1603395,
+          36.110795
+        ],
+        [
+          -115.1603463,
+          36.1108742
+        ],
+        [
+          -115.1604157,
+          36.1109842
+        ],
+        [
+          -115.1605274,
+          36.1110678
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1456078477,
+      "version": "1",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "highway": "raceway",
+        "name": "Las Vegas Strip Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1456078477",
+      "nodeIds": [
+        13016217986,
+        11348753611,
+        11348753612
+      ],
+      "coordinates": [
+        [
+          -115.1618816,
+          36.1092838
+        ],
+        [
+          -115.1604566,
+          36.1105837
+        ],
+        [
+          -115.160364,
+          36.1107004
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1456078478,
+      "version": "1",
+      "timestamp": "2025-12-04T18:25:46Z",
+      "tags": {
+        "highway": "raceway",
+        "name": "Las Vegas Strip Circuit",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1456078478",
+      "nodeIds": [
+        13341696778,
+        11358754437,
+        13016208734,
+        13016217987,
+        13016217988,
+        11348753609,
+        13016217989,
+        11348753610,
+        13016217985
+      ],
+      "coordinates": [
+        [
+          -115.1639015,
+          36.1079696
+        ],
+        [
+          -115.1636513,
+          36.1080479
+        ],
+        [
+          -115.1635088,
+          36.1080898
+        ],
+        [
+          -115.1633356,
+          36.1081544
+        ],
+        [
+          -115.163145,
+          36.1082226
+        ],
+        [
+          -115.1629815,
+          36.1083062
+        ],
+        [
+          -115.1628372,
+          36.1084118
+        ],
+        [
+          -115.1626928,
+          36.1085439
+        ],
+        [
+          -115.1625601,
+          36.1086649
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1486896083,
+      "version": "2",
+      "timestamp": "2026-08-10T21:55:23Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1486896083",
+      "nodeIds": [
+        13615751771,
+        13615751772
+      ],
+      "coordinates": [
+        [
+          -115.1729847,
+          36.117413
+        ],
+        [
+          -115.1729892,
+          36.1173174
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1547082474,
+      "version": "3",
+      "timestamp": "2026-09-22T03:36:09Z",
+      "tags": {
+        "alt_name": "Las Vegas Strip",
+        "hgv": "no",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "loc_name": "Las Vegas Boulevard South",
+        "maxheight": "default",
+        "maxspeed": "30 mph",
+        "name": "South Las Vegas Boulevard",
+        "old_ref": "US 91;SR 6;SR 604",
+        "oneway": "yes",
+        "postal_code": "89123",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "smoothness": "excellent",
+        "source:old_ref": "Nevada's State Maintained Highways (January 2003)",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1547082474",
+      "nodeIds": [
+        9835431642,
+        6016349698,
+        9832606128
+      ],
+      "coordinates": [
+        [
+          -115.1709547,
+          36.123125
+        ],
+        [
+          -115.1712722,
+          36.1226804
+        ],
+        [
+          -115.171321,
+          36.1226113
+        ]
+      ],
+      "closed": false
+    }
+  ],
+  "errors": [],
+  "retrievedAtUtc": "2026-11-15T12:26:13.124867+00:00",
+  "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+}

@@ -1,0 +1,3005 @@
+{
+  "circuitId": "baku",
+  "displayName": "Baku",
+  "appLengthKm": 6.003,
+  "appCenter": [
+    49.8533,
+    40.3725
+  ],
+  "queries": [
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/map?bbox=49.8456357,40.3666610,49.8609643,40.3783390",
+      "sha256": "5257259b86e4939d063a6963a5997d01d302f2e13b90517a56b9c8a647a65d6b",
+      "bytes": 2826470,
+      "radiusMeters": 650
+    },
+    {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11266687/full",
+      "sha256": "2f8ffe9fb6a6ea2d194f86ece4f9a9342c9fa32b9f90e904fe155d493e4e46d8",
+      "bytes": 79277
+    }
+  ],
+  "elements": [
+    {
+      "type": "node",
+      "id": 13826310746,
+      "version": "1",
+      "timestamp": "2026-05-14T03:43:44Z",
+      "tags": {
+        "name": "Start Line"
+      },
+      "url": "https://www.openstreetmap.org/node/13826310746",
+      "coordinates": [
+        49.8529141,
+        40.3725853
+      ]
+    },
+    {
+      "type": "node",
+      "id": 13826310747,
+      "version": "1",
+      "timestamp": "2026-05-14T03:43:44Z",
+      "tags": {
+        "name": "Finish Line"
+      },
+      "url": "https://www.openstreetmap.org/node/13826310747",
+      "coordinates": [
+        49.8517072,
+        40.3721915
+      ]
+    },
+    {
+      "type": "relation",
+      "id": 11266687,
+      "version": "40",
+      "timestamp": "2026-10-21T13:06:36Z",
+      "tags": {
+        "highway": "raceway",
+        "name": "Baku City Circuit",
+        "sport": "motor",
+        "surface": "asphalt",
+        "type": "circuit",
+        "wikidata": "Q17004958",
+        "wikipedia": "en:Baku City Circuit"
+      },
+      "url": "https://www.openstreetmap.org/relation/11266687",
+      "members": [
+        {
+          "type": "way",
+          "ref": 1069034735,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1413965638,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 167173315,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 290633714,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1415085014,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1415085013,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1548322894,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1548322893,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1548322892,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1548322891,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558832738,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 177431273,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 182645384,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558832740,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558832743,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1415075090,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1415063178,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1415075088,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1415063177,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1570371147,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 165695131,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558829712,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 25402777,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1168829202,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1329392228,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1168829203,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 766787796,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 179238852,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1555062568,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 323377758,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 131835265,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558855505,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 249018354,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 822375070,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 500527621,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1050381555,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 167173308,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1050381554,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 476752810,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 926192527,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1279858618,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 476752809,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 639403533,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1513267145,
+          "role": "pit_lane"
+        },
+        {
+          "type": "node",
+          "ref": 13826310746,
+          "role": "start"
+        },
+        {
+          "type": "node",
+          "ref": 13826310747,
+          "role": "finish"
+        },
+        {
+          "type": "way",
+          "ref": 1558832741,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558829713,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558832742,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558837058,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558839567,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 338326554,
+          "role": ""
+        },
+        {
+          "type": "way",
+          "ref": 1558855504,
+          "role": ""
+        }
+      ]
+    },
+    {
+      "type": "way",
+      "id": 25402777,
+      "version": "26",
+      "timestamp": "2025-04-14T19:37:04Z",
+      "tags": {
+        "highway": "secondary",
+        "lanes": "5",
+        "lanes:backward": "3",
+        "lanes:forward": "2",
+        "lit": "yes",
+        "name": "Puşkin küçəsi",
+        "name:az": "Puşkin küçəsi",
+        "name:az-cyr": "Пушкин күчәси",
+        "name:en": "Pushkin Street",
+        "name:ru": "улица Пушкина",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/25402777",
+      "nodeIds": [
+        276371597,
+        12216054794,
+        4462419096,
+        276842653
+      ],
+      "coordinates": [
+        [
+          49.8540339,
+          40.3753742
+        ],
+        [
+          49.8540464,
+          40.3753526
+        ],
+        [
+          49.8541224,
+          40.375224
+        ],
+        [
+          49.8546391,
+          40.3744093
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 131835265,
+      "version": "38",
+      "timestamp": "2026-08-07T07:53:53Z",
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "Neftçilər prospekti",
+        "name:az": "Neftçilər prospekti",
+        "name:az-cyr": "Нефтчиләр проспекти",
+        "name:en": "Neftchilar Avenue",
+        "name:ru": "проспект Нефтяников",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/131835265",
+      "nodeIds": [
+        2941447471,
+        14078184112,
+        2941447475,
+        9812799749,
+        2941447474,
+        276370538,
+        4475530721,
+        13953710316,
+        276371827
+      ],
+      "coordinates": [
+        [
+          49.8413111,
+          40.3686959
+        ],
+        [
+          49.8415426,
+          40.3688201
+        ],
+        [
+          49.8415609,
+          40.3688299
+        ],
+        [
+          49.8417306,
+          40.3689114
+        ],
+        [
+          49.8418955,
+          40.3689768
+        ],
+        [
+          49.8429139,
+          40.36933
+        ],
+        [
+          49.8453502,
+          40.3701204
+        ],
+        [
+          49.8455804,
+          40.3701953
+        ],
+        [
+          49.8456502,
+          40.370218
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 165695131,
+      "version": "48",
+      "timestamp": "2026-09-14T12:09:38Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Xaqani küçəsi",
+        "name:az": "Xaqani küçəsi",
+        "name:en": "Khagani Street",
+        "name:ru": "улица Хагани",
+        "oneway": "yes",
+        "parking:lane:both": "parallel",
+        "surface": "asphalt",
+        "wikidata": "Q368862",
+        "wikipedia": "en:Khaqani"
+      },
+      "url": "https://www.openstreetmap.org/way/165695131",
+      "nodeIds": [
+        6225812434,
+        2101927480,
+        276847442,
+        12367590228,
+        11729823831,
+        276846862,
+        276847443,
+        3889262340,
+        14180561340
+      ],
+      "coordinates": [
+        [
+          49.849819,
+          40.3750372
+        ],
+        [
+          49.8501887,
+          40.3751491
+        ],
+        [
+          49.851492,
+          40.3755552
+        ],
+        [
+          49.8515529,
+          40.3755748
+        ],
+        [
+          49.8515706,
+          40.3755792
+        ],
+        [
+          49.8516237,
+          40.375597
+        ],
+        [
+          49.851801,
+          40.3756525
+        ],
+        [
+          49.8528955,
+          40.3759653
+        ],
+        [
+          49.8533885,
+          40.3761149
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 167173308,
+      "version": "22",
+      "timestamp": "2024-11-29T20:09:01Z",
+      "tags": {
+        "highway": "primary",
+        "int_ref": "AH8",
+        "lit": "yes",
+        "name": "Niyazi küçəsi",
+        "name:en": "Niyazi Street",
+        "name:ru": "улица Ниязи",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/167173308",
+      "nodeIds": [
+        3454030819,
+        9652651820
+      ],
+      "coordinates": [
+        [
+          49.8311157,
+          40.3639098
+        ],
+        [
+          49.8311728,
+          40.3638921
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 167173315,
+      "version": "23",
+      "timestamp": "2024-09-19T07:48:07Z",
+      "tags": {
+        "highway": "trunk",
+        "int_name": "Neftchilar Prospect",
+        "int_ref": "E 60",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "Neftçilər prospekti",
+        "name:az": "Neftçilər prospekti",
+        "name:az-cyr": "Нефтчиләр проспекти",
+        "name:en": "Neftchilar Avenue",
+        "name:ru": "проспект Нефтяников",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/167173315",
+      "nodeIds": [
+        2290884750,
+        1797880831
+      ],
+      "coordinates": [
+        [
+          49.8417595,
+          40.3690778
+        ],
+        [
+          49.8411486,
+          40.3687248
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 177431273,
+      "version": "20",
+      "timestamp": "2026-09-14T12:22:43Z",
+      "tags": {
+        "cycleway:left": "lane",
+        "cycleway:left:oneway": "no",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "name": "Bülbül prospekti",
+        "name:az": "Bülbül prospekti",
+        "name:en": "Bulbul Avenue",
+        "name:ru": "проспект Бюльбюля",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/177431273",
+      "nodeIds": [
+        276371995,
+        14180627126
+      ],
+      "coordinates": [
+        [
+          49.8445259,
+          40.3722258
+        ],
+        [
+          49.8450242,
+          40.3713463
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 179238852,
+      "version": "49",
+      "timestamp": "2026-09-14T13:52:44Z",
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Neftçilər prospekti",
+        "name:az": "Neftçilər prospekti",
+        "name:az-cyr": "Нефтчиләр проспекти",
+        "name:en": "Neftchilar Avenue",
+        "name:ru": "проспект Нефтяников",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/179238852",
+      "nodeIds": [
+        276370540,
+        3648243699,
+        2558476048,
+        2557102477,
+        12988634893,
+        4489396194,
+        3648244741,
+        5607438769
+      ],
+      "coordinates": [
+        [
+          49.8486029,
+          40.3711852
+        ],
+        [
+          49.8486724,
+          40.3712074
+        ],
+        [
+          49.8487342,
+          40.3712272
+        ],
+        [
+          49.850091,
+          40.371668
+        ],
+        [
+          49.8505044,
+          40.3717988
+        ],
+        [
+          49.8505682,
+          40.3718192
+        ],
+        [
+          49.8506578,
+          40.3718508
+        ],
+        [
+          49.851408,
+          40.3720939
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 182645384,
+      "version": "23",
+      "timestamp": "2025-07-16T05:15:06Z",
+      "tags": {
+        "cycleway:left": "lane",
+        "cycleway:left:oneway": "no",
+        "foot": "no",
+        "highway": "primary",
+        "lanes": "3",
+        "name": "Bülbül prospekti",
+        "name:az": "Bülbül prospekti",
+        "name:en": "Bulbul Avenue",
+        "name:ru": "проспект Бюльбюля",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/182645384",
+      "nodeIds": [
+        5079651134,
+        12348830215,
+        276371995
+      ],
+      "coordinates": [
+        [
+          49.8444728,
+          40.3723298
+        ],
+        [
+          49.8444923,
+          40.3722918
+        ],
+        [
+          49.8445259,
+          40.3722258
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 249018354,
+      "version": "37",
+      "timestamp": "2026-09-14T13:41:32Z",
+      "tags": {
+        "highway": "trunk",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Neftçilər prospekti",
+        "name:az": "Neftçilər prospekti",
+        "name:az-cyr": "Нефтчиләр проспекти",
+        "name:en": "Neftchilar Avenue",
+        "name:ru": "проспект Нефтяников",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/249018354",
+      "nodeIds": [
+        2557155069,
+        3031367458,
+        2941455965,
+        2945156941,
+        14180802141
+      ],
+      "coordinates": [
+        [
+          49.8354224,
+          40.3633451
+        ],
+        [
+          49.8359273,
+          40.3640753
+        ],
+        [
+          49.8359745,
+          40.3641341
+        ],
+        [
+          49.8360381,
+          40.3641913
+        ],
+        [
+          49.8373795,
+          40.3651313
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 290633714,
+      "version": "17",
+      "timestamp": "2026-05-23T14:41:32Z",
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "4",
+        "maxspeed": "60",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/290633714",
+      "nodeIds": [
+        2290884761,
+        9813148803,
+        13866912249,
+        3594182942,
+        2941447472,
+        2941464307,
+        1416166974,
+        9812799763,
+        9812799762,
+        1416166971,
+        1416166973,
+        2290884756,
+        2290884754,
+        2290884755,
+        1416166976,
+        2290884750
+      ],
+      "coordinates": [
+        [
+          49.8421159,
+          40.3699619
+        ],
+        [
+          49.8419767,
+          40.3698928
+        ],
+        [
+          49.8418728,
+          40.3698249
+        ],
+        [
+          49.8417939,
+          40.369766
+        ],
+        [
+          49.8417461,
+          40.3697165
+        ],
+        [
+          49.841723,
+          40.3696813
+        ],
+        [
+          49.8417121,
+          40.3696427
+        ],
+        [
+          49.8417091,
+          40.3696134
+        ],
+        [
+          49.8417158,
+          40.3695704
+        ],
+        [
+          49.8417261,
+          40.3695421
+        ],
+        [
+          49.8418425,
+          40.369249
+        ],
+        [
+          49.841846,
+          40.3692132
+        ],
+        [
+          49.8418349,
+          40.3691692
+        ],
+        [
+          49.8418184,
+          40.3691346
+        ],
+        [
+          49.8417939,
+          40.3691043
+        ],
+        [
+          49.8417595,
+          40.3690778
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 323377758,
+      "version": "20",
+      "timestamp": "2026-09-04T09:40:28Z",
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "Neftçilər prospekti",
+        "name:az": "Neftçilər prospekti",
+        "name:az-cyr": "Нефтчиләр проспекти",
+        "name:en": "Neftchilar Avenue",
+        "name:ru": "проспект Нефтяников",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "left|left;through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/323377758",
+      "nodeIds": [
+        276371827,
+        276848321
+      ],
+      "coordinates": [
+        [
+          49.8456502,
+          40.370218
+        ],
+        [
+          49.8475002,
+          40.3708293
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 338326554,
+      "version": "17",
+      "timestamp": "2025-07-21T05:38:03Z",
+      "tags": {
+        "highway": "primary",
+        "int_ref": "AH8",
+        "lit": "yes",
+        "name": "Niyazi küçəsi",
+        "name:en": "Niyazi Street",
+        "name:ru": "улица Ниязи",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/338326554",
+      "nodeIds": [
+        4702367253,
+        9652645366,
+        13014858215,
+        3594182936,
+        7241246551
+      ],
+      "coordinates": [
+        [
+          49.8331686,
+          40.3631032
+        ],
+        [
+          49.8332358,
+          40.3630761
+        ],
+        [
+          49.8337331,
+          40.3628808
+        ],
+        [
+          49.8343061,
+          40.3626559
+        ],
+        [
+          49.8345063,
+          40.3625813
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 476752809,
+      "version": "26",
+      "timestamp": "2026-08-07T06:12:34Z",
+      "tags": {
+        "cycleway:right": "track",
+        "highway": "primary",
+        "int_ref": "AH8",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "İstiqlaliyyət küçəsi",
+        "name:az": "İstiqlaliyyət küçəsi",
+        "name:en": "Istiglaliyyat Street",
+        "name:ru": "улица Истиглалиййят",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "parking:both": "no",
+        "sidewalk:both": "separate",
+        "surface": "asphalt",
+        "wikidata": "Q4472311",
+        "wikipedia": "en:Istiglaliyyat Street"
+      },
+      "url": "https://www.openstreetmap.org/way/476752809",
+      "nodeIds": [
+        276887830,
+        10593475597,
+        277334987,
+        9823366017,
+        3765773689,
+        9823360115,
+        276880945,
+        13003842717,
+        14078062197,
+        9823360112,
+        9823360111,
+        9823360108,
+        277336019,
+        277336118,
+        9823327612,
+        276881459,
+        13929297066,
+        9630529549,
+        3463121869
+      ],
+      "coordinates": [
+        [
+          49.8313437,
+          40.367165
+        ],
+        [
+          49.8314116,
+          40.3673438
+        ],
+        [
+          49.8315478,
+          40.3676905
+        ],
+        [
+          49.8315717,
+          40.3677415
+        ],
+        [
+          49.8316014,
+          40.3677881
+        ],
+        [
+          49.8316408,
+          40.3678426
+        ],
+        [
+          49.8316892,
+          40.3678889
+        ],
+        [
+          49.8317105,
+          40.3679101
+        ],
+        [
+          49.8317327,
+          40.3679282
+        ],
+        [
+          49.8317555,
+          40.3679468
+        ],
+        [
+          49.8318279,
+          40.3679949
+        ],
+        [
+          49.8319016,
+          40.3680368
+        ],
+        [
+          49.8323905,
+          40.3682624
+        ],
+        [
+          49.8330439,
+          40.3685626
+        ],
+        [
+          49.8332933,
+          40.3686536
+        ],
+        [
+          49.8339129,
+          40.3688823
+        ],
+        [
+          49.8345428,
+          40.3690979
+        ],
+        [
+          49.834665,
+          40.3691393
+        ],
+        [
+          49.8346874,
+          40.3691477
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 476752810,
+      "version": "25",
+      "timestamp": "2026-09-14T13:25:17Z",
+      "tags": {
+        "highway": "primary",
+        "int_ref": "AH8",
+        "lane_markings": "yes",
+        "lanes": "4",
+        "lit": "yes",
+        "name": "İstiqlaliyyət küçəsi",
+        "name:az": "İstiqlaliyyət küçəsi",
+        "name:en": "Istiglaliyyat Street",
+        "name:ru": "улица Истиглалиййят",
+        "oneway": "no",
+        "parking:both": "no",
+        "sidewalk:both": "separate",
+        "smoothness": "excellent",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/476752810",
+      "nodeIds": [
+        4702367255,
+        9652651825,
+        4702367245,
+        9823360097,
+        3454030834,
+        1467420792,
+        9652645374,
+        14180755428,
+        9652645397
+      ],
+      "coordinates": [
+        [
+          49.8309367,
+          40.3661235
+        ],
+        [
+          49.830924,
+          40.3660381
+        ],
+        [
+          49.830922,
+          40.3659582
+        ],
+        [
+          49.8309253,
+          40.3658756
+        ],
+        [
+          49.8309343,
+          40.3657592
+        ],
+        [
+          49.8309831,
+          40.3652557
+        ],
+        [
+          49.8310547,
+          40.364511
+        ],
+        [
+          49.8310604,
+          40.3643296
+        ],
+        [
+          49.8310606,
+          40.3640383
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 500527621,
+      "version": "10",
+      "timestamp": "2024-11-29T20:07:30Z",
+      "tags": {
+        "highway": "primary",
+        "int_ref": "AH8",
+        "lanes": "2",
+        "lit": "yes",
+        "name": "Niyazi küçəsi",
+        "name:en": "Niyazi Street",
+        "name:ru": "улица Ниязи",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/500527621",
+      "nodeIds": [
+        4702367250,
+        4702367253
+      ],
+      "coordinates": [
+        [
+          49.8319515,
+          40.3635846
+        ],
+        [
+          49.8331686,
+          40.3631032
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 639403533,
+      "version": "15",
+      "timestamp": "2026-04-30T21:09:15Z",
+      "tags": {
+        "access": "permissive",
+        "cycleway:right": "lane",
+        "highway": "service",
+        "lit": "yes",
+        "maxspeed": "20",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/639403533",
+      "nodeIds": [
+        12990498600,
+        13756192601,
+        13756149458,
+        3454030843,
+        13756149500,
+        7065820506,
+        12990514004,
+        12990514017,
+        13756149498,
+        13756149499,
+        13763369189,
+        2125106195,
+        3463121877
+      ],
+      "coordinates": [
+        [
+          49.8358329,
+          40.3694064
+        ],
+        [
+          49.8358683,
+          40.369396
+        ],
+        [
+          49.8358914,
+          40.3693812
+        ],
+        [
+          49.8359114,
+          40.3693624
+        ],
+        [
+          49.8359233,
+          40.3693398
+        ],
+        [
+          49.8360944,
+          40.368918
+        ],
+        [
+          49.8361098,
+          40.3688911
+        ],
+        [
+          49.8361268,
+          40.3688746
+        ],
+        [
+          49.8361482,
+          40.3688634
+        ],
+        [
+          49.8361905,
+          40.3688501
+        ],
+        [
+          49.836206,
+          40.368847
+        ],
+        [
+          49.8362533,
+          40.3688464
+        ],
+        [
+          49.8363592,
+          40.3688452
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 766787796,
+      "version": "13",
+      "timestamp": "2026-05-14T03:43:44Z",
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Neftçilər prospekti",
+        "name:az": "Neftçilər prospekti",
+        "name:az-cyr": "Нефтчиләр проспекти",
+        "name:en": "Neftchilar Avenue",
+        "name:ru": "проспект Нефтяников",
+        "oneway": "yes",
+        "sidewalk:left": "yes",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/766787796",
+      "nodeIds": [
+        5607438769,
+        13826310747,
+        13826310746,
+        10869386375
+      ],
+      "coordinates": [
+        [
+          49.851408,
+          40.3720939
+        ],
+        [
+          49.8517072,
+          40.3721915
+        ],
+        [
+          49.8529141,
+          40.3725853
+        ],
+        [
+          49.855042,
+          40.3732719
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 822375070,
+      "version": "9",
+      "timestamp": "2026-09-14T13:41:32Z",
+      "tags": {
+        "highway": "raceway",
+        "sport": "motor"
+      },
+      "url": "https://www.openstreetmap.org/way/822375070",
+      "nodeIds": [
+        7241246551,
+        14180802143,
+        14180802151,
+        14180802139,
+        14180802142,
+        7678658474,
+        2557155069
+      ],
+      "coordinates": [
+        [
+          49.8345063,
+          40.3625813
+        ],
+        [
+          49.8346189,
+          40.3625482
+        ],
+        [
+          49.834737,
+          40.3625402
+        ],
+        [
+          49.8348298,
+          40.3625604
+        ],
+        [
+          49.8348803,
+          40.362596
+        ],
+        [
+          49.8349273,
+          40.3626483
+        ],
+        [
+          49.8354224,
+          40.3633451
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 926192527,
+      "version": "13",
+      "timestamp": "2026-03-31T17:21:25Z",
+      "tags": {
+        "cycleway:right": "track",
+        "highway": "primary",
+        "int_ref": "AH8",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "İstiqlaliyyət küçəsi",
+        "name:az": "İstiqlaliyyət küçəsi",
+        "name:en": "Istiglaliyyat Street",
+        "name:ru": "улица Истиглалиййят",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "sidewalk:both": "separate",
+        "smoothness": "good",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/926192527",
+      "nodeIds": [
+        4702367255,
+        9652651824,
+        9652651826,
+        9630529519,
+        276881215
+      ],
+      "coordinates": [
+        [
+          49.8309367,
+          40.3661235
+        ],
+        [
+          49.8309535,
+          40.3661771
+        ],
+        [
+          49.8309723,
+          40.3662292
+        ],
+        [
+          49.8309939,
+          40.3662844
+        ],
+        [
+          49.8311006,
+          40.3665488
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1050381554,
+      "version": "3",
+      "timestamp": "2024-11-29T20:08:59Z",
+      "tags": {
+        "highway": "primary",
+        "int_ref": "AH8",
+        "lit": "yes",
+        "name": "İstiqlaliyyət küçəsi",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1050381554",
+      "nodeIds": [
+        9652645397,
+        9652645377,
+        9652645376,
+        9652645369,
+        9652645373,
+        9652645370,
+        3454030819
+      ],
+      "coordinates": [
+        [
+          49.8310606,
+          40.3640383
+        ],
+        [
+          49.8310623,
+          40.3640075
+        ],
+        [
+          49.8310727,
+          40.3639696
+        ],
+        [
+          49.8310815,
+          40.3639474
+        ],
+        [
+          49.8310884,
+          40.3639339
+        ],
+        [
+          49.8310986,
+          40.3639219
+        ],
+        [
+          49.8311157,
+          40.3639098
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1050381555,
+      "version": "7",
+      "timestamp": "2026-04-07T17:21:02Z",
+      "tags": {
+        "highway": "primary",
+        "int_ref": "AH8",
+        "lane_markings": "yes",
+        "lit": "yes",
+        "name": "Niyazi küçəsi",
+        "name:en": "Niyazi Street",
+        "name:ru": "улица Ниязи",
+        "oneway": "no",
+        "sidewalk": "both",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1050381555",
+      "nodeIds": [
+        9652651820,
+        4702367250
+      ],
+      "coordinates": [
+        [
+          49.8311728,
+          40.3638921
+        ],
+        [
+          49.8319515,
+          40.3635846
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1069034735,
+      "version": "24",
+      "timestamp": "2026-09-14T12:50:28Z",
+      "tags": {
+        "addr:street": "Əziz Əliyev küç.",
+        "bicycle": "no",
+        "cycleway:right": "lane",
+        "foot": "yes",
+        "highway": "pedestrian",
+        "horse": "permissive",
+        "lit": "yes",
+        "maxspeed": "60",
+        "motor_vehicle": "no",
+        "name": "Əziz Əliyev küçəsi",
+        "name:az": "Əziz Əliyev küçəsi",
+        "name:en": "Aziz Aliyev Street",
+        "oneway": "no",
+        "surface": "asphalt",
+        "wikidata": "Q4062274",
+        "wikipedia": "en:Aziz Aliyev"
+      },
+      "url": "https://www.openstreetmap.org/way/1069034735",
+      "nodeIds": [
+        3463121877,
+        13783066057,
+        13783066058,
+        13756192605,
+        276876589,
+        13756149461,
+        9823366030,
+        1770473732,
+        1770473731,
+        276876590,
+        9823366033,
+        1770473722,
+        1466042013,
+        9823366034,
+        1770473714,
+        9823366032,
+        9823340878,
+        13756192713,
+        9823340879,
+        13783066065
+      ],
+      "coordinates": [
+        [
+          49.8363592,
+          40.3688452
+        ],
+        [
+          49.8364141,
+          40.3688463
+        ],
+        [
+          49.8364627,
+          40.3688478
+        ],
+        [
+          49.8366421,
+          40.3688578
+        ],
+        [
+          49.8366886,
+          40.3688589
+        ],
+        [
+          49.8367279,
+          40.3688575
+        ],
+        [
+          49.8367585,
+          40.3688529
+        ],
+        [
+          49.8367898,
+          40.3688448
+        ],
+        [
+          49.8368233,
+          40.3688301
+        ],
+        [
+          49.8370633,
+          40.3687253
+        ],
+        [
+          49.8370883,
+          40.3687218
+        ],
+        [
+          49.8371176,
+          40.3687237
+        ],
+        [
+          49.8371798,
+          40.3687345
+        ],
+        [
+          49.8372188,
+          40.3687449
+        ],
+        [
+          49.8372618,
+          40.3687495
+        ],
+        [
+          49.8372983,
+          40.3687477
+        ],
+        [
+          49.837335,
+          40.3687328
+        ],
+        [
+          49.8373566,
+          40.3687167
+        ],
+        [
+          49.8373731,
+          40.3686922
+        ],
+        [
+          49.8380764,
+          40.3671043
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1168829202,
+      "version": "6",
+      "timestamp": "2026-09-14T12:09:38Z",
+      "tags": {
+        "cycleway:right": "lane",
+        "highway": "secondary",
+        "lit": "yes",
+        "name": "Puşkin küçəsi",
+        "name:az": "Puşkin küçəsi",
+        "name:az-cyr": "Пушкин күчәси",
+        "name:en": "Pushkin Street",
+        "name:ru": "улица Пушкина",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1168829202",
+      "nodeIds": [
+        276842653,
+        12216060845,
+        14180561347,
+        3383981132
+      ],
+      "coordinates": [
+        [
+          49.8546391,
+          40.3744093
+        ],
+        [
+          49.8546521,
+          40.3743876
+        ],
+        [
+          49.854708,
+          40.3742936
+        ],
+        [
+          49.8547871,
+          40.3741607
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1168829203,
+      "version": "4",
+      "timestamp": "2026-09-14T12:09:38Z",
+      "tags": {
+        "highway": "raceway",
+        "sport": "motor"
+      },
+      "url": "https://www.openstreetmap.org/way/1168829203",
+      "nodeIds": [
+        10869386375,
+        10869386374,
+        10869386373,
+        10869386372,
+        10869386371,
+        9811381248
+      ],
+      "coordinates": [
+        [
+          49.855042,
+          40.3732719
+        ],
+        [
+          49.8551314,
+          40.3733214
+        ],
+        [
+          49.8551752,
+          40.3733815
+        ],
+        [
+          49.8551723,
+          40.3734536
+        ],
+        [
+          49.8551466,
+          40.3735104
+        ],
+        [
+          49.8550024,
+          40.3737941
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1279858618,
+      "version": "6",
+      "timestamp": "2025-06-12T05:59:36Z",
+      "tags": {
+        "cycleway:right": "track",
+        "highway": "primary",
+        "int_ref": "AH8",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "İstiqlaliyyət küçəsi",
+        "name:az": "İstiqlaliyyət küçəsi",
+        "name:en": "Istiglaliyyat Street",
+        "name:ru": "улица Истиглалиййят",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1279858618",
+      "nodeIds": [
+        276881215,
+        276887830
+      ],
+      "coordinates": [
+        [
+          49.8311006,
+          40.3665488
+        ],
+        [
+          49.8313437,
+          40.367165
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1329392228,
+      "version": "3",
+      "timestamp": "2026-09-14T12:09:38Z",
+      "tags": {
+        "highway": "secondary",
+        "lit": "yes",
+        "name": "Puşkin küçəsi",
+        "name:az": "Puşkin küçəsi",
+        "name:az-cyr": "Пушкин күчәси",
+        "name:en": "Pushkin Street",
+        "name:ru": "улица Пушкина",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1329392228",
+      "nodeIds": [
+        3383981132,
+        2844641823,
+        9811381248
+      ],
+      "coordinates": [
+        [
+          49.8547871,
+          40.3741607
+        ],
+        [
+          49.8549323,
+          40.3738985
+        ],
+        [
+          49.8550024,
+          40.3737941
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1413965638,
+      "version": "5",
+      "timestamp": "2026-09-14T12:50:28Z",
+      "tags": {
+        "highway": "trunk",
+        "int_name": "Neftchilar Prospect",
+        "int_ref": "E 60",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Neftçilər prospekti",
+        "name:az": "Neftçilər prospekti",
+        "name:az-cyr": "Нефтчиләр проспекти",
+        "name:en": "Neftchilar Avenue",
+        "name:ru": "проспект Нефтяников",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk": "both",
+        "sidewalk:both:surface": "paving_stones",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1413965638",
+      "nodeIds": [
+        1797880831,
+        276876530,
+        3077754617,
+        14134539622,
+        276370536,
+        9812858715,
+        2290884749
+      ],
+      "coordinates": [
+        [
+          49.8411486,
+          40.3687248
+        ],
+        [
+          49.8400474,
+          40.368056
+        ],
+        [
+          49.8389888,
+          40.3674542
+        ],
+        [
+          49.8388073,
+          40.3673493
+        ],
+        [
+          49.8385545,
+          40.3672033
+        ],
+        [
+          49.8384898,
+          40.3671631
+        ],
+        [
+          49.8384273,
+          40.3671182
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1415063177,
+      "version": "2",
+      "timestamp": "2026-10-21T13:06:36Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "foot": "no",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Xaqani küçəsi",
+        "name:az": "Xaqani küçəsi",
+        "name:en": "Khagani Street",
+        "name:ru": "улица Хагани",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "wikidata": "Q368862",
+        "wikipedia": "en:Khaqani"
+      },
+      "url": "https://www.openstreetmap.org/way/1415063177",
+      "nodeIds": [
+        6225812433,
+        276374004
+      ],
+      "coordinates": [
+        [
+          49.8496235,
+          40.3749734
+        ],
+        [
+          49.8497366,
+          40.3750116
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1415063178,
+      "version": "2",
+      "timestamp": "2025-07-16T03:14:25Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "foot": "no",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Xaqani küçəsi",
+        "name:az": "Xaqani küçəsi",
+        "name:en": "Khagani Street",
+        "name:ru": "улица Хагани",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "wikidata": "Q368862",
+        "wikipedia": "en:Khaqani"
+      },
+      "url": "https://www.openstreetmap.org/way/1415063178",
+      "nodeIds": [
+        276846863,
+        12224096820
+      ],
+      "coordinates": [
+        [
+          49.8469013,
+          40.3740327
+        ],
+        [
+          49.8470069,
+          40.3740687
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1415075088,
+      "version": "3",
+      "timestamp": "2026-07-01T22:12:21Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Xaqani küçəsi",
+        "name:az": "Xaqani küçəsi",
+        "name:en": "Khagani Street",
+        "name:ru": "улица Хагани",
+        "oneway": "yes",
+        "parking:lane:both": "parallel",
+        "surface": "asphalt",
+        "wikidata": "Q368862",
+        "wikipedia": "en:Khaqani"
+      },
+      "url": "https://www.openstreetmap.org/way/1415075088",
+      "nodeIds": [
+        12224096820,
+        6225812433
+      ],
+      "coordinates": [
+        [
+          49.8470069,
+          40.3740687
+        ],
+        [
+          49.8496235,
+          40.3749734
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1415075090,
+      "version": "1",
+      "timestamp": "2025-07-16T03:14:25Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "foot": "no",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Xaqani küçəsi",
+        "name:az": "Xaqani küçəsi",
+        "name:en": "Khagani Street",
+        "name:ru": "улица Хагани",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "wikidata": "Q368862",
+        "wikipedia": "en:Khaqani"
+      },
+      "url": "https://www.openstreetmap.org/way/1415075090",
+      "nodeIds": [
+        4489370567,
+        276846863
+      ],
+      "coordinates": [
+        [
+          49.8467878,
+          40.3739938
+        ],
+        [
+          49.8469013,
+          40.3740327
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1415085013,
+      "version": "1",
+      "timestamp": "2025-07-16T05:15:06Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "cycleway:left:oneway": "-1",
+        "foot": "no",
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "Zərifə Əliyeva küçəsi",
+        "name:az": "Zərifə Əliyeva küçəsi",
+        "name:en": "Zarifa Aliyeva Street",
+        "name:ru": "улица Зарифы Алиевой",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1415085013",
+      "nodeIds": [
+        7190127942,
+        276371182
+      ],
+      "coordinates": [
+        [
+          49.843349,
+          40.370525
+        ],
+        [
+          49.843251,
+          40.3704894
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1415085014,
+      "version": "1",
+      "timestamp": "2025-07-16T05:15:06Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "cycleway:left:oneway": "-1",
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "Zərifə Əliyeva küçəsi",
+        "name:az": "Zərifə Əliyeva küçəsi",
+        "name:en": "Zarifa Aliyeva Street",
+        "name:ru": "улица Зарифы Алиевой",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1415085014",
+      "nodeIds": [
+        276371182,
+        5280753618,
+        2290884761
+      ],
+      "coordinates": [
+        [
+          49.843251,
+          40.3704894
+        ],
+        [
+          49.8422111,
+          40.370009
+        ],
+        [
+          49.8421159,
+          40.3699619
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1513267145,
+      "version": "7",
+      "timestamp": "2026-09-14T14:17:11Z",
+      "tags": {
+        "highway": "raceway",
+        "name": "Pit Lane",
+        "oneway": "yes",
+        "sport": "motor",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1513267145",
+      "nodeIds": [
+        14180845361,
+        13826279381,
+        13826279385,
+        14180845363,
+        14180845365,
+        14180855827,
+        14180854750,
+        14180845364,
+        14180855828,
+        14180889254,
+        14180845362,
+        14180845360,
+        13826279390,
+        14180561348,
+        13826279391,
+        14180561349,
+        13826279392,
+        14180561341,
+        14180561347
+      ],
+      "coordinates": [
+        [
+          49.8482649,
+          40.3710761
+        ],
+        [
+          49.8498691,
+          40.3716558
+        ],
+        [
+          49.8508813,
+          40.3719802
+        ],
+        [
+          49.8509724,
+          40.3720171
+        ],
+        [
+          49.8510657,
+          40.3720642
+        ],
+        [
+          49.8511413,
+          40.3721069
+        ],
+        [
+          49.8512223,
+          40.3721412
+        ],
+        [
+          49.8513003,
+          40.3721613
+        ],
+        [
+          49.8514105,
+          40.3721665
+        ],
+        [
+          49.8515128,
+          40.3721795
+        ],
+        [
+          49.8515831,
+          40.3722004
+        ],
+        [
+          49.8517109,
+          40.3722515
+        ],
+        [
+          49.8549636,
+          40.3733503
+        ],
+        [
+          49.8550279,
+          40.3733887
+        ],
+        [
+          49.8550761,
+          40.3734494
+        ],
+        [
+          49.8550708,
+          40.3735239
+        ],
+        [
+          49.8550354,
+          40.3735873
+        ],
+        [
+          49.8547822,
+          40.374011
+        ],
+        [
+          49.854708,
+          40.3742936
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1548322891,
+      "version": "1",
+      "timestamp": "2026-08-09T13:59:01Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "cycleway:left:oneway": "-1",
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "Zərifə Əliyeva küçəsi",
+        "name:az": "Zərifə Əliyeva küçəsi",
+        "name:en": "Zarifa Aliyeva Street",
+        "name:ru": "улица Зарифы Алиевой",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1548322891",
+      "nodeIds": [
+        9812789080,
+        9812789084
+      ],
+      "coordinates": [
+        [
+          49.8445875,
+          40.3709294
+        ],
+        [
+          49.8444834,
+          40.3708947
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1548322892,
+      "version": "1",
+      "timestamp": "2026-08-09T13:59:01Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "cycleway:left:oneway": "-1",
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "Zərifə Əliyeva küçəsi",
+        "name:az": "Zərifə Əliyeva küçəsi",
+        "name:en": "Zarifa Aliyeva Street",
+        "name:ru": "улица Зарифы Алиевой",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1548322892",
+      "nodeIds": [
+        9812789084,
+        9812789082
+      ],
+      "coordinates": [
+        [
+          49.8444834,
+          40.3708947
+        ],
+        [
+          49.8440058,
+          40.3707378
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1548322893,
+      "version": "1",
+      "timestamp": "2026-08-09T13:59:01Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "cycleway:left:oneway": "-1",
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "Zərifə Əliyeva küçəsi",
+        "name:az": "Zərifə Əliyeva küçəsi",
+        "name:en": "Zarifa Aliyeva Street",
+        "name:ru": "улица Зарифы Алиевой",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1548322893",
+      "nodeIds": [
+        9812789082,
+        11309681420
+      ],
+      "coordinates": [
+        [
+          49.8440058,
+          40.3707378
+        ],
+        [
+          49.8438871,
+          40.3706977
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1548322894,
+      "version": "1",
+      "timestamp": "2026-08-09T13:59:01Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "cycleway:left:oneway": "-1",
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "Zərifə Əliyeva küçəsi",
+        "name:az": "Zərifə Əliyeva küçəsi",
+        "name:en": "Zarifa Aliyeva Street",
+        "name:ru": "улица Зарифы Алиевой",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1548322894",
+      "nodeIds": [
+        11309681420,
+        13953710327,
+        7190127942
+      ],
+      "coordinates": [
+        [
+          49.8438871,
+          40.3706977
+        ],
+        [
+          49.8434279,
+          40.3705503
+        ],
+        [
+          49.843349,
+          40.370525
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1555062568,
+      "version": "2",
+      "timestamp": "2026-09-14T13:52:44Z",
+      "tags": {
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "Neftçilər prospekti",
+        "name:az": "Neftçilər prospekti",
+        "name:az-cyr": "Нефтчиләр проспекти",
+        "name:en": "Neftchilar Avenue",
+        "name:ru": "проспект Нефтяников",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "left|left;through|through|through"
+      },
+      "url": "https://www.openstreetmap.org/way/1555062568",
+      "nodeIds": [
+        276848321,
+        14180845361,
+        276370540
+      ],
+      "coordinates": [
+        [
+          49.8475002,
+          40.3708293
+        ],
+        [
+          49.8482649,
+          40.3710761
+        ],
+        [
+          49.8486029,
+          40.3711852
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558829712,
+      "version": "1",
+      "timestamp": "2026-09-14T12:09:38Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "highway": "secondary",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Puşkin küçəsi",
+        "name:az": "Puşkin küçəsi",
+        "name:az-cyr": "Пушкин күчәси",
+        "name:en": "Pushkin Street",
+        "name:ru": "улица Пушкина",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1558829712",
+      "nodeIds": [
+        14180561343,
+        7384081390,
+        4445139960,
+        4462419092,
+        276371597
+      ],
+      "coordinates": [
+        [
+          49.8536511,
+          40.3760471
+        ],
+        [
+          49.8538434,
+          40.3756973
+        ],
+        [
+          49.8539269,
+          40.3755461
+        ],
+        [
+          49.8539725,
+          40.3754718
+        ],
+        [
+          49.8540339,
+          40.3753742
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558829713,
+      "version": "1",
+      "timestamp": "2026-09-14T12:09:38Z",
+      "tags": {
+        "highway": "raceway",
+        "sport": "motor"
+      },
+      "url": "https://www.openstreetmap.org/way/1558829713",
+      "nodeIds": [
+        14180561343,
+        14180561346,
+        14180561345,
+        14180561342,
+        14180561340
+      ],
+      "coordinates": [
+        [
+          49.8536511,
+          40.3760471
+        ],
+        [
+          49.8535966,
+          40.3760966
+        ],
+        [
+          49.8535457,
+          40.376118
+        ],
+        [
+          49.8534739,
+          40.3761243
+        ],
+        [
+          49.8533885,
+          40.3761149
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558832738,
+      "version": "1",
+      "timestamp": "2026-09-14T12:22:43Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "cycleway:left:oneway": "-1",
+        "highway": "trunk",
+        "int_ref": "E 60",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "Zərifə Əliyeva küçəsi",
+        "name:az": "Zərifə Əliyeva küçəsi",
+        "name:en": "Zarifa Aliyeva Street",
+        "name:ru": "улица Зарифы Алиевой",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1558832738",
+      "nodeIds": [
+        14180627128,
+        9812789080
+      ],
+      "coordinates": [
+        [
+          49.8449001,
+          40.3710394
+        ],
+        [
+          49.8445875,
+          40.3709294
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558832740,
+      "version": "1",
+      "timestamp": "2026-09-14T12:22:43Z",
+      "tags": {
+        "cycleway:left": "lane",
+        "cycleway:left:oneway": "no",
+        "highway": "primary",
+        "lanes": "3",
+        "name": "Bülbül prospekti",
+        "name:az": "Bülbül prospekti",
+        "name:en": "Bulbul Avenue",
+        "name:ru": "проспект Бюльбюля",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1558832740",
+      "nodeIds": [
+        14180627127,
+        3077754627,
+        13866875481,
+        5079651134
+      ],
+      "coordinates": [
+        [
+          49.844189,
+          40.3729238
+        ],
+        [
+          49.8444355,
+          40.3724068
+        ],
+        [
+          49.84446,
+          40.3723548
+        ],
+        [
+          49.8444728,
+          40.3723298
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558832741,
+      "version": "1",
+      "timestamp": "2026-09-14T12:22:43Z",
+      "tags": {
+        "highway": "raceway",
+        "sport": "motor"
+      },
+      "url": "https://www.openstreetmap.org/way/1558832741",
+      "nodeIds": [
+        14180627131,
+        14180627123,
+        14180627132,
+        14180627129,
+        14180627127
+      ],
+      "coordinates": [
+        [
+          49.8443221,
+          40.3731325
+        ],
+        [
+          49.8442488,
+          40.3730938
+        ],
+        [
+          49.8442104,
+          40.3730501
+        ],
+        [
+          49.8441879,
+          40.3729909
+        ],
+        [
+          49.844189,
+          40.3729238
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558832742,
+      "version": "1",
+      "timestamp": "2026-09-14T12:22:43Z",
+      "tags": {
+        "highway": "raceway",
+        "sport": "motor"
+      },
+      "url": "https://www.openstreetmap.org/way/1558832742",
+      "nodeIds": [
+        14180627126,
+        14180627124,
+        14180627125,
+        14180627130,
+        14180627128
+      ],
+      "coordinates": [
+        [
+          49.8450242,
+          40.3713463
+        ],
+        [
+          49.8450521,
+          40.3712441
+        ],
+        [
+          49.845042,
+          40.371164
+        ],
+        [
+          49.8449914,
+          40.3710997
+        ],
+        [
+          49.8449001,
+          40.3710394
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558832743,
+      "version": "1",
+      "timestamp": "2026-09-14T12:22:43Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Xaqani küçəsi",
+        "name:az": "Xaqani küçəsi",
+        "name:en": "Khagani Street",
+        "name:ru": "улица Хагани",
+        "oneway": "yes",
+        "parking:lane:both": "parallel",
+        "surface": "asphalt",
+        "wikidata": "Q368862",
+        "wikipedia": "en:Khaqani"
+      },
+      "url": "https://www.openstreetmap.org/way/1558832743",
+      "nodeIds": [
+        14180627131,
+        4489370565,
+        4489370567
+      ],
+      "coordinates": [
+        [
+          49.8443221,
+          40.3731325
+        ],
+        [
+          49.8467214,
+          40.3739722
+        ],
+        [
+          49.8467878,
+          40.3739938
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558837058,
+      "version": "2",
+      "timestamp": "2026-09-14T12:50:01Z",
+      "tags": {
+        "highway": "raceway",
+        "sport": "motor"
+      },
+      "url": "https://www.openstreetmap.org/way/1558837058",
+      "nodeIds": [
+        2290884749,
+        14180657606,
+        14180657605,
+        14180657609,
+        14180657610,
+        14180599600,
+        13783066065
+      ],
+      "coordinates": [
+        [
+          49.8384273,
+          40.3671182
+        ],
+        [
+          49.8383778,
+          40.3670897
+        ],
+        [
+          49.8383323,
+          40.3670746
+        ],
+        [
+          49.8382789,
+          40.3670668
+        ],
+        [
+          49.8381335,
+          40.3670739
+        ],
+        [
+          49.8381011,
+          40.3670828
+        ],
+        [
+          49.8380764,
+          40.3671043
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558839567,
+      "version": "1",
+      "timestamp": "2026-09-14T13:01:56Z",
+      "tags": {
+        "highway": "raceway",
+        "sport": "motor"
+      },
+      "url": "https://www.openstreetmap.org/way/1558839567",
+      "nodeIds": [
+        12990498600,
+        14180677242,
+        14180677243,
+        14180677245,
+        14180677244,
+        3463121869
+      ],
+      "coordinates": [
+        [
+          49.8358329,
+          40.3694064
+        ],
+        [
+          49.8357828,
+          40.3694172
+        ],
+        [
+          49.8357131,
+          40.3694162
+        ],
+        [
+          49.8356299,
+          40.3693998
+        ],
+        [
+          49.8348172,
+          40.3691866
+        ],
+        [
+          49.8346874,
+          40.3691477
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558855504,
+      "version": "1",
+      "timestamp": "2026-09-14T13:41:32Z",
+      "tags": {
+        "highway": "raceway",
+        "sport": "motor"
+      },
+      "url": "https://www.openstreetmap.org/way/1558855504",
+      "nodeIds": [
+        14180802141,
+        14180802144,
+        14180802145,
+        14180802152,
+        14180802140,
+        14180802149,
+        14180802150,
+        14180802147,
+        14180802146,
+        14180802148,
+        9812867727
+      ],
+      "coordinates": [
+        [
+          49.8373795,
+          40.3651313
+        ],
+        [
+          49.8376596,
+          40.3653635
+        ],
+        [
+          49.8378079,
+          40.3654987
+        ],
+        [
+          49.8378847,
+          40.3655889
+        ],
+        [
+          49.8379377,
+          40.3656792
+        ],
+        [
+          49.8380168,
+          40.3658289
+        ],
+        [
+          49.8380801,
+          40.3659946
+        ],
+        [
+          49.8382611,
+          40.366656
+        ],
+        [
+          49.8383244,
+          40.3668179
+        ],
+        [
+          49.8383824,
+          40.3669062
+        ],
+        [
+          49.8384684,
+          40.3670032
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1558855505,
+      "version": "1",
+      "timestamp": "2026-09-14T13:41:32Z",
+      "tags": {
+        "highway": "trunk",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Neftçilər prospekti",
+        "name:az": "Neftçilər prospekti",
+        "name:az-cyr": "Нефтчиләр проспекти",
+        "name:en": "Neftchilar Avenue",
+        "name:ru": "проспект Нефтяников",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "url": "https://www.openstreetmap.org/way/1558855505",
+      "nodeIds": [
+        9812867727,
+        13922396677,
+        2941455976,
+        13783066059,
+        2941455972,
+        3077754616,
+        14134539621,
+        14078184116,
+        14078184114,
+        2941447471
+      ],
+      "coordinates": [
+        [
+          49.8384684,
+          40.3670032
+        ],
+        [
+          49.8384878,
+          40.3670221
+        ],
+        [
+          49.8385131,
+          40.367042
+        ],
+        [
+          49.838571,
+          40.3670819
+        ],
+        [
+          49.838618,
+          40.3671107
+        ],
+        [
+          49.8390734,
+          40.3673716
+        ],
+        [
+          49.839361,
+          40.3675418
+        ],
+        [
+          49.8395003,
+          40.3676243
+        ],
+        [
+          49.8408379,
+          40.3684158
+        ],
+        [
+          49.8413111,
+          40.3686959
+        ]
+      ],
+      "closed": false
+    },
+    {
+      "type": "way",
+      "id": 1570371147,
+      "version": "1",
+      "timestamp": "2026-10-21T13:06:36Z",
+      "tags": {
+        "cycleway:both": "shoulder",
+        "foot": "no",
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Xaqani küçəsi",
+        "name:az": "Xaqani küçəsi",
+        "name:en": "Khagani Street",
+        "name:ru": "улица Хагани",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "wikidata": "Q368862",
+        "wikipedia": "en:Khaqani"
+      },
+      "url": "https://www.openstreetmap.org/way/1570371147",
+      "nodeIds": [
+        276374004,
+        6225812434
+      ],
+      "coordinates": [
+        [
+          49.8497366,
+          40.3750116
+        ],
+        [
+          49.849819,
+          40.3750372
+        ]
+      ],
+      "closed": false
+    }
+  ],
+  "errors": [],
+  "retrievedAtUtc": "2026-11-15T12:25:43.436068+00:00",
+  "license": "ODbL-1.0; © OpenStreetMap contributors; https://www.openstreetmap.org/copyright"
+}
